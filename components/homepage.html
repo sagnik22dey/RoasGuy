@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roas - Advanced Meta Ads Course</title>
+    <style>
+        /* =========================================
+           CSS VARIABLES (THEMING)
+           ========================================= */
+        :root {
+            /* --- Light Mode Palette --- */
+            --bg-body: #ffffff;
+            --bg-nav: #ffffff;
+            --text-main: #000000;
+            --text-sub: #0099ff; /* The blue text color */
+            --text-desc: #000000;
+            
+            /* Gradient from Figma for Light Mode Body */
+            --hero-bg: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.62) 2.53%, rgba(255, 255, 255, 0.92) 8.79%, rgba(255, 255, 255, 0.99) 35.05%, rgba(255, 255, 255, 0.96) 64.93%, rgba(255, 255, 255, 0.64) 86%, rgba(255, 255, 255, 0.66) 95.96%);
+            
+            --toggle-bg: #e0e0e0;
+            --toggle-circle: #ffffff;
+            --nav-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.05);
+            
+            /* Button Gradient */
+            --btn-gradient: linear-gradient(90deg, #1ACFFF 0%, #0076FF 100%);
+            
+            --blue-strip: #0A93E3;
+            --play-btn-bg: rgba(255, 255, 255, 0.86);
+            --play-icon-color: #49454F;
+        }
+
+        body.dark-mode {
+            /* --- Dark Mode Palette --- */
+            --bg-body: #000000;
+            --bg-nav: #000000;
+            --text-main: #ffffff;
+            --text-sub: #1ACFFF;
+            --text-desc: #e0e0e0;
+
+            /* Complex Dark Mode Background with Grid Simulation */
+            --hero-bg: 
+                linear-gradient(180deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.589) 8.18%, rgba(0, 0, 0, 0.874) 12.51%, rgba(0, 0, 0, 0.6935) 25.85%, rgba(0, 0, 0, 0.608) 59.13%, rgba(0, 0, 0, 0.627) 62.46%, rgba(0, 0, 0, 0.6935) 83.18%, rgba(0, 0, 0, 0.95) 94.24%),
+                linear-gradient(#1a1a1a 1px, transparent 1px), 
+                linear-gradient(90deg, #1a1a1a 1px, transparent 1px);
+            
+            /* Size for the grid lines */
+            --bg-size: 100% 100%, 4vh 4vh, 4vh 4vh;
+
+            --toggle-bg: #333333;
+            --toggle-circle: #cccccc;
+            --nav-shadow: 0 1vh 4vh -1vh rgba(0, 158, 255, 0.2); 
+            
+            --play-btn-bg: #ffffff;
+            --play-icon-color: #000000;
+        }
+
+        /* =========================================
+           RESET & BASE STYLES
+           ========================================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Font specific simulation for "Neue Montreal" */
+        .neue-font {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            letter-spacing: -0.02em;
+        }
+
+        body {
+            background: var(--hero-bg);
+            background-color: var(--bg-body);
+            background-size: var(--bg-size, auto); /* Apply grid size only in dark mode */
+            width: 100vw;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* =========================================
+           NAVBAR (From previous request)
+           ========================================= */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 12vh;
+            background-color: var(--bg-nav);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 8vw; 
+            padding-right: 8vw;
+            box-shadow: var(--nav-shadow);
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 8vh;
+            cursor: pointer;
+        }
+
+        .logo-main {
+            display: flex;
+            align-items: center;
+            font-size: 3.5vh;
+            font-weight: 800;
+            color: var(--text-main);
+            line-height: 1;
+            letter-spacing: -0.05vw;
+        }
+
+        .logo-icon-box {
+            position: relative;
+            width: 2.8vh;
+            height: 2.8vh;
+            margin: 0 0.2vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .logo-arrow-svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .logo-sub {
+            font-size: 1.2vh;
+            color: var(--text-sub);
+            font-weight: 600;
+            letter-spacing: 0.1vw;
+            margin-top: 0.5vh;
+            text-transform: uppercase;
+        }
+
+        /* CONTROLS */
+        .nav-controls {
+            display: flex;
+            align-items: center;
+            gap: 2vw;
+        }
+
+        /* TOGGLE SWITCH */
+        .theme-switch {
+            position: relative;
+            width: 6vh;
+            height: 3vh;
+        }
+
+        .theme-switch input { opacity: 0; width: 0; height: 0; }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: var(--toggle-bg);
+            border-radius: 3vh;
+            border: 0.2vh solid #888;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 2vh;
+            width: 2vh;
+            left: 0.3vh;
+            bottom: 0.3vh;
+            background-color: var(--toggle-circle);
+            border-radius: 50%;
+            transition: .4s;
+        }
+
+        input:checked + .slider { border-color: #fff; }
+        input:checked + .slider:before { transform: translateX(3vh); }
+
+        /* NAV BTN */
+        .btn-nav {
+            background: var(--btn-gradient);
+            color: white;
+            border: none;
+            height: 5vh;
+            padding: 0 2vw;
+            border-radius: 2.5vh;
+            font-size: 1.8vh;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        /* =========================================
+           HERO SECTION
+           ========================================= */
+        .hero-container {
+            margin-top: 12vh; /* Push below navbar */
+            width: 100vw;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Blue Strip */
+        .info-strip {
+            width: 100%;
+            height: 4vh; /* Relative to viewport height */
+            background-color: var(--blue-strip);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 5vh;
+        }
+
+        .info-strip p {
+            color: #FFFFFF;
+            font-size: 1.8vh;
+            font-weight: 400;
+            text-align: center;
+            letter-spacing: 0.05vw;
+        }
+
+        /* Main Content Grid/Flex */
+        .hero-content {
+            width: 84vw; /* Match Navbar alignment roughly */
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 10vh;
+        }
+
+        /* Left Column: Text */
+        .text-col {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            gap: 3vh;
+        }
+
+        .hero-title {
+            font-size: 6vh; /* Scaled from 49px */
+            line-height: 1.2;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .hero-title span {
+            color: var(--text-sub);
+            display: block;
+        }
+
+        .hero-desc {
+            font-size: 2.2vh; /* Scaled from 20px */
+            line-height: 1.5;
+            color: var(--text-desc);
+            font-weight: 400;
+            max-width: 35vw;
+        }
+
+        .btn-hero {
+            background: var(--btn-gradient);
+            color: white;
+            border: none;
+            width: fit-content;
+            padding: 1.5vh 3vw;
+            border-radius: 1vh;
+            font-size: 2.5vh; /* Scaled from 28px */
+            font-weight: 500;
+            cursor: pointer;
+            margin-top: 2vh;
+            box-shadow: 0 4px 15px rgba(0, 118, 255, 0.3);
+        }
+        
+        .btn-hero:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 118, 255, 0.4);
+        }
+
+        /* Right Column: Video */
+        .video-col {
+            width: 45%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .video-card {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border-radius: 2vh;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 2vh 4vh rgba(0,0,0,0.2);
+            background-color: #000;
+        }
+
+        .video-thumb {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Applying blur from Figma CSS */
+            filter: blur(0px); 
+            transition: filter 0.3s;
+        }
+
+        .video-card:hover .video-thumb {
+            filter: blur(1px);
+        }
+
+        .play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 9vh;
+            height: 9vh;
+            background-color: var(--play-btn-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 0.5vh 2vh rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+
+        .play-btn:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .play-icon {
+            width: 4vh;
+            height: 4vh;
+            fill: var(--play-icon-color);
+        }
+
+        /* =========================================
+           MOBILE OPTIMIZATION
+           ========================================= */
+        @media (max-width: 768px) {
+            .navbar {
+                height: 10vh;
+                padding-left: 5vw;
+                padding-right: 5vw;
+            }
+
+            .logo-main { font-size: 3vh; }
+            .logo-icon-box { width: 2.5vh; height: 2.5vh; }
+            .btn-nav { display: none; } /* Hide top nav button on small mobile to save space if needed, or keep smaller */
+
+            .hero-container {
+                margin-top: 10vh;
+            }
+
+            .info-strip {
+                height: auto;
+                padding: 1vh 2vw;
+                margin-bottom: 4vh;
+            }
+
+            .info-strip p {
+                font-size: 1.6vh;
+                line-height: 1.4;
+            }
+
+            .hero-content {
+                flex-direction: column;
+                width: 90vw;
+                gap: 5vh;
+            }
+
+            .text-col {
+                width: 100%;
+                text-align: center;
+                align-items: center;
+                order: 1; /* Ensure text is on top/bottom as desired. Visuals usually Text top on mobile */
+            }
+
+            .hero-title {
+                font-size: 4vh; /* Smaller for mobile */
+            }
+
+            .hero-desc {
+                font-size: 1.8vh;
+                max-width: 100%;
+            }
+
+            .btn-hero {
+                width: 100%; /* Full width button on mobile */
+                padding: 1.5vh 0;
+            }
+
+            .video-col {
+                width: 100%;
+                order: 2;
+            }
+            
+            .play-btn {
+                width: 7vh;
+                height: 7vh;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo-container">
+            <div class="logo-main neue-font">
+                R
+                <div class="logo-icon-box">
+                    <!-- SVG Chart Arrow Icon -->
+                   <svg viewBox="0 0 100 100" class="logo-arrow-svg">
+                       <path d="M15,85 L45,55 L65,75 L85,25" fill="none" stroke="#0099ff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+                       <path d="M85,25 L55,25 M85,25 L85,55" fill="none" stroke="#0099ff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="50" cy="50" r="44" stroke="var(--text-main)" stroke-width="10" fill="none" />
+                   </svg>
+                </div>
+                as
+            </div>
+            <div class="logo-sub">School of Marketing</div>
+        </div>
+
+        <div class="nav-controls">
+            <!-- Theme Toggle -->
+            <label class="theme-switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider"></span>
+            </label>
+            <!-- Nav CTA -->
+            <button class="btn-nav">Enroll Now</button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <main class="hero-container">
+        <!-- Blue Strip Banner -->
+        <div class="info-strip">
+            <p>💵 100% Refund if Not Satisfied, Only 50 Seats per Batch</p>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="hero-content">
+            
+            <!-- Left: Text Info -->
+            <div class="text-col">
+                <h1 class="hero-title neue-font">
+                    Psychology Driven 
+                    <span>Advanced Meta Ads Course</span>
+                </h1>
+                <p class="hero-desc neue-font">
+                    Anyone can publish an ad. Few know how to make it profitable. 
+                    By the end of this course, you'll know exactly who to target, 
+                    write stronger offers, build funnels that convert, and make 
+                    data-backed decisions like a real strategist.
+                </p>
+                <button class="btn-hero neue-font">Enroll now</button>
+            </div>
+
+            <!-- Right: Video Card -->
+            <div class="video-col">
+                <div class="video-card">
+                    <!-- Placeholder Image from Picsum matching specific dimensions style -->
+                    <img src="https://picsum.photos/800/450?grayscale" alt="Course Thumbnail" class="video-thumb">
+                    
+                    <div class="play-btn">
+                        <!-- Simple Triangle Play Icon SVG -->
+                        <svg class="play-icon" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        // Logic to handle Dark/Light mode toggle
+        const toggleSwitch = document.querySelector('#theme-toggle');
+        const body = document.body;
+
+        // Function to apply theme
+        function setTheme(isDark) {
+            if (isDark) {
+                body.classList.add('dark-mode');
+                toggleSwitch.checked = true;
+                // Update SVG strokes for logo logic inside CSS variables mostly, 
+                // but specific SVG stroke updates can be handled here if css variables aren't enough.
+                // In this code, CSS vars handle colors nicely.
+            } else {
+                body.classList.remove('dark-mode');
+                toggleSwitch.checked = false;
+            }
+        }
+
+        // Initialize based on local storage or default
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            setTheme(true);
+        }
+
+        // Listener
+        toggleSwitch.addEventListener('change', function(e) {
+            if (e.target.checked) {
+                setTheme(true);
+                localStorage.setItem('theme', 'dark');
+            } else {
+                setTheme(false);
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roas Navbar</title>
+    <style>
+        /* =========================================
+           CSS VARIABLES (THEMING)
+           ========================================= */
+        :root {
+            /* Light Mode Default */
+            --bg-body: #ffffff;
+            --bg-nav: #ffffff;
+            --text-main: #222222;
+            --text-sub: #0099ff;
+            --accent-color: #009eff; /* The blue button color */
+            --toggle-bg: #e0e0e0;
+            --toggle-circle: #ffffff;
+            --nav-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.05);
+            --border-color: #e5e5e5;
+            --logo-arrow-bg: #009eff;
+            --logo-arrow-color: #fff;
+        }
+
+        body.dark-mode {
+            /* Dark Mode Overrides */
+            --bg-body: #0a0a0a;
+            --bg-nav: #000000;
+            --text-main: #ffffff;
+            --text-sub: #0099ff;
+            --toggle-bg: #333333;
+            --toggle-circle: #cccccc;
+            /* The specific blue glow seen in your dark mode image */
+            --nav-shadow: 0 1vh 4vh -1vh rgba(0, 158, 255, 0.4); 
+            --border-color: #111;
+        }
+
+        /* =========================================
+           RESET & BASE STYLES
+           ========================================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            width: 100vw;
+            min-height: 100vh; /* Using vh */
+            overflow-x: hidden;
+        }
+
+        /* =========================================
+           NAVBAR LAYOUT
+           ========================================= */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw; /* Using vw */
+            height: 12vh; /* Using vh for height */
+            background-color: var(--bg-nav);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 5vw; /* Using vw for spacing */
+            padding-right: 5vw;
+            box-shadow: var(--nav-shadow);
+            z-index: 1000;
+        }
+
+        /* =========================================
+           LOGO RECREATION
+           ========================================= */
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 8vh;
+            cursor: pointer;
+        }
+
+        .logo-main {
+            display: flex;
+            align-items: center;
+            font-size: 3.5vh; /* Sized relative to viewport height */
+            font-weight: 800;
+            color: var(--text-main);
+            line-height: 1;
+            letter-spacing: -0.05vw;
+        }
+
+        /* The arrow icon recreation inside the logo */
+        .logo-icon-box {
+            position: relative;
+            width: 2.8vh;
+            height: 2.8vh;
+            margin: 0 0.2vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Blue square/arrow part */
+        .logo-arrow-svg {
+            width: 100%;
+            height: 100%;
+            fill: var(--text-sub);
+        }
+
+        .logo-sub {
+            font-size: 1.2vh; /* Small tagline relative to height */
+            color: var(--text-sub);
+            font-weight: 600;
+            letter-spacing: 0.1vw;
+            margin-top: 0.5vh;
+            text-transform: uppercase;
+        }
+
+        /* =========================================
+           RIGHT SIDE CONTROLS
+           ========================================= */
+        .nav-controls {
+            display: flex;
+            align-items: center;
+            gap: 3vw; /* Spacing using vw */
+        }
+
+        /* TOGGLE SWITCH */
+        .theme-switch {
+            position: relative;
+            width: 6vh; /* Sized by height to stay pill-shaped */
+            height: 3vh;
+        }
+
+        .theme-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--toggle-bg);
+            border-radius: 3vh; /* Fully rounded */
+            border: 0.2vh solid #888; /* Thin border like in image */
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 2vh;
+            width: 2vh;
+            left: 0.3vh;
+            bottom: 0.3vh;
+            background-color: var(--toggle-circle);
+            border-radius: 50%;
+            transition: .4s;
+        }
+
+        /* Toggle Active State */
+        input:checked + .slider {
+            border-color: #fff;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(3vh);
+        }
+
+        /* CTA BUTTON */
+        .btn-enroll {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            height: 5vh;
+            padding: 0 2vw; /* vw padding for width */
+            border-radius: 2.5vh; /* Pill shape */
+            font-size: 1.8vh;
+            font-weight: 700;
+            cursor: pointer;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-enroll:hover {
+            opacity: 0.9;
+        }
+
+        /* =========================================
+           MOBILE OPTIMIZATION
+           ========================================= */
+        @media (max-width: 768px) {
+            .navbar {
+                height: 10vh; /* Slightly shorter on mobile */
+                padding-left: 4vw;
+                padding-right: 4vw;
+            }
+
+            .logo-main {
+                font-size: 3vh;
+            }
+
+            .logo-icon-box {
+                width: 2.5vh;
+                height: 2.5vh;
+            }
+
+            .logo-sub {
+                font-size: 1vh;
+            }
+
+            .nav-controls {
+                gap: 4vw;
+            }
+
+            .btn-enroll {
+                height: 4.5vh;
+                font-size: 1.6vh;
+                padding: 0 4vw;
+            }
+
+            .theme-switch {
+                width: 7vh; /* Make toggle slightly easier to hit on touch */
+                height: 3.5vh;
+            }
+            
+            .slider:before {
+                height: 2.5vh;
+                width: 2.5vh;
+            }
+            
+            input:checked + .slider:before {
+                transform: translateX(3.2vh);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <!-- Logo Area -->
+        <div class="logo-container">
+            <div class="logo-main">
+                R
+                <!-- SVG Icon recreating the arrow O -->
+                <div class="logo-icon-box">
+                   <svg viewBox="0 0 100 100" class="logo-arrow-svg">
+                       <!-- This path draws the arrow/chart icon -->
+                       <path d="M10,90 L40,60 L60,80 L90,20" fill="none" stroke="#009eff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+                       <path d="M90,20 L60,20 M90,20 L90,50" fill="none" stroke="#009eff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+                       <!-- Make it look like an O shape around it subtly (optional, simplified to text + icon like image) -->
+                        <circle cx="50" cy="50" r="42" stroke="var(--text-main)" stroke-width="12" fill="none" />
+                   </svg>
+                </div>
+                as
+            </div>
+            <div class="logo-sub">School of Marketing</div>
+        </div>
+
+        <!-- Controls Area -->
+        <div class="nav-controls">
+            <!-- Theme Toggle -->
+            <label class="theme-switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider"></span>
+            </label>
+
+            <!-- CTA Button -->
+            <button class="btn-enroll">Enroll Now</button>
+        </div>
+    </header>
+
+    <!-- Placeholder content to demonstrate body background change -->
+    <div style="padding-top: 15vh; padding-left: 5vw; color: var(--text-main);">
+        <h1 style="font-size: 4vh;">Welcome to ROAS</h1>
+        <p style="font-size: 2vh; margin-top: 1vh; opacity: 0.8;">Toggle the switch to see the Dark Mode implementation.</p>
+    </div>
+
+    <script>
+        // Select elements
+        const toggleSwitch = document.querySelector('#theme-toggle');
+        const body = document.body;
+
+        // Function to set theme
+        function setTheme(isDark) {
+            if (isDark) {
+                body.classList.add('dark-mode');
+                toggleSwitch.checked = true;
+            } else {
+                body.classList.remove('dark-mode');
+                toggleSwitch.checked = false;
+            }
+        }
+
+        // Check Local Storage for preference on load
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            setTheme(true);
+        } else {
+            // Optional: Check system preference if no save exists
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && !savedTheme) {
+                setTheme(true);
+            }
+        }
+
+        // Event Listener for the toggle
+        toggleSwitch.addEventListener('change', function(e) {
+            if (e.target.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
+</body>
+</html>

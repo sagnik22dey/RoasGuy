@@ -1,0 +1,43 @@
+# ---- Python build artifacts ----
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ---- Virtual environments ----
+venv/
+.env/
+.env*/
+.venv/
+
+# ---- Packages & locks ----
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# ---- Test & coverage ----
+.coverage*
+htmlcov/
+.pytest_cache/
+
+# ---- Logs & runtime ----
+*.log
+*.pid
+
+# ---- IDE/editor ----
+.vscode/
+.idea/
+*.iml
+
+# ---- OS files ----
+.DS_Store
+Thumbs.db
+
+# ---- Uvicorn/Starlette static cache ----
+staticfiles/
+
+# ---- Notebook checkpoints ----
+.ipynb_checkpoints/
+
+# ---- Misc ----
+# If you generate temporary files or local-only resources, add them below.

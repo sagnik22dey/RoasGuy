@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../styles/homePage.css" />
+    <link rel="stylesheet" href="../style/homePage.css" />
   </head>
   <body>
     <!-- NAVBAR -->
@@ -292,23 +292,32 @@
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              d="M0 6C60 0 110 12 170 6C230 0 290 12 350 6C410 0 438 6 438 6"
-              stroke="url(#courseWaveGradient)"
-              stroke-width="3"
-              stroke-linecap="round"
-            />
+            <g clip-path="url(#clip0_2_3586)">
+              <path
+                d="M-12.5689 1.71998C-12.5227 1.72666 -12.0232 1.80465 -11.8938 1.8247C-11.6255 1.8648 -11.362 1.9049 -11.0937 1.94501C-10.266 2.06755 -9.43825 2.18786 -8.6105 2.30594C-6.95037 2.54211 -5.28562 2.76937 -3.61163 2.98771C-0.26363 3.42663 3.10748 3.82767 6.48785 4.19974C6.45548 4.19529 6.84855 4.23762 7.07051 4.26213C7.29248 4.28441 7.68554 4.32674 7.65317 4.32228C8.50405 4.40918 9.35492 4.49607 10.2104 4.58073C12.0416 4.7612 13.8775 4.93275 15.7133 5.0954C19.1584 5.39841 22.6128 5.67245 26.0764 5.9153C39.4221 6.85106 53.4754 7.32562 67.2835 7.4905C96.0467 7.83361 124.838 6.77754 153.434 5.40063C181.656 4.04378 209.791 2.28144 238.064 1.17858C265.99 0.0913143 294.106 -0.432266 322.096 0.42997C349.685 1.27884 377.311 3.51575 403.341 8.09874C406.397 8.63569 409.422 9.21274 412.423 9.82098C413.385 10.0148 418.032 10.8704 416.256 11.6747C414.606 12.4233 409.505 11.6947 407.863 11.3628C404.862 10.7545 401.838 10.1797 398.781 9.64052C397.357 9.39098 395.928 9.1459 394.495 8.91196C393.722 8.78496 392.945 8.6602 392.168 8.53766C391.836 8.48418 391.503 8.43294 391.17 8.3817C390.948 8.34605 390.934 8.34382 390.966 8.34828C390.897 8.33714 390.767 8.31931 390.531 8.28366C387.387 7.81578 384.224 7.3791 381.042 6.97583C379.558 6.78868 378.069 6.60598 376.575 6.4322C375.771 6.33862 374.961 6.24505 374.157 6.15593C373.81 6.11805 373.463 6.07795 373.116 6.04007C373.01 6.02893 372.349 5.95763 372.164 5.93758C359.114 4.58073 346.642 3.76083 333.551 3.25953C305.944 2.20123 278.179 2.64906 250.595 3.66502C222.355 4.7055 194.267 6.44557 166.1 7.83584C137.277 9.25953 108.333 10.3446 79.3391 10.1708C50.5436 9.99922 21.6278 8.5889 -6.17811 4.85923C-9.84981 4.36684 -13.4891 3.82321 -17.1146 3.26176C-18.1273 3.10357 -22.6822 2.19232 -20.9481 1.40806C-19.2048 0.619349 -14.3123 1.44816 -12.555 1.71998H-12.5689Z"
+                fill="url(#paint0_linear_2_3586)"
+              />
+            </g>
             <defs>
               <linearGradient
-                id="courseWaveGradient"
-                x1="0"
-                y1="0"
-                x2="438"
-                y2="0"
+                id="paint0_linear_2_3586"
+                x1="-28.5634"
+                y1="12.1751"
+                x2="283.643"
+                y2="-290.645"
+                gradientUnits="userSpaceOnUse"
               >
-                <stop offset="0%" stop-color="#FFFFFF" />
-                <stop offset="100%" stop-color="#EEEEEE" />
+                <stop stop-color="var(--primary-color)" />
+                <stop offset="1" stop-color="var(--primary-color)" />
               </linearGradient>
+              <clipPath id="clip0_2_3586">
+                <rect
+                  width="438"
+                  height="12"
+                  fill="white"
+                  transform="matrix(1 0 0 -1 0 12)"
+                />
+              </clipPath>
             </defs>
           </svg>
         </div>
@@ -416,7 +425,7 @@
     </section>
 
     <!-- COURSE CURRICULUM SECTION -->
-    <section class="course-curriculum">
+    <section class="course-curriculum" id="course-curriculum">
       <!-- Header with Blue Oval -->
       <div class="curriculum-header">
         <div class="curriculum-title-wrapper">
@@ -702,7 +711,7 @@
       </div>
     </section>
     <!-- PROOF OF WORK SECTION -->
-    <section class="proof-of-work">
+    <section class="proof-of-work" id="proof-of-work">
       <!-- Section Header -->
       <div class="proof-header">
         <div class="proof-title-box">
@@ -1170,7 +1179,7 @@
         </div>
       </div>
     </section>
-    <section class="additional-access">
+    <section class="additional-access" id="additional-access">
       <!-- Section Header -->
       <div class="additional-access-header">
         <h2 class="additional-access-title">
@@ -1396,7 +1405,7 @@
       </div>
     </section>
     <!-- NO-NONSENSE APPROACH SECTION -->
-    <section class="no-nonsense-section">
+    <section class="no-nonsense-section" id="pricing">
       <div class="no-nonsense-container">
         <!-- Left Side - Illustration -->
         <div class="no-nonsense-illustration">

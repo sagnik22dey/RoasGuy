@@ -40,6 +40,7 @@
     --faq-icon-color: #000000;
     --mission-wave-color:#000000;
     --guarantee-title-text: #ffffff;
+    --primary-color: #EEEEEE;
   }
 
       body.dark-mode {
@@ -78,6 +79,7 @@
     --faq-icon-color: #ffffff;
     --mission-wave-color:#ffffff;
     --guarantee-title-text: #000000;
+    --primary-color:#000000;
   }
 
       /* =========================================
@@ -96,6 +98,10 @@
       .neue-font {
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         letter-spacing: -0.02em;
+      }
+
+      html {
+        scroll-behavior: smooth;
       }
 
       body {
@@ -283,7 +289,7 @@ input:checked + .slider:before {
 
 /* Vertical divider lines between links */
 .nav-pill-divider {
-  width: 3px;
+  width: 1px;
   height: 20px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(238, 238, 238, 0.8) 100%);
   border-radius: 1px;
@@ -300,16 +306,17 @@ input:checked + .slider:before {
   border: 1.28px solid #08A4FF;
   box-shadow: 0px -5px 10.5px rgba(0, 0, 0, 0.25);
   border-radius: 60px;
-  height: 50px;
+  height: 40px;
   font-family: 'Lexend', sans-serif;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 24px;
-  line-height: 40px;
+  line-height: 30px;
   text-align: center;
   color: #000000;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
 }
 
 .nav-enroll-btn:hover {
@@ -361,8 +368,32 @@ input:checked + .slider:before {
   }
 
   .nav-buttons {
+    display: flex;
+    gap: 5px;
+  }
+
+  /* Hide Enroll Button on Mobile Navbar */
+  .nav-enroll-btn {
     display: none;
   }
+
+  /* Adjust Pill for Mobile */
+  .nav-pill {
+    padding: 5px 15px;
+    gap: 15px;
+    height: 30px;
+    border-radius: 20px;
+  }
+
+  .nav-pill-link {
+    font-size: 11px;
+    line-height: 20px;
+  }
+
+  .nav-pill-divider {
+    height: 12px;
+  }
+
 
   /* Hero Section Mobile Adjustments */
   .hero-content {
@@ -399,6 +430,7 @@ input:checked + .slider:before {
     color: white;
     border: none;
     cursor: pointer;
+    text-decoration: none;
   }
 
   /* Hide the image on mobile, show text instead */
@@ -427,10 +459,72 @@ input:checked + .slider:before {
 
   .navbar {
     height: 53px;
-    padding: 8.24px 20px;
+    padding: 8.24px 10px; /* Reduce side padding to make room */
     background: var(--bg-nav);
     box-shadow: 0px 4px 12.3px #08a4ff;
   }
+
+  .nav-buttons {
+    gap: 3px;
+  }
+
+  .nav-pill {
+    padding: 4px 10px;
+    gap: 8px;
+    height: 26px;
+    border-radius: 15px;
+  }
+
+  .nav-pill-link {
+    font-size: 10px;
+    line-height: 18px;
+  }
+
+  .nav-pill-divider {
+    height: 10px;
+  }
+
+
+  /* ... (Existing Navbar overrides) ... - Keeping them valid if needed, or simply appending the new rules */
+  
+  /* Hero Section Typography */
+  .hero-title {
+    font-size: 42px;
+    line-height: 100%;
+  }
+
+  .hero-desc {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  /* Section Title Sizes */
+  .course-section-title,
+  .beginner-title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  /* Language Toggle - Mobile Sizing from Figma (Frame 96/95) */
+  .language-toggle {
+    margin-top: 2vh;
+    gap: 0; /* Reset gap as we use specific dimensions */
+    width: 271.17px;
+    height: 23.81px;
+    justify-content: space-between; /* To separate the two buttons */
+  }
+
+  .lang-btn {
+    width: 110.96px;
+    height: 23.81px;
+    min-width: 0; /* Override previous min-width */
+    padding: 2.82px 6.86px;
+    font-size: 12.912px;
+    line-height: 16px;
+    border-radius: 8.07px;
+  }
+  
+  /* Language Toggle Active/Inactive Styles match broadly with base variables but size was key discrepancy */
 
   .logo-container {
     height: 36px;
@@ -472,63 +566,6 @@ input:checked + .slider:before {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-  }
-
-  /* Language Toggle Buttons - Mobile */
-  .language-toggle {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 0px;
-    gap: 49.25px;
-    width: 271.17px;
-    height: 23.81px;
-    background: transparent;
-  }
-
-  .lang-btn {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 2.82px 6.86px;
-    gap: 4.03px;
-    width: 110.96px;
-    min-width: 110.96px;
-    height: 23.81px;
-    border-radius: 8.07px;
-    font-family: 'Lexend', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12.912px;
-    line-height: 16px;
-    text-align: center;
-    cursor: pointer;
-  }
-
-  .lang-btn.active {
-    background: linear-gradient(90deg, #08A4FF 0%, #056299 100%);
-    border: none;
-  }
-
-  .lang-btn.active span {
-    background: linear-gradient(91.52deg, #FFFFFF -1.64%, #EEEEEE 133.11%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .lang-btn:not(.active) {
-    box-sizing: border-box;
-    background: linear-gradient(91.52deg, #FFFFFF -1.64%, #EEEEEE 133.11%);
-    border: 0.55px solid #000000;
-  }
-
-  .lang-btn:not(.active) span {
-    color: #000000;
-    -webkit-text-fill-color: #000000;
-    background: none;
   }
 
   /* Video Card Wrapper - Mobile */
@@ -835,7 +872,7 @@ input:checked + .slider:before {
     cursor: pointer;
     /* On desktop, position in the right area below text-col */
     position: absolute;
-    top: 65%;
+    top: 75%;
     right: 16%;
   }
 
@@ -1494,7 +1531,7 @@ input:checked + .slider:before {
   /* Instructor Card */
   .instructor-card {
     position: relative;
-    width: 80%;
+    width: 100%;
     max-width: 1260px;
     height: 606px;
     background: #FCFCFC;
@@ -2868,7 +2905,7 @@ input:checked + .slider:before {
           line-height: 24px;
           text-align: center;
           
-          color: #FFFFFF;
+          color: var(--text-main);
           margin-bottom: 25px;
           margin-top: 20px; /* Add some spacing from title box */
         }
@@ -2902,7 +2939,7 @@ input:checked + .slider:before {
         .proof-card {
           flex-direction: column !important;
           gap: 15px;
-          background-color: #000000;
+          background-color: var(--bg-main);
           padding: 15px;
           border-radius: 12px;
         }
@@ -2981,7 +3018,7 @@ input:checked + .slider:before {
         .metric-value {
           font-size: 12px;
           line-height: 16px;
-          color: #ffffff;
+          color: var(--metric-value-color);
           font-weight: 600;
         }
 
@@ -3210,6 +3247,7 @@ body.dark-mode .benefit-item span {
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
   justify-self: center;
+  text-decoration: none;
 }
 
 .btn-enroll-cert:hover {
@@ -3227,6 +3265,7 @@ body.dark-mode .benefit-item span {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  text-decoration: none;
 }
 
 
@@ -3292,11 +3331,13 @@ body.dark-mode .benefit-item span {
   .btn-enroll-cert {
     width: 220px;
     height: 50px;
+    text-decoration: none;
   }
   
   .btn-enroll-cert-text {
     font-size: 26px;
     line-height: 32px;
+    text-decoration: none;
   }
 }
 
@@ -3366,11 +3407,13 @@ body.dark-mode .benefit-item span {
     order: 5;
     width: 180px;
     height: 44px;
+    text-decoration: none;
   }
   
   .btn-enroll-cert-text {
     font-size: 20px;
     line-height: 26px;
+    text-decoration: none;
   }
 }
 
@@ -4324,12 +4367,8 @@ body.dark-mode .footer-image .footer-svg-dark {
 
   .highlight-text {
     font-style: italic;
-    text-decoration: underline;
   }
 
-  .wavy-underline {
-    display: none; /* Hide on mobile, use underline instead */
-  }
 
   /* Video Column - Order 2 (after text) */
   .video-col {
@@ -4451,6 +4490,7 @@ body.dark-mode .footer-image .footer-svg-dark {
     align-items: center;
     cursor: pointer;
     order: 100; /* Ensure it's at the bottom */
+    text-decoration: none;
   }
 
   .btn-hero img {
@@ -4655,5 +4695,37 @@ body.dark-mode .icon-dark {
     width: 220px;  /* Fixed width to ensure container consistency */
     object-fit: contain;
     max-width: 100%;
+  }
+}
+
+/* Default: Hide mobile underline image */
+.course-underline-mobile-img {
+  display: none;
+}
+
+.mobile-course-span {
+    position: relative;
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+  /* Hide desktop wave */
+  .course-title-wave {
+    display: none;
+  }
+
+  /* Show mobile underline image */
+  .course-underline-mobile-img {
+    display: block;
+    position: absolute;
+    bottom: -10px; /* Adjust as needed */
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+  
+  .course-section-title {
+    position: relative;
+    margin-bottom: 25px; /* Add space for the underline */
   }
 }

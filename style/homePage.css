@@ -38,6 +38,8 @@
     --course-section-title-color: linear-gradient(91.52deg, #ffffff -1.64%, #eeeeee 133.11%);
     --metric-value-color: #000000;
     --faq-icon-color: #000000;
+    --mission-wave-color:#000000;
+    --guarantee-title-text: #ffffff;
   }
 
       body.dark-mode {
@@ -74,6 +76,8 @@
     --course-section-title-color: linear-gradient(91.52deg, #000000 -1.64%, #000000 133.11%);
     --metric-value-color: #FFFFFF;
     --faq-icon-color: #ffffff;
+    --mission-wave-color:#ffffff;
+    --guarantee-title-text: #000000;
   }
 
       /* =========================================
@@ -132,7 +136,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 8vh;
+  height: 10vh;
   cursor: pointer;
   text-decoration: none;
 }
@@ -233,8 +237,117 @@ input:checked + .slider:before {
 }
 
 /* =========================================
+   NAVBAR NAVIGATION BUTTONS
+   ========================================= */
+
+/* Container for nav buttons */
+.nav-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Blue gradient pill containing navigation links */
+.nav-pill {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 32px;
+  gap: 50px;
+  background: linear-gradient(90deg, #1ACFFF 0%, #0076FF 100%);
+  border-radius: 30px;
+  height: 35px;
+}
+
+/* Navigation links inside the pill */
+.nav-pill-link {
+  font-family: 'Lexend', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  background: linear-gradient(91.52deg, #FFFFFF -1.64%, #EEEEEE 133.11%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: opacity 0.2s ease;
+}
+
+.nav-pill-link:hover {
+  opacity: 0.85;
+}
+
+/* Vertical divider lines between links */
+.nav-pill-divider {
+  width: 3px;
+  height: 20px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(238, 238, 238, 0.8) 100%);
+  border-radius: 1px;
+}
+
+/* White Enroll Now button */
+.nav-enroll-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 25px;
+  background: #FFFFFF;
+  border: 1.28px solid #08A4FF;
+  box-shadow: 0px -5px 10.5px rgba(0, 0, 0, 0.25);
+  border-radius: 60px;
+  height: 50px;
+  font-family: 'Lexend', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 40px;
+  text-align: center;
+  color: #000000;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav-enroll-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px -5px 15px rgba(8, 164, 255, 0.4);
+}
+
+/* =========================================
    RESPONSIVE NAVBAR
    ========================================= */
+
+@media (max-width: 1024px) {
+  .nav-buttons {
+    gap: 12px;
+  }
+
+  .nav-pill {
+    padding: 10px 20px;
+    gap: 30px;
+    height: 52px;
+  }
+
+  .nav-pill-link {
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  .nav-pill-divider {
+    height: 32px;
+  }
+
+  .nav-enroll-btn {
+    padding: 5px 18px;
+    height: 52px;
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
 
 @media (max-width: 768px) {
   .navbar {
@@ -244,6 +357,10 @@ input:checked + .slider:before {
   }
 
   .btn-nav {
+    display: none;
+  }
+
+  .nav-buttons {
     display: none;
   }
 }
@@ -302,7 +419,7 @@ input:checked + .slider:before {
   /* Blue Strip */
   .info-strip {
     width: 100%;
-    height: 40px;
+    height: 25px;
     background-color: #010890;
     display: flex;
     align-items: center;
@@ -372,7 +489,7 @@ input:checked + .slider:before {
 
   .video-card {
     width: 100%;
-    aspect-ratio: 634 / 501;
+    aspect-ratio: 680 / 501;
     border-radius: 32px;
     overflow: hidden;
     position: relative;
@@ -383,7 +500,7 @@ input:checked + .slider:before {
   .video-thumb {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fit;
     filter: blur(0px);
     transition: filter 0.3s;
   }
@@ -424,6 +541,7 @@ input:checked + .slider:before {
     display: flex;
     gap: 1.5vw;
     justify-content: flex-start;
+    margin-top:4vh;
   }
 
   .lang-btn {
@@ -553,6 +671,7 @@ input:checked + .slider:before {
     display: flex;
     align-items: center;
     position: relative;
+    left:35%;
   }
 
   .btn-hero:hover {
@@ -578,15 +697,33 @@ input:checked + .slider:before {
     flex-direction: column;
     align-items: center;
     gap: 2vh;
+    width: 100%;
+    max-width: 1233px;
   }
 
   .beginner-title {
     font-family: 'Lexend', sans-serif;
-    font-size: 32px;
-    font-weight: 500;
-    font-style: italic;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
     color: var(--text-main);
     letter-spacing: -0.02em;
+  }
+
+  .highlight-underline {
+    position: relative;
+    display: inline;
+  }
+
+  .wavy-underline-blue {
+    position: absolute;
+    left: -30px;
+    bottom: -25px;
+    width: 100%;
+    height: 21px;
+    object-fit: contain;
   }
 
   .beginner-line {
@@ -1053,7 +1190,7 @@ input:checked + .slider:before {
     font-size: 40px;
     line-height: 50px;
     text-align: center;
-    color: #000000;
+    color: var(--guarantee-title-text);
   }
 
   .guarantee-description {
@@ -1094,9 +1231,9 @@ input:checked + .slider:before {
 
   .guarantee-wave {
     position: absolute;
-    width: 268px;
+    width: 230px;
     height: 12px;
-    left: 50%;
+    left: 16%;
     transform: translateX(-50%);
     bottom: -15px;
   }
@@ -1158,6 +1295,7 @@ input:checked + .slider:before {
   .mission-highlight {
     position: relative;
     display: inline;
+    color:#08a4ff;
   }
 
   .mission-wave {
@@ -1166,6 +1304,7 @@ input:checked + .slider:before {
     left: 0;
     width: 100%;
     height: 15px;
+    fill: var(--mission-wave-color);
   }
 
   .mission-text {
@@ -1186,10 +1325,6 @@ input:checked + .slider:before {
     font-weight: 600;
   }
 
-  .mission-underline {
-    text-decoration: underline;
-    text-underline-offset: 3px;
-  }
 
   /* Instructor Card */
   .instructor-card {
@@ -1349,10 +1484,8 @@ input:checked + .slider:before {
 
   .proof-underline {
     position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 100%;
-    height: 20px;
+    left: -33%;
+    bottom: -9vw;
   }
 
   /* Results Grid */
@@ -1487,8 +1620,8 @@ input:checked + .slider:before {
   }
 
   .additional-access-wave {
-    width: 228px;
-    height: 12px;
+    width: auto;
+    height: auto;
   }
 
   /* Access Items Container */
@@ -1609,18 +1742,6 @@ input:checked + .slider:before {
     line-height: 50px;
     color: var(--text-main);
     position: relative;
-  }
-
-  /* Strikethrough line on price */
-  .original-price::after {
-    content: '';
-    position: absolute;
-    left: -5px;
-    right: -5px;
-    top: 50%;
-    height: 4px;
-    background: #08A4FF;
-    transform: translateY(-50%);
   }
 
   .free-badge {
@@ -3573,5 +3694,89 @@ body.dark-mode .footer-image .footer-svg-dark {
     height: 195px;
     object-fit: cover;
     object-position: center;
+  }
+}
+
+/* =========================================
+   ACCESS PRICING STYLES
+   ========================================= */
+
+.access-pricing {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.original-price {
+  position: relative;
+  display: inline-block;
+  font-family: 'Lexend', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 30px;
+  color: var(--text-main);
+}
+
+.price-strike {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 110%;
+  height: auto;
+  pointer-events: none;
+}
+
+.free-badge {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 16px;
+  background: #08A4FF;
+  border-radius: 4px;
+}
+
+.free-text {
+  font-family: 'Lexend', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+/* Responsive styles for access-pricing */
+@media (max-width: 768px) {
+  .original-price {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  .free-text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .access-pricing {
+    gap: 8px;
+  }
+  
+  .original-price {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  
+  .free-badge {
+    padding: 3px 12px;
+  }
+  
+  .free-text {
+    font-size: 14px;
+    line-height: 18px;
   }
 }

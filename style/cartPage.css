@@ -3,21 +3,29 @@
            ========================================= */
       :root {
         --primary-blue: #08a4ff;
-        --deep-blue: #010890;
         --text-black: #000000;
         --text-white: #ffffff;
         --bg-color: #ffffff;
         --bg-nav: #ffffff;
         --text-primary: #000000;
-        --text-secondary: #666666;
-        --input-bg: #f0f0f0;
-        --input-border: rgba(0, 0, 0, 0.44);
-        --placeholder-color: #929292;
-        --divider-color: #ffffff;
+        --text-secondary: #000000;
+        --divider-color: #000000;
+        --whatsapp-gradient: linear-gradient(
+          219.38deg,
+          #46cc5e 28.74%,
+          #1f991e 105.9%
+        );
+        --linkedin-blue: #0077b5;
         --page-width: 1512px;
         --nav-shadow: 0px 4px 28.7px #08a4ff;
         --toggle-bg: #ffffff;
         --toggle-circle: #d9d9d9;
+        
+        /* Preserved */
+        --deep-blue: #010890;
+        --input-bg: #f0f0f0;
+        --input-border: rgba(0, 0, 0, 0.44);
+        --placeholder-color: #929292;
         --gradient-overlay: linear-gradient(
           90deg,
           rgba(255, 255, 255, 0.35) 34.51%,
@@ -27,15 +35,18 @@
       }
 
       /* Dark Mode Variables */
+      /* Dark Mode Variables */
       body.dark-mode {
         --bg-color: #000000;
         --bg-nav: #000000;
         --text-primary: #ffffff;
         --text-secondary: #ffffff;
-        --divider-color: #ffffff;
+        --divider-color: #333333;
         --nav-shadow: 0px 4px 28.7px rgba(8, 164, 255, 0.3);
         --toggle-bg: #333333;
         --toggle-circle: #ffffff;
+        
+        /* Preserved */
         --gradient-overlay: linear-gradient(
           90deg,
           rgba(44, 44, 44, 0.35) 34.51%,
@@ -121,7 +132,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        height: 8vh;
+        height: 15vh;
         cursor: pointer;
         text-decoration: none;
       }
@@ -272,21 +283,47 @@
            ========================================= */
       .refund-banner {
         width: 100%;
-        height: 40px;
+        height: 20px;
         background: var(--deep-blue);
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         margin-top: 12vh;
+        overflow: hidden;
       }
 
-      .refund-banner p {
-        font-family: "Lexend", sans-serif;
-        font-weight: 400;
-        font-size: 22px;
-        line-height: 28px;
-        text-align: center;
+      .marquee-track {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        animation: scroll-left 25s linear infinite;
+      }
+
+      .marquee-group {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        min-width: 100%;
+        justify-content: space-around;
+      }
+
+      .marquee-group span {
         color: #ffffff;
+        font-size: 1.8vh;
+        font-weight: 400;
+        text-align: center;
+        letter-spacing: 0.05vw;
+        white-space: nowrap;
+        padding: 0 5vw;
+      }
+
+      @keyframes scroll-left {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
       }
 
       /* =========================================
@@ -654,7 +691,7 @@
           width: 50%;
         }
 
-        header.navbar {
+        .navbar {
           padding: 20px 40px;
         }
       }
@@ -693,16 +730,17 @@
           line-height: 42px;
         }
 
-        .refund-banner p {
+        .marquee-group span {
           font-size: 16px;
         }
 
-        header.navbar {
-          padding: 15px 20px;
-          height: auto;
+        .navbar {
+          height: 10vh;
+          padding-left: 5vw;
+          padding-right: 5vw;
         }
 
-        .logo-container img {
+        .logo-img {
           height: 45px;
         }
 
@@ -817,14 +855,14 @@
         /* Mobile Refund Banner */
         .refund-banner {
           height: 21px;
-          padding: 1px 10px;
+          padding: 1px 0;
           margin-top: 53px;
           width: 100%;
         }
 
-        .refund-banner p {
+        .marquee-group span {
           font-size: 10px;
-          padding-top: 8px;
+          padding-top: 0; /* Adjusted vertical alignment */
           line-height: 15px;
           white-space: nowrap;
           text-align: center;
@@ -1095,4 +1133,68 @@
 
       input:checked + .slider:before {
         transform: translateX(3vh);
+      }
+
+      /* =========================================
+         RESPONSIVE STYLES
+         ========================================= */
+      @media (max-width: 768px) {
+        .navbar {
+          height: 10vh;
+          padding-left: 5vw;
+          padding-right: 5vw;
+        }
+
+        .logo-main {
+          font-size: 3vh;
+        }
+
+        .logo-icon-box {
+          width: 2.5vh;
+          height: 2.5vh;
+        }
+
+        .btn-nav {
+          display: none;
+        }
+      }
+
+      @media (max-width: 480px) {
+        /* Mobile Navbar */
+        .navbar {
+          height: 53px;
+          padding: 8.24px 20px;
+          background: var(--bg-nav);
+          box-shadow: 0px 4px 12.3px #08a4ff;
+        }
+
+        .logo-container {
+          height: 36px;
+        }
+
+        .logo-img {
+          height: 36px;
+        }
+
+        /* Theme Toggle Mobile */
+        .theme-switch {
+          width: 34px;
+          height: 14.38px;
+        }
+
+        .slider {
+          border-radius: 41px;
+          border-width: 0.15vh;
+        }
+
+        .slider:before {
+          height: 11px;
+          width: 11px;
+          left: 0.2vh;
+          bottom: 0.15vh;
+        }
+
+        input:checked + .slider:before {
+          transform: translateX(18px);
+        }
       }

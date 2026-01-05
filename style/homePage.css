@@ -60,7 +60,7 @@
         --bg-size: 80px 80px, 80px 80px;
 
         --toggle-bg: #333333;
-    --toggle-circle: #08a4ff;
+    --toggle-circle: #ffffff;
     --nav-shadow: 0px 4px 28.7px rgba(8, 164, 255, 0.3);
 
     --play-btn-bg: #ffffff;
@@ -142,7 +142,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 10vh;
+  height: 15vh;
   cursor: pointer;
   text-decoration: none;
 }
@@ -560,7 +560,7 @@ input:checked + .slider:before {
     width: 371px;
     max-width: 100%;
     height: 101.78px;
-    background: #F2F2F2;
+    background: transparent;
     border-radius: 14.23px;
     display: flex;
     justify-content: center;
@@ -623,28 +623,42 @@ input:checked + .slider:before {
     background-color: #010890;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     margin-bottom: 5vh;
     overflow: hidden;
   }
 
-  .info-strip p {
+  .marquee-track {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    animation: scroll-left 25s linear infinite;
+  }
+
+  .marquee-group {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    min-width: 100%;
+    justify-content: space-around;
+  }
+
+  .marquee-group span {
     color: #ffffff;
     font-size: 1.8vh;
     font-weight: 400;
     text-align: center;
     letter-spacing: 0.05vw;
     white-space: nowrap;
-    display: inline-block;
-    animation: marquee 15s linear infinite;
+    padding: 0 5vw;
   }
 
-  @keyframes marquee {
+  @keyframes scroll-left {
     0% {
-      transform: translateX(-100%);
+      transform: translateX(0);
     }
     100% {
-      transform: translateX(100%);
+      transform: translateX(-50%);
     }
   }
 
@@ -2030,11 +2044,11 @@ input:checked + .slider:before {
 
         .info-strip {
           height: auto;
-          padding: 1vh 2vw;
+          padding: 1vh 0;
           margin-bottom: 4vh;
         }
 
-        .info-strip p {
+        .marquee-group span {
           font-size: 1.6vh;
           line-height: 1.4;
         }
@@ -4322,11 +4336,11 @@ body.dark-mode .footer-image .footer-svg-dark {
   .info-strip {
     width: 100%;
     height: 21px;
-    padding: 1px 52px;
+    padding: 1px 0;
     margin-bottom: 30px;
   }
 
-  .info-strip p {
+  .marquee-group span {
     font-size: 12px;
     line-height: 15px;
   }
@@ -4425,7 +4439,7 @@ body.dark-mode .footer-image .footer-svg-dark {
     width: 371px;
     max-width: 100%;
     height: 52.77px;
-    background: #D9D9D9;
+    background: transparent;
     border-radius: 0 0 14.23px 14.23px;
     z-index: 0;
   }

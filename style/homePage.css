@@ -531,7 +531,7 @@ input:checked + .slider:before {
   }
 
   .logo-img {
-    height: 36px;
+    height: 50px;
   }
 
   .theme-switch {

@@ -764,7 +764,7 @@
         }
 
         .logo-img {
-          height: 36px;
+          height: 50px;
         }
 
         /* Theme Toggle Mobile */
@@ -838,7 +838,7 @@
 
         .subtitle {
           width: 318px;
-          max-width: calc(100% - 84px);
+          max-width: calc(100% - 75px);
           margin-bottom: 18px;
           padding: 0;
         }
@@ -996,7 +996,7 @@
 
         .contact-info {
           width: 336px;
-          max-width: calc(100% - 66px);
+          max-width: 100%;
           font-size: 14px;
           line-height: 25px;
           font-weight: 500;

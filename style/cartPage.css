@@ -460,19 +460,30 @@
         align-items: center;
         gap: 5px;
         cursor: pointer;
+        position: relative;
       }
 
-      .country-code {
+      .country-select {
         font-family: "Lohit Tamil", "Lexend", sans-serif;
         font-weight: 400;
         font-size: 20px;
         line-height: 24px;
         color: var(--text-black);
-      }
-
-      .country-selector svg {
-        width: 27px;
-        height: 27px;
+        background: transparent;
+        border: none;
+        outline: none;
+        appearance: none; /* Remove default arrow */
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        cursor: pointer;
+        padding-right: 20px; /* Space for custom arrow if added, currently just spacing */
+        /* Adding a background image for arrow could be good, but for now simple */
+        background-image: url("data:image/svg+xml,%3Csvg width='27' height='27' viewBox='0 0 27 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.75 10.125L13.5 16.875L20.25 10.125' stroke='%231E1E1E' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: 18px; /* Adjust size as needed */
+        width: 100%;
+        min-width: 40px; /* Ensure wide enough for text */
       }
 
       .phone-input {
@@ -922,7 +933,8 @@
           border-width: 0.33px;
         }
 
-        .country-code {
+        .country-code,
+        .country-select {
           font-size: 15px;
           line-height: 18px;
         }
@@ -964,19 +976,19 @@
 
         .pay-btn {
           width: auto;
-          padding: 3px 15px;
-          margin-left: 36px;
+          padding: 10px 20px;
+          margin-left: 32px;
           gap: 3.5px;
           border-radius: 20px;
         }
     
         .pay-btn img {
-          width: 17px;
-          height: 17px;
+          width: 20px;
+          height: 20px;
         }
 
         .pay-btn span {
-          font-size: 11px;
+          font-size: 13px;
           line-height: 14px;
         }
 
@@ -986,11 +998,10 @@
         }
 
         .horizontal-divider-mobile {
-          display: block;
           width: 286px;
           height: 1px;
           background: #ffffff;
-          margin: 40px auto;
+          margin: 0px auto;
         }
 
         /* Mobile Features Section */
@@ -1034,7 +1045,6 @@
           flex-wrap: wrap;
           justify-content: center;
           align-items: center;
-          gap: 62px;
           max-width: 312px;
           margin: 0 auto;
         }
@@ -1060,8 +1070,10 @@
           font-size: 25px;
           line-height: 32px;
           display: flex;
+          font-weight: 700;
           align-items: center;
           justify-content: center;
+          margin-bottom: 15px;
         }
 
         .feature-desc {
@@ -1085,10 +1097,6 @@
         }
       }
 
-      /* Add horizontal divider for mobile */
-      .horizontal-divider-mobile {
-        display: none;
-      }
       /* Theme Toggle Switch */
       .theme-switch {
         position: relative;
@@ -1173,7 +1181,7 @@
         }
 
         .logo-img {
-          height: 36px;
+          height: 50px;
         }
 
         /* Theme Toggle Mobile */

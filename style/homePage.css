@@ -266,7 +266,7 @@ input:checked+.slider:before {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 13px 32px;
+  padding: 25px 32px;
   gap: 50px;
   background: linear-gradient(90deg, #1ACFFF 0%, #0076FF 100%);
   border-radius: 30px;
@@ -307,7 +307,7 @@ input:checked+.slider:before {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 5px 25px;
+  padding: 25px 25px;
   min-width: 140px;
   background: #FFFFFF;
   border: 1.28px solid #08A4FF;
@@ -389,7 +389,28 @@ input:checked+.slider:before {
 
   /* Hide Enroll Button on Mobile Navbar */
   .nav-enroll-btn {
-    display: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px;
+    min-width: 80px;
+    background: #FFFFFF;
+    border: 1.28px solid #08A4FF;
+    box-shadow: 0px -5px 10.5px rgba(0, 0, 0, 0.25);
+    border-radius: 60px;
+    height: 30px;
+    font-family: 'Lexend', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 10px;
+    text-align: center;
+    color: #000000;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+    white-space: nowrap;
   }
 
   /* Adjust Pill for Mobile */
@@ -496,7 +517,7 @@ input:checked+.slider:before {
   }
 
   .nav-pill-link {
-    font-size: 10px;
+    font-size: 12px;
     line-height: 18px;
   }
 
@@ -2070,10 +2091,6 @@ body.dark-mode .access-item.item-highlighted .access-item-desc {
   }
 
   /* Hide top nav button on small mobile to save space if needed, or keep smaller */
-
-  .hero-container {
-    margin-top: 10vh;
-  }
 
   .info-strip {
     height: auto;
@@ -4457,7 +4474,6 @@ body.dark-mode .footer-image .footer-svg-dark {
 
   /* Hero Container */
   .hero-container {
-    margin-top: 53px;
     /* Match navbar height */
     width: 100%;
   }

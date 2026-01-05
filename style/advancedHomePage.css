@@ -676,7 +676,7 @@ input:checked+.slider:before {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding-bottom: 10vh;
   gap: 4vw;
   position: relative;
@@ -848,7 +848,7 @@ body.dark-mode .lang-btn.active:hover {
   font-family: 'Lexend', sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 64px;
+  font-size: 50px;
   line-height: 110%;
   color: var(--text-main);
 }
@@ -862,7 +862,7 @@ body.dark-mode .lang-btn.active:hover {
   font-family: 'Lexend', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 25px;
   color: var(--text-desc);
   max-width: 587px;
@@ -893,10 +893,9 @@ body.dark-mode .lang-btn.active:hover {
   display: flex;
   align-items: center;
   cursor: pointer;
-  /* On desktop, position in the right area below text-col */
-  position: absolute;
-  top: 75%;
-  right: 16%;
+  /* Position relative to text flow now */
+  position: static;
+  margin-top: 20px;
 }
 
 .btn-hero:hover {

@@ -884,7 +884,7 @@ body.dark-mode .lang-btn.active:hover {
 
 .hero-title span {
   color: var(--text-sub);
-  display: block;
+  display: inline;
 }
 
 .hero-desc {
@@ -4511,15 +4511,15 @@ body.dark-mode .footer-image .footer-svg-dark {
   }
 
   .hero-title {
-    font-size: 42px;
+    font-size: 47px;
     line-height: 100%;
     width: 100%;
-    max-width: 351px;
+    max-width: 100%;
     text-align: left;
   }
 
   .hero-desc {
-    font-size: 19px;
+    font-size: 21px;
     line-height: 25px;
     width: 100%;
     max-width: 345px;

@@ -182,6 +182,34 @@ body.dark-mode .logo-dark {
   gap: 2vw;
 }
 
+/* Desktop Enroll Now Button - Navbar Header */
+.nav-enroll-btn-desktop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  min-width: 120px;
+  height: 40px;
+  background: linear-gradient(90deg, #1ACFFF 0%, #0076FF 100%);
+  border-radius: 30px;
+  font-family: 'Lexend', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14.66px;
+  line-height: 18px;
+  text-align: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav-enroll-btn-desktop:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 15px rgba(8, 164, 255, 0.4);
+}
+
 /* Theme Toggle */
 .theme-switch {
   position: relative;
@@ -379,6 +407,11 @@ input:checked+.slider:before {
   }
 
   .btn-nav {
+    display: none;
+  }
+
+  /* Hide Desktop Enroll Button on Mobile */
+  .nav-enroll-btn-desktop {
     display: none;
   }
 

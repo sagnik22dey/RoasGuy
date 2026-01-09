@@ -13,13 +13,16 @@
 </head>
 
 <body>
+  <!-- NAVBAR -->
   <header class="navbar">
     <a href="/advHomepage" class="logo-container">
       <img class="logo-img logo-light" src="../Resources/HomePage/roas-logo-light.png" alt="roas-guy-logo" />
       <img class="logo-img logo-dark" src="../Resources/HomePage/roas-logo-dark.png" alt="roas-guy-logo" />
     </a>
 
+    <!-- Navigation Buttons -->
     <div class="nav-buttons">
+      <!-- Main Nav Pill with Links -->
       <div class="nav-pill">
         <a href="#course-curriculum" class="nav-pill-link">Curriculum</a>
         <span class="nav-pill-divider"></span>
@@ -27,31 +30,38 @@
         <span class="nav-pill-divider"></span>
         <a href="#pricing-section" class="nav-pill-link">Pricing</a>
       </div>
+      <!-- Enroll Now Button -->
       <a href="/cartpage" class="nav-enroll-btn">Enroll Now</a>
     </div>
 
     <div class="nav-controls">
+      <!-- Theme Toggle -->
       <label class="theme-switch">
         <input type="checkbox" id="theme-toggle" />
         <span class="slider"></span>
       </label>
+      <!-- Desktop Enroll Now Button -->
       <a href="/cartpage" class="nav-enroll-btn-desktop">Enroll Now</a>
     </div>
   </header>
-
+<!-- Blue Strip Banner -->
     <section class="info-strip">
       <div class="marquee-track">
         <span class="marquee-text">💵 100% Refund if Not Satisfied, Let’s scale your business</span>
       </div>
     </section>
+  <!-- HERO SECTION -->
   <section class="hero-container">
+    <!-- Content Grid -->
     <div class="hero-content">
+      <!-- Left: Text Info -->
       <div class="text-col">
         <h1 class="hero-title neue-font">
           Psychology Driven <br>
           <span>Advanced Meta Ads Course</span>
         </h1>
 
+        <!-- Mobile-Only Video Duplicate -->
         <div class="video-card-wrapper mobile-video-only">
           <div class="video-card" role="button" tabindex="0" aria-label="Play course intro">
             <img src="../Resources/HomePage/thumbnail.jpg" alt="Facebook Ads Course Thumbnail" class="video-thumb" />
@@ -68,12 +78,15 @@
         </br>
         <span class="hero-span neue-font">By the end of this course, you won’t be “running ads” , you'll be engineering buying behavior. You’ll know exactly who to target, how to craft offers people can’t ignore, how to structure funnels that convert, and how to think like the strategist your competition wishes they had.</span>
         </p>
+        <!-- Enroll Now Button (Text Based) -->
         <a href="/cartpage" class="btn-hero neue-font">
           Enroll now
         </a>
       </div>
 
+      <!-- Right: Video Card -->
       <div class="video-col video-col-mobile">
+        <!-- Thumbnail card -->
         <div class="video-card-wrapper desktop-video-only">
           <div class="video-card" role="button" tabindex="0" aria-label="Play course intro">
             <img src="../Resources/HomePage/thumbnail.jpg" alt="Facebook Ads Course Thumbnail" class="video-thumb" />
@@ -86,9 +99,24 @@
           </div>
         </div>
 
+        <!-- Language toggle block
+        <div class="language-toggle-wrapper">
+          <div class="language-toggle" role="tablist" aria-label="Language">
+            <button class="lang-btn active" type="button" data-lang="en" role="tab" aria-selected="true">
+              <span>English</span>
+            </button>
+
+            <button class="lang-btn" type="button" data-lang="hi" role="tab" aria-selected="false">
+              <span>Hindi</span>
+            </button>
+          </div>
+        </div>
+      </div> -->
   </section>
 
+  <!-- STRUGGLES SECTION (For advertisers running ads) -->
   <section class="struggles-section">
+    <!-- Section Header -->
     <div class="struggles-header">
       <h2 class="struggles-title">
         Are you running ads and
@@ -96,9 +124,12 @@
       </h2>
     </div>
 
+    <!-- Cards Grid -->
     <div class="struggles-grid">
+      <!-- Card 1: Getting Sales In Consistently -->
       <div class="struggles-card">
         <div class="struggles-card-image">
+          <!-- Placeholder - replace with actual illustration -->
           <img class="struggles-card-light" src="../Resources/AdvHomePage/s1.png" alt="">
           <img class="struggles-card-dark" src="../Resources/AdvHomePage/s1-dark.png" alt="">
         </div>
@@ -108,8 +139,10 @@
         </p>
       </div>
 
+      <!-- Card 2: Weak Offers -->
       <div class="struggles-card">
         <div class="struggles-card-image">
+          <!-- Placeholder - replace with actual illustration -->
           <img class="struggles-card-light" src="../Resources/AdvHomePage/s2.png" alt="">
           <img class="struggles-card-dark" src="../Resources/AdvHomePage/s2-dark.png" alt="">
         </div>
@@ -119,8 +152,10 @@
         </p>
       </div>
 
+      <!-- Card 3: No Funnel Clarity -->
       <div class="struggles-card">
         <div class="struggles-card-image">
+          <!-- Placeholder - replace with actual illustration -->
           <img class="struggles-card-light" src="../Resources/AdvHomePage/s3.png" alt="">
           <img class="struggles-card-dark" src="../Resources/AdvHomePage/s3-dark.png" alt="">
         </div>
@@ -130,8 +165,10 @@
         </p>
       </div>
 
+      <!-- Card 4: Ad Fatigue & Poor Performance -->
       <div class="struggles-card">
         <div class="struggles-card-image">
+          <!-- Placeholder - replace with actual illustration -->
           <img class="struggles-card-light" src="../Resources/AdvHomePage/s4.png" alt="">
           <img class="struggles-card-dark" src="../Resources/AdvHomePage/s4-dark.png" alt="">
         </div>
@@ -141,8 +178,10 @@
         </p>
       </div>
 
+      <!-- Card 5: Understanding Data -->
       <div class="struggles-card">
         <div class="struggles-card-image">
+          <!-- Placeholder - replace with actual illustration -->
           <img class="struggles-card-light" src="../Resources/AdvHomePage/s5.png" alt="">
           <img class="struggles-card-dark" src="../Resources/AdvHomePage/s5-dark.png" alt="">
         </div>
@@ -152,8 +191,10 @@
         </p>
       </div>
 
+      <!-- Card 6: Relying Too Much on Agencies or AI -->
       <div class="struggles-card">
         <div class="struggles-card-image">
+          <!-- Placeholder - replace with actual illustration -->
           <img class="struggles-card-light" src="../Resources/AdvHomePage/s6.png" alt="">
           <img class="struggles-card-dark" src="../Resources/AdvHomePage/s6-dark.png" alt="">
         </div>
@@ -167,6 +208,7 @@
 
   <section class="end-of-the-course-section">
     <div class="course-section-container">
+      <!-- Section Header -->
       <div class="course-section-header">
         <h2 class="course-section-title neue-font">
           By the end of this course,<br>
@@ -174,7 +216,9 @@
         </h2>
       </div>
 
+      <!-- Features Grid - 3x2 Layout -->
       <div class="course-features-grid">
+        <!-- Card 1: Create Offers That Convert -->
         <div class="course-feature-card">
           <div class="feature-illustration">
             <img src="../Resources/AdvHomePage/e1.png" alt="Create Offers That Convert" class="feature-img" />
@@ -187,6 +231,7 @@
           </div>
         </div>
 
+        <!-- Card 2: Build Funnels That Sell for You -->
         <div class="course-feature-card">
           <div class="feature-illustration">
             <img src="../Resources/AdvHomePage/e2.png" alt="Build Funnels That Sell for You" class="feature-img" />
@@ -199,6 +244,7 @@
           </div>
         </div>
 
+        <!-- Card 3: Understand Your Audience Deeply -->
         <div class="course-feature-card">
           <div class="feature-illustration">
             <img src="../Resources/AdvHomePage/e3.png" alt="Understand Your Audience Deeply" class="feature-img" />
@@ -211,6 +257,7 @@
           </div>
         </div>
 
+        <!-- Card 4: Run Ads That Bring Real Results -->
         <div class="course-feature-card">
           <div class="feature-illustration">
             <img src="../Resources/AdvHomePage/e4.png" alt="Run Ads That Bring Real Results" class="feature-img" />
@@ -223,6 +270,7 @@
           </div>
         </div>
 
+        <!-- Card 5: Scale With Confidence -->
         <div class="course-feature-card">
           <div class="feature-illustration">
             <img src="../Resources/AdvHomePage/e5.png" alt="Scale With Confidence" class="feature-img" />
@@ -235,6 +283,7 @@
           </div>
         </div>
 
+        <!-- Card 6: Become Independent From Agencies or Guesswork -->
         <div class="course-feature-card">
           <div class="feature-illustration">
             <img src="../Resources/AdvHomePage/e6.png" alt="Become Independent From Agencies or Guesswork" class="feature-img" />
@@ -250,7 +299,9 @@
     </div>
   </section>
 
+  <!-- COURSE CURRICULUM SECTION - New Design -->
   <section class="course-curriculum-new" id="course-curriculum">
+    <!-- Section Header -->
     <div class="curriculum-header-new">
       <h2 class="curriculum-title-new">Course Curriculum</h2>
       <p class="curriculum-subtitle-new">
@@ -260,7 +311,9 @@
       </p>
     </div>
 
+    <!-- Curriculum Cards Container -->
     <div class="curriculum-cards-new">
+      <!-- Module 01: Psychology of Selling with Ads (Preview) -->
       <div class="curriculum-module-card">
         <div class="module-content">
           <div class="module-number">01</div>
@@ -276,6 +329,7 @@
         </div>
       </div>
 
+      <!-- Module 02: Finding Your Target Group -->
       <div class="curriculum-module-card">
         <div class="module-content">
           <div class="module-number">02</div>
@@ -292,6 +346,7 @@
         </div>
       </div>
 
+      <!-- Module 03: Crafting an Irresistible Offer -->
       <div class="curriculum-module-card">
         <div class="module-content">
           <div class="module-number">03</div>
@@ -308,6 +363,7 @@
         </div>
       </div>
 
+      <!-- Module 04: Selecting Media for Your Target Market -->
       <div class="curriculum-module-card">
         <div class="module-content">
           <div class="module-number">04</div>
@@ -323,6 +379,7 @@
         </div>
       </div>
 
+      <!-- Module 05: Understanding Funnels & Why They Matter -->
       <div class="curriculum-module-card">
         <div class="module-content">
           <div class="module-number">05</div>
@@ -339,6 +396,7 @@
         </div>
       </div>
 
+      <!-- Module 06: Creative Strategy (Formats + Copywriting) -->
       <div class="curriculum-module-card">
         <div class="module-content">
           <div class="module-number">06</div>
@@ -353,6 +411,7 @@
         </div>
       </div>
 
+      <!-- Module 07: Audience Targeting in Detail -->
       <div class="curriculum-module-card">
         <div class="module-content">
           <div class="module-number">07</div>
@@ -368,6 +427,7 @@
         </div>
       </div>
 
+      <!-- Module 08: Budgets & Placements (ABO, CBO & Beyond) -->
       <div class="curriculum-module-card">
         <div class="module-content">
           <div class="module-number">08</div>
@@ -383,6 +443,7 @@
         </div>
       </div>
 
+      <!-- Module 09: Standard vs Advantage + Campaigns -->
       <div class="curriculum-module-card">
         <div class="module-content">
           <div class="module-number">09</div>
@@ -398,6 +459,7 @@
         </div>
       </div>
 
+      <!-- Module 10: Pixel & Tracking Setup -->
       <div class="curriculum-module-card">
         <div class="module-content">
           <div class="module-number">10</div>
@@ -415,6 +477,7 @@
         </div>
       </div>
 
+      <!-- Module 11: Reading & Understanding Performance -->
       <div class="curriculum-module-card">
         <div class="module-content">
           <div class="module-number">11</div>
@@ -430,6 +493,7 @@
         </div>
       </div>
 
+      <!-- Module 12: The Power of Remarketing -->
       <div class="curriculum-module-card">
         <div class="module-content">
           <div class="module-number">12</div>
@@ -446,6 +510,7 @@
         </div>
       </div>
 
+      <!-- Module 13: Testing & Optimization Framework -->
       <div class="curriculum-module-card">
         <div class="module-content">
           <div class="module-number">13</div>
@@ -462,6 +527,7 @@
         </div>
       </div>
 
+      <!-- Module 14: Scaling Your Ads -->
       <div class="curriculum-module-card">
         <div class="module-content">
           <div class="module-number">14</div>
@@ -478,6 +544,7 @@
         </div>
       </div>
 
+      <!-- Module 15: CAC vs CLTV – Thinking Beyond Cost per Lead -->
       <div class="curriculum-module-card">
         <div class="module-content">
           <div class="module-number">15</div>
@@ -494,6 +561,7 @@
         </div>
       </div>
 
+      <!-- Module 16: Why Great Ads Don't Always Win on Day 1 -->
       <div class="curriculum-module-card">
         <div class="module-content">
           <div class="module-number">16</div>
@@ -513,6 +581,7 @@
 
   </section>
 
+  <!-- THIS IS OUR GUARANTEE SECTION - New Design -->
   <section class="guarantee-new-section">
     <div class="guarantee-new-container">
       <h2 class="guarantee-new-title">
@@ -531,12 +600,15 @@
     </div>
   </section>
 
+  <!-- ROAS MISSION SECTION - New Design with Illustration -->
   <section class="roas-mission-new">
     <div class="mission-new-container">
+      <!-- Left: Illustration -->
       <div class="mission-illustration">
         <img src="../Resources/AdvHomePage/roas-mission.png" alt="ROAS Mission Illustration" />
       </div>
 
+      <!-- Right: Text Content -->
       <div class="mission-new-content">
         <h2 class="mission-new-title">
           The ROAS School of<br>
@@ -560,7 +632,9 @@
     </div>
   </section>
 
+  <!-- INSTRUCTOR SECTION -->
   <section class="instructor-section">
+    <!-- Instructor Card -->
     <div class="instructor-card">
       <div class="instructor-content">
         <span class="instructor-label">Meet Your Instructor</span>
@@ -589,13 +663,16 @@
       </div>
     </div>
   </section>
+  <!-- PROOF OF WORK SECTION -->
   <section class="proof-of-work" id="proof-of-work">
+    <!-- Section Header -->
     <div class="proof-header">
       <div class="proof-title-box">
         <span class="proof-title-text">Here's the <span class="proof-highlight-word">Proof</span> of my work</span>
       </div>
     </div>
 
+    <!-- Subtitle -->
     <p class="proof-subtitle">
       Don't just take my word for it <span class="proof-dash">—</span>
       <span class="proof-highlight">
@@ -603,7 +680,9 @@
       </span>
     </p>
 
+    <!-- Results Grid -->
     <div class="proof-results-grid">
+      <!-- Result Card 1 - Left -->
       <div class="proof-card card-right">
         <div class="proof-card-image">
           <div class="card-image-shadow"></div>
@@ -627,6 +706,7 @@
         </div>
       </div>
 
+      <!-- Result Card 2 - Right -->
       <div class="proof-card card-left">
         <div class="proof-card-metrics">
           <div class="metric-item">
@@ -650,6 +730,7 @@
         </div>
       </div>
 
+      <!-- Result Card 3 - Left -->
       <div class="proof-card card-right">
         <div class="proof-card-image">
           <div class="card-image-shadow"></div>
@@ -673,6 +754,7 @@
         </div>
       </div>
 
+      <!-- Result Card 4 - Right -->
       <div class="proof-card card-left">
         <div class="proof-card-metrics">
           <div class="metric-item">
@@ -696,6 +778,7 @@
         </div>
       </div>
 
+      <!-- Result Card 5 - Left -->
       <div class="proof-card card-right">
         <div class="proof-card-image">
           <div class="card-image-shadow"></div>
@@ -719,6 +802,7 @@
         </div>
       </div>
 
+      <!-- Result Card 6 - Right -->
       <div class="proof-card card-left">
         <div class="proof-card-metrics">
           <div class="metric-item">
@@ -742,6 +826,7 @@
         </div>
       </div>
 
+      <!-- Result Card 7 - Left -->
       <div class="proof-card card-right">
         <div class="proof-card-image">
           <div class="card-image-shadow"></div>
@@ -765,6 +850,7 @@
         </div>
       </div>
 
+      <!-- Result Card 8 - Right -->
       <div class="proof-card card-left">
         <div class="proof-card-metrics">
           <div class="metric-item">
@@ -788,6 +874,7 @@
         </div>
       </div>
 
+      <!-- Result Card 9 - Left -->
       <div class="proof-card card-right">
         <div class="proof-card-image">
           <div class="card-image-shadow"></div>
@@ -811,6 +898,7 @@
         </div>
       </div>
 
+      <!-- Result Card 10 - Right -->
       <div class="proof-card card-left">
         <div class="proof-card-metrics">
           <div class="metric-item">
@@ -830,9 +918,11 @@
           <div class="card-image-shadow"></div>
           <div class="card-image-content">
             <img src="../Resources/AdvHomePage/proof-10.jpg" alt="Performance Screenshot 10" />
+            <!-- <div class="blur-on-image-result"></div> -->
           </div>
         </div>
       </div>
+      <!-- Result Card 11 - Left -->
       <div class="proof-card card-right">
         <div class="proof-card-image">
           <div class="card-image-shadow"></div>
@@ -858,9 +948,12 @@
     </div>
   </section>
 
+  <!-- MARKETING STATS CAROUSEL SECTION -->
   <section class="stats-carousel-section">
     <div class="stats-carousel-container" id="stats-carousel">
       <div class="stats-carousel-track" id="stats-carousel-track">
+        
+        <!-- Slide 1 -->
         <div class="stats-carousel-slide">
           <div class="stats-slide-content" style="background: url('../Resources/AdvHomePage/carousel-1.png') center/cover no-repeat;">
             <div class="stats-slide-overlay"></div>
@@ -872,6 +965,7 @@
           </div>
         </div>
 
+        <!-- Slide 2 -->
         <div class="stats-carousel-slide">
           <div class="stats-slide-content" style="background: url('../Resources/AdvHomePage/carousel-2.png') center/cover no-repeat;">
             <div class="stats-slide-overlay"></div>
@@ -881,6 +975,7 @@
           </div>
         </div>
 
+        <!-- Slide 3 -->
         <div class="stats-carousel-slide">
           <div class="stats-slide-content" style="background: url('../Resources/AdvHomePage/carousel-3.png') center/cover no-repeat;">
             <div class="stats-slide-overlay"></div>
@@ -893,6 +988,7 @@
       </div>
     </div>
   </section>
+  <!-- EXCLUSIVE BONUS BUNDLES SECTION -->
   <section class="bonus-bundles-section">
     <div class="bonus-header-container">
       <h2 class="bonus-section-title">
@@ -900,6 +996,7 @@
       </h2>
     </div>
     <div class="bonus-grid">
+      <!-- Card 1 -->
       <div class="bonus-card">
         <div class="bonus-image-wrapper">
           <img src="../Resources/AdvHomePage/bonus-1.png" alt="The ROASGUY Toolkit" />
@@ -916,6 +1013,7 @@
            </ul>
         </div>
       </div>
+      <!-- Card 2 -->
       <div class="bonus-card">
         <div class="bonus-image-wrapper">
           <img src="../Resources/AdvHomePage/bonus-2.png" alt="The Ad Performance Bundle" />
@@ -934,6 +1032,7 @@
            </ul>
         </div>
       </div>
+      <!-- Card 3 -->
       <div class="bonus-card">
         <div class="bonus-image-wrapper">
           <img src="../Resources/AdvHomePage/bonus-3.png" alt="The Facebook Ads Survival Pack" />
@@ -952,6 +1051,7 @@
            </ul>
         </div>
       </div>
+      <!-- Card 4 -->
       <div class="bonus-card">
         <div class="bonus-image-wrapper">
           <img src="../Resources/AdvHomePage/bonus-4.png" alt="The Growth Accelerator Bundle" />
@@ -972,8 +1072,10 @@
     </div>
   </section>
 
+  <!-- COURSE FIT SECTION - For/Not For You -->
   <section class="course-fit-section">
     <div class="course-fit-container">
+      <!-- Left Column - This course IS for you -->
       <div class="course-fit-column fit-for-you">
         <h3 class="course-fit-title">This course is for you if…</h3>
         <div class="course-fit-divider"></div>
@@ -1017,8 +1119,10 @@
         </ul>
       </div>
 
+      <!-- Vertical Divider -->
       <div class="course-fit-vertical-divider"></div>
 
+      <!-- Right Column - This course is NOT for you -->
       <div class="course-fit-column fit-not-for-you">
         <h3 class="course-fit-title">This course is not for you if…</h3>
         <div class="course-fit-divider"></div>
@@ -1058,11 +1162,14 @@
     </div>
   </section>
 
+  <!-- CERTIFICATION THAT SETS YOU APART SECTION -->
   <section class="certification-apart-section">
     <div class="certification-apart-card">
+      <!-- Left Content -->
       <div class="certification-apart-content">
         <h2 class="certification-apart-title">Certification That Sets You Apart</h2>
         <p class="certification-apart-subtitle">This isn't just a certificate — it's proof that you can:</p>
+        
         <ul class="certification-apart-list">
           <li>
             <span class="cert-check-icon">
@@ -1098,24 +1205,30 @@
 
         <p class="certification-apart-footer">Add it to your resume, LinkedIn, or client pitches — and stand out as a marketer who drives real business growth.</p>
 
+        <!-- Enroll Button -->
         <a href="/cartpage" class="btn-certification-enroll">
           <span class="btn-certification-text">Enroll Now</span>
         </a>
       </div>
 
+      <!-- Right Image -->
       <div class="certification-apart-image">
         <img src="../Resources/AdvHomePage/certificate.png" alt="ROAS School Of Marketing Certificate" />
       </div>
     </div>
   </section>
 
+  <!-- ROLES YOU CAN EXPECT SECTION -->
   <section class="roles-expect-section">
     <div class="roles-expect-container">
+      <!-- Section Title -->
       <h2 class="roles-expect-title">
         After completing this course, <span class="roles-highlight">these are the roles you can expect:</span>
       </h2>
 
+      <!-- Roles Grid -->
       <div class="roles-grid">
+        <!-- Role Card 1: Meta Ads Specialist -->
         <div class="role-card">
           <div class="role-icon">
             <image class="role-img-light" src="../Resources/AdvHomePage/afc-light1.png"/>
@@ -1126,6 +1239,7 @@
           <p class="role-salary">Average Salary: <span class="role-salary-highlight">₹4.5 – ₹8 LPA</span></p>
         </div>
 
+        <!-- Role Card 2: Performance Marketer -->
         <div class="role-card">
           <div class="role-icon">
             <image class="role-img-light" src="../Resources/AdvHomePage/afc-light2.png"/>
@@ -1136,6 +1250,7 @@
           <p class="role-salary">Average Salary: <span class="role-salary-highlight">₹6 – ₹12 LPA</span></p>
         </div>
 
+        <!-- Role Card 3: Digital Marketing Executive -->
         <div class="role-card">
           <div class="role-icon">
             <image class="role-img-light" src="../Resources/AdvHomePage/afc-light3.png"/>
@@ -1146,6 +1261,7 @@
           <p class="role-salary">Average Salary: <span class="role-salary-highlight">₹3 – ₹6 LPA</span></p>
         </div>
 
+        <!-- Role Card 4: Creative Strategist -->
         <div class="role-card">
           <div class="role-icon">
             <image class="role-img-light" src="../Resources/AdvHomePage/afc-light4.png"/>
@@ -1156,6 +1272,7 @@
           <p class="role-salary">Average Salary: <span class="role-salary-highlight">₹5 – ₹10 LPA</span></p>
         </div>
 
+        <!-- Role Card 5: Marketing Funnel Specialist -->
         <div class="role-card">
           <div class="role-icon">
             <image class="role-img-light" src="../Resources/AdvHomePage/afc-light5.png"/>
@@ -1166,6 +1283,7 @@
           <p class="role-salary">Average Salary: <span class="role-salary-highlight">₹5 – ₹9 LPA</span></p>
         </div>
 
+        <!-- Role Card 6: Freelancer / Meta Ads Manager -->
         <div class="role-card">
           <div class="role-icon">
             <image class="role-img-light" src="../Resources/AdvHomePage/afc-light6.png"/>
@@ -1179,11 +1297,15 @@
     </div>
   </section>
 
+  <!-- PRICING PLAN SECTION -->
   <section class="pricing-plan-section" id="pricing-section">
     <div class="pricing-plan-container">
+      <!-- Section Title -->
       <h2 class="pricing-plan-title">Pricing plan</h2>
 
+      <!-- Pricing Cards Container -->
       <div class="pricing-cards-wrapper">
+        <!-- Card 1: Business Growth Plan (Most Popular - Purple) -->
         <div class="pricing-card pricing-card-featured">
           <div class="pricing-badge pricing-badge-white">
             <span>MOST POPULAR</span>
@@ -1191,6 +1313,7 @@
           <div class="pricing-price">₹49,991</div>
           <h3 class="pricing-card-title">Business Growth<br>Plan</h3>
           <p class="pricing-card-subtitle">1-on-1 Mentorship to Scale Your Business with Meta Ads</p>
+          
           <ul class="pricing-features-list">
             <li class="pricing-feature">
               <span class="feature-icon feature-check-white"></span>
@@ -1221,14 +1344,17 @@
               <span class="feature-text">Funnel & Ad Plan</span>
             </li>
           </ul>
+          
           <a href="/business-growth-cart" class="pricing-btn">Choose plan</a>
           <p class="pricing-refund"><strong>100% refund</strong> if not satisfied</p>
         </div>
 
+        <!-- Card 2: Value Plan (Middle) -->
         <div class="pricing-card pricing-card-light">
           <div class="pricing-price pricing-price-dark">₹14,991</div>
           <h3 class="pricing-card-title pricing-title-dark">Value Plan</h3>
           <p class="pricing-card-subtitle pricing-subtitle-dark">For those who want feedback & real-time guidance.</p>
+          
           <ul class="pricing-features-list">
             <li class="pricing-feature">
               <span class="feature-icon feature-check-blue"></span>
@@ -1259,14 +1385,17 @@
               <span class="feature-text feature-text-dark">No Personalized Offer Creation or Funnel Setup</span>
             </li>
           </ul>
+          
           <a href="/value-cart" class="pricing-btn">Choose plan</a>
           <p class="pricing-refund pricing-refund-dark"><strong>100% refund</strong> if not satisfied</p>
         </div>
 
+        <!-- Card 3: Basic Plan (Right) -->
         <div class="pricing-card pricing-card-standard">
           <div class="pricing-price pricing-price-dark">₹13,991</div>
           <h3 class="pricing-card-title pricing-title-dark">Basic Plan</h3>
           <p class="pricing-card-subtitle pricing-subtitle-dark">For those who prefer learning at their own pace.</p>
+          
           <ul class="pricing-features-list">
             <li class="pricing-feature">
               <span class="feature-icon feature-check-blue"></span>
@@ -1301,6 +1430,7 @@
               <span class="feature-text feature-text-dark">No 1-on-1 Mentorship</span>
             </li>
           </ul>
+          
           <a href="/basic-cart" class="pricing-btn">Choose plan</a>
           <p class="pricing-refund pricing-refund-dark"><strong>100% refund</strong> if not satisfied</p>
         </div>
@@ -1312,6 +1442,7 @@
       <h2 class="faq-title">Frequently Asked Questions</h2>
 
       <div class="faq-list">
+        <!-- FAQ Item 1 -->
         <details class="faq-item" open>
           <summary class="faq-summary">
             <span class="faq-icon" aria-hidden="true"></span>
@@ -1325,6 +1456,7 @@
         </details>
         <div class="faq-divider"></div>
 
+        <!-- FAQ Item 2 -->
         <details class="faq-item">
           <summary class="faq-summary">
             <span class="faq-icon" aria-hidden="true"></span>
@@ -1338,6 +1470,7 @@
         </details>
         <div class="faq-divider"></div>
 
+        <!-- FAQ Item 3 -->
         <details class="faq-item">
           <summary class="faq-summary">
             <span class="faq-icon" aria-hidden="true"></span>
@@ -1351,6 +1484,7 @@
         </details>
         <div class="faq-divider"></div>
 
+        <!-- FAQ Item 4 -->
         <details class="faq-item">
           <summary class="faq-summary">
             <span class="faq-icon" aria-hidden="true"></span>
@@ -1364,6 +1498,7 @@
         </details>
         <div class="faq-divider"></div>
 
+        <!-- FAQ Item 5 -->
         <details class="faq-item">
           <summary class="faq-summary">
             <span class="faq-icon" aria-hidden="true"></span>
@@ -1377,6 +1512,7 @@
         </details>
         <div class="faq-divider"></div>
 
+        <!-- FAQ Item 6 -->
         <details class="faq-item">
           <summary class="faq-summary">
             <span class="faq-icon" aria-hidden="true"></span>
@@ -1390,6 +1526,7 @@
         </details>
         <div class="faq-divider"></div>
 
+        <!-- FAQ Item 7 -->
         <details class="faq-item">
           <summary class="faq-summary">
             <span class="faq-icon" aria-hidden="true"></span>
@@ -1403,6 +1540,7 @@
         </details>
         <div class="faq-divider"></div>
 
+        <!-- FAQ Item 8 -->
         <details class="faq-item">
           <summary class="faq-summary">
             <span class="faq-icon" aria-hidden="true"></span>
@@ -1416,6 +1554,7 @@
         </details>
         <div class="faq-divider"></div>
 
+        <!-- FAQ Item 9 -->
         <details class="faq-item">
           <summary class="faq-summary">
             <span class="faq-icon" aria-hidden="true"></span>
@@ -1429,6 +1568,7 @@
         </details>
         <div class="faq-divider"></div>
 
+        <!-- FAQ Item 10 -->
         <details class="faq-item">
           <summary class="faq-summary">
             <span class="faq-icon" aria-hidden="true"></span>
@@ -1442,6 +1582,7 @@
         </details>
         <div class="faq-divider"></div>
 
+        <!-- FAQ Item 11 -->
         <details class="faq-item">
           <summary class="faq-summary">
             <span class="faq-icon" aria-hidden="true"></span>
@@ -1455,6 +1596,7 @@
         </details>
         <div class="faq-divider"></div>
 
+        <!-- FAQ Item 12 -->
         <details class="faq-item">
           <summary class="faq-summary">
             <span class="faq-icon" aria-hidden="true"></span>
@@ -1468,6 +1610,7 @@
         </details>
         <div class="faq-divider"></div>
 
+        <!-- FAQ Item 13 -->
         <details class="faq-item">
           <summary class="faq-summary">
             <span class="faq-icon" aria-hidden="true"></span>
@@ -1483,7 +1626,9 @@
     </div>
   </section>
   <section class="footer-section">
+    <!-- Footer Image -->
     <div class="footer-image">
+      <!-- Light Mode SVG -->
       <svg class="footer-svg-light" width="1512" height="775" viewBox="0 0 1512 775" fill="none"
         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <rect x="-6" width="1523" height="775" fill="url(#pattern0_1_14)" />
@@ -1496,6 +1641,7 @@
         </defs>
       </svg>
 
+      <!-- Dark Mode SVG -->
       <svg width="1512" height="775" viewBox="0 0 1512 775" fill="none" xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink" class="footer-svg-dark">
         <rect x="-6" width="1523" height="775" fill="url(#pattern0_2_12164)" />
@@ -1577,6 +1723,7 @@
     });
   </script>
 
+  <!-- Stats Carousel Auto-slide and Drag Functionality (Infinite Loop) -->
   <script>
     (function() {
       const carousel = document.getElementById('stats-carousel');
@@ -1638,10 +1785,13 @@
       function nextSlide() {
         if (isTransitioning) return;
         isTransitioning = true;
+        
         const slideWidth = getSlideWidth();
         const currentScroll = carousel.scrollLeft;
         const targetScroll = currentScroll + slideWidth;
+        
         scrollToPosition(targetScroll, true);
+        
         currentIndex++;
         if (currentIndex >= slideCount) {
           currentIndex = 0;
@@ -1653,6 +1803,7 @@
         const slideWidth = getSlideWidth();
         const currentScroll = carousel.scrollLeft;
         const totalRealWidth = slideWidth * slideCount;
+        
         // If scrolled past the last real slide (into clones at end)
         if (currentScroll >= totalRealWidth * 2) {
           carousel.scrollLeft = currentScroll - totalRealWidth;
@@ -1664,6 +1815,7 @@
             carousel.scrollLeft = currentScroll + totalRealWidth;
           }
         }
+        
         isTransitioning = false;
       }
 
@@ -1777,4 +1929,5 @@
     })();
   </script>
 </body>
+
 </html>

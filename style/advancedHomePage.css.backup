@@ -1,10 +1,17 @@
+/* =========================================
+           CSS VARIABLES (THEMING)
+           ========================================= */
 :root {
+  /* --- Light Mode Palette --- */
   --bg-body: #ffffff;
   --bg-nav: #ffffff;
   --text-main: #000000;
   --text-sub: #0099ff;
+  /* The blue text color */
   --text-desc: #000000;
 
+  /* Light Mode Background with subtle Grid */
+  /* Replaced with new premium gradient from Figma */
   --hero-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.96) 26.16%, #FFFFFF 74.06%, rgba(255, 255, 255, 0.95) 95.96%), #FFFFFF;
   --hero-box-shadow: 0px 8px 0px #08A4FF;
   --hero-border-radius: 43px;
@@ -15,10 +22,13 @@
   --toggle-circle: #d9d9d9;
   --nav-shadow: 0px 4px 28.7px #08a4ff;
 
+  /* Button Gradient */
   --btn-gradient: linear-gradient(90deg, #1acfff 0%, #0076ff 100%);
 
+  /* Text Colors */
   --text-hero-desc: #08A4FF;
 
+  /* Language Button Variables (Light Mode) */
   --lang-active-bg: linear-gradient(90deg, #08A4FF 0%, #056299 100%);
   --lang-active-text: linear-gradient(91.52deg, #FFFFFF -1.64%, #EEEEEE 133.11%);
   --lang-inactive-bg: linear-gradient(91.52deg, #FFFFFF -1.64%, #EEEEEE 133.11%);
@@ -39,15 +49,20 @@
 }
 
 body.dark-mode {
+  /* --- Dark Mode Palette --- */
   --bg-body: #000000;
   --bg-nav: #000000;
   --text-main: #ffffff;
   --text-sub: #1acfff;
   --text-desc: #e0e0e0;
 
+  /* Dark Mode Background with Grid */
+  /* Dark Mode Background with Grid */
+  /* Replaced with new premium gradient from Figma */
   --hero-bg: linear-gradient(180deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.589) 8.18%, rgba(0, 0, 0, 0.874) 12.51%, rgba(0, 0, 0, 0.6935) 25.85%, rgba(0, 0, 0, 0.608) 59.13%, rgba(0, 0, 0, 0.627) 62.46%, rgba(0, 0, 0, 0.6935) 83.18%, rgba(0, 0, 0, 0.95) 94.24%), #000000;
   --hero-box-shadow: 0px 4px 0px rgba(163, 163, 163, 0.25);
 
+  /* Size for the grid lines */
   --bg-size: 80px 80px, 80px 80px;
 
   --toggle-bg: #333333;
@@ -57,6 +72,7 @@ body.dark-mode {
   --play-btn-bg: #ffffff;
   --play-icon-color: #000000;
 
+  /* Language Button Variables (Dark Mode) */
   --lang-active-bg: linear-gradient(90deg, #08A4FF 0%, #056299 100%);
   --lang-active-text: linear-gradient(91.52deg, #FFFFFF -1.64%, #EEEEEE 133.11%);
   --lang-inactive-bg: linear-gradient(91.52deg, #FFFFFF -1.64%, #EEEEEE 133.11%);
@@ -72,6 +88,9 @@ body.dark-mode {
   --primary-color: #000000;
 }
 
+/* =========================================
+           RESET & BASE STYLES
+           ========================================= */
 * {
   margin: 0;
   padding: 0;
@@ -81,6 +100,7 @@ body.dark-mode {
     box-shadow 0.3s ease;
 }
 
+/* Font specific simulation for "Neue Montreal" */
 .neue-font {
   font-family: 'Lexend', sans-serif;
   letter-spacing: -0.02em;
@@ -95,11 +115,16 @@ body {
   background-color: var(--bg-body);
   background-size: var(--bg-size,
       auto);
+  /* Apply grid size only in dark mode */
   width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
   position: relative;
 }
+
+/* =========================================
+   NAVBAR
+   ========================================= */
 
 .navbar {
   position: sticky;
@@ -133,6 +158,7 @@ body {
   object-fit: contain;
 }
 
+/* Theme-based logo visibility */
 .logo-light {
   display: block;
 }
@@ -149,12 +175,14 @@ body.dark-mode .logo-dark {
   display: block;
 }
 
+/* Nav Controls Container */
 .nav-controls {
   display: flex;
   align-items: center;
   gap: 2vw;
 }
 
+/* Desktop Enroll Now Button - Navbar Header */
 .nav-enroll-btn-desktop {
   display: flex;
   justify-content: center;
@@ -182,6 +210,7 @@ body.dark-mode .logo-dark {
   box-shadow: 0px 4px 15px rgba(8, 164, 255, 0.4);
 }
 
+/* Theme Toggle */
 .theme-switch {
   position: relative;
   width: 6vh;
@@ -227,6 +256,7 @@ input:checked+.slider:before {
   transform: translateX(3vh);
 }
 
+/* Nav Button */
 .btn-nav {
   background: linear-gradient(90deg, #1acfff 0%, #0076ff 100%);
   color: white;
@@ -245,6 +275,11 @@ input:checked+.slider:before {
   box-shadow: 0 4px 15px rgba(0, 118, 255, 0.3);
 }
 
+/* =========================================
+   NAVBAR NAVIGATION BUTTONS
+   ========================================= */
+
+/* Container for nav buttons - Floating Bottom Navbar */
 .nav-buttons {
   position: fixed;
   bottom: 20px;
@@ -258,6 +293,7 @@ input:checked+.slider:before {
   padding: 12px 24px;
 }
 
+/* Blue gradient pill containing navigation links */
 .nav-pill {
   display: flex;
   flex-direction: row;
@@ -270,6 +306,7 @@ input:checked+.slider:before {
   height: 35px;
 }
 
+/* Navigation links inside the pill */
 .nav-pill-link {
   font-family: 'Lexend', sans-serif;
   font-style: normal;
@@ -289,6 +326,7 @@ input:checked+.slider:before {
   opacity: 0.85;
 }
 
+/* Vertical divider lines between links */
 .nav-pill-divider {
   width: 1px;
   height: 20px;
@@ -296,6 +334,7 @@ input:checked+.slider:before {
   border-radius: 1px;
 }
 
+/* White Enroll Now button */
 .nav-enroll-btn {
   display: flex;
   flex-direction: row;
@@ -325,6 +364,10 @@ input:checked+.slider:before {
   transform: translateY(-2px);
   box-shadow: 0px -5px 15px rgba(8, 164, 255, 0.4);
 }
+
+/* =========================================
+   RESPONSIVE NAVBAR
+   ========================================= */
 
 @media (max-width: 1024px) {
   .nav-buttons {
@@ -367,6 +410,7 @@ input:checked+.slider:before {
     display: none;
   }
 
+  /* Hide Desktop Enroll Button on Mobile */
   .nav-enroll-btn-desktop {
     display: none;
   }
@@ -381,6 +425,7 @@ input:checked+.slider:before {
     border-radius: 40px;
   }
 
+  /* Hide Enroll Button on Mobile Navbar */
   .nav-enroll-btn {
     display: flex;
     flex-direction: row;
@@ -406,6 +451,7 @@ input:checked+.slider:before {
     white-space: nowrap;
   }
 
+  /* Adjust Pill for Mobile */
   .nav-pill {
     padding: 5px 15px;
     gap: 15px;
@@ -422,6 +468,8 @@ input:checked+.slider:before {
     height: 12px;
   }
 
+
+  /* Hero Section Mobile Adjustments */
   .hero-content {
     flex-direction: column;
     align-items: center;
@@ -438,6 +486,7 @@ input:checked+.slider:before {
     align-items: center;
   }
 
+  /* Hero CTA Button - Show as text button on mobile (image hidden, text visible) */
   .btn-hero {
     position: static;
     width: 256px;
@@ -458,14 +507,17 @@ input:checked+.slider:before {
     text-decoration: none;
   }
 
+  /* Hide the image on mobile, show text instead */
   .btn-hero img {
     display: none;
   }
+
 
 }
 
 @media (max-width: 480px) {
 
+  /* Mobile-specific color overrides for guarantee title text */
   :root {
     --guarantee-title-text: #000000;
   }
@@ -477,6 +529,7 @@ input:checked+.slider:before {
   .navbar {
     height: 53px;
     padding: 8.24px 10px;
+    /* Reduce side padding to make room */
     background: var(--bg-nav);
     box-shadow: 0px 4px 12.3px #08a4ff;
   }
@@ -504,6 +557,10 @@ input:checked+.slider:before {
     height: 10px;
   }
 
+
+  /* ... (Existing Navbar overrides) ... - Keeping them valid if needed, or simply appending the new rules */
+
+  /* Hero Section Typography */
   .hero-title {
     font-size: 42px;
     line-height: 100%;
@@ -523,29 +580,36 @@ input:checked+.slider:before {
     line-height: 25px;
   }
 
+  /* Section Title Sizes */
   .course-section-title,
   .beginner-title {
     font-size: 32px;
     line-height: 40px;
   }
 
+  /* Language Toggle - Mobile Sizing from Figma (Frame 96/95) */
   .language-toggle {
     margin-top: 2vh;
     gap: 0;
+    /* Reset gap as we use specific dimensions */
     width: 271.17px;
     height: 23.81px;
     justify-content: space-between;
+    /* To separate the two buttons */
   }
 
   .lang-btn {
     width: 110.96px;
     height: 23.81px;
     min-width: 0;
+    /* Override previous min-width */
     padding: 2.82px 6.86px;
     font-size: 12.912px;
     line-height: 16px;
     border-radius: 8.07px;
   }
+
+  /* Language Toggle Active/Inactive Styles match broadly with base variables but size was key discrepancy */
 
   .logo-container {
     height: 36px;
@@ -576,6 +640,20 @@ input:checked+.slider:before {
     transform: translateX(18px);
   }
 
+  /* Language Toggle Wrapper - Mobile (Gray Container)
+  .language-toggle-wrapper {
+    width: 371px;
+    max-width: 100%;
+    height: 101.78px;
+    background: transparent;
+    border-radius: 14.23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  } */
+
+  /* Video Card Wrapper - Mobile */
   .video-card-wrapper {
     width: 371px;
     max-width: 100%;
@@ -590,6 +668,7 @@ input:checked+.slider:before {
     border-radius: 19.7px;
   }
 
+  /* Play Button - Mobile */
   .play-btn {
     display: flex;
     flex-direction: row;
@@ -608,6 +687,11 @@ input:checked+.slider:before {
     fill: #49454F;
   }
 
+  /* =========================================
+     MOBILE HERO SECTION - Figma Design
+     ========================================= */
+
+  /* Mobile Hero Container */
   .hero-container {
     padding: 0;
     display: flex;
@@ -616,6 +700,7 @@ input:checked+.slider:before {
     gap: 20px;
   }
 
+  /* Mobile Hero Content - Centered Column Layout */
   .hero-content {
     display: flex;
     flex-direction: column;
@@ -627,15 +712,20 @@ input:checked+.slider:before {
     padding-bottom: 30px;
   }
 
+  /* Mobile Text Column */
   .text-col {
     display: contents;
+    /* Allows children to be ordered with siblings */
   }
 
+  /* Mobile Video Column */
   .video-col,
   .video-col-mobile {
     display: contents;
+    /* Allows children to be ordered with siblings */
   }
 
+  /* Order 1: Title */
   .hero-title {
     order: 1;
     width: 361px;
@@ -654,6 +744,7 @@ input:checked+.slider:before {
     display: block;
   }
 
+  /* Order 2: Video */
   .video-card-wrapper {
     order: 2;
     width: 345px;
@@ -663,6 +754,7 @@ input:checked+.slider:before {
     margin: 0 auto;
   }
 
+  /* Order 3: Description */
   .hero-desc {
     order: 3;
     width: 361px;
@@ -676,6 +768,7 @@ input:checked+.slider:before {
     text-align: left;
   }
 
+  /* Order 4: Extended Span */
   .hero-span {
     order: 4;
     width: 361px;
@@ -690,10 +783,13 @@ input:checked+.slider:before {
     margin-top: -15px;
   }
 
+  /* Order 5: Button */
   .btn-hero {
     order: 5;
   }
 
+
+  /* Mobile Video Card - with blur effect */
   .video-card {
     width: 345px;
     max-width: 100%;
@@ -713,6 +809,7 @@ input:checked+.slider:before {
     filter: blur(0.9px);
   }
 
+  /* Mobile Play Button - Centered on thumbnail */
   .play-btn {
     position: absolute;
     display: flex;
@@ -735,6 +832,7 @@ input:checked+.slider:before {
     fill: #49454F;
   }
 
+  /* Mobile Hero CTA Button - Gradient Enroll */
   .btn-hero {
     display: flex;
     flex-direction: row;
@@ -766,7 +864,12 @@ input:checked+.slider:before {
   }
 }
 
+
+/* =========================================
+       HERO SECTION
+       ========================================= */
 .hero-container {
+  /* Push below navbar */
   width: 100%;
   position: relative;
   display: flex;
@@ -779,23 +882,28 @@ input:checked+.slider:before {
   background-size: cover;
 }
 
+/* Dark mode grid background for hero section */
 body.dark-mode .hero-container {
   background:
+    /* Vertical lines */
     repeating-linear-gradient(to right,
       transparent,
       transparent 79px,
       rgba(60, 60, 60, 0.4) 79px,
       rgba(60, 60, 60, 0.4) 80px),
+    /* Horizontal lines */
     repeating-linear-gradient(to bottom,
       transparent,
       transparent 79px,
       rgba(60, 60, 60, 0.4) 79px,
       rgba(60, 60, 60, 0.4) 80px),
+    /* Base dark gradient */
     linear-gradient(180deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.589) 8.18%, rgba(0, 0, 0, 0.874) 12.51%, rgba(0, 0, 0, 0.6935) 25.85%, rgba(0, 0, 0, 0.608) 59.13%, rgba(0, 0, 0, 0.627) 62.46%, rgba(0, 0, 0, 0.6935) 83.18%, rgba(0, 0, 0, 0.95) 94.24%),
     #000000;
   background-size: 80px 80px, 80px 80px, cover, cover;
 }
 
+/* Blue Strip */
 .info-strip {
   width: 100%;
   height: 25px;
@@ -835,8 +943,10 @@ body.dark-mode .hero-container {
   }
 }
 
+/* Main Content Grid/Flex */
 .hero-content {
   width: 84vw;
+  /* Match Navbar alignment roughly */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -846,6 +956,7 @@ body.dark-mode .hero-container {
   position: relative;
 }
 
+/* Left Column: Video */
 .video-col {
   width: 42%;
   position: relative;
@@ -855,10 +966,23 @@ body.dark-mode .hero-container {
   gap: 2.5vh;
 }
 
+/* Video Card Container with Blue Shadow */
 .video-card-wrapper {
   position: relative;
   width: 100%;
 }
+
+/* .video-card-wrapper::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -15px;
+  top: 18px;
+  background: #005181;
+  border-radius: 20px;
+  z-index: 0;
+} */
 
 .video-card {
   width: 100%;
@@ -911,11 +1035,24 @@ body.dark-mode .hero-container {
   width: 72px;
   height: 78px;
   fill: #49454F;
-
+  /* Figma had specific positioning for the icon inside the 90x90 circle, but flex center is usually safer.
+     However, Figma said:
+     width: 72px; height: 78px;
+     position: absolute; left: 33.33%; right: 20.83%; ...
+     That positioning suggests the icon itself is not a perfect square or centered simply by flex if the svg viewport is weird.
+     I'll stick to 'flex' centering for reliability, but use the requested fill color.
+     The icon size 72x78 might be too big for a 90x90 circle if it has no padding. 
+     Let's check the previous icon size: 4vh inside 9vh circle. 
+     90px circle. 72px icon is ~80%. That fits but is tight. 
+     Figma: "width: 72px; height: 78px;" is likely the frame size, not the path. 
+     Let's try standard flex centering.
+  */
   width: 40px;
+  /* Adjusted for visual balance inside 90px circle */
   height: 40px;
 }
 
+/* Language Toggle Buttons */
 .language-toggle {
   display: flex;
   gap: 1.5vw;
@@ -946,13 +1083,16 @@ body.dark-mode .hero-container {
 
 .lang-btn.active {
   background: var(--lang-active-bg);
+  /* Gradient text */
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
+  /* We need a wrapper approach for gradient text on gradient bg */
   position: relative;
 }
 
+/* Using pseudo-element for active button gradient background */
 .lang-btn.active {
   background: var(--lang-active-bg);
   color: white;
@@ -987,6 +1127,7 @@ body.dark-mode .lang-btn.active:hover {
   box-shadow: 0 4px 15px rgba(240, 152, 25, 0.4);
 }
 
+/* Right Column: Text */
 .text-col {
   width: 50%;
   display: flex;
@@ -997,10 +1138,13 @@ body.dark-mode .lang-btn.active:hover {
 
 .hero-title {
   font-family: 'Neue Montreal', sans-serif;
+  /* Fallback to Lexend via class */
   font-style: normal;
   font-weight: 500;
   font-size: 49px;
+  /* Updated from Figma */
   line-height: 59px;
+  /* Updated from Figma */
   color: var(--text-main);
 }
 
@@ -1016,6 +1160,7 @@ body.dark-mode .lang-btn.active:hover {
   font-size: 20px;
   line-height: 24px;
   color: var(--text-hero-desc);
+  /* New Variable #08A4FF */
   width: 100%;
   max-width: 650px;
 }
@@ -1031,9 +1176,11 @@ body.dark-mode .lang-btn.active:hover {
 
 .highlight-text {
   color: var(--text-main);
+  /* Keep generic highlight or adjust if needed */
   font-weight: 600;
 }
 
+/* Wavy underline handling */
 .wavy-underline {
   display: inline-block;
   vertical-align: middle;
@@ -1043,6 +1190,7 @@ body.dark-mode .lang-btn.active:hover {
   height: auto;
 }
 
+/* Hero CTA Button */
 .btn-hero {
   display: inline-block;
   margin-top: 2vh;
@@ -1050,12 +1198,14 @@ body.dark-mode .lang-btn.active:hover {
   height: 51px;
   background: var(--btn-gradient);
   border-radius: 10px;
+  /* Updated radius */
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
   cursor: pointer;
   transition: transform 0.2s;
+  /* Add text support if image is removed or just wrapper */
   font-family: 'Neue Montreal', sans-serif;
   font-weight: 500;
   font-size: 24px;
@@ -1067,6 +1217,13 @@ body.dark-mode .lang-btn.active:hover {
   transform: scale(1.05);
 }
 
+
+
+
+
+/* =========================================
+     END OF COURSE SECTION
+     ========================================= */
 .end-of-the-course-section {
   width: 100%;
   background: var(--bg-body);
@@ -1084,6 +1241,7 @@ body.dark-mode .lang-btn.active:hover {
   gap: 60px;
 }
 
+/* Section Header */
 .course-section-header {
   text-align: center;
   display: flex;
@@ -1115,6 +1273,7 @@ body.dark-mode .lang-btn.active:hover {
   height: 12px;
 }
 
+/* Features Grid - 3x2 Layout */
 .course-features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1123,6 +1282,7 @@ body.dark-mode .lang-btn.active:hover {
   max-width: 1400px;
 }
 
+/* Individual Feature Card - White Card with Blue Box Shadow */
 .course-feature-card {
   box-sizing: border-box;
   display: flex;
@@ -1148,6 +1308,7 @@ body.dark-mode .lang-btn.active:hover {
   box-shadow: 12px 12px 0px rgba(8, 164, 255, 0.8);
 }
 
+/* Feature Illustration */
 .feature-illustration {
   position: relative;
   width: 100%;
@@ -1183,6 +1344,7 @@ body.dark-mode .lang-btn.active:hover {
   transform: scale(1.05);
 }
 
+/* Feature Text Content Container */
 .feature-text-content {
   display: flex;
   flex-direction: column;
@@ -1192,6 +1354,7 @@ body.dark-mode .lang-btn.active:hover {
   width: 100%;
 }
 
+/* Feature Title */
 .feature-title {
   font-family: 'Lexend', sans-serif;
   font-style: normal;
@@ -1207,6 +1370,7 @@ body.dark-mode .lang-btn.active:hover {
   margin: 0;
 }
 
+/* Feature Description */
 .feature-desc {
   font-family: 'Lexend', sans-serif;
   font-style: normal;
@@ -1222,6 +1386,7 @@ body.dark-mode .lang-btn.active:hover {
   margin: 0;
 }
 
+/* Dark Mode Adjustments for End of Course Section */
 body.dark-mode .end-of-the-course-section {
   background: var(--bg-body);
 }
@@ -1252,6 +1417,13 @@ body.dark-mode .feature-desc {
   color: #E0E0E0;
 }
 
+
+
+
+
+/* =========================================
+     ROAS MISSION SECTION
+     ========================================= */
 .roas-mission {
   width: 100%;
   padding: 80px 8vw;
@@ -1261,6 +1433,7 @@ body.dark-mode .feature-desc {
   gap: 100px;
 }
 
+/* Mission Statement */
 .mission-statement {
   display: flex;
   flex-direction: column;
@@ -1322,6 +1495,8 @@ body.dark-mode .feature-desc {
   font-weight: 600;
 }
 
+
+/* Instructor Card */
 .instructor-card {
   position: relative;
   width: 100%;
@@ -1334,6 +1509,7 @@ body.dark-mode .feature-desc {
   flex-direction: row;
   align-items: center;
   overflow: visible;
+  /* Allow image to overflow */
 }
 
 .instructor-content {
@@ -1382,6 +1558,7 @@ body.dark-mode .feature-desc {
   transform: translateY(-50%);
   width: 610px;
   height: 607px;
+  /* Slightly taller than card to overflow */
   border-radius: 41px;
   overflow: hidden;
   flex-shrink: 0;
@@ -1394,6 +1571,7 @@ body.dark-mode .feature-desc {
   object-position: center top;
 }
 
+/* Dark Mode Adjustments for ROAS Mission */
 body.dark-mode .instructor-card {
   background: #FFFFFF;
   box-shadow: 11px 13px 21.3px rgba(0, 0, 0, 0.4);
@@ -1404,6 +1582,9 @@ body.dark-mode .instructor-bio {
   color: #000000;
 }
 
+/* =========================================
+     PROOF OF WORK SECTION
+     ========================================= */
 .proof-of-work {
   width: 100%;
   padding: 80px 8vw;
@@ -1413,6 +1594,7 @@ body.dark-mode .instructor-bio {
   overflow: hidden;
 }
 
+/* Header with Blue Box */
 .proof-header {
   display: flex;
   flex-direction: row;
@@ -1459,6 +1641,7 @@ body.dark-mode .instructor-bio {
   height: 166px;
 }
 
+/* Subtitle */
 .proof-subtitle {
   font-family: 'Lexend', sans-serif;
   font-style: normal;
@@ -1492,6 +1675,7 @@ body.dark-mode .instructor-bio {
   display: none;
 }
 
+/* Results Grid */
 .proof-results-grid {
   width: 100%;
   max-width: 1400px;
@@ -1500,6 +1684,7 @@ body.dark-mode .instructor-bio {
   gap: 80px;
 }
 
+/* Proof Cards */
 .proof-card {
   display: flex;
   flex-direction: row;
@@ -1518,6 +1703,7 @@ body.dark-mode .instructor-bio {
   justify-content: flex-end;
 }
 
+/* Card Image Container */
 .proof-card-image {
   position: relative;
   width: 801px;
@@ -1548,6 +1734,13 @@ body.dark-mode .instructor-bio {
   border-radius: 18px;
 }
 
+/* =========================================
+   IMAGE CROPPER UTILITY CLASSES
+   Use these classes on .card-image-content to crop/resize images
+   Example: <div class="card-image-content crop-center scale-120">
+   ========================================= */
+
+/* Scale Classes - Zoom into the image */
 .card-image-content.scale-110 img {
   transform: scale(1.1);
 }
@@ -1584,6 +1777,8 @@ body.dark-mode .instructor-bio {
   transform: scale(2.0);
 }
 
+/* Position Classes - Move the image to show specific areas */
+/* Center positions (default is center) */
 .card-image-content.pos-center img {
   object-position: center center;
 }
@@ -1604,6 +1799,7 @@ body.dark-mode .instructor-bio {
   object-position: right center;
 }
 
+/* Corner positions */
 .card-image-content.pos-top-left img {
   object-position: left top;
 }
@@ -1620,6 +1816,7 @@ body.dark-mode .instructor-bio {
   object-position: right bottom;
 }
 
+/* Percentage-based positions for precise cropping */
 .card-image-content.pos-x-25 img {
   object-position: 25% center;
 }
@@ -1636,43 +1833,53 @@ body.dark-mode .instructor-bio {
   object-position: center 75%;
 }
 
+/* Combined crop classes for common scenarios */
+/* Crop left side - shows right portion of image */
 .card-image-content.crop-left img {
   object-position: right center;
 }
 
+/* Crop right side - shows left portion of image */
 .card-image-content.crop-right img {
   object-position: left center;
 }
 
+/* Crop top - shows bottom portion of image */
 .card-image-content.crop-top img {
   object-position: center bottom;
 }
 
+/* Crop bottom - shows top portion of image */
 .card-image-content.crop-bottom img {
   object-position: center top;
 }
 
+/* Crop to show center-right area (good for hiding left sidebar) */
 .card-image-content.crop-sidebar-left img {
   object-position: 70% center;
   transform: scale(1.15);
 }
 
+/* Crop to show metrics area (center-top) */
 .card-image-content.crop-metrics img {
   object-position: center 20%;
   transform: scale(1.2);
 }
 
+/* Crop to show performance overview (top-right area) */
 .card-image-content.crop-performance img {
   object-position: 60% 30%;
   transform: scale(1.3);
 }
 
+/* Custom crop with transform-origin support */
 .card-image-content.crop-custom img {
   transform-origin: var(--crop-origin, center center);
   transform: scale(var(--crop-scale, 1));
   object-position: var(--crop-position, center center);
 }
 
+/* Blur effect overlay for proof card image */
 .blur-on-gif-result {
   position: absolute;
   left: 0;
@@ -1697,6 +1904,7 @@ body.dark-mode .instructor-bio {
   pointer-events: none;
 }
 
+/* Card Metrics */
 .proof-card-metrics {
   display: flex;
   flex-direction: column;
@@ -1734,10 +1942,16 @@ body.dark-mode .instructor-bio {
   display: none;
 }
 
+/* Dark Mode Adjustments for Proof of Work */
 body.dark-mode .proof-title-text {
   color: #FFFFFF;
 }
 
+
+
+/* =========================================
+           MOBILE OPTIMIZATION
+           ========================================= */
 @media (max-width: 768px) {
   .navbar {
     height: 10vh;
@@ -1757,6 +1971,8 @@ body.dark-mode .proof-title-text {
   .btn-nav {
     display: none;
   }
+
+  /* Hide top nav button on small mobile to save space if needed, or keep smaller */
 
   .info-strip {
     height: auto;
@@ -1780,10 +1996,12 @@ body.dark-mode .proof-title-text {
     text-align: center;
     align-items: center;
     order: 1;
+    /* Ensure text is on top/bottom as desired. Visuals usually Text top on mobile */
   }
 
   .hero-title {
     font-size: 4vh;
+    /* Smaller for mobile */
   }
 
   .hero-desc {
@@ -1793,6 +2011,7 @@ body.dark-mode .proof-title-text {
 
   .btn-hero {
     width: 100%;
+    /* Full width button on mobile */
     padding: 1.5vh 0;
   }
 
@@ -1807,6 +2026,7 @@ body.dark-mode .proof-title-text {
     height: 7vh;
   }
 
+  /* Language Toggle Mobile */
   .language-toggle {
     justify-content: center;
     width: 100%;
@@ -1825,6 +2045,9 @@ body.dark-mode .proof-title-text {
     justify-content: center;
   }
 
+
+
+  /* End of Course Section Mobile 768px */
   .end-of-the-course-section {
     padding: 60px 0;
     margin-top: 40px;
@@ -1870,6 +2093,11 @@ body.dark-mode .proof-title-text {
     line-height: 22px;
   }
 
+
+
+
+
+  /* ROAS Mission Section Mobile 768px */
   .roas-mission {
     padding: 60px 5vw;
     gap: 60px;
@@ -1927,6 +2155,7 @@ body.dark-mode .proof-title-text {
     border-radius: 40px 40px 0 0;
   }
 
+  /* Proof of Work Section Mobile 768px */
   .proof-of-work {
     padding: 60px 5vw;
   }
@@ -2006,10 +2235,17 @@ body.dark-mode .proof-title-text {
     align-items: center;
   }
 
+
+
 }
 
+/* =========================================
+           MOBILE DESIGN (480px and below)
+           Theme Toggle Mobile Styles
+           ========================================= */
 @media (max-width: 480px) {
 
+  /* Mobile Navbar */
   .navbar {
     height: 53px;
     padding: 8.24px 20px;
@@ -2021,6 +2257,7 @@ body.dark-mode .proof-title-text {
     height: 36px;
   }
 
+  /* Theme Toggle Mobile */
   .theme-switch {
     width: 34px;
     height: 14.38px;
@@ -2042,6 +2279,9 @@ body.dark-mode .proof-title-text {
     transform: translateX(18px);
   }
 
+
+
+  /* End of Course Section Small Mobile 480px */
   .end-of-the-course-section {
     padding: 50px 0;
     margin-top: 30px;
@@ -2093,6 +2333,7 @@ body.dark-mode .proof-title-text {
     padding: 0 20px;
   }
 
+  /* Course Curriculum Small Mobile 480px */
   .course-curriculum {
     padding: 40px 4vw;
   }
@@ -2172,6 +2413,7 @@ body.dark-mode .proof-title-text {
     padding-left: 18px;
   }
 
+  /* Guarantee Section Small Mobile 480px */
   .guarantee-section {
     margin-top: 40px;
     gap: 15px;
@@ -2219,6 +2461,7 @@ body.dark-mode .proof-title-text {
     left: 50%;
   }
 
+  /* ROAS Mission Section Small Mobile 480px */
   .roas-mission {
     padding: 40px 20px;
     gap: 40px;
@@ -2251,6 +2494,7 @@ body.dark-mode .proof-title-text {
     max-width: 336px;
   }
 
+  /* Instructor Card Mobile 480px */
   .instructor-card {
     width: 368px;
     max-width: 100%;
@@ -2317,6 +2561,7 @@ body.dark-mode .proof-title-text {
     border-radius: 41px;
   }
 
+  /* Proof of Work Section Small Mobile 480px */
   .proof-of-work {
     padding: 40px 20px;
     background-color: transparent;
@@ -2358,9 +2603,12 @@ body.dark-mode .proof-title-text {
   }
 
   .proof-subtitle {
+    /* "Don’t just take my word for it..." */
     position: relative;
+    /* Changed from absolute to flow relatively in mobile column */
     width: 353px;
     height: auto;
+    /* Allow auto height for wrapping if needed, but spec says 50px */
     min-height: 50px;
 
     font-family: 'Lexend', sans-serif;
@@ -2372,6 +2620,7 @@ body.dark-mode .proof-title-text {
 
     color: var(--text-main);
     margin-bottom: 25px;
+    /* Add some spacing from title box */
   }
 
   .proof-highlight {
@@ -2393,6 +2642,7 @@ body.dark-mode .proof-title-text {
     width: 100%;
     left: 0;
     bottom: -15px;
+    /* Adjust positioning as needed */
     height: auto;
   }
 
@@ -2428,6 +2678,7 @@ body.dark-mode .proof-title-text {
     order: 0;
   }
 
+  /* Also handle .card-left class for mobile */
   .proof-card.card-left {
     flex-direction: column !important;
   }
@@ -2501,6 +2752,7 @@ body.dark-mode .proof-title-text {
     font-weight: 600;
   }
 
+  /* Additional Access Section Small Mobile 480px */
   .additional-access {
     padding: 40px 4vw;
     gap: 35px;
@@ -2569,13 +2821,19 @@ body.dark-mode .proof-title-text {
   }
 }
 
+/* =========================================
+   GET CERTIFIED SECTION
+   ========================================= */
+
 .get-certified-section {
   padding: 80px 8vw;
   background-color: #F4F4F4;
+  /* Beige for light mode */
 }
 
 body.dark-mode .get-certified-section {
   background-color: #F0F0F0;
+  /* Light gray for dark mode */
 }
 
 .get-certified-container {
@@ -2608,6 +2866,7 @@ body.dark-mode .get-certified-section {
 
 body.dark-mode .get-certified-title {
   color: #000000;
+  /* Dark text on light container */
 }
 
 .certified-highlight {
@@ -2635,6 +2894,7 @@ body.dark-mode .get-certified-title {
   align-items: center;
 }
 
+/* Certificate image - light mode (default) */
 .get-certified-image .certificate-light {
   display: block;
   width: 600px;
@@ -2655,6 +2915,7 @@ body.dark-mode .get-certified-title {
   border-radius: 0;
 }
 
+/* Certificate image - dark mode */
 body.dark-mode .get-certified-image .certificate-light {
   display: none;
 }
@@ -2691,6 +2952,7 @@ body.dark-mode .get-certified-image .certificate-dark {
 
 body.dark-mode .benefit-item .benefit-icon {
   color: #000000;
+  /* Dark icons on white container */
 }
 
 .benefit-item span {
@@ -2704,6 +2966,7 @@ body.dark-mode .benefit-item .benefit-icon {
 
 body.dark-mode .benefit-item span {
   color: #000000;
+  /* Dark text on white container */
 }
 
 .btn-enroll-cert {
@@ -2743,6 +3006,8 @@ body.dark-mode .benefit-item span {
   text-decoration: none;
 }
 
+
+/* Responsive Styles */
 @media (max-width: 1200px) {
   .get-certified-container {
     display: flex;
@@ -2827,6 +3092,7 @@ body.dark-mode .benefit-item span {
     gap: 20px;
   }
 
+  /* Mobile order: Title(1) → Image(2) → Benefits(3) → Button(4) */
   .get-certified-title {
     order: 1;
     font-size: 26px;
@@ -2889,6 +3155,10 @@ body.dark-mode .benefit-item span {
   }
 }
 
+/* =========================================
+   NO-NONSENSE APPROACH SECTION
+   ========================================= */
+
 .no-nonsense-section {
   display: flex;
   flex-direction: column;
@@ -2908,6 +3178,7 @@ body.dark-mode .benefit-item span {
   width: 100%;
 }
 
+/* Left Side - Illustration */
 .no-nonsense-illustration {
   flex-shrink: 0;
   width: 412px;
@@ -2920,6 +3191,7 @@ body.dark-mode .benefit-item span {
   object-fit: contain;
 }
 
+/* Right Side - Content */
 .no-nonsense-content {
   display: flex;
   flex-direction: column;
@@ -2941,6 +3213,7 @@ body.dark-mode .benefit-item span {
   color: #08A4FF;
 }
 
+/* Features Container */
 .no-nonsense-features {
   display: flex;
   flex-direction: column;
@@ -2949,6 +3222,7 @@ body.dark-mode .benefit-item span {
   width: 100%;
 }
 
+/* Individual Feature Block */
 .feature-block {
   display: flex;
   flex-direction: column;
@@ -2975,6 +3249,7 @@ body.dark-mode .benefit-item span {
   color: var(--text-main);
 }
 
+/* Enroll Button */
 .btn-enroll-no-nonsense {
   display: flex;
   flex-direction: row;
@@ -3008,6 +3283,10 @@ body.dark-mode .benefit-item span {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+/* =========================================
+   NO-NONSENSE SECTION RESPONSIVE
+   ========================================= */
 
 @media (max-width: 1200px) {
   .no-nonsense-container {
@@ -3139,16 +3418,22 @@ body.dark-mode .benefit-item span {
   }
 }
 
+/* =========================================
+   COURSE FOR YOU SECTION
+   ========================================= */
+
 .course-for-you-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 80px 8vw;
   background-color: #F4F4F4;
+  /* Light mode background */
 }
 
 body.dark-mode .course-for-you-section {
   background-color: #FFFFFF;
+  /* Dark mode background - white */
 }
 
 .course-for-you-container {
@@ -3161,6 +3446,7 @@ body.dark-mode .course-for-you-section {
   width: 100%;
 }
 
+/* Left Column */
 .course-for-you-left {
   display: flex;
   flex-direction: column;
@@ -3170,6 +3456,7 @@ body.dark-mode .course-for-you-section {
   max-width: 600px;
 }
 
+/* Header Box with Blue Background */
 .course-for-you-header-box {
   display: flex;
   flex-direction: row;
@@ -3193,6 +3480,7 @@ body.dark-mode .course-for-you-section {
   background-clip: text;
 }
 
+/* Right Column */
 .course-for-you-right {
   display: flex;
   flex-direction: column;
@@ -3213,6 +3501,7 @@ body.dark-mode .course-for-you-section {
   padding: 0;
 }
 
+/* Vertical Divider */
 .course-for-you-divider {
   width: 2px;
   min-height: 450px;
@@ -3224,6 +3513,7 @@ body.dark-mode .course-for-you-divider {
   background-color: #000000;
 }
 
+/* Items Container */
 .course-for-you-items {
   display: flex;
   flex-direction: column;
@@ -3231,6 +3521,7 @@ body.dark-mode .course-for-you-divider {
   gap: 37px;
 }
 
+/* Individual Item */
 .course-for-you-item {
   display: flex;
   flex-direction: row;
@@ -3238,11 +3529,13 @@ body.dark-mode .course-for-you-divider {
   gap: 24px;
 }
 
+/* Check and Cross Icons */
 .check-icon,
 .cross-icon {
   flex-shrink: 0;
 }
 
+/* Item Text */
 .course-for-you-text {
   font-family: 'Lexend', sans-serif;
   font-style: normal;
@@ -3254,7 +3547,12 @@ body.dark-mode .course-for-you-divider {
 
 body.dark-mode .course-for-you-text {
   color: #000000;
+  /* Keep black text on white bg in dark mode */
 }
+
+/* =========================================
+   COURSE FOR YOU SECTION RESPONSIVE
+   ========================================= */
 
 @media (max-width: 1200px) {
   .course-for-you-container {
@@ -3418,6 +3716,10 @@ body.dark-mode .course-for-you-text {
   --grad: linear-gradient(91.52deg, #FFFFFF -1.64%, #EEEEEE 133.11%);
 }
 
+/* =========================================
+   FAQ SECTION - FIGMA DESIGN
+   ========================================= */
+
 .faq-section {
   background: var(--bg);
   padding: 80px 24px;
@@ -3429,6 +3731,7 @@ body.dark-mode .course-for-you-text {
   margin: 0 auto;
 }
 
+/* Title - 70px font, 84px line height per Figma */
 .faq-title {
   margin: 0 0 60px;
   text-align: center;
@@ -3440,6 +3743,7 @@ body.dark-mode .course-for-you-text {
   color: #000000;
 }
 
+/* FAQ List Container - 33px gap between items */
 .faq-list {
   display: flex;
   flex-direction: column;
@@ -3448,6 +3752,7 @@ body.dark-mode .course-for-you-text {
   gap: 33px;
 }
 
+/* Individual FAQ Item */
 .faq-item {
   display: flex;
   flex-direction: column;
@@ -3456,6 +3761,7 @@ body.dark-mode .course-for-you-text {
   border: none;
 }
 
+/* Remove default marker */
 .faq-summary {
   list-style: none;
   cursor: pointer;
@@ -3471,6 +3777,7 @@ body.dark-mode .course-for-you-text {
   display: none;
 }
 
+/* FAQ Content wrapper (question + answer) */
 .faq-content {
   display: flex;
   flex-direction: column;
@@ -3479,6 +3786,7 @@ body.dark-mode .course-for-you-text {
   flex: 1;
 }
 
+/* Question text - 36px bold, 43px line height per Figma */
 .faq-q {
   display: block;
   font-family: 'Neue Montreal', 'Lexend', sans-serif;
@@ -3489,6 +3797,7 @@ body.dark-mode .course-for-you-text {
   color: #000000;
 }
 
+/* Icon button - 35.35px blue circle per Figma */
 .faq-icon {
   display: flex;
   flex-direction: row;
@@ -3506,6 +3815,7 @@ body.dark-mode .course-for-you-text {
   flex-shrink: 0;
 }
 
+/* Plus/minus lines */
 .faq-icon::before,
 .faq-icon::after {
   content: "";
@@ -3524,6 +3834,7 @@ body.dark-mode .course-for-you-text {
   transform: translate(-50%, -50%) rotate(90deg);
 }
 
+/* Open state => minus */
 .faq-item[open] .faq-icon::before,
 .faq-item[open] .faq-icon::after {
   background: var(--faq-icon-color);
@@ -3534,6 +3845,7 @@ body.dark-mode .course-for-you-text {
   transform: translate(-50%, -50%) rotate(90deg) scaleY(0);
 }
 
+/* Panel animation */
 .faq-panel {
   margin-left: calc(35.35px + 21.78px);
   margin-top: 21.78px;
@@ -3550,6 +3862,7 @@ body.dark-mode .course-for-you-text {
   overflow: hidden;
 }
 
+/* Answer text - 24px regular, 29px line height per Figma */
 .faq-a {
   margin: 0;
   font-family: 'Neue Montreal', 'Lexend', sans-serif;
@@ -3560,6 +3873,7 @@ body.dark-mode .course-for-you-text {
   color: #000000;
 }
 
+/* Line Divider - 927px width, 1px black per Figma */
 .faq-divider {
   width: 927px;
   max-width: 100%;
@@ -3570,6 +3884,11 @@ body.dark-mode .course-for-you-text {
   flex-shrink: 0;
 }
 
+/* =========================================
+   FAQ SECTION - LIGHT MODE STYLES (DEFAULT)
+   ========================================= */
+
+/* Light mode is now default - black text on white background */
 body:not(.dark-mode) .faq-section {
   background: #ffffff;
 }
@@ -3589,6 +3908,10 @@ body:not(.dark-mode) .faq-a {
 body:not(.dark-mode) .faq-divider {
   border-top-color: #000000;
 }
+
+/* =========================================
+   FAQ SECTION - DARK MODE STYLES
+   ========================================= */
 
 body.dark-mode .faq-section {
   background: #0b0b0b;
@@ -3617,6 +3940,10 @@ body.dark-mode .faq-a {
 body.dark-mode .faq-divider {
   border-top-color: rgba(255, 255, 255, 0.75);
 }
+
+/* =========================================
+   FAQ SECTION RESPONSIVE
+   ========================================= */
 
 @media (max-width: 1200px) {
   .faq-title {
@@ -3704,6 +4031,7 @@ body.dark-mode .faq-divider {
   }
 }
 
+/* Mobile 480px - Smaller styling */
 @media (max-width: 480px) {
   .faq-section {
     padding: 40px 16px;
@@ -3725,6 +4053,7 @@ body.dark-mode .faq-divider {
     padding: 4px;
   }
 
+  /* Smaller plus/minus lines for mobile */
   .faq-icon::before,
   .faq-icon::after {
     width: 10px;
@@ -3760,6 +4089,10 @@ body.dark-mode .faq-divider {
   }
 }
 
+/* =========================
+   FOOTER (SVG)
+   ========================= */
+
 .footer-image {
   width: 100%;
   display: flex;
@@ -3773,12 +4106,14 @@ body.dark-mode .faq-divider {
   display: block;
 }
 
+/* (Optional) keep if you ever switch to <img> instead of inline <svg> */
 .footer-image img {
   width: 100%;
   max-height: 775px;
   object-fit: contain;
 }
 
+/* Theme-based footer SVG visibility */
 .footer-image .footer-svg-light {
   display: block;
 }
@@ -3795,6 +4130,7 @@ body.dark-mode .footer-image .footer-svg-dark {
   display: block;
 }
 
+/* Mobile footer (480px and below) */
 @media (max-width: 480px) {
   .footer-image {
     width: calc(100% - 19px);
@@ -3808,6 +4144,7 @@ body.dark-mode .footer-image .footer-svg-dark {
     object-position: center;
   }
 
+  /* (Optional) if using <img> */
   .footer-image img {
     width: 100%;
     height: 195px;
@@ -3815,6 +4152,10 @@ body.dark-mode .footer-image .footer-svg-dark {
     object-position: center;
   }
 }
+
+/* =========================================
+   ACCESS PRICING STYLES
+   ========================================= */
 
 .access-pricing {
   display: flex;
@@ -3863,6 +4204,7 @@ body.dark-mode .footer-image .footer-svg-dark {
   color: #ffffff;
 }
 
+/* Responsive styles for access-pricing */
 @media (max-width: 768px) {
   .original-price {
     font-size: 20px;
@@ -3895,12 +4237,19 @@ body.dark-mode .footer-image .footer-svg-dark {
   }
 }
 
+/* =========================================
+   MOBILE HERO SECTION STYLES (480px)
+   ========================================= */
+
 @media (max-width: 480px) {
 
+  /* Hero Container */
   .hero-container {
+    /* Match navbar height */
     width: 100%;
   }
 
+  /* Info Strip Mobile */
   .info-strip {
     width: 100%;
     height: 30px;
@@ -3914,6 +4263,7 @@ body.dark-mode .footer-image .footer-svg-dark {
     line-height: 15px;
   }
 
+  /* Hero Content - Mobile Column Layout with Flex Wrap */
   .hero-content {
     width: 100%;
     flex-direction: column;
@@ -3923,6 +4273,7 @@ body.dark-mode .footer-image .footer-svg-dark {
     align-items: center;
   }
 
+  /* Text Column - Shows first on mobile (title & description only) */
   .text-col {
     width: 100%;
     order: 1;
@@ -3951,6 +4302,8 @@ body.dark-mode .footer-image .footer-svg-dark {
     font-style: italic;
   }
 
+
+  /* Video Column - Order 2 (after text) */
   .video-col {
     width: 100%;
     order: 2;
@@ -3959,6 +4312,7 @@ body.dark-mode .footer-image .footer-svg-dark {
     position: relative;
   }
 
+  /* Video Card Wrapper */
   .video-card-wrapper {
     width: 371px;
     max-width: 100%;
@@ -3966,8 +4320,10 @@ body.dark-mode .footer-image .footer-svg-dark {
 
   .video-card-wrapper::before {
     display: none;
+    /* Hide the blue shadow on mobile */
   }
 
+  /* Video Card */
   .video-card {
     width: 100%;
     height: 216.69px;
@@ -3979,6 +4335,7 @@ body.dark-mode .footer-image .footer-svg-dark {
     object-fit: cover;
   }
 
+  /* Play Button */
   .play-btn {
     width: 52px;
     height: 52px;
@@ -3992,6 +4349,7 @@ body.dark-mode .footer-image .footer-svg-dark {
     height: 32px;
   }
 
+  /* Language Toggle Container with Background - Extends from video */
   .video-col::after {
     content: '';
     position: absolute;
@@ -4006,6 +4364,7 @@ body.dark-mode .footer-image .footer-svg-dark {
     z-index: 0;
   }
 
+  /* Language Toggle - Centered below video */
   .language-toggle {
     width: 100%;
     justify-content: center;
@@ -4016,6 +4375,7 @@ body.dark-mode .footer-image .footer-svg-dark {
     z-index: 1;
   }
 
+  /* Language Buttons - Mobile Compact */
   .lang-btn {
     min-width: 110.96px;
     height: 23.81px;
@@ -4044,6 +4404,7 @@ body.dark-mode .footer-image .footer-svg-dark {
     color: #000000;
   }
 
+  /* Hero CTA Button - Order 3 (at the very bottom) */
   .btn-hero {
     width: 256px;
     height: 58.09px;
@@ -4063,6 +4424,7 @@ body.dark-mode .footer-image .footer-svg-dark {
     align-items: center;
     cursor: pointer;
     order: 100;
+    /* Ensure it's at the bottom */
     text-decoration: none;
   }
 
@@ -4073,6 +4435,9 @@ body.dark-mode .footer-image .footer-svg-dark {
   }
 }
 
+/* =========================================
+   ICON THEME SWITCHING
+   ========================================= */
 .icon-light {
   display: block;
 }
@@ -4089,17 +4454,23 @@ body.dark-mode .icon-dark {
   display: block;
 }
 
+/* Ensure access icons are responsive */
 .access-item-image img {
   width: 100%;
   height: auto;
   max-width: 476px;
+  /* Match max width of original SVGs */
 }
 
+/* Specific sizing for smaller icons (Media, Stop) */
 .item-content-right .access-item-image img,
 .item-right .access-item-image img {
   max-width: 324px;
 }
 
+/* =========================================
+   ADDITIONAL ACCESS / BONUSES MOBILE STYLES (480px)
+   ========================================= */
 @media (max-width: 480px) {
   .additional-access {
     padding: 60px 4vw;
@@ -4128,9 +4499,11 @@ body.dark-mode .icon-dark {
     flex-direction: column;
     align-items: center;
     gap: 61px;
+    /* Matches user design */
     width: 100%;
   }
 
+  /* Reset item layout for vertical stack */
   .access-item,
   .access-item.item-content-top,
   .access-item.item-content-bottom {
@@ -4145,6 +4518,7 @@ body.dark-mode .icon-dark {
     position: relative;
   }
 
+  /* 1. Image Ordering */
   .access-item-image {
     width: 100%;
     height: auto;
@@ -4155,6 +4529,7 @@ body.dark-mode .icon-dark {
     margin-bottom: 20px;
   }
 
+  /* 2. Content Container Ordering */
   .access-item-content {
     display: flex;
     flex-direction: column;
@@ -4178,6 +4553,9 @@ body.dark-mode .icon-dark {
     pointer-events: none;
   }
 
+  /* 3. Reorder elements inside content: Title -> Desc -> Price */
+
+  /* Title */
   .access-item-title {
     order: 1;
     font-family: 'Lexend', sans-serif;
@@ -4189,6 +4567,7 @@ body.dark-mode .icon-dark {
     color: var(--text-main);
   }
 
+  /* Description */
   .access-item-desc {
     order: 2;
     font-family: 'Lexend', sans-serif;
@@ -4199,25 +4578,32 @@ body.dark-mode .icon-dark {
     margin-bottom: 20px;
     color: var(--text-main);
     width: 316px;
+    /* From design */
     max-width: 100%;
   }
 
+  /* Pricing */
   .access-pricing {
     order: 3;
     width: 182.81px;
+    /* precise width from user snippet */
     height: 31.95px;
     display: flex;
     flex-direction: row;
     align-items: center;
+    /* User requested center alignment */
     justify-content: center;
     gap: 33.28px;
+    /* precise gap */
     position: relative;
+    /* layout context */
   }
 
   .original-price {
     font-family: 'Lexend', sans-serif;
     font-weight: 600;
     font-size: 24.4px;
+    /* 24.4039px rounded */
     line-height: 31px;
     color: var(--text-main);
     width: 71.44px;
@@ -4230,6 +4616,7 @@ body.dark-mode .icon-dark {
 
   .price-strike {
     width: 100%;
+    /* Strikethrough image positioning */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -4257,14 +4644,18 @@ body.dark-mode .icon-dark {
     width: 71.44px;
   }
 
+  /* Specific adjustment for specific images if needed */
   .access-item-image img {
     height: 140px;
+    /* Fixed height */
     width: 220px;
+    /* Fixed width to ensure container consistency */
     object-fit: contain;
     max-width: 100%;
   }
 }
 
+/* Default: Hide mobile underline image */
 .course-underline-mobile-img {
   display: none;
 }
@@ -4276,10 +4667,12 @@ body.dark-mode .icon-dark {
 
 @media (max-width: 768px) {
 
+  /* Show mobile underline image */
   .course-underline-mobile-img {
     display: block;
     position: absolute;
     bottom: -10px;
+    /* Adjust as needed */
     left: 0;
     width: 100%;
     height: auto;
@@ -4288,8 +4681,10 @@ body.dark-mode .icon-dark {
   .course-section-title {
     position: relative;
     margin-bottom: 25px;
+    /* Add space for the underline */
   }
 
+  /* Fix: Scale and position SVG wave to only underline "course" on mobile */
   .course-section-title span {
     position: static;
     display: flex;
@@ -4303,6 +4698,10 @@ body.dark-mode .icon-dark {
     bottom: -8px;
   }
 }
+
+/* =========================================
+   STRUGGLES SECTION (Running Ads)
+   ========================================= */
 
 .struggles-section {
   width: 100%;
@@ -4410,6 +4809,7 @@ body.dark-mode .struggles-card-dark {
   max-width: 330px;
 }
 
+/* Struggles Section - Tablet Responsive */
 @media (max-width: 1024px) {
   .struggles-title {
     font-size: 48px;
@@ -4422,6 +4822,7 @@ body.dark-mode .struggles-card-dark {
   }
 }
 
+/* Struggles Section - Mobile Responsive */
 @media (max-width: 768px) {
   .struggles-section {
     padding: 40px 5vw;
@@ -4484,6 +4885,11 @@ body.dark-mode .struggles-card-dark {
   }
 }
 
+/* =========================================
+   END OF COURSE SECTION - RESPONSIVE
+   ========================================= */
+
+/* Tablet Responsive */
 @media (max-width: 1200px) {
   .course-section-container {
     padding: 0 40px;
@@ -4532,6 +4938,7 @@ body.dark-mode .struggles-card-dark {
   }
 }
 
+/* Mobile Responsive */
 @media (max-width: 768px) {
   .end-of-the-course-section {
     padding: 60px 0;
@@ -4643,6 +5050,9 @@ body.dark-mode .struggles-card-dark {
   }
 }
 
+/* =========================================
+   NEW COURSE CURRICULUM SECTION
+   ========================================= */
 .course-curriculum-new {
   width: 100%;
   padding: 80px 8vw;
@@ -4652,6 +5062,7 @@ body.dark-mode .struggles-card-dark {
   background: var(--bg-body);
 }
 
+/* Header */
 .curriculum-header-new {
   text-align: center;
   margin-bottom: 60px;
@@ -4683,6 +5094,7 @@ body.dark-mode .struggles-card-dark {
   max-width: 1208px;
 }
 
+/* Curriculum Cards Container */
 .curriculum-cards-new {
   width: 100%;
   max-width: 1098px;
@@ -4692,6 +5104,7 @@ body.dark-mode .struggles-card-dark {
   gap: 30px;
 }
 
+/* Individual Module Card */
 .curriculum-module-card {
   box-sizing: border-box;
   width: 100%;
@@ -4709,6 +5122,7 @@ body.dark-mode .struggles-card-dark {
   box-shadow: 10px 10px 0px #08A4FF;
 }
 
+/* Module Content */
 .module-content {
   display: flex;
   flex-direction: row;
@@ -4717,6 +5131,7 @@ body.dark-mode .struggles-card-dark {
   gap: 31.5px;
 }
 
+/* Module Number */
 .module-number {
   font-family: 'Lexend', sans-serif;
   font-style: normal;
@@ -4731,6 +5146,7 @@ body.dark-mode .struggles-card-dark {
   flex-shrink: 0;
 }
 
+/* Vertical Divider */
 .module-divider {
   width: 1px;
   height: 120px;
@@ -4739,6 +5155,7 @@ body.dark-mode .struggles-card-dark {
   flex-shrink: 0;
 }
 
+/* Module Info */
 .module-info {
   display: flex;
   flex-direction: column;
@@ -4747,6 +5164,7 @@ body.dark-mode .struggles-card-dark {
   flex: 1;
 }
 
+/* Module Title */
 .module-title {
   font-family: 'Lexend', sans-serif;
   font-style: normal;
@@ -4757,6 +5175,7 @@ body.dark-mode .struggles-card-dark {
   margin: 0;
 }
 
+/* Module Topics List */
 .module-topics {
   font-family: 'Lexend', sans-serif;
   font-style: normal;
@@ -4777,6 +5196,7 @@ body.dark-mode .struggles-card-dark {
   margin-bottom: 0;
 }
 
+/* Dark Mode Adjustments */
 body.dark-mode .curriculum-module-card {
   background: linear-gradient(180deg, #636363 0%, #1E1E1E 100%);
   border: 0.93px solid #f0f0f0f0;
@@ -4796,6 +5216,11 @@ body.dark-mode .module-divider {
   background: rgba(255, 255, 255, 0.5);
 }
 
+/* =========================================
+   RESPONSIVE - NEW CURRICULUM SECTION
+   ========================================= */
+
+/* Tablet */
 @media (max-width: 1024px) {
   .curriculum-title-new {
     font-size: 52px;
@@ -4833,6 +5258,7 @@ body.dark-mode .module-divider {
   }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
   .course-curriculum-new {
     padding: 60px 5vw;
@@ -4906,6 +5332,7 @@ body.dark-mode .module-divider {
   }
 }
 
+/* Small Mobile */
 @media (max-width: 480px) {
   .curriculum-title-new {
     font-size: 28px;
@@ -4943,6 +5370,10 @@ body.dark-mode .module-divider {
     padding-left: 10px;
   }
 }
+
+/* =========================================
+   THIS IS OUR GUARANTEE - NEW SECTION
+   ========================================= */
 
 .guarantee-new-section {
   width: 100%;
@@ -5018,6 +5449,10 @@ body.dark-mode .module-divider {
   margin-top: 10px;
 }
 
+/* =========================================
+   ROAS MISSION - NEW SECTION WITH ILLUSTRATION
+   ========================================= */
+
 .roas-mission-new {
   width: 100%;
   padding: 80px 8vw;
@@ -5089,6 +5524,7 @@ body.dark-mode .module-divider {
   font-weight: 700;
 }
 
+/* Dark Mode Grid Background for Guarantee and Mission Sections */
 body.dark-mode .guarantee-new-section {
   background-color: #000000;
   background-image:
@@ -5104,6 +5540,10 @@ body.dark-mode .roas-mission-new {
     linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
   background-size: 50px 50px;
 }
+
+/* =========================================
+   INSTRUCTOR SECTION
+   ========================================= */
 
 .instructor-section {
   width: 100%;
@@ -5197,6 +5637,9 @@ body.dark-mode .roas-mission-new {
   border-radius: 92px;
 }
 
+/* =========================================
+   DARK MODE - INSTRUCTOR SECTION
+   ========================================= */
 body.dark-mode .instructor-card {
   background: linear-gradient(264.57deg, rgba(102, 102, 102, 0.59) -0.2%, rgba(0, 0, 0, 0.65) 13.53%, rgba(20, 20, 20, 0.93) 57.61%, rgba(0, 0, 0, 0.96) 78.5%, rgba(102, 102, 102, 0.31) 96.75%);
   box-shadow: -6px 6px 31.6px rgba(8, 164, 255, 0.34);
@@ -5221,6 +5664,11 @@ body.dark-mode .instructor-image {
   border-radius: 0px;
 }
 
+/* =========================================
+   RESPONSIVE - INSTRUCTOR SECTION
+   ========================================= */
+
+/* Large Tablet */
 @media (max-width: 1400px) {
   .instructor-card {
     min-height: 600px;
@@ -5275,6 +5723,7 @@ body.dark-mode .instructor-image {
   }
 }
 
+/* Tablet */
 @media (max-width: 1024px) {
   .instructor-section {
     padding: 60px 5vw 80px;
@@ -5334,6 +5783,7 @@ body.dark-mode .instructor-image {
   }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
   .instructor-section {
     padding: 40px 5vw 60px;
@@ -5375,6 +5825,7 @@ body.dark-mode .instructor-image {
   }
 }
 
+/* Small Mobile */
 @media (max-width: 480px) {
   .instructor-section {
     padding: 20px 5vw 40px;
@@ -5486,6 +5937,11 @@ body.dark-mode .instructor-image {
   }
 }
 
+/* =========================================
+   RESPONSIVE - GUARANTEE NEW SECTION
+   ========================================= */
+
+/* Tablet */
 @media (max-width: 1024px) {
   .guarantee-new-title {
     font-size: 52px;
@@ -5499,6 +5955,7 @@ body.dark-mode .instructor-image {
   }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
   .guarantee-new-section {
     padding: 20px 5vw;
@@ -5524,6 +5981,7 @@ body.dark-mode .instructor-image {
   }
 }
 
+/* Small Mobile */
 @media (max-width: 480px) {
   .guarantee-new-title {
     font-size: 28px;
@@ -5537,6 +5995,11 @@ body.dark-mode .instructor-image {
   }
 }
 
+/* =========================================
+   RESPONSIVE - ROAS MISSION NEW SECTION
+   ========================================= */
+
+/* Tablet */
 @media (max-width: 1200px) {
   .mission-new-container {
     gap: 40px;
@@ -5590,6 +6053,7 @@ body.dark-mode .instructor-image {
   }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
   .roas-mission-new {
     padding: 20px 5vw;
@@ -5614,6 +6078,7 @@ body.dark-mode .instructor-image {
   }
 }
 
+/* Small Mobile */
 @media (max-width: 480px) {
   .mission-illustration {
     max-width: 280px;
@@ -5636,6 +6101,10 @@ body.dark-mode .instructor-image {
     padding: 40px 5vw 60px;
   }
 }
+
+/* =========================================
+   MARKETING STATS CAROUSEL SECTION
+   ========================================= */
 
 .stats-carousel-section {
   width: 100%;
@@ -5744,6 +6213,11 @@ body.dark-mode .instructor-image {
   margin-top: 20px;
 }
 
+/* =========================================
+   RESPONSIVE - MARKETING STATS CAROUSEL
+   ========================================= */
+
+/* Tablet */
 @media (max-width: 1024px) {
   .stats-carousel-track {
     gap: 30px;
@@ -5771,6 +6245,7 @@ body.dark-mode .instructor-image {
   }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
   .stats-carousel-section {
     padding: 40px 0;
@@ -5816,6 +6291,7 @@ body.dark-mode .instructor-image {
   }
 }
 
+/* Small Mobile */
 @media (max-width: 480px) {
   .stats-carousel-section {
     padding: 30px 0;
@@ -5852,10 +6328,15 @@ body.dark-mode .instructor-image {
   }
 }
 
+/* =========================================
+   EXCLUSIVE BONUS BUNDLES SECTION
+   ========================================= */
+
 .bonus-bundles-section {
   width: 100%;
   padding: 80px 8vw;
   background-color: transparent;
+  /* Allows body background (gradient) */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -5868,6 +6349,7 @@ body.dark-mode .instructor-image {
 
 .bonus-section-title {
   font-family: 'Lexend', sans-serif;
+  /* Or 'Neue Montreal' simulation */
   font-weight: 700;
   font-size: 54px;
   line-height: 1.1;
@@ -5876,6 +6358,8 @@ body.dark-mode .instructor-image {
 
 .bonus-worth {
   color: #005BBC;
+  /* Or var(--text-hero-desc) which is #08A4FF */
+  /* Using specific blue from plan: #005BBC or #08A4FF */
   color: #08A4FF;
 }
 
@@ -6006,6 +6490,7 @@ body.dark-mode .instructor-image {
   line-height: 32px;
 }
 
+/* Dark Mode Adjustments */
 body.dark-mode .bonus-card {
   background: linear-gradient(180deg, #000000 0%, #404040 100%);
   border-color: #08A4FF;
@@ -6033,6 +6518,7 @@ body.dark-mode .bonus-list li::before {
   color: #1ACFFF;
 }
 
+/* Responsive Adjustments */
 @media (max-width: 1024px) {
   .bonus-grid {
     gap: 30px;
@@ -6120,6 +6606,10 @@ body.dark-mode .bonus-list li::before {
     line-height: 24px;
   }
 }
+
+/* =========================================
+   COURSE FIT SECTION - For/Not For You
+   ========================================= */
 
 .course-fit-section {
   width: 100%;
@@ -6219,6 +6709,7 @@ body.dark-mode .bonus-list li::before {
   color: #000000;
 }
 
+/* Dark Mode Adjustments */
 body.dark-mode .course-fit-container {
   background: #111111;
   border-color: #08A4FF;
@@ -6241,6 +6732,7 @@ body.dark-mode .fit-text {
   color: #E0E0E0;
 }
 
+/* Responsive Adjustments */
 @media (max-width: 1200px) {
   .course-fit-container {
     max-width: 1100px;
@@ -6396,6 +6888,7 @@ body.dark-mode .fit-text {
     gap: 20px;
   }
 
+  /* Dark mode mobile adjustments */
   body.dark-mode .course-fit-container {
     background: transparent;
     box-shadow: none;
@@ -6410,6 +6903,10 @@ body.dark-mode .fit-text {
     color: rgba(255, 255, 255, 0.9);
   }
 }
+
+/* =========================================
+   CERTIFICATION THAT SETS YOU APART SECTION
+   ========================================= */
 
 .certification-apart-section {
   width: 100%;
@@ -6489,6 +6986,7 @@ body.dark-mode .fit-text {
   object-fit: contain;
 }
 
+
 .cert-list-text {
   font-family: 'Lexend', sans-serif;
   font-weight: 400;
@@ -6554,6 +7052,7 @@ body.dark-mode .fit-text {
   box-sizing: border-box;
 }
 
+/* Dark Mode Adjustments - Section stays light-themed */
 body.dark-mode .certification-apart-card {
   background: #FFFFFF;
   box-shadow: 0px 4px 27.6px 3px rgba(8, 164, 255, 0.25);
@@ -6579,6 +7078,7 @@ body.dark-mode .certification-apart-image img {
   border-color: #000000;
 }
 
+/* Responsive Adjustments */
 @media (max-width: 1400px) {
   .certification-apart-card {
     padding: 60px 50px;
@@ -6713,6 +7213,7 @@ body.dark-mode .certification-apart-image img {
     min-height: auto;
   }
 
+  /* Reorder elements: Image(1) → Content(2) → Button handled within content */
   .certification-apart-image {
     order: 1;
     width: 100%;
@@ -6799,6 +7300,9 @@ body.dark-mode .certification-apart-image img {
   }
 }
 
+/* =========================================
+   ROLES YOU CAN EXPECT SECTION
+   ========================================= */
 .roles-expect-section {
   width: 100%;
   padding: 80px 8vw;
@@ -6808,6 +7312,7 @@ body.dark-mode .certification-apart-image img {
   background: var(--bg-body);
 }
 
+/* Dark Mode Grid Background for Roles Section */
 body.dark-mode .roles-expect-section {
   background: #000000;
   background-image:
@@ -6888,6 +7393,7 @@ body.dark-mode .roles-expect-section {
   display: none;
 }
 
+/* Dark Mode Adjustments */
 body.dark-mode .role-img-light {
   display: none;
 }
@@ -6930,6 +7436,7 @@ body.dark-mode .role-img-dark {
   font-weight: 600;
 }
 
+/* Responsive Adjustments */
 @media (max-width: 1024px) {
   .roles-expect-title {
     font-size: 40px;
@@ -7081,6 +7588,7 @@ body.dark-mode .role-img-dark {
   justify-content: center;
   align-items: center;
   background: var(--bg-body);
+  /* Grid background pattern */
   background-image:
     linear-gradient(rgba(8, 164, 255, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(8, 164, 255, 0.05) 1px, transparent 1px);
@@ -7115,6 +7623,7 @@ body.dark-mode .role-img-dark {
   width: 100%;
 }
 
+/* Base Pricing Card Styles */
 .pricing-card {
   position: relative;
   display: flex;
@@ -7131,21 +7640,25 @@ body.dark-mode .role-img-dark {
   transform: translateY(-8px);
 }
 
+/* Featured Card (Business Growth - Purple Gradient) */
 .pricing-card-featured {
   background: linear-gradient(180deg, #351BC9 0%, #141C86 100%);
   box-shadow: 4.42px 4.42px 48px rgba(8, 164, 255, 0.4);
 }
 
+/* Light Card (Value Plan - Light Blue Tinted) */
 .pricing-card-light {
   background: rgba(8, 164, 255, 0.23);
   box-shadow: 4.42px 4.42px 48px rgba(8, 164, 255, 0.4);
 }
 
+/* Standard Card (Basic Plan - White Background) */
 .pricing-card-standard {
   background: #FFFFFF;
   box-shadow: 4.42px 4.42px 48px rgba(8, 164, 255, 0.4);
 }
 
+/* Dark Mode overrides for cards */
 body.dark-mode .pricing-card-light {
   background: rgb(181, 238, 255);
 }
@@ -7154,6 +7667,7 @@ body.dark-mode .pricing-card-standard {
   background: rgba(255, 255, 255, 0.95);
 }
 
+/* Pricing Badge */
 .pricing-badge {
   position: absolute;
   top: 20px;
@@ -7180,6 +7694,7 @@ body.dark-mode .pricing-card-standard {
   color: #FFFFFF;
 }
 
+/* Pricing Price */
 .pricing-price {
   font-family: 'Poppins', 'Lexend', sans-serif;
   font-style: normal;
@@ -7195,6 +7710,7 @@ body.dark-mode .pricing-card-standard {
   color: #231D4F;
 }
 
+/* Card Title */
 .pricing-card-title {
   font-family: 'Lexend', sans-serif;
   font-style: normal;
@@ -7209,6 +7725,7 @@ body.dark-mode .pricing-card-standard {
   color: #231D4F;
 }
 
+/* Card Subtitle */
 .pricing-card-subtitle {
   font-family: 'Poppins', 'Lexend', sans-serif;
   font-style: normal;
@@ -7224,6 +7741,7 @@ body.dark-mode .pricing-card-standard {
   color: #000000;
 }
 
+/* Features List */
 .pricing-features-list {
   list-style: none;
   display: flex;
@@ -7240,6 +7758,7 @@ body.dark-mode .pricing-card-standard {
   gap: 10px;
 }
 
+/* Feature Icons */
 .feature-icon {
   width: 20px;
   height: 20px;
@@ -7287,6 +7806,7 @@ body.dark-mode .pricing-card-standard {
   font-weight: bold;
 }
 
+/* Feature Text */
 .feature-text {
   font-family: 'Poppins', 'Lexend', sans-serif;
   font-style: normal;
@@ -7300,6 +7820,7 @@ body.dark-mode .pricing-card-standard {
   color: #000000;
 }
 
+/* Pricing Button */
 .pricing-btn {
   display: flex;
   justify-content: center;
@@ -7324,6 +7845,7 @@ body.dark-mode .pricing-card-standard {
   box-shadow: 0px 6px 20px rgba(8, 164, 255, 0.35);
 }
 
+/* Refund Text */
 .pricing-refund {
   font-family: 'Poppins', 'Lexend', sans-serif;
   font-style: normal;
@@ -7342,6 +7864,9 @@ body.dark-mode .pricing-card-standard {
   color: black;
 }
 
+/* =========================================
+   PRICING PLAN SECTION - RESPONSIVE
+   ========================================= */
 @media (max-width: 1200px) {
   .pricing-cards-wrapper {
     flex-wrap: wrap;
@@ -7447,9 +7972,14 @@ body.dark-mode .pricing-card-standard {
   }
 }
 
+/* =========================================
+   MOBILE HERO FIXES (Overrides Base Styles)
+   ========================================= */
 @media (max-width: 480px) {
 
+  /* Reset Hero Container */
   .hero-container {
+    /* DEBUG */
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -7458,6 +7988,7 @@ body.dark-mode .pricing-card-standard {
     padding-bottom: 30px !important;
   }
 
+  /* Hero Content - Flex Column */
   .hero-content {
     width: 100% !important;
     display: flex !important;
@@ -7468,12 +7999,16 @@ body.dark-mode .pricing-card-standard {
     justify-content: flex-start !important;
   }
 
+  /* Unwrap Columns */
   .text-col,
   .video-col,
   .video-col-mobile {
     display: contents !important;
   }
 
+  /* Reorder Items */
+
+  /* 1. Title */
   .hero-title {
     order: 1 !important;
     width: 100% !important;
@@ -7483,6 +8018,7 @@ body.dark-mode .pricing-card-standard {
     margin-bottom: 0 !important;
   }
 
+  /* 2. Video */
   .video-card-wrapper {
     order: 2 !important;
     width: 100% !important;
@@ -7490,6 +8026,7 @@ body.dark-mode .pricing-card-standard {
     margin: 0 auto !important;
   }
 
+  /* 3. Description */
   .hero-desc {
     order: 3 !important;
     width: 100% !important;
@@ -7498,6 +8035,7 @@ body.dark-mode .pricing-card-standard {
     line-height: 20px !important;
   }
 
+  /* 4. Span */
   .hero-span {
     order: 4 !important;
     width: 100% !important;
@@ -7507,6 +8045,7 @@ body.dark-mode .pricing-card-standard {
     margin-top: 0 !important;
   }
 
+  /* 5. Button */
   .btn-hero {
     order: 5 !important;
     width: 100% !important;
@@ -7514,41 +8053,55 @@ body.dark-mode .pricing-card-standard {
     margin-top: 10px !important;
   }
 
+  /* Ensure Video Card Sizing */
   .video-card {
     width: 100% !important;
     max-width: 345px !important;
     height: auto !important;
     aspect-ratio: 590/345 !important;
+    /* Approx ratio from desktop or figma */
   }
 
   .video-col {
     width: auto !important;
+    /* Reset width from 42% */
   }
 }
 
+/* Mobile Hero Layout Fixes via content duplication */
+
+/* Hide mobile video by default (Desktop) */
 .mobile-video-only {
   display: none !important;
 }
 
+/* Base style for desktop video? It's visible by default. */
+
 @media (max-width: 768px) {
 
+  /* Show mobile video */
   .mobile-video-only {
     display: block !important;
     width: 100% !important;
     max-width: 345px !important;
     margin: 20px auto !important;
     order: 5 !important;
+    /* Natural flow inside text-col */
   }
 
+  /* Hide desktop video */
   .desktop-video-only {
     display: none !important;
   }
 
+  /* Reset .video-col just in case it takes up space */
   .video-col,
   .video-col-mobile {
     display: none !important;
+    /* Hide the whole column wrapper on mobile */
   }
 
+  /* Reset Hero Container */
   .hero-container {
     display: flex !important;
     flex-direction: column !important;
@@ -7558,6 +8111,7 @@ body.dark-mode .pricing-card-standard {
     padding-bottom: 30px !important;
   }
 
+  /* Hero Content */
   .hero-content {
     width: 100% !important;
     display: flex !important;
@@ -7567,6 +8121,7 @@ body.dark-mode .pricing-card-standard {
     gap: 24px !important;
   }
 
+  /* Ensure Text Column is Flex Column */
   .text-col {
     display: flex !important;
     flex-direction: column !important;
@@ -7575,6 +8130,7 @@ body.dark-mode .pricing-card-standard {
     align-items: center !important;
   }
 
+  /* Styling for items inside text-col */
   .hero-title {
     width: 100% !important;
     text-align: left !important;
@@ -7593,13 +8149,17 @@ body.dark-mode .pricing-card-standard {
   }
 }
 
+/* Crop class for proof card 2 - focuses on Performance Overview section */
 .crop-proof img {
   object-fit: cover;
   object-position: 65% 50%;
+  /* Shift left to hide sidebar, focus on metrics area */
   transform: scale(1.3);
+  /* Zoom in to crop and focus on main content */
   transform-origin: 85% 20%;
 }
 
+/* Blur overlay */
 .blur-on-gif-result,
 .blur-on-image-result {
   position: absolute;
@@ -7628,6 +8188,7 @@ body.dark-mode .pricing-card-standard {
   gap: 4px;
 }
 
+/* Mobile Responsiveness */
 @media (max-width: 1200px) {
   .proof-card {
     flex-direction: column;

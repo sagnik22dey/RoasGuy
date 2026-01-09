@@ -2133,10 +2133,12 @@ body.dark-mode .instructor-bio {
 }
 
 .proof-card.card-left {
+  flex-direction: row-reverse;
   justify-content: flex-start;
 }
 
 .proof-card.card-right {
+  flex-direction: row-reverse;
   justify-content: flex-end;
 }
 
@@ -2169,6 +2171,151 @@ body.dark-mode .instructor-bio {
   height: 100%;
   object-fit: cover;
   border-radius: 18px;
+}
+
+/* =========================================
+   IMAGE CROPPER UTILITY CLASSES
+   Use these classes on .card-image-content to crop/resize images
+   Example: <div class="card-image-content crop-center scale-120">
+   ========================================= */
+
+/* Scale Classes - Zoom into the image */
+.card-image-content.scale-110 img {
+  transform: scale(1.1);
+}
+
+.card-image-content.scale-120 img {
+  transform: scale(1.2);
+}
+
+.card-image-content.scale-130 img {
+  transform: scale(1.3);
+}
+
+.card-image-content.scale-140 img {
+  transform: scale(1.4);
+}
+
+.card-image-content.scale-150 img {
+  transform: scale(1.5);
+}
+
+.card-image-content.scale-160 img {
+  transform: scale(1.6);
+}
+
+.card-image-content.scale-170 img {
+  transform: scale(1.7);
+}
+
+.card-image-content.scale-180 img {
+  transform: scale(1.8);
+}
+
+.card-image-content.scale-200 img {
+  transform: scale(2.0);
+}
+
+/* Position Classes - Move the image to show specific areas */
+/* Center positions (default is center) */
+.card-image-content.pos-center img {
+  object-position: center center;
+}
+
+.card-image-content.pos-top img {
+  object-position: center top;
+}
+
+.card-image-content.pos-bottom img {
+  object-position: center bottom;
+}
+
+.card-image-content.pos-left img {
+  object-position: left center;
+}
+
+.card-image-content.pos-right img {
+  object-position: right center;
+}
+
+/* Corner positions */
+.card-image-content.pos-top-left img {
+  object-position: left top;
+}
+
+.card-image-content.pos-top-right img {
+  object-position: right top;
+}
+
+.card-image-content.pos-bottom-left img {
+  object-position: left bottom;
+}
+
+.card-image-content.pos-bottom-right img {
+  object-position: right bottom;
+}
+
+/* Percentage-based positions for precise cropping */
+.card-image-content.pos-x-25 img {
+  object-position: 25% center;
+}
+
+.card-image-content.pos-x-75 img {
+  object-position: 75% center;
+}
+
+.card-image-content.pos-y-25 img {
+  object-position: center 25%;
+}
+
+.card-image-content.pos-y-75 img {
+  object-position: center 75%;
+}
+
+/* Combined crop classes for common scenarios */
+/* Crop left side - shows right portion of image */
+.card-image-content.crop-left img {
+  object-position: right center;
+}
+
+/* Crop right side - shows left portion of image */
+.card-image-content.crop-right img {
+  object-position: left center;
+}
+
+/* Crop top - shows bottom portion of image */
+.card-image-content.crop-top img {
+  object-position: center bottom;
+}
+
+/* Crop bottom - shows top portion of image */
+.card-image-content.crop-bottom img {
+  object-position: center top;
+}
+
+/* Crop to show center-right area (good for hiding left sidebar) */
+.card-image-content.crop-sidebar-left img {
+  object-position: 70% center;
+  transform: scale(1.15);
+}
+
+/* Crop to show metrics area (center-top) */
+.card-image-content.crop-metrics img {
+  object-position: center 20%;
+  transform: scale(1.2);
+}
+
+/* Crop to show performance overview (top-right area) */
+.card-image-content.crop-performance img {
+  object-position: 60% 30%;
+  transform: scale(1.3);
+}
+
+/* Custom crop with transform-origin support */
+.card-image-content.crop-custom img {
+  transform-origin: var(--crop-origin, center center);
+  transform: scale(var(--crop-scale, 1));
+  object-position: var(--crop-position, center center);
 }
 
 /* Blur effect overlay for proof card image */
@@ -2864,11 +3011,6 @@ body.dark-mode .access-item.item-highlighted .access-item-desc {
     align-items: center;
   }
 
-  .metric-label,
-  .metric-value {
-    font-size: 20px;
-    line-height: 26px;
-  }
 
   /* Additional Access Section Mobile 768px */
   .additional-access {
@@ -3349,12 +3491,14 @@ body.dark-mode .access-item.item-highlighted .access-item-desc {
     font-family: 'Lexend', sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 32px;
+    line-height: 34px;
     text-align: center;
     color: var(--text-main);
-    width: auto;
+    width: 100%;
+    max-width: 100%;
     height: auto;
+    word-wrap: break-word;
   }
 
   .proof-title-text .proof-highlight-word {
@@ -3434,6 +3578,19 @@ body.dark-mode .access-item.item-highlighted .access-item-desc {
   }
 
   .proof-card.card-right .proof-card-metrics {
+    order: 0;
+  }
+
+  /* Also handle .card-left class for mobile */
+  .proof-card.card-left {
+    flex-direction: column !important;
+  }
+
+  .proof-card.card-left .proof-card-image {
+    order: 1;
+  }
+
+  .proof-card.card-left .proof-card-metrics {
     order: 0;
   }
 
@@ -5611,23 +5768,23 @@ body.dark-mode .struggles-card-dark {
 
 @media (max-width: 480px) {
   .struggles-title {
-    font-size: 28px;
-    line-height: 34px;
+    font-size: 32px;
+    line-height: 38px;
   }
 
   .struggles-card-image {
-    width: 130px;
-    height: 130px;
+    width: 160px;
+    height: 180px;
   }
 
   .struggles-card-title {
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 22px;
+    line-height: 26px;
   }
 
   .struggles-card-desc {
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 20px;
   }
 }
 
@@ -8780,7 +8937,7 @@ body.dark-mode .pricing-card-standard {
     order: 3 !important;
     width: 100% !important;
     text-align: left !important;
-    font-size: 15px !important;
+    font-size: 17px !important;
     line-height: 20px !important;
   }
 
@@ -8789,7 +8946,7 @@ body.dark-mode .pricing-card-standard {
     order: 4 !important;
     width: 100% !important;
     text-align: left !important;
-    font-size: 15px !important;
+    font-size: 17px !important;
     line-height: 20px !important;
     margin-top: 0 !important;
   }
@@ -8883,7 +9040,7 @@ body.dark-mode .pricing-card-standard {
   .hero-title {
     width: 100% !important;
     text-align: left !important;
-    font-size: 44px !important;
+    font-size: 45px !important;
     line-height: 45px !important;
   }
 
@@ -8895,5 +9052,82 @@ body.dark-mode .pricing-card-standard {
 
   .btn-hero {
     margin-top: 10px !important;
+  }
+}
+
+/* Crop class for proof card 2 - focuses on Performance Overview section */
+.crop-proof img {
+  object-fit: cover;
+  object-position: 65% 50%;
+  /* Shift left to hide sidebar, focus on metrics area */
+  transform: scale(1.3);
+  /* Zoom in to crop and focus on main content */
+  transform-origin: 85% 20%;
+}
+
+/* Blur overlay */
+.blur-on-gif-result,
+.blur-on-image-result {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 32%;
+  height: 100%;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.proof-card-metrics {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 14px;
+  width: 350px;
+}
+
+.metric-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Text Styling from Prompt */
+/* .metric-label,
+.metric-value {
+  font-family: 'Neue Montreal', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+} */
+
+/* Mobile Responsiveness */
+@media (max-width: 1200px) {
+  .proof-card {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .proof-card-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    aspect-ratio: 801/397;
+  }
+
+  .proof-card-metrics {
+    width: 100%;
+    align-items: center;
+  }
+
+  .metric-item {
+    align-items: center;
   }
 }

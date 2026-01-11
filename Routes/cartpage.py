@@ -36,3 +36,15 @@ async def valueCart() -> HTMLResponse:
 async def businessGrowthCart() -> HTMLResponse:
     content = _read_html_file("businessGrowthCart.html")
     return HTMLResponse(content=content, status_code=200)
+
+
+@router.get("/meta-base-cart", response_class=HTMLResponse)
+async def metaBaseCart() -> HTMLResponse:
+    content = _read_html_file("metaBaseCart.html")
+    return HTMLResponse(content=content, status_code=200)
+
+
+@router.get("/meta-mentorship-cart", response_class=HTMLResponse)
+async def metaMentorshipCart() -> HTMLResponse:
+    content = _read_html_file("metaMentorshipCart.html")
+    return HTMLResponse(content=content, status_code=200)

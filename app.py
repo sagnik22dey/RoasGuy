@@ -11,6 +11,10 @@ from Routes import advancedHomepage
 from Routes import metaHomepage
 app = FastAPI()
 
+@app.get("/.well-known/appspecific/com.chrome.devtools.json")
+async def chrome_devtools_config():
+    return {}
+
 app.include_router(healthcheck.router)
 app.include_router(homepage.router)
 app.include_router(thankYouPage.router)

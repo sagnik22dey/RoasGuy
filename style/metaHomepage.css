@@ -195,7 +195,9 @@ body.dark-mode .logo-dark {
 }
 
 .theme-switch {
-    display: none;
+    position: relative;
+    width: 6vh;
+    height: 3vh;
 }
 
 .theme-switch input {
@@ -434,16 +436,18 @@ input:checked+.slider:before {
     }
 
     .navbar-enroll-btn {
-        padding: 6px 14px;
-        font-size: 12px;
-        border-radius: 30px;
+        padding: 8px 8px;
+        font-size: 14px;
+        line-height: 14px;
+        margin-left: 6px;
     }
 
     .nav-buttons {
         bottom: 12px;
         gap: 0;
-        padding: 6px 8px;
+        padding: 8px 5px;
         border-radius: 10px;
+        margin-bottom: 20px;
     }
 
     .logo-container {
@@ -463,9 +467,9 @@ input:checked+.slider:before {
     }
 
     .nav-pill-link {
-        font-size: 12px;
+        font-size: 15px;
         line-height: 16px;
-        padding: 4px 6px;
+        padding: 6px 3px;
     }
 
     .nav-pill-divider {
@@ -475,9 +479,30 @@ input:checked+.slider:before {
 
     .nav-enroll-btn {
         padding: 5px 12px;
-        font-size: 11px;
-        line-height: 14px;
-        margin-left: 6px;
+        font-size: 15px;
+        line-height: 16px;
+        margin-left: 1px;
+    }
+
+    .theme-switch {
+        width: 34px;
+        height: 14.38px;
+    }
+
+    .slider {
+        border-radius: 41px;
+        border-width: 0.15vh;
+    }
+
+    .slider:before {
+        height: 11px;
+        width: 11px;
+        left: 0.2vh;
+        bottom: 0.15vh;
+    }
+
+    input:checked+.slider:before {
+        transform: translateX(18px);
     }
 
     .info-strip {
@@ -501,7 +526,7 @@ input:checked+.slider:before {
     flex-direction: column;
     align-items: center;
     padding-bottom: 80px;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .hero-content-meta {
@@ -753,7 +778,9 @@ body.dark-mode .hero-desc-meta {
         height: auto;
         border-radius: 20px;
         box-shadow: 5px 5px 0px #08A4FF;
+        -webkit-box-shadow: 5px 5px 0px #08A4FF;
         margin-top: 0;
+        margin-bottom: 10px;
     }
 
     .hero-thumbnail {
@@ -1028,6 +1055,8 @@ body.dark-mode .learning-title {
 
 .middle-two-cards {
     margin-top: -280px;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 .learning-card {
@@ -1164,16 +1193,13 @@ body.dark-mode .learning-title {
 .learning-cards-grid .learning-card:nth-child(6) {
     grid-column: 1;
     grid-row: 3;
-    width: 255px;
-    height: 256px;
+
 }
 
 .learning-cards-grid .learning-card:nth-child(7) {
     grid-column: 1;
     grid-row: 3;
     margin-left: 275px;
-    width: 256px;
-    height: 256px;
 }
 
 .learning-cards-grid .learning-card:nth-child(8) {
@@ -1188,7 +1214,54 @@ body.dark-mode .learning-title {
 
 @media (max-width: 1200px) {}
 
-@media (max-width: 900px) {}
+@media (max-width: 900px) {
+    .learning-cards-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 23px;
+        width: 100%;
+    }
+
+    .middle-two-cards {
+        margin-top: 0;
+    }
+
+    .learning-card {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        min-height: 280px;
+        margin-left: 0 !important;
+    }
+
+    .learning-card.card-large {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        min-height: 350px;
+    }
+
+    .learning-cards-grid .learning-card:nth-child(n) {
+        grid-column: auto;
+        grid-row: auto;
+        margin-left: 0;
+    }
+
+    .learning-card-image {
+        min-height: 180px;
+        -webkit-flex: 1;
+        flex: 1;
+    }
+
+    .learning-card-image img {
+        width: 100%;
+        height: auto;
+        min-height: 150px;
+        -webkit-object-fit: cover;
+        object-fit: cover;
+    }
+}
 
 @media (max-width: 600px) {}
 
@@ -2210,13 +2283,14 @@ body.dark-mode .instructor-bio {
     }
 
     .instructor-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        width: 41rem;
+        height: auto;
+        object-fit: contain;
         transform: none;
         transform-origin: center center;
         margin-bottom: 0;
         border-radius: 34px;
+        margin-left: -8rem;
     }
 }
 
@@ -2837,7 +2911,7 @@ body.dark-mode .footer-image .footer-svg-dark {
     width: 100%;
     height: 0;
     border: 0.69px solid #E7EBFF;
-    margin: 19px 0;
+    margin: 0;
 }
 
 .pricing-features-list {
@@ -3278,7 +3352,16 @@ body.dark-mode .is-this-for-you-title {
     .hero-play-btn {
         display: flex;
     }
+
+    .pricing-enroll-btn-2 {
+        margin-top: 0px;
+    }
+
+    .pricing-enroll-btn {
+        margin-top: 0px;
+    }
 }
+
 
 /* -----------------------------------------------------------
    PROOF OF WORK SECTION (Desktop) - Min 769px

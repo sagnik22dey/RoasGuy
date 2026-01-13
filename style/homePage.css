@@ -578,11 +578,6 @@ input:checked+.slider:before {
     height: 70px;
   }
 
-  .theme-switch {
-    width: 39px;
-    height: 16.38px;
-  }
-
   .slider {
     border-radius: 41px;
     border-width: 0.15vh;

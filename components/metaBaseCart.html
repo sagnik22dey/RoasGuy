@@ -64,7 +64,7 @@
       <div class="desktop-background-grid">
         <div class="content-grid">
           <!-- Form Section -->
-          <div class="form-section">
+          <div class="form-section" id="form-section">
             <!-- Full Name -->
             <div class="form-group">
               <label class="form-label"
@@ -129,7 +129,7 @@
             <!-- Pay Button -->
             <div class="pay-button-wrapper">
               <div class="price-section">
-                <span class="price">₹991</span>
+                <span class="price">₹1491</span>
                 <span class="price-label">Total Amount</span>
               </div>
               <button class="pay-btn" onclick="handlePayment()">
@@ -238,9 +238,9 @@
             </div>
           </div>
           <div>
-            <button class="pay-now-mobile" onclick="handlePayment()">
-              Pay Now
-            </button>
+            <a href="#form-section" style="text-decoration: none"
+              ><button class="pay-now-mobile">Pay Now</button></a
+            >
           </div>
         </div>
       </div>

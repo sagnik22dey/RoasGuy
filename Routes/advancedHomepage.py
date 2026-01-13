@@ -14,7 +14,7 @@ def _read_adv_homepage_html() -> str:
         return "<html><body><h1>Advanced Homepage not found</h1></body></html>"
 
 
-@router.get("/advanced-course", response_class=HTMLResponse)
+@router.get("/psychology-driven-advanced-meta-ad-course", response_class=HTMLResponse)
 async def advHomepage() -> HTMLResponse:
     content = _read_adv_homepage_html()
     return HTMLResponse(content=content, status_code=200)

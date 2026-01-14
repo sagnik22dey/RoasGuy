@@ -177,6 +177,27 @@ body.dark-mode .logo-dark {
   gap: 2vw;
 }
 
+.whatsapp-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+}
+
+.whatsapp-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 /* Theme Toggle */
 .theme-switch {
   position: relative;
@@ -592,6 +613,11 @@ input:checked+.slider:before {
 
   input:checked+.slider:before {
     transform: translateX(18px);
+  }
+
+  .whatsapp-btn {
+    width: 45px;
+    height: 45px;
   }
 
   /* Language Toggle Wrapper - Mobile (Gray Container) */

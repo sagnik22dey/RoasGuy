@@ -5131,8 +5131,7 @@ body.dark-mode .footer-logo.logo-dark {
 
 @media (max-width: 480px) {
   .site-footer {
-    margin-top: 60px;
-    padding: 30px 5vw 15px;
+    padding: 30px 5vw 100px;
   }
 
   .footer-logo {

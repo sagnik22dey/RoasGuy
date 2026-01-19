@@ -9,6 +9,7 @@ from Routes import thankYouPage
 from Routes import cartpage
 from Routes import advancedHomepage
 from Routes import metaHomepage
+from Routes import policyPages
 app = FastAPI()
 
 @app.get("/.well-known/appspecific/com.chrome.devtools.json")
@@ -21,6 +22,7 @@ app.include_router(thankYouPage.router)
 app.include_router(cartpage.router)
 app.include_router(advancedHomepage.router)
 app.include_router(metaHomepage.router)
+app.include_router(policyPages.router)
 
 app.mount("/Resources", StaticFiles(directory="Resources"), name="Resources")
 app.mount("/style", StaticFiles(directory="style"), name="style")

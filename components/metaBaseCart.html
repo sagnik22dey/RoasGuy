@@ -386,23 +386,10 @@
       }
 
       function handlePayment() {
-        // Validate form
-        const fullName = document.querySelector(
-          '.form-input[type="text"]'
-        ).value;
-        const phone = document.querySelector(".phone-input").value;
-        const email = document.querySelector('.form-input[type="email"]').value;
-
-        if (!fullName || !phone || !email) {
-          alert("Please fill in all required fields.");
-          return;
-        }
-
-        // Proceed to payment (integrate with payment gateway)
-        alert("Redirecting to payment gateway...");
-        // window.location.href = '/payment';
+        initializeRazorpayPayment("meta-andromeda-base");
       }
     </script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <script src="/Resources/script.js"></script>
     <script src="/Resources/cart.js"></script>
   </body>

@@ -5000,6 +5000,7 @@ body.dark-mode .icon-dark {
 
 .footer-logo {
   height: 60px;
+  scale: 3.5;
   width: auto;
   object-fit: contain;
 }
@@ -5025,6 +5026,7 @@ body.dark-mode .footer-logo.logo-dark {
   font-size: 14px;
   color: var(--text-main);
   opacity: 0.8;
+  margin-top: 30px;
 }
 
 .footer-links {
@@ -5150,4 +5152,8 @@ body.dark-mode .footer-logo.logo-dark {
   .footer-bottom {
     margin-top: 25px;
   }
+}
+
+.footer-section {
+  display: none;
 }

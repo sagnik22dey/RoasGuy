@@ -1097,7 +1097,6 @@ body.dark-mode .lang-btn.active:hover {
   width: 100%;
   background: var(--bg-body);
   padding: 80px 0;
-  margin-top: 60px;
 }
 
 .course-section-container {
@@ -1155,11 +1154,11 @@ body.dark-mode .lang-btn.active:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 43px 29px;
-  gap: 20px;
+  padding: 20px 20px;
+  gap: 5px;
   width: 100%;
-  max-width: 415px;
-  min-height: 528px;
+  max-width: 350px;
+  min-height: 200px;
   background: #FFFFFF;
   box-shadow: 8px 8px 0px rgba(8, 164, 255, 0.67);
   border-radius: 32px;
@@ -5906,10 +5905,13 @@ body.dark-mode .instructor-image {
 }
 
 .bonus-grid {
+  scale: 0.7;
+  margin-bottom: -20rem;
+  margin-top: -15rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
+  gap: 80px;
   width: 100%;
   max-width: 1400px;
 }
@@ -6061,7 +6063,10 @@ body.dark-mode .bonus-list li::before {
 
 @media (max-width: 1024px) {
   .bonus-grid {
+    scale: 1;
     gap: 30px;
+    margin-bottom: 0rem;
+    margin-top: 0rem;
   }
 
   .bonus-section-title {
@@ -6079,8 +6084,11 @@ body.dark-mode .bonus-list li::before {
   }
 
   .bonus-grid {
+    scale: 1;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 0rem;
+    margin-top: 0rem;
     gap: 40px;
   }
 
@@ -7138,6 +7146,7 @@ body.dark-mode .role-img-dark {
   flex-direction: row;
   justify-content: center;
   align-items: stretch;
+  gap: 50px;
   width: 100%;
 }
 
@@ -7678,4 +7687,187 @@ body.dark-mode .pricing-card-standard {
   .metric-item {
     align-items: center;
   }
+}
+
+.site-footer {
+  width: 100%;
+  background: var(--bg-body);
+  padding: 60px 8vw 100px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 300px;
+}
+
+.footer-logo {
+  height: 60px;
+  scale: 3.5;
+  width: auto;
+  object-fit: contain;
+}
+
+.footer-logo.logo-light {
+  display: block;
+}
+
+.footer-logo.logo-dark {
+  display: none;
+}
+
+body.dark-mode .footer-logo.logo-light {
+  display: none;
+}
+
+body.dark-mode .footer-logo.logo-dark {
+  display: block;
+}
+
+.footer-tagline {
+  font-family: 'Lexend', sans-serif;
+  font-size: 14px;
+  color: var(--text-main);
+  opacity: 0.8;
+  margin-top: 30px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-links-title,
+.footer-contact-title {
+  font-family: 'Lexend', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links-list li a {
+  font-family: 'Lexend', sans-serif;
+  font-size: 16px;
+  color: var(--text-main);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links-list li a:hover {
+  color: #08A4FF;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-contact-phone,
+.footer-contact-email {
+  font-family: 'Lexend', sans-serif;
+  font-size: 14px;
+  color: var(--text-main);
+}
+
+.footer-contact-email a {
+  color: #08A4FF;
+  text-decoration: none;
+}
+
+.footer-contact-email a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(8, 164, 255, 0.2);
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-family: 'Lexend', sans-serif;
+  font-size: 14px;
+  color: var(--text-main);
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 40px 5vw 20px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .footer-brand {
+    align-items: center;
+  }
+
+  .footer-links {
+    align-items: center;
+  }
+
+  .footer-links-list {
+    align-items: center;
+  }
+
+  .footer-contact {
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-footer {
+    padding: 30px 5vw 100px;
+  }
+
+  .footer-logo {
+    height: 50px;
+  }
+
+  .footer-links-title,
+  .footer-contact-title {
+    font-size: 16px;
+  }
+
+  .footer-links-list li a {
+    font-size: 14px;
+  }
+
+  .footer-bottom {
+    margin-top: 25px;
+  }
+}
+
+.footer-section {
+  display: none;
 }

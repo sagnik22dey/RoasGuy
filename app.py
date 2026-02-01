@@ -2,6 +2,9 @@ from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
 import uvicorn
+from dotenv import load_dotenv
+
+load_dotenv()
 
 from Routes import healthcheck
 from Routes import homepage
@@ -10,6 +13,7 @@ from Routes import cartpage
 from Routes import advancedHomepage
 from Routes import metaHomepage
 from Routes import policyPages
+from Routes import payments
 app = FastAPI()
 
 @app.get("/.well-known/appspecific/com.chrome.devtools.json")
@@ -23,6 +27,7 @@ app.include_router(cartpage.router)
 app.include_router(advancedHomepage.router)
 app.include_router(metaHomepage.router)
 app.include_router(policyPages.router)
+app.include_router(payments.router)
 
 app.mount("/Resources", StaticFiles(directory="Resources"), name="Resources")
 app.mount("/style", StaticFiles(directory="style"), name="style")

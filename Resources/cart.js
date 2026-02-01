@@ -1,46 +1,132 @@
-function handlePayment() {
-  const fullNameInput = document.querySelector('input[placeholder="Enter your full name"]');
-  const phoneNumberInput = document.querySelector('.phone-input');
-  const countryCodeInput = document.querySelector('.country-select');
-  const emailInput = document.querySelector('input[type="email"]');
+const COURSE_CONFIG = {
+  "fundamentals-of-facebook-ads": {
+    name: "Fundamentals of Facebook Ads",
+    amount: 999,
+    thankYouPage: "/fundamentals-of-facebook-ads/thankyou",
+  },
+  "business-growth-plan": {
+    name: "Business Growth Plan",
+    amount: 49991,
+    thankYouPage: "/psychology-driven-advanced-meta-ad-course/business-growth-plan/thankyou",
+  },
+  "value-plan": {
+    name: "Value Plan",
+    amount: 14991,
+    thankYouPage: "/psychology-driven-advanced-meta-ad-course/value-plan/thankyou",
+  },
+  "meta-andromeda-base": {
+    name: "Meta Andromeda Base",
+    amount: 1491,
+    thankYouPage: "/meta-andromeda-update-course/base-plan/thankyou",
+  },
+  "meta-andromeda-mentorship": {
+    name: "Meta Andromeda Mentorship",
+    amount: 4991,
+    thankYouPage: "/meta-andromeda-update-course/mentorship-plan/thankyou",
+  },
+};
 
-  const fullName = fullNameInput ? fullNameInput.value.trim() : "";
-  const phoneNumber = phoneNumberInput ? phoneNumberInput.value.trim() : "";
-  const countryCode = countryCodeInput ? countryCodeInput.value : "";
-  const email = emailInput ? emailInput.value.trim() : "";
+async function initializeRazorpayPayment(courseId) {
+  const fullName = document.querySelector('.form-input[type="text"]').value.trim();
+  const countryCode = document.getElementById("country-code").value;
+  const phoneNumber = document.querySelector(".phone-input").value.trim();
+  const email = document.querySelector('.form-input[type="email"]').value.trim();
 
   if (!fullName || !phoneNumber || !email) {
     alert("Please fill in all required fields.");
     return;
   }
 
-  // Basic email validation
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
     alert("Please enter a valid email address.");
     return;
   }
 
-  const priceElement = document.querySelector('.price');
-  const amount = priceElement ? priceElement.innerText : "0";
+  const phone = countryCode + phoneNumber;
+  const course = COURSE_CONFIG[courseId];
 
-  const paymentData = {
-    fullName: fullName,
-    phoneNumber: countryCode + phoneNumber,
-    email: email,
-    amount: amount
-  };
+  if (!course) {
+    alert("Invalid course selection.");
+    return;
+  }
 
-  console.log("Processing payment for:", paymentData);
-  alert(`Proceeding to payment for ${amount}. Integration waiting for gateway credentials.`);
-  
-  // TODO: Add actual payment gateway integration here (e.g., Razorpay, Stripe)
-  // Example for Razorpay:
-  // var options = {
-  //     "key": "YOUR_KEY_ID",
-  //     "amount": "50000", 
-  //     ...
-  // };
-  // var rzp1 = new Razorpay(options);
-  // rzp1.open();
+  try {
+    const response = await fetch("/api/create-order", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        course_id: courseId,
+        name: fullName,
+        email: email,
+        phone: phone,
+      }),
+    });
+
+    const data = await response.json();
+
+    if (!data.success) {
+      alert("Failed to create order. Please try again.");
+      return;
+    }
+
+    const options = {
+      key: data.key_id,
+      amount: data.amount,
+      currency: data.currency,
+      name: "ROAS School of Marketing",
+      description: data.course_name,
+      order_id: data.order_id,
+      handler: async function (response) {
+        const verifyResponse = await fetch("/api/verify-payment", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            razorpay_order_id: response.razorpay_order_id,
+            razorpay_payment_id: response.razorpay_payment_id,
+            razorpay_signature: response.razorpay_signature,
+            course_id: courseId,
+            name: fullName,
+            email: email,
+            phone: phone,
+          }),
+        });
+
+        const verifyData = await verifyResponse.json();
+
+        if (verifyData.success) {
+          window.location.href = course.thankYouPage;
+        } else {
+          alert("Payment verification failed. Please contact support.");
+        }
+      },
+      prefill: {
+        name: data.prefill.name,
+        email: data.prefill.email,
+        contact: data.prefill.contact,
+      },
+      theme: {
+        color: "#6366f1",
+      },
+      modal: {
+        ondismiss: function () {
+          console.log("Payment modal closed");
+        },
+      },
+    };
+
+    const rzp = new Razorpay(options);
+    rzp.on("payment.failed", function (response) {
+      alert("Payment failed. Please try again.");
+      console.error(response.error);
+    });
+    rzp.open();
+  } catch (error) {
+    console.error("Error:", error);
+    alert("An error occurred. Please try again.");
+  }
 }

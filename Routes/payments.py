@@ -1,4 +1,4 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, BackgroundTasks
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 import razorpay
@@ -7,6 +7,7 @@ import hashlib
 import os
 import logging
 from dotenv import load_dotenv
+from services.graphy import create_and_enroll_learner
 
 load_dotenv()
 
@@ -125,10 +126,32 @@ async def create_order(request: CreateOrderRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
 
-@router.post("/api/verify-payment")
-async def verify_payment(request: VerifyPaymentRequest):
+async def _enroll_on_graphy(email: str, name: str, phone: str, course_id: str, razorpay_payment_id: str):
     """
-    Verify the Razorpay payment signature and confirm the payment.
+    Background task: Create learner on Graphy and enroll them in the purchased course.
+    Runs after the payment verification response is sent to the user.
+    """
+    try:
+        result = await create_and_enroll_learner(
+            email=email,
+            name=name,
+            phone=phone,
+            course_id=course_id,
+            razorpay_payment_id=razorpay_payment_id,
+        )
+        if result["course_assigned"]:
+            logger.info(f"Graphy enrollment SUCCESS for {email} | course: {course_id} | payment: {razorpay_payment_id}")
+        else:
+            logger.error(f"Graphy enrollment FAILED for {email} | course: {course_id} | details: {result}")
+    except Exception as e:
+        logger.error(f"Graphy enrollment background task error for {email}: {str(e)}")
+
+
+@router.post("/api/verify-payment")
+async def verify_payment(request: VerifyPaymentRequest, background_tasks: BackgroundTasks):
+    """
+    Verify the Razorpay payment signature, confirm the payment,
+    and trigger Graphy learner creation + course enrollment in the background.
     """
     try:
         message = f"{request.razorpay_order_id}|{request.razorpay_payment_id}"
@@ -140,6 +163,15 @@ async def verify_payment(request: VerifyPaymentRequest):
         
         if generated_signature != request.razorpay_signature:
             raise HTTPException(status_code=400, detail="Invalid payment signature")
+        
+        background_tasks.add_task(
+            _enroll_on_graphy,
+            email=request.email,
+            name=request.name,
+            phone=request.phone,
+            course_id=request.course_id,
+            razorpay_payment_id=request.razorpay_payment_id,
+        )
         
         return JSONResponse(content={
             "success": True,

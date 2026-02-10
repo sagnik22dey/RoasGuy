@@ -1,3 +1,4 @@
+import os
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
@@ -39,4 +40,5 @@ async def not_found_exception_handler(request: Request, exc):
     return JSONResponse(status_code=404, content={"message": "Page not found"})
 
 if __name__ == "__main__":
-    uvicorn.run("app:app", host="0.0.0.0", port=5500, reload=True)
+    port = int(os.environ.get("PORT", 5500))
+    uvicorn.run("app:app", host="0.0.0.0", port=port, reload=True)

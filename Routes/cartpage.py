@@ -38,13 +38,13 @@ async def businessGrowthCart() -> HTMLResponse:
     return HTMLResponse(content=content, status_code=200)
 
 
-@router.get("/meta-andromeda-update-course/meta-base-cart", response_class=HTMLResponse)
+@router.get("/master-creative-targeting/meta-base-cart", response_class=HTMLResponse)
 async def metaBaseCart() -> HTMLResponse:
     content = _read_html_file("metaBaseCart.html")
     return HTMLResponse(content=content, status_code=200)
 
 
-@router.get("/meta-andromeda-update-course/meta-mentorship-cart", response_class=HTMLResponse)
+@router.get("/master-creative-targeting/meta-mentorship-cart", response_class=HTMLResponse)
 async def metaMentorshipCart() -> HTMLResponse:
     content = _read_html_file("metaMentorshipCart.html")
     return HTMLResponse(content=content, status_code=200)

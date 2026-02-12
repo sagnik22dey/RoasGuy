@@ -17,12 +17,12 @@ const COURSE_CONFIG = {
   "meta-andromeda-base": {
     name: "Meta Andromeda Base",
     amount: 1491,
-    thankYouPage: "/meta-andromeda-update-course/base-plan/thankyou",
+    thankYouPage: "/master-creative-targeting/base-plan/thankyou",
   },
   "meta-andromeda-mentorship": {
     name: "Meta Andromeda Mentorship",
     amount: 4991,
-    thankYouPage: "/meta-andromeda-update-course/mentorship-plan/thankyou",
+    thankYouPage: "/master-creative-targeting/mentorship-plan/thankyou",
   },
 };
 

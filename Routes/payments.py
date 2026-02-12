@@ -28,7 +28,7 @@ client = razorpay.Client(auth=(RAZORPAY_KEY_ID, RAZORPAY_KEY_SECRET))
 COURSE_PRICES = {
     "fundamentals-of-facebook-ads": {
         "name": "Fundamentals of Facebook Ads",
-        "amount": 99900,
+        "amount": 100,
         "currency": "INR"
     },
     "business-growth-plan": {

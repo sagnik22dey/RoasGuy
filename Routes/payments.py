@@ -18,9 +18,12 @@ router = APIRouter()
 
 RAZORPAY_KEY_ID = os.getenv("RAZORPAY_KEY_ID")
 RAZORPAY_KEY_SECRET = os.getenv("RAZORPAY_KEY_SECRET")
+TEST_PRICE_OVERRIDE = os.getenv("TEST_PRICE_OVERRIDE")
 
 logger.info(f"Razorpay Key ID loaded: {RAZORPAY_KEY_ID[:10]}..." if RAZORPAY_KEY_ID else "Razorpay Key ID NOT loaded")
 logger.info(f"Razorpay Key Secret loaded: {'Yes' if RAZORPAY_KEY_SECRET else 'No'}")
+if TEST_PRICE_OVERRIDE:
+    logger.warning(f"TEST_PRICE_OVERRIDE is active: all Razorpay orders will be charged {TEST_PRICE_OVERRIDE} paise")
 
 client = razorpay.Client(auth=(RAZORPAY_KEY_ID, RAZORPAY_KEY_SECRET))
 
@@ -29,29 +32,45 @@ COURSE_PRICES = {
     "fundamentals-of-facebook-ads": {
         "name": "Fundamentals of Facebook Ads",
         "amount": 99900,
-        "currency": "INR"
+        "currency": "INR",
+        "price_env": "PRICE_FUNDAMENTALS"
+    },
+    "basic-plan": {
+        "name": "Basic Plan",
+        "amount": 1399100,
+        "currency": "INR",
+        "price_env": "PRICE_BASIC_PLAN"
     },
     "business-growth-plan": {
         "name": "Business Growth Plan",
         "amount": 4999100,
-        "currency": "INR"
+        "currency": "INR",
+        "price_env": "PRICE_BUSINESS_GROWTH"
     },
     "value-plan": {
         "name": "Value Plan",
         "amount": 1499100,
-        "currency": "INR"
+        "currency": "INR",
+        "price_env": "PRICE_VALUE_PLAN"
     },
-    "meta-andromeda-base": {
-        "name": "Meta Andromeda Base",
-        "amount": 149100,
-        "currency": "INR"
+    "master-creative-targeting-base": {
+        "name": "Master Creative Targeting - Base Plan",
+        "amount": 199100,
+        "currency": "INR",
+        "price_env": "PRICE_MCT_BASE"
     },
-    "meta-andromeda-mentorship": {
-        "name": "Meta Andromeda Mentorship",
+    "master-creative-targeting-mentorship": {
+        "name": "Master Creative Targeting - Mentorship Plan",
         "amount": 499100,
-        "currency": "INR"
+        "currency": "INR",
+        "price_env": "PRICE_MCT_MENTORSHIP"
     }
 }
+
+for cid, cdata in COURSE_PRICES.items():
+    env_val = os.getenv(cdata["price_env"])
+    if env_val:
+        logger.warning(f"Price override active for '{cid}': {env_val} paise (env: {cdata['price_env']})")
 
 
 class CreateOrderRequest(BaseModel):
@@ -89,8 +108,11 @@ async def create_order(request: CreateOrderRequest):
         import time
         receipt_id = f"rcpt_{int(time.time())}"
         
+        env_override = os.getenv(course["price_env"])
+        charge_amount = int(env_override) if env_override else course["amount"]
+        
         order_data = {
-            "amount": course["amount"],
+            "amount": charge_amount,
             "currency": course["currency"],
             "receipt": receipt_id,
             "notes": {
@@ -109,7 +131,7 @@ async def create_order(request: CreateOrderRequest):
         return JSONResponse(content={
             "success": True,
             "order_id": order["id"],
-            "amount": course["amount"],
+            "amount": charge_amount,
             "currency": course["currency"],
             "key_id": RAZORPAY_KEY_ID,
             "course_name": course["name"],

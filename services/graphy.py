@@ -27,8 +27,8 @@ COURSE_GRAPHY_PRODUCT_MAP = {
     "fundamentals-of-facebook-ads": os.getenv("GRAPHY_PRODUCT_FUNDAMENTALS", ""),
     "business-growth-plan": os.getenv("GRAPHY_PRODUCT_BUSINESS_GROWTH", ""),
     "value-plan": os.getenv("GRAPHY_PRODUCT_VALUE_PLAN", ""),
-    "meta-andromeda-base": os.getenv("GRAPHY_PRODUCT_META_BASE", ""),
-    "meta-andromeda-mentorship": os.getenv("GRAPHY_PRODUCT_META_MENTORSHIP", ""),
+    "master-creative-targeting-base": os.getenv("GRAPHY_PRODUCT_MCT_BASE", ""),
+    "master-creative-targeting-mentorship": os.getenv("GRAPHY_PRODUCT_MCT_MENTORSHIP", ""),
 }
 
 

@@ -772,6 +772,22 @@ input:checked+.slider:before {
   background-color: #000;
 }
 
+.video-embed {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  border-radius: 32px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.video-embed iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 32px;
+}
+
 .video-thumb {
   width: 100%;
   height: 100%;
@@ -4604,6 +4620,14 @@ body.dark-mode .footer-image .footer-svg-dark {
     width: 100%;
     height: 216.69px;
     aspect-ratio: auto;
+    border-radius: 19.7px;
+  }
+
+  .video-embed {
+    border-radius: 19.7px;
+  }
+
+  .video-embed iframe {
     border-radius: 19.7px;
   }
 

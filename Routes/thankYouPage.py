@@ -31,8 +31,8 @@ def _read_metaThankyou_html() -> str:
         return "<html><body><h1>Meta Thank You Page not found</h1></body></html>"
 
 
-@router.get("/meta-andromeda-update-course/mentorship-plan/thankyou", response_class=HTMLResponse)
-@router.get("/meta-andromeda-update-course/base-plan/thankyou", response_class=HTMLResponse)
+@router.get("/master-creative-targeting/mentorship-plan/thankyou", response_class=HTMLResponse)
+@router.get("/master-creative-targeting/base-plan/thankyou", response_class=HTMLResponse)
 async def metaThankYouPage() -> HTMLResponse:
     content = _read_metaThankyou_html()
     return HTMLResponse(content=content, status_code=200)

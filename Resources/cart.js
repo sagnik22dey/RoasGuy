@@ -4,6 +4,11 @@ const COURSE_CONFIG = {
     amount: 999,
     thankYouPage: "/fundamentals-of-facebook-ads/thankyou",
   },
+  "basic-plan": {
+    name: "Basic Plan",
+    amount: 13991,
+    thankYouPage: "/psychology-driven-advanced-meta-ad-course/basic-plan/thankyou",
+  },
   "business-growth-plan": {
     name: "Business Growth Plan",
     amount: 49991,
@@ -14,15 +19,15 @@ const COURSE_CONFIG = {
     amount: 14991,
     thankYouPage: "/psychology-driven-advanced-meta-ad-course/value-plan/thankyou",
   },
-  "meta-andromeda-base": {
-    name: "Meta Andromeda Base",
-    amount: 1491,
-    thankYouPage: "/meta-andromeda-update-course/base-plan/thankyou",
+  "master-creative-targeting-base": {
+    name: "Master Creative Targeting - Base Plan",
+    amount: 1991,
+    thankYouPage: "/master-creative-targeting/base-plan/thankyou",
   },
-  "meta-andromeda-mentorship": {
-    name: "Meta Andromeda Mentorship",
+  "master-creative-targeting-mentorship": {
+    name: "Master Creative Targeting - Mentorship Plan",
     amount: 4991,
-    thankYouPage: "/meta-andromeda-update-course/mentorship-plan/thankyou",
+    thankYouPage: "/master-creative-targeting/mentorship-plan/thankyou",
   },
 };
 
@@ -99,7 +104,21 @@ async function initializeRazorpayPayment(courseId) {
         const verifyData = await verifyResponse.json();
 
         if (verifyData.success) {
-          window.location.href = course.thankYouPage;
+          const redirectParams = new URLSearchParams(window.location.search);
+
+          redirectParams.set("payment_id", response.razorpay_payment_id);
+          redirectParams.set("order_id", response.razorpay_order_id);
+          redirectParams.set("payment_amount", course.amount);
+          redirectParams.set("course_name", course.name);
+          redirectParams.set("course_id", courseId);
+
+          redirectParams.set("name", fullName);
+          redirectParams.set("email", email);
+          redirectParams.set("phone", phone);
+          redirectParams.set("country_code", countryCode);
+
+          window.location.href =
+            course.thankYouPage + "?" + redirectParams.toString();
         } else {
           alert("Payment verification failed. Please contact support.");
         }

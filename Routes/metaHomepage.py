@@ -14,7 +14,7 @@ def _read_metaHomepage_html() -> str:
         return "<html><body><h1>Homepage not found</h1></body></html>"
 
 
-@router.get("/meta-andromeda-update-course", response_class=HTMLResponse)
+@router.get("/master-creative-targeting", response_class=HTMLResponse)
 async def metaHomepage() -> HTMLResponse:
     content = _read_metaHomepage_html()
     return HTMLResponse(content=content, status_code=200)

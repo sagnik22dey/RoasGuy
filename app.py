@@ -15,6 +15,7 @@ from Routes import advancedHomepage
 from Routes import metaHomepage
 from Routes import policyPages
 from Routes import payments
+from Routes import fofaSubroutes
 app = FastAPI()
 
 @app.get("/.well-known/appspecific/com.chrome.devtools.json")
@@ -29,6 +30,7 @@ app.include_router(advancedHomepage.router)
 app.include_router(metaHomepage.router)
 app.include_router(policyPages.router)
 app.include_router(payments.router)
+app.include_router(fofaSubroutes.router)
 
 app.mount("/Resources", StaticFiles(directory="Resources"), name="Resources")
 app.mount("/style", StaticFiles(directory="style"), name="style")

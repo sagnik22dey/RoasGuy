@@ -16,6 +16,8 @@ def _read_thankYouPage_html() -> str:
 @router.get("/psychology-driven-advanced-meta-ad-course/business-growth-plan/thankyou", response_class=HTMLResponse)
 @router.get("/psychology-driven-advanced-meta-ad-course/value-plan/thankyou", response_class=HTMLResponse)
 @router.get("/psychology-driven-advanced-meta-ad-course/basic-plan/thankyou", response_class=HTMLResponse)
+@router.get("/psychology-driven-advanced-meta-ad-course/business-growth-partner-plan/thankyou", response_class=HTMLResponse)
+@router.get("/psychology-driven-advanced-meta-ad-course/business-growth-mastery-plan/thankyou", response_class=HTMLResponse)
 @router.get("/fundamentals-of-facebook-ads/thankyou", response_class=HTMLResponse)
 async def thankYouPage() -> HTMLResponse:
     content = _read_thankYouPage_html()

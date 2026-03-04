@@ -48,3 +48,15 @@ async def metaBaseCart() -> HTMLResponse:
 async def metaMentorshipCart() -> HTMLResponse:
     content = _read_html_file("metaMentorshipCart.html")
     return HTMLResponse(content=content, status_code=200)
+
+
+@router.get("/psychology-driven-advanced-meta-ad-course/growth-mastery-plan", response_class=HTMLResponse)
+async def valueCartBusiness() -> HTMLResponse:
+    content = _read_html_file("valueCart_business.html")
+    return HTMLResponse(content=content, status_code=200)
+
+
+@router.get("/psychology-driven-advanced-meta-ad-course/growth-partner-plan", response_class=HTMLResponse)
+async def businessGrowthCartBusiness() -> HTMLResponse:
+    content = _read_html_file("businessGrowthCart_business.html")
+    return HTMLResponse(content=content, status_code=200)

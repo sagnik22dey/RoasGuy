@@ -10,9 +10,11 @@
   --text-primary: #000000;
   --text-secondary: #000000;
   --divider-color: #000000;
-  --whatsapp-gradient: linear-gradient(219.38deg,
-      #46cc5e 28.74%,
-      #1f991e 105.9%);
+  --whatsapp-gradient: linear-gradient(
+    219.38deg,
+    #46cc5e 28.74%,
+    #1f991e 105.9%
+  );
   --linkedin-blue: #0077b5;
   --page-width: 1512px;
   --nav-shadow: 0px 4px 28.7px #08a4ff;
@@ -24,10 +26,12 @@
   --input-bg: #f0f0f0;
   --input-border: rgba(0, 0, 0, 0.44);
   --placeholder-color: #929292;
-  --gradient-overlay: linear-gradient(90deg,
-      rgba(255, 255, 255, 0.35) 34.51%,
-      rgba(200, 200, 200, 0.22) 62.86%,
-      rgba(254, 254, 254, 0) 100%);
+  --gradient-overlay: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.35) 34.51%,
+    rgba(200, 200, 200, 0.22) 62.86%,
+    rgba(254, 254, 254, 0) 100%
+  );
 }
 
 /* Dark Mode Variables */
@@ -43,10 +47,12 @@ body.dark-mode {
   --toggle-circle: #ffffff;
 
   /* Preserved */
-  --gradient-overlay: linear-gradient(90deg,
-      rgba(44, 44, 44, 0.35) 34.51%,
-      rgba(119, 119, 119, 0.22) 62.86%,
-      rgba(254, 254, 254, 0) 100%);
+  --gradient-overlay: linear-gradient(
+    90deg,
+    rgba(44, 44, 44, 0.35) 34.51%,
+    rgba(119, 119, 119, 0.22) 62.86%,
+    rgba(254, 254, 254, 0) 100%
+  );
 }
 
 * {
@@ -65,7 +71,9 @@ body {
   color: var(--text-primary);
   min-height: 100vh;
   overflow-x: hidden;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 /* Light Mode Background - CLEAN BODY */
@@ -82,8 +90,8 @@ body.dark-mode {
 .desktop-background-grid {
   width: 100%;
   /* Light Mode Grid */
-  background-image: linear-gradient(rgba(200, 200, 200, 0.4) 1px,
-      transparent 1px),
+  background-image:
+    linear-gradient(rgba(200, 200, 200, 0.4) 1px, transparent 1px),
     linear-gradient(90deg, rgba(200, 200, 200, 0.4) 1px, transparent 1px);
   background-size: 60px 60px;
   background-position: -1px -1px;
@@ -91,8 +99,8 @@ body.dark-mode {
 
 /* Dark Mode Grid Override */
 body.dark-mode .desktop-background-grid {
-  background-image: linear-gradient(rgba(50, 50, 50, 0.5) 1px,
-      transparent 1px),
+  background-image:
+    linear-gradient(rgba(50, 50, 50, 0.5) 1px, transparent 1px),
     linear-gradient(90deg, rgba(50, 50, 50, 0.5) 1px, transparent 1px);
   background-size: 60px 60px;
   background-position: -1px -1px;
@@ -115,7 +123,9 @@ body.dark-mode .desktop-background-grid {
   padding-right: 8vw;
   box-shadow: var(--nav-shadow);
   z-index: 1000;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .logo-container {
@@ -242,11 +252,11 @@ body.dark-mode .logo-circle {
   transition: 0.4s;
 }
 
-input:checked+.slider {
+input:checked + .slider {
   border-color: white;
 }
 
-input:checked+.slider:before {
+input:checked + .slider:before {
   transform: translateX(3vh);
 }
 
@@ -261,7 +271,9 @@ input:checked+.slider:before {
   font-size: 1.8vh;
   font-weight: 600;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .btn-nav:hover {
@@ -276,7 +288,9 @@ input:checked+.slider:before {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
   cursor: pointer;
 }
 
@@ -368,7 +382,7 @@ input:checked+.slider:before {
 .main-title {
   font-family: "Neue Montreal", sans-serif;
   font-weight: 600;
-  font-size: 64px;
+  font-size: 52px;
   line-height: 80px;
   text-align: center;
   color: var(--text-primary);
@@ -536,9 +550,7 @@ input:checked+.slider:before {
   padding: 11px 22px;
   gap: 22px;
   width: fit-content;
-  background: linear-gradient(170.23deg,
-      #1acfff -19.45%,
-      #0076ff 118.36%);
+  background: linear-gradient(170.23deg, #1acfff -19.45%, #0076ff 118.36%);
   border-radius: 16.22px;
   margin-top: 20px;
 }
@@ -578,7 +590,9 @@ input:checked+.slider:before {
   border-radius: 36.78px;
   border: none;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
 }
 
 .pay-btn:hover {
@@ -834,7 +848,9 @@ body.dark-mode .footer-image .footer-svg-dark {
 
   body.dark-mode {
     background-color: #000000;
-    background-image: linear-gradient(180deg,
+    background-image:
+      linear-gradient(
+        180deg,
         #000000 0%,
         rgba(0, 0, 0, 0.62) 2.53%,
         rgba(0, 0, 0, 0.92) 8.79%,
@@ -842,17 +858,26 @@ body.dark-mode .footer-image .footer-svg-dark {
         rgba(0, 0, 0, 0.64) 59.13%,
         rgba(0, 0, 0, 0.66) 62.46%,
         rgba(0, 0, 0, 0.73) 75.73%,
-        #000000 85.84%),
+        #000000 85.84%
+      ),
       linear-gradient(rgba(50, 50, 50, 0.5) 1px, transparent 1px),
       linear-gradient(90deg, rgba(50, 50, 50, 0.5) 1px, transparent 1px);
-    background-size: 100% 100%, 60px 60px, 60px 60px;
-    background-position: 0 0, -1px -1px, -1px -1px;
+    background-size:
+      100% 100%,
+      60px 60px,
+      60px 60px;
+    background-position:
+      0 0,
+      -1px -1px,
+      -1px -1px;
     background-repeat: no-repeat, repeat, repeat;
   }
 
   body:not(.dark-mode) {
     background-color: #ffffff;
-    background-image: linear-gradient(180deg,
+    background-image:
+      linear-gradient(
+        180deg,
         #ffffff 0%,
         rgba(255, 255, 255, 0.62) 2.53%,
         rgba(255, 255, 255, 0.92) 8.79%,
@@ -860,11 +885,18 @@ body.dark-mode .footer-image .footer-svg-dark {
         rgba(255, 255, 255, 0.64) 59.13%,
         rgba(255, 255, 255, 0.66) 62.46%,
         rgba(255, 255, 255, 0.73) 75.73%,
-        #ffffff 85.84%),
+        #ffffff 85.84%
+      ),
       linear-gradient(rgba(200, 200, 200, 0.4) 1px, transparent 1px),
       linear-gradient(90deg, rgba(200, 200, 200, 0.4) 1px, transparent 1px);
-    background-size: 100% 100%, 60px 60px, 60px 60px;
-    background-position: 0 0, -1px -1px, -1px -1px;
+    background-size:
+      100% 100%,
+      60px 60px,
+      60px 60px;
+    background-position:
+      0 0,
+      -1px -1px,
+      -1px -1px;
     background-repeat: no-repeat, repeat, repeat;
   }
 
@@ -901,7 +933,7 @@ body.dark-mode .footer-image .footer-svg-dark {
     bottom: 0.15vh;
   }
 
-  input:checked+.slider:before {
+  input:checked + .slider:before {
     transform: translateX(18px);
   }
 
@@ -1066,7 +1098,7 @@ body.dark-mode .footer-image .footer-svg-dark {
     border: 0.686158px solid #1b223c;
     border-radius: 8.23389px;
 
-    font-family: 'Outfit', sans-serif;
+    font-family: "Outfit", sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 16.4678px;
@@ -1078,8 +1110,8 @@ body.dark-mode .footer-image .footer-svg-dark {
   /* Mobile Features Section */
   body.dark-mode .features-section,
   body.dark-mode .footer-image {
-    background-image: linear-gradient(rgba(50, 50, 50, 0.5) 1px,
-        transparent 1px),
+    background-image:
+      linear-gradient(rgba(50, 50, 50, 0.5) 1px, transparent 1px),
       linear-gradient(90deg, rgba(50, 50, 50, 0.5) 1px, transparent 1px);
     background-size: 40px 40px;
     background-position: -1px -1px;
@@ -1087,8 +1119,8 @@ body.dark-mode .footer-image .footer-svg-dark {
 
   body:not(.dark-mode) .features-section,
   body:not(.dark-mode) .footer-image {
-    background-image: linear-gradient(rgba(200, 200, 200, 0.4) 1px,
-        transparent 1px),
+    background-image:
+      linear-gradient(rgba(200, 200, 200, 0.4) 1px, transparent 1px),
       linear-gradient(90deg, rgba(200, 200, 200, 0.4) 1px, transparent 1px);
     background-size: 40px 40px;
     background-position: -1px -1px;
@@ -1208,11 +1240,11 @@ body.dark-mode .footer-image .footer-svg-dark {
   transition: 0.4s;
 }
 
-input:checked+.slider {
+input:checked + .slider {
   border-color: white;
 }
 
-input:checked+.slider:before {
+input:checked + .slider:before {
   transform: translateX(3vh);
 }
 
@@ -1241,7 +1273,6 @@ input:checked+.slider:before {
 }
 
 @media (max-width: 480px) {
-
   /* Mobile Navbar */
   .navbar {
     height: 53px;
@@ -1276,7 +1307,7 @@ input:checked+.slider:before {
     bottom: 0.15vh;
   }
 
-  input:checked+.slider:before {
+  input:checked + .slider:before {
     transform: translateX(18px);
   }
 }

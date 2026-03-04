@@ -43,13 +43,13 @@ COURSE_PRICES = {
     },
     "business-growth-plan": {
         "name": "Business Growth Plan",
-        "amount": 4999100,
+        "amount": 1499100,
         "currency": "INR",
         "price_env": "PRICE_BUSINESS_GROWTH"
     },
     "value-plan": {
         "name": "Value Plan",
-        "amount": 1499100,
+        "amount": 999100,
         "currency": "INR",
         "price_env": "PRICE_VALUE_PLAN"
     },
@@ -64,6 +64,18 @@ COURSE_PRICES = {
         "amount": 499100,
         "currency": "INR",
         "price_env": "PRICE_MCT_MENTORSHIP"
+    },
+    "business-growth-partner-plan": {
+        "name": "Business Growth Partner Plan",
+        "amount": 4999100,
+        "currency": "INR",
+        "price_env": "PRICE_BUSINESS_GROWTH_PARTNER"
+    },
+    "business-growth-mastery-plan": {
+        "name": "Business Growth Mastery Plan",
+        "amount": 2499100,
+        "currency": "INR",
+        "price_env": "PRICE_BUSINESS_GROWTH_MASTERY"
     }
 }
 

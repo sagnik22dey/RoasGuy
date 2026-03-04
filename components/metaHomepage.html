@@ -2,11 +2,18 @@
 <html lang="en">
   <head>
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-KTC4PQQ3');</script>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-KTC4PQQ3");
+    </script>
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,8 +33,14 @@
 
   <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KTC4PQQ3"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-KTC4PQQ3"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <!-- NAVBAR -->
     <header class="navbar">
@@ -1556,6 +1569,102 @@
         // const selectedLang = btn.dataset.lang;  // "en" | "hi"
         // swap video URL / thumbnail here if needed
       });
+    </script>
+
+    <div class="video-modal-overlay" id="videoModal">
+      <div class="video-modal-content">
+        <div class="video-modal-iframe-wrap">
+          <iframe
+            id="videoModalIframe"
+            src=""
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+            "
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="video-modal-tabs">
+          <button
+            class="video-modal-tab-btn active"
+            data-video="student"
+            id="tabStudent"
+          >
+            For Students
+          </button>
+          <button
+            class="video-modal-tab-btn"
+            data-video="business"
+            id="tabBusiness"
+          >
+            For Business Owners
+          </button>
+        </div>
+        <button class="video-modal-close-btn" id="closeVideoModal">
+          ✕ Close Video
+        </button>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        const VIDEOS = {
+          student: "https://www.youtube.com/embed/tLXbTZrZVxE?autoplay=1",
+          business: "https://www.youtube.com/embed/nt_nDT4BjM8?autoplay=1",
+        };
+
+        const overlay = document.getElementById("videoModal");
+        const iframe = document.getElementById("videoModalIframe");
+        const closeBtn = document.getElementById("closeVideoModal");
+        const tabBtns = overlay.querySelectorAll(".video-modal-tab-btn");
+
+        const heroPlayBtn = document.querySelector(".hero-play-btn");
+        const heroWrapper = document.querySelector(".hero-thumbnail-wrapper");
+
+        function openModal() {
+          setTab("student");
+          overlay.classList.add("active");
+          document.body.style.overflow = "hidden";
+        }
+
+        function closeModal() {
+          overlay.classList.remove("active");
+          iframe.src = "";
+          document.body.style.overflow = "";
+        }
+
+        function setTab(key) {
+          iframe.src = VIDEOS[key];
+          tabBtns.forEach(function (btn) {
+            btn.classList.toggle("active", btn.dataset.video === key);
+          });
+        }
+
+        if (heroPlayBtn) heroPlayBtn.addEventListener("click", openModal);
+        if (heroWrapper) heroWrapper.addEventListener("click", openModal);
+
+        closeBtn.addEventListener("click", closeModal);
+
+        overlay.addEventListener("click", function (e) {
+          if (e.target === overlay) closeModal();
+        });
+
+        tabBtns.forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            setTab(btn.dataset.video);
+          });
+        });
+
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && overlay.classList.contains("active")) {
+            closeModal();
+          }
+        });
+      })();
     </script>
   </body>
 </html>

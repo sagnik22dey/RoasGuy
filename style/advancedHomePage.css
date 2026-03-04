@@ -5,8 +5,16 @@
   --text-sub: #0099ff;
   --text-desc: #000000;
 
-  --hero-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.96) 26.16%, #FFFFFF 74.06%, rgba(255, 255, 255, 0.95) 95.96%), #FFFFFF;
-  --hero-box-shadow: 0px 8px 0px #08A4FF;
+  --hero-bg:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.88) 0%,
+      rgba(255, 255, 255, 0.96) 26.16%,
+      #ffffff 74.06%,
+      rgba(255, 255, 255, 0.95) 95.96%
+    ),
+    #ffffff;
+  --hero-box-shadow: 0px 8px 0px #08a4ff;
   --hero-border-radius: 43px;
 
   --bg-size: 80px 80px, 80px 80px;
@@ -17,25 +25,41 @@
 
   --btn-gradient: linear-gradient(90deg, #1acfff 0%, #0076ff 100%);
 
-  --text-hero-desc: #08A4FF;
+  --text-hero-desc: #08a4ff;
 
-  --lang-active-bg: linear-gradient(90deg, #08A4FF 0%, #056299 100%);
-  --lang-active-text: linear-gradient(91.52deg, #FFFFFF -1.64%, #EEEEEE 133.11%);
-  --lang-inactive-bg: linear-gradient(91.52deg, #FFFFFF -1.64%, #EEEEEE 133.11%);
+  --lang-active-bg: linear-gradient(90deg, #08a4ff 0%, #056299 100%);
+  --lang-active-text: linear-gradient(
+    91.52deg,
+    #ffffff -1.64%,
+    #eeeeee 133.11%
+  );
+  --lang-inactive-bg: linear-gradient(
+    91.52deg,
+    #ffffff -1.64%,
+    #eeeeee 133.11%
+  );
   --lang-inactive-text: #000000;
   --lang-inactive-border: 1px solid rgba(0, 0, 0, 0.1);
 
   --blue-strip: #0a93e3;
   --play-btn-bg: rgba(255, 255, 255, 0.86);
   --play-icon-color: #49454f;
-  --end-of-course-bg: linear-gradient(180deg, #08A4FF 0%, #056299 100%);
-  --feature-title-color: linear-gradient(91.52deg, #ffffff -1.64%, #eeeeee 133.11%);
-  --course-section-title-color: linear-gradient(91.52deg, #ffffff -1.64%, #eeeeee 133.11%);
+  --end-of-course-bg: linear-gradient(180deg, #08a4ff 0%, #056299 100%);
+  --feature-title-color: linear-gradient(
+    91.52deg,
+    #ffffff -1.64%,
+    #eeeeee 133.11%
+  );
+  --course-section-title-color: linear-gradient(
+    91.52deg,
+    #ffffff -1.64%,
+    #eeeeee 133.11%
+  );
   --metric-value-color: #000000;
   --faq-icon-color: #000000;
   --mission-wave-color: #000000;
   --guarantee-title-text: #ffffff;
-  --primary-color: #EEEEEE;
+  --primary-color: #eeeeee;
 }
 
 body.dark-mode {
@@ -45,7 +69,19 @@ body.dark-mode {
   --text-sub: #1acfff;
   --text-desc: #e0e0e0;
 
-  --hero-bg: linear-gradient(180deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.589) 8.18%, rgba(0, 0, 0, 0.874) 12.51%, rgba(0, 0, 0, 0.6935) 25.85%, rgba(0, 0, 0, 0.608) 59.13%, rgba(0, 0, 0, 0.627) 62.46%, rgba(0, 0, 0, 0.6935) 83.18%, rgba(0, 0, 0, 0.95) 94.24%), #000000;
+  --hero-bg:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.95) 0%,
+      rgba(0, 0, 0, 0.589) 8.18%,
+      rgba(0, 0, 0, 0.874) 12.51%,
+      rgba(0, 0, 0, 0.6935) 25.85%,
+      rgba(0, 0, 0, 0.608) 59.13%,
+      rgba(0, 0, 0, 0.627) 62.46%,
+      rgba(0, 0, 0, 0.6935) 83.18%,
+      rgba(0, 0, 0, 0.95) 94.24%
+    ),
+    #000000;
   --hero-box-shadow: 0px 4px 0px rgba(163, 163, 163, 0.25);
 
   --bg-size: 80px 80px, 80px 80px;
@@ -57,15 +93,35 @@ body.dark-mode {
   --play-btn-bg: #ffffff;
   --play-icon-color: #000000;
 
-  --lang-active-bg: linear-gradient(90deg, #08A4FF 0%, #056299 100%);
-  --lang-active-text: linear-gradient(91.52deg, #FFFFFF -1.64%, #EEEEEE 133.11%);
-  --lang-inactive-bg: linear-gradient(91.52deg, #FFFFFF -1.64%, #EEEEEE 133.11%);
+  --lang-active-bg: linear-gradient(90deg, #08a4ff 0%, #056299 100%);
+  --lang-active-text: linear-gradient(
+    91.52deg,
+    #ffffff -1.64%,
+    #eeeeee 133.11%
+  );
+  --lang-inactive-bg: linear-gradient(
+    91.52deg,
+    #ffffff -1.64%,
+    #eeeeee 133.11%
+  );
   --lang-inactive-text: #000000;
   --lang-inactive-border: none;
-  --end-of-course-bg: linear-gradient(91.52deg, #FFFFFF -1.64%, #EEEEEE 133.11%);
-  --feature-title-color: linear-gradient(91.52deg, #000000 -1.64%, #000000 133.11%);
-  --course-section-title-color: linear-gradient(91.52deg, #000000 -1.64%, #000000 133.11%);
-  --metric-value-color: #FFFFFF;
+  --end-of-course-bg: linear-gradient(
+    91.52deg,
+    #ffffff -1.64%,
+    #eeeeee 133.11%
+  );
+  --feature-title-color: linear-gradient(
+    91.52deg,
+    #000000 -1.64%,
+    #000000 133.11%
+  );
+  --course-section-title-color: linear-gradient(
+    91.52deg,
+    #000000 -1.64%,
+    #000000 133.11%
+  );
+  --metric-value-color: #ffffff;
   --faq-icon-color: #ffffff;
   --mission-wave-color: #ffffff;
   --guarantee-title-text: #000000;
@@ -76,13 +132,15 @@ body.dark-mode {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Lexend', sans-serif;
-  transition: background-color 0.3s ease, color 0.3s ease,
+  font-family: "Lexend", sans-serif;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
     box-shadow 0.3s ease;
 }
 
 .neue-font {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   letter-spacing: -0.02em;
 }
 
@@ -93,8 +151,7 @@ html {
 body {
   background: var(--hero-bg);
   background-color: var(--bg-body);
-  background-size: var(--bg-size,
-      auto);
+  background-size: var(--bg-size, auto);
   width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
@@ -115,7 +172,9 @@ body {
   padding-right: 8vw;
   box-shadow: var(--nav-shadow);
   z-index: 1000;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .logo-container {
@@ -162,7 +221,9 @@ body.dark-mode .logo-dark {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
   cursor: pointer;
 }
 
@@ -183,18 +244,20 @@ body.dark-mode .logo-dark {
   padding: 10px 20px;
   min-width: 120px;
   height: 40px;
-  background: linear-gradient(90deg, #1ACFFF 0%, #0076FF 100%);
+  background: linear-gradient(90deg, #1acfff 0%, #0076ff 100%);
   border-radius: 30px;
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 14.66px;
   line-height: 18px;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
   white-space: nowrap;
 }
 
@@ -240,11 +303,11 @@ body.dark-mode .logo-dark {
   transition: 0.4s;
 }
 
-input:checked+.slider {
+input:checked + .slider {
   border-color: white;
 }
 
-input:checked+.slider:before {
+input:checked + .slider:before {
   transform: translateX(3vh);
 }
 
@@ -258,7 +321,9 @@ input:checked+.slider:before {
   font-size: 1.8vh;
   font-weight: 600;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .btn-nav:hover {
@@ -286,20 +351,20 @@ input:checked+.slider:before {
   align-items: center;
   padding: 25px 32px;
   gap: 50px;
-  background: linear-gradient(90deg, #1ACFFF 0%, #0076FF 100%);
+  background: linear-gradient(90deg, #1acfff 0%, #0076ff 100%);
   border-radius: 30px;
   height: 35px;
 }
 
 .nav-pill-link {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
   line-height: 40px;
   text-align: center;
   text-decoration: none;
-  background: linear-gradient(91.52deg, #FFFFFF -1.64%, #EEEEEE 133.11%);
+  background: linear-gradient(91.52deg, #ffffff -1.64%, #eeeeee 133.11%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -313,7 +378,11 @@ input:checked+.slider:before {
 .nav-pill-divider {
   width: 1px;
   height: 20px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(238, 238, 238, 0.8) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(238, 238, 238, 0.8) 100%
+  );
   border-radius: 1px;
 }
 
@@ -324,12 +393,12 @@ input:checked+.slider:before {
   align-items: center;
   padding: 25px 25px;
   min-width: 140px;
-  background: #FFFFFF;
-  border: 1.28px solid #08A4FF;
+  background: #ffffff;
+  border: 1.28px solid #08a4ff;
   box-shadow: 0px -5px 10.5px rgba(0, 0, 0, 0.25);
   border-radius: 60px;
   height: 40px;
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -337,7 +406,9 @@ input:checked+.slider:before {
   text-align: center;
   color: #000000;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
   text-decoration: none;
   white-space: nowrap;
 }
@@ -409,12 +480,12 @@ input:checked+.slider:before {
     align-items: center;
     padding: 5px 15px;
     min-width: 80px;
-    background: #FFFFFF;
-    border: 1.28px solid #08A4FF;
+    background: #ffffff;
+    border: 1.28px solid #08a4ff;
     box-shadow: 0px -5px 10.5px rgba(0, 0, 0, 0.25);
     border-radius: 60px;
     height: 30px;
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -422,7 +493,9 @@ input:checked+.slider:before {
     text-align: center;
     color: #000000;
     cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
     text-decoration: none;
     white-space: nowrap;
   }
@@ -463,14 +536,14 @@ input:checked+.slider:before {
     position: static;
     width: 256px;
     height: 58px;
-    background: linear-gradient(90deg, #1ACFFF 0%, #0076FF 100%);
+    background: linear-gradient(90deg, #1acfff 0%, #0076ff 100%);
     border-radius: 67px;
     margin: 30px auto 0;
     display: flex;
     justify-content: center;
     align-items: center;
     order: 3;
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     font-weight: 600;
     font-size: 20px;
     color: white;
@@ -482,11 +555,9 @@ input:checked+.slider:before {
   .btn-hero img {
     display: none;
   }
-
 }
 
 @media (max-width: 480px) {
-
   :root {
     --guarantee-title-text: #000000;
   }
@@ -531,7 +602,7 @@ input:checked+.slider:before {
   }
 
   .hero-span {
-    font-family: 'Neue Montreal', sans-serif;
+    font-family: "Neue Montreal", sans-serif;
     color: var(--text-main);
     font-weight: 500;
     font-size: 15px;
@@ -593,7 +664,7 @@ input:checked+.slider:before {
     bottom: 0.15vh;
   }
 
-  input:checked+.slider:before {
+  input:checked + .slider:before {
     transform: translateX(18px);
   }
 
@@ -631,7 +702,7 @@ input:checked+.slider:before {
   .play-icon {
     width: 42px;
     height: 46px;
-    fill: #49454F;
+    fill: #49454f;
   }
 
   .hero-container {
@@ -666,7 +737,7 @@ input:checked+.slider:before {
     order: 1;
     width: 361px;
     max-width: 100%;
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 38px;
@@ -693,12 +764,12 @@ input:checked+.slider:before {
     order: 3;
     width: 361px;
     max-width: 100%;
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 15px;
     line-height: 20px;
-    color: #08A4FF;
+    color: #08a4ff;
     text-align: left;
   }
 
@@ -706,12 +777,12 @@ input:checked+.slider:before {
     order: 4;
     width: 361px;
     max-width: 100%;
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 15px;
     line-height: 20px;
-    color: #08A4FF;
+    color: #08a4ff;
     text-align: left;
     margin-top: -15px;
   }
@@ -758,7 +829,7 @@ input:checked+.slider:before {
   .play-icon {
     width: 32px;
     height: 35px;
-    fill: #49454F;
+    fill: #49454f;
   }
 
   .btn-hero {
@@ -770,20 +841,22 @@ input:checked+.slider:before {
     gap: 10px;
     width: 205px;
     height: 56px;
-    background: linear-gradient(90deg, #1ACFFF 0%, #0076FF 100%);
+    background: linear-gradient(90deg, #1acfff 0%, #0076ff 100%);
     border-radius: 10px;
     order: 3;
     margin-top: 10px;
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 34px;
     text-align: center;
-    color: #FFFFFF;
+    color: #ffffff;
     text-decoration: none;
     cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
   }
 
   .btn-hero:hover {
@@ -807,19 +880,37 @@ input:checked+.slider:before {
 
 body.dark-mode .hero-container {
   background:
-    repeating-linear-gradient(to right,
+    repeating-linear-gradient(
+      to right,
       transparent,
       transparent 79px,
       rgba(60, 60, 60, 0.4) 79px,
-      rgba(60, 60, 60, 0.4) 80px),
-    repeating-linear-gradient(to bottom,
+      rgba(60, 60, 60, 0.4) 80px
+    ),
+    repeating-linear-gradient(
+      to bottom,
       transparent,
       transparent 79px,
       rgba(60, 60, 60, 0.4) 79px,
-      rgba(60, 60, 60, 0.4) 80px),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.589) 8.18%, rgba(0, 0, 0, 0.874) 12.51%, rgba(0, 0, 0, 0.6935) 25.85%, rgba(0, 0, 0, 0.608) 59.13%, rgba(0, 0, 0, 0.627) 62.46%, rgba(0, 0, 0, 0.6935) 83.18%, rgba(0, 0, 0, 0.95) 94.24%),
+      rgba(60, 60, 60, 0.4) 80px
+    ),
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.95) 0%,
+      rgba(0, 0, 0, 0.589) 8.18%,
+      rgba(0, 0, 0, 0.874) 12.51%,
+      rgba(0, 0, 0, 0.6935) 25.85%,
+      rgba(0, 0, 0, 0.608) 59.13%,
+      rgba(0, 0, 0, 0.627) 62.46%,
+      rgba(0, 0, 0, 0.6935) 83.18%,
+      rgba(0, 0, 0, 0.95) 94.24%
+    ),
     #000000;
-  background-size: 80px 80px, 80px 80px, cover, cover;
+  background-size:
+    80px 80px,
+    80px 80px,
+    cover,
+    cover;
 }
 
 .info-strip {
@@ -936,7 +1027,7 @@ body.dark-mode .hero-container {
 .play-icon {
   width: 72px;
   height: 78px;
-  fill: #49454F;
+  fill: #49454f;
 
   width: 40px;
   height: 40px;
@@ -962,7 +1053,7 @@ body.dark-mode .hero-container {
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -1022,7 +1113,7 @@ body.dark-mode .lang-btn.active:hover {
 }
 
 .hero-title {
-  font-family: 'Neue Montreal', sans-serif;
+  font-family: "Neue Montreal", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 49px;
@@ -1036,7 +1127,7 @@ body.dark-mode .lang-btn.active:hover {
 }
 
 .hero-desc {
-  font-family: 'Neue Montreal', sans-serif;
+  font-family: "Neue Montreal", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -1047,7 +1138,7 @@ body.dark-mode .lang-btn.active:hover {
 }
 
 .hero-span {
-  font-family: 'Neue Montreal', sans-serif;
+  font-family: "Neue Montreal", sans-serif;
   color: var(--text-main);
   font-weight: 500;
   font-size: 20px;
@@ -1082,10 +1173,10 @@ body.dark-mode .lang-btn.active:hover {
   text-decoration: none;
   cursor: pointer;
   transition: transform 0.2s;
-  font-family: 'Neue Montreal', sans-serif;
+  font-family: "Neue Montreal", sans-serif;
   font-weight: 500;
   font-size: 24px;
-  color: #FFFFFF;
+  color: #ffffff;
   position: static;
 }
 
@@ -1118,7 +1209,7 @@ body.dark-mode .lang-btn.active:hover {
 }
 
 .course-section-title {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-size: 70px;
   font-weight: 500;
   line-height: 84px;
@@ -1131,7 +1222,7 @@ body.dark-mode .lang-btn.active:hover {
 }
 
 .course-section-title .course-highlight {
-  color: #08A4FF;
+  color: #08a4ff;
   font-style: italic;
 }
 
@@ -1159,13 +1250,15 @@ body.dark-mode .lang-btn.active:hover {
   width: 100%;
   max-width: 350px;
   min-height: 200px;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 8px 8px 0px rgba(8, 164, 255, 0.67);
   border-radius: 32px;
   border-color: #999999;
   border: 1px solid;
   margin: 0 auto;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .course-feature-card:hover {
@@ -1189,7 +1282,7 @@ body.dark-mode .lang-btn.active:hover {
   position: absolute;
   width: 238px;
   height: 238px;
-  background: #E6E6E6;
+  background: #e6e6e6;
   border-radius: 50%;
   z-index: 0;
 }
@@ -1218,7 +1311,7 @@ body.dark-mode .lang-btn.active:hover {
 }
 
 .feature-title {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -1233,7 +1326,7 @@ body.dark-mode .lang-btn.active:hover {
 }
 
 .feature-desc {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -1256,7 +1349,7 @@ body.dark-mode .course-section-title {
 }
 
 body.dark-mode .course-section-title .course-highlight {
-  color: #1ACFFF;
+  color: #1acfff;
 }
 
 body.dark-mode .course-feature-card {
@@ -1270,11 +1363,11 @@ body.dark-mode .course-feature-card:hover {
 }
 
 body.dark-mode .feature-title {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 body.dark-mode .feature-desc {
-  color: #E0E0E0;
+  color: #e0e0e0;
 }
 
 .roas-mission {
@@ -1305,7 +1398,7 @@ body.dark-mode .feature-desc {
 }
 
 .mission-title {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 40px;
@@ -1330,7 +1423,7 @@ body.dark-mode .feature-desc {
 }
 
 .mission-text {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -1352,7 +1445,7 @@ body.dark-mode .feature-desc {
   width: 100%;
   max-width: 1260px;
   height: 606px;
-  background: #FCFCFC;
+  background: #fcfcfc;
   box-shadow: 11px 13px 21.3px rgba(0, 0, 0, 0.25);
   border-radius: 78px;
   display: flex;
@@ -1371,16 +1464,16 @@ body.dark-mode .feature-desc {
 }
 
 .instructor-label {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 30px;
-  color: #08A4FF;
+  color: #08a4ff;
 }
 
 .instructor-name {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 40px;
@@ -1389,7 +1482,7 @@ body.dark-mode .feature-desc {
 }
 
 .instructor-bio {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -1420,7 +1513,7 @@ body.dark-mode .feature-desc {
 }
 
 body.dark-mode .instructor-card {
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 11px 13px 21.3px rgba(0, 0, 0, 0.4);
 }
 
@@ -1462,7 +1555,7 @@ body.dark-mode .instructor-bio {
 }
 
 .proof-title-text {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 70px;
@@ -1472,7 +1565,7 @@ body.dark-mode .instructor-bio {
 }
 
 .proof-title-text .proof-highlight-word {
-  color: #08A4FF;
+  color: #08a4ff;
 }
 
 .proof-decoration {
@@ -1485,7 +1578,7 @@ body.dark-mode .instructor-bio {
 }
 
 .proof-subtitle {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
@@ -1562,7 +1655,7 @@ body.dark-mode .instructor-bio {
   border: 2.6px solid #000000;
   border-radius: 21px;
   overflow: hidden;
-  background: #FFFFFF;
+  background: #ffffff;
   filter: drop-shadow(10px 11px 0px rgba(8, 164, 255, 0.86));
 }
 
@@ -1606,7 +1699,7 @@ body.dark-mode .instructor-bio {
 }
 
 .card-image-content.scale-200 img {
-  transform: scale(2.0);
+  transform: scale(2);
 }
 
 .card-image-content.pos-center img {
@@ -1738,16 +1831,16 @@ body.dark-mode .instructor-bio {
 }
 
 .metric-label {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
-  color: #08A4FF;
+  color: #08a4ff;
 }
 
 .metric-value {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -1760,7 +1853,7 @@ body.dark-mode .instructor-bio {
 }
 
 body.dark-mode .proof-title-text {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 @media (max-width: 768px) {
@@ -2030,11 +2123,9 @@ body.dark-mode .proof-title-text {
   .metric-item {
     align-items: center;
   }
-
 }
 
 @media (max-width: 480px) {
-
   .navbar {
     height: 53px;
     padding: 8.24px 20px;
@@ -2063,7 +2154,7 @@ body.dark-mode .proof-title-text {
     bottom: 0.15vh;
   }
 
-  input:checked+.slider:before {
+  input:checked + .slider:before {
     transform: translateX(18px);
   }
 
@@ -2168,12 +2259,12 @@ body.dark-mode .proof-title-text {
   }
 
   .curriculum-card .card-number {
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     font-weight: 700;
     font-size: 36px;
     line-height: 49px;
     min-width: 44px;
-    color: #08A4FF;
+    color: #08a4ff;
   }
 
   .curriculum-card .card-separator {
@@ -2255,7 +2346,7 @@ body.dark-mode .proof-title-text {
   }
 
   .mission-title {
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 32px;
@@ -2266,7 +2357,7 @@ body.dark-mode .proof-title-text {
   }
 
   .mission-text {
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -2281,7 +2372,7 @@ body.dark-mode .proof-title-text {
     max-width: 100%;
     height: 1100px;
     margin: 0 auto;
-    background: #FCFCFC;
+    background: #fcfcfc;
     box-shadow: 11px 13px 21.3px rgba(0, 0, 0, 0.25);
     border-radius: 47px;
     flex-direction: column;
@@ -2296,16 +2387,16 @@ body.dark-mode .proof-title-text {
   }
 
   .instructor-label {
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 25px;
-    color: #08A4FF;
+    color: #08a4ff;
   }
 
   .instructor-name {
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 25px;
@@ -2314,7 +2405,7 @@ body.dark-mode .proof-title-text {
   }
 
   .instructor-bio {
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 17px;
@@ -2365,7 +2456,7 @@ body.dark-mode .proof-title-text {
   }
 
   .proof-title-text {
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 32px;
@@ -2379,7 +2470,7 @@ body.dark-mode .proof-title-text {
   }
 
   .proof-title-text .proof-highlight-word {
-    color: #08A4FF;
+    color: #08a4ff;
   }
 
   .proof-subtitle {
@@ -2388,7 +2479,7 @@ body.dark-mode .proof-title-text {
     height: auto;
     min-height: 50px;
 
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 19px;
@@ -2511,7 +2602,7 @@ body.dark-mode .proof-title-text {
   .metric-label {
     font-size: 17px;
     line-height: 22px;
-    color: #08A4FF;
+    color: #08a4ff;
     font-weight: 600;
   }
 
@@ -2596,11 +2687,11 @@ body.dark-mode .proof-title-text {
 
 .get-certified-section {
   padding: 80px 8vw;
-  background-color: #F4F4F4;
+  background-color: #f4f4f4;
 }
 
 body.dark-mode .get-certified-section {
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
 }
 
 .get-certified-container {
@@ -2636,7 +2727,7 @@ body.dark-mode .get-certified-title {
 }
 
 .certified-highlight {
-  color: #08A4FF;
+  color: #08a4ff;
 }
 
 .certified-objects {
@@ -2686,7 +2777,7 @@ body.dark-mode .get-certified-image .certificate-light {
 
 body.dark-mode .get-certified-image .certificate-dark {
   display: block;
-  border-color: #0D1B2A;
+  border-color: #0d1b2a;
 }
 
 .certification-benefits {
@@ -2741,7 +2832,7 @@ body.dark-mode .benefit-item span {
   gap: 6.74px;
   width: 255.6px;
   height: 58px;
-  background: linear-gradient(90deg, #1ACFFF 0%, #0076FF 100%);
+  background: linear-gradient(90deg, #1acfff 0%, #0076ff 100%);
   border-radius: 67.44px;
   border: none;
   cursor: pointer;
@@ -2761,7 +2852,7 @@ body.dark-mode .benefit-item span {
   font-size: 32.37px;
   line-height: 40px;
   text-align: center;
-  background: linear-gradient(91.52deg, #FFFFFF -1.64%, #EEEEEE 133.11%);
+  background: linear-gradient(91.52deg, #ffffff -1.64%, #eeeeee 133.11%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -2954,7 +3045,7 @@ body.dark-mode .benefit-item span {
 }
 
 .no-nonsense-title {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 40px;
@@ -2963,7 +3054,7 @@ body.dark-mode .benefit-item span {
 }
 
 .no-nonsense-title .highlight-blue {
-  color: #08A4FF;
+  color: #08a4ff;
 }
 
 .no-nonsense-features {
@@ -2983,16 +3074,16 @@ body.dark-mode .benefit-item span {
 }
 
 .feature-heading {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 30px;
-  color: #08A4FF;
+  color: #08a4ff;
 }
 
 .feature-description {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -3009,7 +3100,7 @@ body.dark-mode .benefit-item span {
   gap: 7.36px;
   width: 279px;
   height: 63.31px;
-  background: linear-gradient(90deg, #1ACFFF 0%, #0076FF 100%);
+  background: linear-gradient(90deg, #1acfff 0%, #0076ff 100%);
   border-radius: 73.61px;
   border: none;
   cursor: pointer;
@@ -3022,13 +3113,13 @@ body.dark-mode .benefit-item span {
 }
 
 .btn-enroll-text {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 35.34px;
   line-height: 44px;
   text-align: center;
-  background: linear-gradient(91.52deg, #FFFFFF -1.64%, #EEEEEE 133.11%);
+  background: linear-gradient(91.52deg, #ffffff -1.64%, #eeeeee 133.11%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -3169,11 +3260,11 @@ body.dark-mode .benefit-item span {
   flex-direction: column;
   align-items: center;
   padding: 80px 8vw;
-  background-color: #F4F4F4;
+  background-color: #f4f4f4;
 }
 
 body.dark-mode .course-for-you-section {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .course-for-you-container {
@@ -3203,16 +3294,16 @@ body.dark-mode .course-for-you-section {
   padding: 0px 20px;
   gap: 10px;
   height: 59px;
-  background: #08A4FF;
+  background: #08a4ff;
 }
 
 .course-for-you-header-text {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 40px;
   line-height: 55px;
-  background: linear-gradient(91.52deg, #FFFFFF -1.64%, #EEEEEE 133.11%);
+  background: linear-gradient(91.52deg, #ffffff -1.64%, #eeeeee 133.11%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -3228,12 +3319,12 @@ body.dark-mode .course-for-you-section {
 }
 
 .course-not-for-you-header {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 40px;
   line-height: 55px;
-  color: #08A4FF;
+  color: #08a4ff;
   margin: 0;
   padding: 0;
 }
@@ -3269,7 +3360,7 @@ body.dark-mode .course-for-you-divider {
 }
 
 .course-for-you-text {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -3436,17 +3527,25 @@ body.dark-mode .course-for-you-text {
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap");
 
 :root {
-  --faq-blue: #08A4FF;
-  --line: rgba(255, 255, 255, .75);
+  --faq-blue: #08a4ff;
+  --line: rgba(255, 255, 255, 0.75);
   --bg: #0b0b0b;
 
-  --grad: linear-gradient(91.52deg, #FFFFFF -1.64%, #EEEEEE 133.11%);
+  --grad: linear-gradient(91.52deg, #ffffff -1.64%, #eeeeee 133.11%);
 }
 
 .faq-section {
   background: var(--bg);
   padding: 80px 24px;
-  font-family: 'Neue Montreal', 'Lexend', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family:
+    "Neue Montreal",
+    "Lexend",
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
 }
 
 .faq-wrap {
@@ -3457,7 +3556,7 @@ body.dark-mode .course-for-you-text {
 .faq-title {
   margin: 0 0 60px;
   text-align: center;
-  font-family: 'Neue Montreal', 'Lexend', sans-serif;
+  font-family: "Neue Montreal", "Lexend", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 70px;
@@ -3506,7 +3605,7 @@ body.dark-mode .course-for-you-text {
 
 .faq-q {
   display: block;
-  font-family: 'Neue Montreal', 'Lexend', sans-serif;
+  font-family: "Neue Montreal", "Lexend", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
@@ -3525,7 +3624,7 @@ body.dark-mode .course-for-you-text {
   height: 35.35px;
   min-width: 35.35px;
   min-height: 35.35px;
-  background: #08A4FF;
+  background: #08a4ff;
   border-radius: 17.67px;
   position: relative;
   flex-shrink: 0;
@@ -3542,7 +3641,10 @@ body.dark-mode .course-for-you-text {
   background: var(--faq-icon-color);
   transform: translate(-50%, -50%);
   border-radius: 999px;
-  transition: transform .2s ease, opacity .2s ease, background .2s ease;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    background 0.2s ease;
 }
 
 .faq-icon::after {
@@ -3564,20 +3666,20 @@ body.dark-mode .course-for-you-text {
   margin-top: 21.78px;
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows .25s ease;
+  transition: grid-template-rows 0.25s ease;
 }
 
 .faq-item[open] .faq-panel {
   grid-template-rows: 1fr;
 }
 
-.faq-panel>* {
+.faq-panel > * {
   overflow: hidden;
 }
 
 .faq-a {
   margin: 0;
-  font-family: 'Neue Montreal', 'Lexend', sans-serif;
+  font-family: "Neue Montreal", "Lexend", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -3851,7 +3953,7 @@ body.dark-mode .footer-image .footer-svg-dark {
 .original-price {
   position: relative;
   display: inline-block;
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 40px;
@@ -3875,12 +3977,12 @@ body.dark-mode .footer-image .footer-svg-dark {
   justify-content: center;
   align-items: center;
   padding: 4px 16px;
-  background: #08A4FF;
+  background: #08a4ff;
   border-radius: 4px;
 }
 
 .free-text {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -3921,7 +4023,6 @@ body.dark-mode .footer-image .footer-svg-dark {
 }
 
 @media (max-width: 480px) {
-
   .hero-container {
     width: 100%;
   }
@@ -4018,7 +4119,7 @@ body.dark-mode .footer-image .footer-svg-dark {
   }
 
   .video-col::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -4052,7 +4153,7 @@ body.dark-mode .footer-image .footer-svg-dark {
   }
 
   .lang-btn.active {
-    background: linear-gradient(90deg, #08A4FF 0%, #056299 100%);
+    background: linear-gradient(90deg, #08a4ff 0%, #056299 100%);
   }
 
   .lang-btn.active span {
@@ -4060,7 +4161,7 @@ body.dark-mode .footer-image .footer-svg-dark {
   }
 
   .lang-btn:not(.active) {
-    background: linear-gradient(91.52deg, #FFFFFF -1.64%, #EEEEEE 133.11%);
+    background: linear-gradient(91.52deg, #ffffff -1.64%, #eeeeee 133.11%);
     border: 0.55px solid #000000;
   }
 
@@ -4074,7 +4175,7 @@ body.dark-mode .footer-image .footer-svg-dark {
     height: 58.09px;
     padding: 9.73px 11.48px 8.78px;
     gap: 6.75px;
-    background: linear-gradient(90deg, #1ACFFF 0%, #0076FF 100%);
+    background: linear-gradient(90deg, #1acfff 0%, #0076ff 100%);
     border-radius: 67.55px;
     position: static !important;
     left: auto !important;
@@ -4205,7 +4306,7 @@ body.dark-mode .icon-dark {
 
   .access-item-title {
     order: 1;
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     font-weight: 600;
     font-size: 26px;
     line-height: 30px;
@@ -4216,7 +4317,7 @@ body.dark-mode .icon-dark {
 
   .access-item-desc {
     order: 2;
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     font-weight: 400;
     font-size: 19px;
     line-height: 24px;
@@ -4240,7 +4341,7 @@ body.dark-mode .icon-dark {
   }
 
   .original-price {
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     font-weight: 600;
     font-size: 24.4px;
     line-height: 31px;
@@ -4265,7 +4366,7 @@ body.dark-mode .icon-dark {
     width: 78.09px;
     height: 31.95px;
     padding: 0;
-    background: #08A4FF;
+    background: #08a4ff;
     border-radius: 0;
     display: flex;
     justify-content: center;
@@ -4273,7 +4374,7 @@ body.dark-mode .icon-dark {
   }
 
   .free-text {
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     font-weight: 600;
     font-size: 24.4px;
     line-height: 31px;
@@ -4300,7 +4401,6 @@ body.dark-mode .icon-dark {
 }
 
 @media (max-width: 768px) {
-
   .course-underline-mobile-img {
     display: block;
     position: absolute;
@@ -4344,7 +4444,7 @@ body.dark-mode .icon-dark {
 }
 
 .struggles-title {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-weight: 500;
   font-size: 70px;
   line-height: 84px;
@@ -4392,7 +4492,6 @@ body.dark-mode .icon-dark {
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-
 }
 
 .struggles-card-light {
@@ -4418,7 +4517,7 @@ body.dark-mode .struggles-card-dark {
 }
 
 .struggles-card-title {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 29px;
@@ -4427,7 +4526,7 @@ body.dark-mode .struggles-card-dark {
 }
 
 .struggles-card-desc {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
@@ -4688,7 +4787,7 @@ body.dark-mode .struggles-card-dark {
 }
 
 .curriculum-title-new {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 70px;
@@ -4698,7 +4797,7 @@ body.dark-mode .struggles-card-dark {
 }
 
 .curriculum-subtitle-new {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -4721,17 +4820,19 @@ body.dark-mode .struggles-card-dark {
   box-sizing: border-box;
   width: 100%;
   max-width: 1098px;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid #000000;
-  box-shadow: 7.4px 7.4px 0px #08A4FF;
+  box-shadow: 7.4px 7.4px 0px #08a4ff;
   border-radius: 24px;
   overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .curriculum-module-card:hover {
   transform: translateY(-3px);
-  box-shadow: 10px 10px 0px #08A4FF;
+  box-shadow: 10px 10px 0px #08a4ff;
 }
 
 .module-content {
@@ -4743,7 +4844,7 @@ body.dark-mode .struggles-card-dark {
 }
 
 .module-number {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 100px;
@@ -4751,7 +4852,7 @@ body.dark-mode .struggles-card-dark {
   display: flex;
   align-items: center;
   text-align: center;
-  color: #08A4FF;
+  color: #08a4ff;
   min-width: 163px;
   flex-shrink: 0;
 }
@@ -4773,7 +4874,7 @@ body.dark-mode .struggles-card-dark {
 }
 
 .module-title {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 26px;
@@ -4783,7 +4884,7 @@ body.dark-mode .struggles-card-dark {
 }
 
 .module-topics {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -4803,18 +4904,18 @@ body.dark-mode .struggles-card-dark {
 }
 
 body.dark-mode .curriculum-module-card {
-  background: linear-gradient(180deg, #636363 0%, #1E1E1E 100%);
+  background: linear-gradient(180deg, #636363 0%, #1e1e1e 100%);
   border: 0.93px solid #f0f0f0f0;
   box-shadow: 7.4px 7.4px 0px rgba(8, 164, 255, 0.5);
 }
 
 body.dark-mode .module-number {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 body.dark-mode .module-title,
 body.dark-mode .module-topics {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 body.dark-mode .module-divider {
@@ -4884,7 +4985,7 @@ body.dark-mode .module-divider {
 
   .curriculum-module-card {
     border-radius: 12px;
-    box-shadow: 4px 4px 0px #08A4FF;
+    box-shadow: 4px 4px 0px #08a4ff;
   }
 
   .module-content {
@@ -4989,7 +5090,7 @@ body.dark-mode .module-divider {
 }
 
 .guarantee-new-title {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 70px;
@@ -4999,7 +5100,7 @@ body.dark-mode .module-divider {
 }
 
 .guarantee-highlight {
-  color: #08A4FF;
+  color: #08a4ff;
 }
 
 .guarantee-new-content {
@@ -5011,7 +5112,7 @@ body.dark-mode .module-divider {
 }
 
 .guarantee-new-text {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
@@ -5022,23 +5123,23 @@ body.dark-mode .module-divider {
 }
 
 .guarantee-action-text {
-  color: #08A4FF;
+  color: #08a4ff;
   font-weight: 700;
 }
 
 .guarantee-refund-text {
-  color: #08A4FF;
+  color: #08a4ff;
   font-weight: 700;
 }
 
 .guarantee-promise-text {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: italic;
   font-weight: 500;
   font-size: 30px;
   line-height: 36px;
   text-align: center;
-  color: #08A4FF;
+  color: #08a4ff;
   margin: 0;
   margin-top: 10px;
 }
@@ -5081,7 +5182,7 @@ body.dark-mode .module-divider {
 }
 
 .mission-new-title {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 48px;
@@ -5091,7 +5192,7 @@ body.dark-mode .module-divider {
 }
 
 .mission-new-highlight {
-  color: #08A4FF;
+  color: #08a4ff;
 }
 
 .mission-new-text {
@@ -5101,7 +5202,7 @@ body.dark-mode .module-divider {
 }
 
 .mission-new-text p {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -5144,8 +5245,8 @@ body.dark-mode .roas-mission-new {
   width: 100%;
   max-width: 1328px;
   min-height: 721px;
-  background: #FFFFFF;
-  border: 2px solid #08A4FF;
+  background: #ffffff;
+  border: 2px solid #08a4ff;
   box-shadow: 7px -7px 0px rgba(8, 164, 255, 0.69);
   border-radius: 55px;
   display: flex;
@@ -5164,16 +5265,16 @@ body.dark-mode .roas-mission-new {
 }
 
 .instructor-label {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
   line-height: 38px;
-  color: #08A4FF;
+  color: #08a4ff;
 }
 
 .instructor-name {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 55px;
@@ -5187,7 +5288,7 @@ body.dark-mode .roas-mission-new {
 }
 
 .instructor-bio p {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -5223,26 +5324,37 @@ body.dark-mode .roas-mission-new {
 }
 
 body.dark-mode .instructor-card {
-  background: linear-gradient(264.57deg, rgba(102, 102, 102, 0.59) -0.2%, rgba(0, 0, 0, 0.65) 13.53%, rgba(20, 20, 20, 0.93) 57.61%, rgba(0, 0, 0, 0.96) 78.5%, rgba(102, 102, 102, 0.31) 96.75%);
+  background: linear-gradient(
+    264.57deg,
+    rgba(102, 102, 102, 0.59) -0.2%,
+    rgba(0, 0, 0, 0.65) 13.53%,
+    rgba(20, 20, 20, 0.93) 57.61%,
+    rgba(0, 0, 0, 0.96) 78.5%,
+    rgba(102, 102, 102, 0.31) 96.75%
+  );
   box-shadow: -6px 6px 31.6px rgba(8, 164, 255, 0.34);
   border-radius: 37px;
   border: none;
 }
 
 body.dark-mode .instructor-label {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 body.dark-mode .instructor-name {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 body.dark-mode .instructor-bio p {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 body.dark-mode .instructor-image {
-  background: linear-gradient(271.14deg, rgba(0, 0, 0, 0) 14.29%, rgba(0, 0, 0, 0.17) 84.48%);
+  background: linear-gradient(
+    271.14deg,
+    rgba(0, 0, 0, 0) 14.29%,
+    rgba(0, 0, 0, 0.17) 84.48%
+  );
   border-radius: 0px;
 }
 
@@ -5414,8 +5526,8 @@ body.dark-mode .instructor-image {
     width: 348px;
     max-width: 100%;
     min-height: auto;
-    background: #FFFFFF;
-    border: 2px solid #08A4FF;
+    background: #ffffff;
+    border: 2px solid #08a4ff;
     box-shadow: -6px 6px 31.6px rgba(8, 164, 255, 0.34);
     border-radius: 37px;
     position: relative;
@@ -5423,7 +5535,14 @@ body.dark-mode .instructor-image {
   }
 
   body.dark-mode .instructor-card {
-    background: linear-gradient(264.57deg, rgba(102, 102, 102, 0.42) -0.2%, rgba(0, 0, 0, 0.65) 13.53%, rgba(20, 20, 20, 0.93) 57.61%, rgba(0, 0, 0, 0.96) 78.5%, rgba(102, 102, 102, 0.07) 96.75%) !important;
+    background: linear-gradient(
+      264.57deg,
+      rgba(102, 102, 102, 0.42) -0.2%,
+      rgba(0, 0, 0, 0.65) 13.53%,
+      rgba(20, 20, 20, 0.93) 57.61%,
+      rgba(0, 0, 0, 0.96) 78.5%,
+      rgba(102, 102, 102, 0.07) 96.75%
+    ) !important;
     border: 2px solid transparent !important;
     box-shadow: -6px 6px 31.6px rgba(8, 164, 255, 0.34) !important;
   }
@@ -5440,7 +5559,7 @@ body.dark-mode .instructor-image {
   }
 
   .instructor-label {
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
@@ -5449,11 +5568,11 @@ body.dark-mode .instructor-image {
   }
 
   body.dark-mode .instructor-label {
-    color: #FFFFFF;
+    color: #ffffff;
   }
 
   .instructor-name {
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 32px;
@@ -5462,7 +5581,7 @@ body.dark-mode .instructor-image {
   }
 
   body.dark-mode .instructor-name {
-    color: #FFFFFF;
+    color: #ffffff;
   }
 
   .instructor-bio {
@@ -5471,7 +5590,7 @@ body.dark-mode .instructor-image {
   }
 
   .instructor-bio p {
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -5480,7 +5599,7 @@ body.dark-mode .instructor-image {
   }
 
   body.dark-mode .instructor-bio p {
-    color: #FFFFFF;
+    color: #ffffff;
   }
 
   .instructor-br {
@@ -5723,7 +5842,12 @@ body.dark-mode .instructor-image {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, rgba(0, 20, 60, 0.7) 0%, rgba(0, 20, 60, 0.3) 50%, rgba(0, 20, 60, 0) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 20, 60, 0.7) 0%,
+    rgba(0, 20, 60, 0.3) 50%,
+    rgba(0, 20, 60, 0) 100%
+  );
   z-index: 1;
 }
 
@@ -5738,20 +5862,20 @@ body.dark-mode .instructor-image {
 }
 
 .stats-slide-headline {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-weight: 500;
   font-size: 48px;
   line-height: 58px;
-  color: #FFFFFF;
+  color: #ffffff;
   margin: 0;
 }
 
 .stats-slide-description {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 29px;
-  color: #FFFFFF;
+  color: #ffffff;
   margin: 0;
 }
 
@@ -5760,11 +5884,11 @@ body.dark-mode .instructor-image {
 }
 
 .stats-slide-source {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
-  color: #FFFFFF;
+  color: #ffffff;
   opacity: 0.8;
   margin-top: 20px;
 }
@@ -5892,7 +6016,7 @@ body.dark-mode .instructor-image {
 }
 
 .bonus-section-title {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-weight: 700;
   font-size: 54px;
   line-height: 1.1;
@@ -5900,8 +6024,8 @@ body.dark-mode .instructor-image {
 }
 
 .bonus-worth {
-  color: #005BBC;
-  color: #08A4FF;
+  color: #005bbc;
+  color: #08a4ff;
 }
 
 .bonus-grid {
@@ -5926,10 +6050,12 @@ body.dark-mode .instructor-image {
   padding: 48px 33px;
   gap: 22px;
   width: 470px;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 11px 11px 0px rgba(8, 164, 255, 0.67);
   border-radius: 36px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   overflow: hidden;
 }
 
@@ -5977,7 +6103,7 @@ body.dark-mode .instructor-image {
 }
 
 .bonus-card-title {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-weight: 700;
   font-size: 23px;
   line-height: 33px;
@@ -5988,7 +6114,7 @@ body.dark-mode .instructor-image {
 }
 
 .bonus-value {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-weight: 700;
   font-size: 23px;
   line-height: 33px;
@@ -5998,7 +6124,7 @@ body.dark-mode .instructor-image {
 }
 
 .bonus-description {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-weight: 400;
   font-size: 22px;
   line-height: 32px;
@@ -6018,7 +6144,7 @@ body.dark-mode .instructor-image {
   position: relative;
   padding-left: 24px;
   margin-bottom: 8px;
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-weight: 400;
   font-size: 22px;
   line-height: 32px;
@@ -6036,29 +6162,29 @@ body.dark-mode .instructor-image {
 
 body.dark-mode .bonus-card {
   background: linear-gradient(180deg, #000000 0%, #404040 100%);
-  border-color: #08A4FF;
+  border-color: #08a4ff;
   box-shadow: 11px 11px 0px rgba(8, 164, 255, 0.3);
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
 }
 
 body.dark-mode .bonus-card-title {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 body.dark-mode .bonus-list li {
-  color: #E0E0E0;
+  color: #e0e0e0;
 }
 
 body.dark-mode .bonus-value {
-  color: #1ACFFF;
+  color: #1acfff;
 }
 
 body.dark-mode .bonus-description {
-  color: #E0E0E0;
+  color: #e0e0e0;
 }
 
 body.dark-mode .bonus-list li::before {
-  color: #1ACFFF;
+  color: #1acfff;
 }
 
 @media (max-width: 1024px) {
@@ -6172,8 +6298,8 @@ body.dark-mode .bonus-list li::before {
   width: 100%;
   max-width: 1250px;
   min-height: 737px;
-  background: #FFFFFF;
-  border: 2px solid #FFFFFF;
+  background: #ffffff;
+  border: 2px solid #ffffff;
   box-shadow: 0px 3px 25.9px rgba(8, 164, 255, 0.56);
   border-radius: 60px;
   padding: 60px 40px;
@@ -6188,9 +6314,9 @@ body.dark-mode .bonus-list li::before {
 }
 
 .course-fit-title {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-weight: 500;
-  font-size: 32px;
+  font-size: 28px;
   line-height: 38px;
   color: #000000;
   margin: 0 0 16px 0;
@@ -6246,7 +6372,7 @@ body.dark-mode .bonus-list li::before {
 }
 
 .fit-text {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
@@ -6255,12 +6381,12 @@ body.dark-mode .bonus-list li::before {
 
 body.dark-mode .course-fit-container {
   background: #111111;
-  border-color: #08A4FF;
+  border-color: #08a4ff;
   box-shadow: 0px 3px 25.9px rgba(8, 164, 255, 0.35);
 }
 
 body.dark-mode .course-fit-title {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 body.dark-mode .course-fit-divider {
@@ -6272,7 +6398,7 @@ body.dark-mode .course-fit-vertical-divider {
 }
 
 body.dark-mode .fit-text {
-  color: #E0E0E0;
+  color: #e0e0e0;
 }
 
 @media (max-width: 1200px) {
@@ -6375,8 +6501,8 @@ body.dark-mode .fit-text {
   }
 
   .course-fit-title {
-    font-family: 'Lexend', sans-serif;
-    font-size: 44px;
+    font-family: "Lexend", sans-serif;
+    font-size: 40px;
     line-height: 120%;
     color: var(--text-main);
     margin-bottom: 20px;
@@ -6397,7 +6523,7 @@ body.dark-mode .fit-text {
   }
 
   .fit-text {
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     font-weight: 400;
     font-size: 17px;
     line-height: 150%;
@@ -6437,7 +6563,7 @@ body.dark-mode .fit-text {
   }
 
   body.dark-mode .course-fit-title {
-    color: #FFFFFF;
+    color: #ffffff;
   }
 
   body.dark-mode .fit-text {
@@ -6460,7 +6586,7 @@ body.dark-mode .fit-text {
   align-items: flex-start;
   width: 100%;
   min-height: 627px;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 4px 27.6px 3px rgba(8, 164, 255, 0.39);
   padding: 86px 60px 80px 88px;
   gap: 40px;
@@ -6474,7 +6600,7 @@ body.dark-mode .fit-text {
 }
 
 .certification-apart-title {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-weight: 700;
   font-size: 32px;
   line-height: 137.61%;
@@ -6483,7 +6609,7 @@ body.dark-mode .fit-text {
 }
 
 .certification-apart-subtitle {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
@@ -6524,7 +6650,7 @@ body.dark-mode .fit-text {
 }
 
 .cert-list-text {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 29px;
@@ -6532,7 +6658,7 @@ body.dark-mode .fit-text {
 }
 
 .certification-apart-footer {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
@@ -6550,10 +6676,12 @@ body.dark-mode .fit-text {
   gap: 6.74px;
   width: 255.6px;
   height: 58px;
-  background: linear-gradient(90deg, #1ACFFF 0%, #0076FF 100%);
+  background: linear-gradient(90deg, #1acfff 0%, #0076ff 100%);
   border-radius: 67.44px;
   text-decoration: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   margin-left: 98px;
 }
 
@@ -6563,12 +6691,12 @@ body.dark-mode .fit-text {
 }
 
 .btn-certification-text {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-weight: 600;
   font-size: 32.37px;
   line-height: 40px;
   text-align: center;
-  background: linear-gradient(91.52deg, #FFFFFF -1.64%, #EEEEEE 133.11%);
+  background: linear-gradient(91.52deg, #ffffff -1.64%, #eeeeee 133.11%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -6589,7 +6717,7 @@ body.dark-mode .fit-text {
 }
 
 body.dark-mode .certification-apart-card {
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 4px 27.6px 3px rgba(8, 164, 255, 0.25);
 }
 
@@ -6860,7 +6988,7 @@ body.dark-mode .roles-expect-section {
 }
 
 .roles-expect-title {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 50px;
@@ -6871,7 +6999,7 @@ body.dark-mode .roles-expect-section {
 }
 
 .roles-highlight {
-  color: #08A4FF;
+  color: #08a4ff;
 }
 
 .roles-grid {
@@ -6891,7 +7019,9 @@ body.dark-mode .roles-expect-section {
   border-radius: 15px;
   background: transparent;
   min-height: 350px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .role-card:hover {
@@ -6938,7 +7068,7 @@ body.dark-mode .role-img-dark {
 }
 
 .role-title {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 22px;
@@ -6949,7 +7079,7 @@ body.dark-mode .role-img-dark {
 }
 
 .role-salary {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -6960,7 +7090,7 @@ body.dark-mode .role-img-dark {
 }
 
 .role-salary-highlight {
-  color: #08A4FF;
+  color: #08a4ff;
   font-weight: 600;
 }
 
@@ -7082,7 +7212,7 @@ body.dark-mode .role-img-dark {
   }
 
   .role-title {
-    font-family: 'Neue Montreal', 'Lexend', sans-serif;
+    font-family: "Neue Montreal", "Lexend", sans-serif;
     font-weight: 500;
     font-size: 22px;
     line-height: 29px;
@@ -7093,7 +7223,7 @@ body.dark-mode .role-img-dark {
   }
 
   .role-salary {
-    font-family: 'Neue Montreal', 'Lexend', sans-serif;
+    font-family: "Neue Montreal", "Lexend", sans-serif;
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
@@ -7104,7 +7234,7 @@ body.dark-mode .role-img-dark {
   }
 
   .role-salary-highlight {
-    color: #08A4FF;
+    color: #08a4ff;
   }
 }
 
@@ -7132,7 +7262,7 @@ body.dark-mode .role-img-dark {
 }
 
 .pricing-plan-title {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 70px;
@@ -7159,7 +7289,9 @@ body.dark-mode .role-img-dark {
   width: 320px;
   min-height: 700px;
   backdrop-filter: blur(17.5px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .pricing-card:hover {
@@ -7167,7 +7299,7 @@ body.dark-mode .role-img-dark {
 }
 
 .pricing-card-featured {
-  background: linear-gradient(180deg, #351BC9 0%, #141C86 100%);
+  background: linear-gradient(180deg, #351bc9 0%, #141c86 100%);
   box-shadow: 4.42px 4.42px 48px rgba(8, 164, 255, 0.4);
 }
 
@@ -7177,7 +7309,7 @@ body.dark-mode .role-img-dark {
 }
 
 .pricing-card-standard {
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 4.42px 4.42px 48px rgba(8, 164, 255, 0.4);
 }
 
@@ -7195,7 +7327,7 @@ body.dark-mode .pricing-card-standard {
   left: 30px;
   padding: 6px 16px;
   border-radius: 13.5px;
-  font-family: 'Poppins', 'Lexend', sans-serif;
+  font-family: "Poppins", "Lexend", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 10px;
@@ -7206,51 +7338,51 @@ body.dark-mode .pricing-card-standard {
 }
 
 .pricing-badge-white {
-  background: #FFFFFF;
-  color: #5C92FF;
+  background: #ffffff;
+  color: #5c92ff;
 }
 
 .pricing-badge-blue {
-  background: linear-gradient(90deg, #1ACFFF 0%, #0076FF 100%);
-  color: #FFFFFF;
+  background: linear-gradient(90deg, #1acfff 0%, #0076ff 100%);
+  color: #ffffff;
 }
 
 .pricing-price {
-  font-family: 'Poppins', 'Lexend', sans-serif;
+  font-family: "Poppins", "Lexend", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
   line-height: 46px;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-top: 40px;
   margin-bottom: 10px;
 }
 
 .pricing-price-dark {
-  color: #231D4F;
+  color: #231d4f;
 }
 
 .pricing-card-title {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 28px;
   line-height: 37px;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-bottom: 10px;
 }
 
 .pricing-title-dark {
-  color: #231D4F;
+  color: #231d4f;
 }
 
 .pricing-card-subtitle {
-  font-family: 'Poppins', 'Lexend', sans-serif;
+  font-family: "Poppins", "Lexend", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
   line-height: 23px;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-bottom: 25px;
   min-height: 46px;
 }
@@ -7292,8 +7424,8 @@ body.dark-mode .pricing-card-standard {
 }
 
 .feature-check-white::after {
-  content: '✓';
-  color: #FFFFFF;
+  content: "✓";
+  color: #ffffff;
   font-size: 12px;
   font-weight: bold;
 }
@@ -7304,8 +7436,8 @@ body.dark-mode .pricing-card-standard {
 }
 
 .feature-check-blue::after {
-  content: '✓';
-  color: #08A4FF;
+  content: "✓";
+  color: #08a4ff;
   font-size: 12px;
   font-weight: bold;
 }
@@ -7316,19 +7448,19 @@ body.dark-mode .pricing-card-standard {
 }
 
 .feature-x::after {
-  content: '✕';
-  color: #CE3E3E;
+  content: "✕";
+  color: #ce3e3e;
   font-size: 12px;
   font-weight: bold;
 }
 
 .feature-text {
-  font-family: 'Poppins', 'Lexend', sans-serif;
+  font-family: "Poppins", "Lexend", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
   line-height: 23px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .feature-text-dark {
@@ -7340,18 +7472,20 @@ body.dark-mode .pricing-card-standard {
   justify-content: center;
   align-items: center;
   padding: 12px 24px;
-  background: linear-gradient(90deg, #1ACFFF 0%, #0076FF 100%);
+  background: linear-gradient(90deg, #1acfff 0%, #0076ff 100%);
   border-radius: 24px;
-  font-family: 'Poppins', 'Lexend', sans-serif;
+  font-family: "Poppins", "Lexend", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
   line-height: 23px;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
   margin-bottom: 15px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .pricing-btn:hover {
@@ -7360,13 +7494,13 @@ body.dark-mode .pricing-card-standard {
 }
 
 .pricing-refund {
-  font-family: 'Poppins', 'Lexend', sans-serif;
+  font-family: "Poppins", "Lexend", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 14.7px;
   line-height: 22px;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .pricing-refund-dark {
@@ -7483,7 +7617,6 @@ body.dark-mode .pricing-card-standard {
 }
 
 @media (max-width: 480px) {
-
   .hero-container {
     display: flex !important;
     flex-direction: column !important;
@@ -7566,7 +7699,6 @@ body.dark-mode .pricing-card-standard {
 }
 
 @media (max-width: 768px) {
-
   .mobile-video-only {
     display: block !important;
     width: 100% !important;
@@ -7736,7 +7868,7 @@ body.dark-mode .footer-logo.logo-dark {
 }
 
 .footer-tagline {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-size: 14px;
   color: var(--text-main);
   opacity: 0.8;
@@ -7751,7 +7883,7 @@ body.dark-mode .footer-logo.logo-dark {
 
 .footer-links-title,
 .footer-contact-title {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-size: 18px;
   font-weight: 600;
   color: var(--text-main);
@@ -7768,7 +7900,7 @@ body.dark-mode .footer-logo.logo-dark {
 }
 
 .footer-links-list li a {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-size: 16px;
   color: var(--text-main);
   text-decoration: none;
@@ -7776,7 +7908,7 @@ body.dark-mode .footer-logo.logo-dark {
 }
 
 .footer-links-list li a:hover {
-  color: #08A4FF;
+  color: #08a4ff;
 }
 
 .footer-contact {
@@ -7787,13 +7919,13 @@ body.dark-mode .footer-logo.logo-dark {
 
 .footer-contact-phone,
 .footer-contact-email {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-size: 14px;
   color: var(--text-main);
 }
 
 .footer-contact-email a {
-  color: #08A4FF;
+  color: #08a4ff;
   text-decoration: none;
 }
 
@@ -7810,7 +7942,7 @@ body.dark-mode .footer-logo.logo-dark {
 }
 
 .footer-bottom p {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-size: 14px;
   color: var(--text-main);
   opacity: 0.7;

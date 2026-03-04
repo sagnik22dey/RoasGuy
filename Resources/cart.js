@@ -11,12 +11,12 @@ const COURSE_CONFIG = {
   },
   "business-growth-plan": {
     name: "Business Growth Plan",
-    amount: 49991,
+    amount: 14991,
     thankYouPage: "/psychology-driven-advanced-meta-ad-course/business-growth-plan/thankyou",
   },
   "value-plan": {
     name: "Value Plan",
-    amount: 14991,
+    amount: 9991,
     thankYouPage: "/psychology-driven-advanced-meta-ad-course/value-plan/thankyou",
   },
   "master-creative-targeting-base": {
@@ -28,6 +28,16 @@ const COURSE_CONFIG = {
     name: "Master Creative Targeting - Mentorship Plan",
     amount: 4991,
     thankYouPage: "/master-creative-targeting/mentorship-plan/thankyou",
+  },
+  "business-growth-partner-plan": {
+    name: "Business Growth Partner Plan",
+    amount: 49991,
+    thankYouPage: "/psychology-driven-advanced-meta-ad-course/business-growth-partner-plan/thankyou",
+  },
+  "business-growth-mastery-plan": {
+    name: "Business Growth Mastery Plan",
+    amount: 14991,
+    thankYouPage: "/psychology-driven-advanced-meta-ad-course/business-growth-mastery-plan/thankyou",
   },
 };
 

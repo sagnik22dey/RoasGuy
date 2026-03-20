@@ -139,21 +139,39 @@
             signal-based approach
           </p>
 
-          <div class="hero-thumbnail-wrapper">
-            <img
-              src="../Resources/MetaHomepage/thumbnail.jpg"
-              alt="Mastering Facebook Ads Course"
-              class="hero-thumbnail"
-            />
-            <div class="hero-play-btn">
-              <svg
-                class="play-icon"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+          <div class="hero-video-widget">
+            <div class="hero-video-card">
+              <div class="hero-video-iframe-wrap">
+                <iframe
+                  id="heroVideoIframe"
+                  src="https://www.youtube.com/embed/tLXbTZrZVxE"
+                  allow="
+                    accelerometer;
+                    autoplay;
+                    clipboard-write;
+                    encrypted-media;
+                    gyroscope;
+                    picture-in-picture;
+                  "
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+            <div class="hero-video-lang-btns">
+              <button
+                class="hero-lang-btn active"
+                data-video="https://www.youtube.com/embed/tLXbTZrZVxE"
+                id="heroLangEn"
               >
-                <path d="M8 5V19L19 12L8 5Z" fill="currentColor" />
-              </svg>
+                Hindi
+              </button>
+              <button
+                class="hero-lang-btn"
+                data-video="https://www.youtube.com/embed/nt_nDT4BjM8"
+                id="heroLangHi"
+              >
+                English
+              </button>
             </div>
           </div>
         </div>
@@ -1571,98 +1589,18 @@
       });
     </script>
 
-    <div class="video-modal-overlay" id="videoModal">
-      <div class="video-modal-content">
-        <div class="video-modal-iframe-wrap">
-          <iframe
-            id="videoModalIframe"
-            src=""
-            allow="
-              accelerometer;
-              autoplay;
-              clipboard-write;
-              encrypted-media;
-              gyroscope;
-              picture-in-picture;
-            "
-            allowfullscreen
-          ></iframe>
-        </div>
-        <div class="video-modal-tabs">
-          <button
-            class="video-modal-tab-btn active"
-            data-video="student"
-            id="tabStudent"
-          >
-            For Students
-          </button>
-          <button
-            class="video-modal-tab-btn"
-            data-video="business"
-            id="tabBusiness"
-          >
-            For Business Owners
-          </button>
-        </div>
-        <button class="video-modal-close-btn" id="closeVideoModal">
-          ✕ Close Video
-        </button>
-      </div>
-    </div>
-
     <script>
       (function () {
-        const VIDEOS = {
-          student: "https://www.youtube.com/embed/tLXbTZrZVxE?autoplay=1",
-          business: "https://www.youtube.com/embed/nt_nDT4BjM8?autoplay=1",
-        };
-
-        const overlay = document.getElementById("videoModal");
-        const iframe = document.getElementById("videoModalIframe");
-        const closeBtn = document.getElementById("closeVideoModal");
-        const tabBtns = overlay.querySelectorAll(".video-modal-tab-btn");
-
-        const heroPlayBtn = document.querySelector(".hero-play-btn");
-        const heroWrapper = document.querySelector(".hero-thumbnail-wrapper");
-
-        function openModal() {
-          setTab("student");
-          overlay.classList.add("active");
-          document.body.style.overflow = "hidden";
-        }
-
-        function closeModal() {
-          overlay.classList.remove("active");
-          iframe.src = "";
-          document.body.style.overflow = "";
-        }
-
-        function setTab(key) {
-          iframe.src = VIDEOS[key];
-          tabBtns.forEach(function (btn) {
-            btn.classList.toggle("active", btn.dataset.video === key);
-          });
-        }
-
-        if (heroPlayBtn) heroPlayBtn.addEventListener("click", openModal);
-        if (heroWrapper) heroWrapper.addEventListener("click", openModal);
-
-        closeBtn.addEventListener("click", closeModal);
-
-        overlay.addEventListener("click", function (e) {
-          if (e.target === overlay) closeModal();
-        });
-
-        tabBtns.forEach(function (btn) {
+        const iframe = document.getElementById("heroVideoIframe");
+        const langBtns = document.querySelectorAll(".hero-lang-btn");
+        langBtns.forEach(function (btn) {
           btn.addEventListener("click", function () {
-            setTab(btn.dataset.video);
+            langBtns.forEach(function (b) {
+              b.classList.remove("active");
+            });
+            btn.classList.add("active");
+            iframe.src = btn.dataset.video;
           });
-        });
-
-        document.addEventListener("keydown", function (e) {
-          if (e.key === "Escape" && overlay.classList.contains("active")) {
-            closeModal();
-          }
         });
       })();
     </script>

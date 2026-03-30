@@ -1,4 +1,4 @@
-from fastapi import APIRouter, HTTPException, BackgroundTasks
+from fastapi import APIRouter, HTTPException, BackgroundTasks, Request, Depends
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 import razorpay
@@ -15,6 +15,32 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 router = APIRouter()
+
+ALLOWED_ORIGINS = [
+    "http://localhost",
+    "http://127.0.0.1",
+    "https://www.roasschoolofmarketing.com",
+    "https://roasschoolofmarketing.com"
+]
+
+def verify_request_origin(request: Request):
+    """
+    Security dependency to verify that requests to sensitive payment endpoints
+    are coming from our own frontend domain, preventing direct public API abuse.
+    """
+    origin = request.headers.get("origin")
+    referer = request.headers.get("referer")
+    
+    is_allowed = False
+    if origin and any(origin.startswith(allowed) for allowed in ALLOWED_ORIGINS):
+        is_allowed = True
+    elif referer and any(referer.startswith(allowed) for allowed in ALLOWED_ORIGINS):
+        is_allowed = True
+        
+    if not is_allowed:
+        logger.warning(f"Blocked unauthorized payment API access. Origin: {origin}, Referer: {referer}")
+        raise HTTPException(status_code=403, detail="Access Denied: Invalid Request Source")
+
 
 RAZORPAY_KEY_ID = os.getenv("RAZORPAY_KEY_ID")
 RAZORPAY_KEY_SECRET = os.getenv("RAZORPAY_KEY_SECRET")
@@ -103,7 +129,7 @@ class VerifyPaymentRequest(BaseModel):
 
 
 @router.post("/api/create-order")
-async def create_order(request: CreateOrderRequest):
+async def create_order(request: CreateOrderRequest, req: Request, _=Depends(verify_request_origin)):
     """
     Create a Razorpay order for the specified course.
     """
@@ -182,7 +208,7 @@ async def _enroll_on_graphy(email: str, name: str, phone: str, course_id: str, r
 
 
 @router.post("/api/verify-payment")
-async def verify_payment(request: VerifyPaymentRequest, background_tasks: BackgroundTasks):
+async def verify_payment(request: VerifyPaymentRequest, background_tasks: BackgroundTasks, req: Request, _=Depends(verify_request_origin)):
     """
     Verify the Razorpay payment signature, confirm the payment,
     and trigger Graphy learner creation + course enrollment in the background.
@@ -217,11 +243,3 @@ async def verify_payment(request: VerifyPaymentRequest, background_tasks: Backgr
         raise HTTPException(status_code=500, detail=str(e))
 
 
-@router.get("/api/razorpay-key")
-async def get_razorpay_key():
-    """
-    Return the Razorpay public key ID for frontend use.
-    """
-    return JSONResponse(content={
-        "key_id": RAZORPAY_KEY_ID
-    })

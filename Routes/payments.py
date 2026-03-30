@@ -7,7 +7,7 @@ import hashlib
 import os
 import logging
 from dotenv import load_dotenv
-from services.graphy import create_and_enroll_learner
+from Routes.services.graphy import create_and_enroll_learner
 
 load_dotenv()
 
@@ -73,7 +73,7 @@ COURSE_PRICES = {
     },
     "business-growth-mastery-plan": {
         "name": "Business Growth Mastery Plan",
-        "amount": 2499100,
+        "amount": 1499100,
         "currency": "INR",
         "price_env": "PRICE_BUSINESS_GROWTH_MASTERY"
     }

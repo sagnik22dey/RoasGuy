@@ -32,12 +32,12 @@ const COURSE_CONFIG = {
   "business-growth-partner-plan": {
     name: "Business Growth Partner Plan",
     amount: 49991,
-    thankYouPage: "/psychology-driven-advanced-meta-ad-course/business-growth-partner-plan/thankyou",
+    thankYouPage: "/growth-plan-for-business-ownerbusiness-growth-partner-plan/thankyou",
   },
   "business-growth-mastery-plan": {
     name: "Business Growth Mastery Plan",
     amount: 24991,
-    thankYouPage: "/psychology-driven-advanced-meta-ad-course/business-growth-mastery-plan/thankyou",
+    thankYouPage: "/growth-plan-for-business-ownerbusiness-growth-mastery-plan/thankyou",
   },
 };
 

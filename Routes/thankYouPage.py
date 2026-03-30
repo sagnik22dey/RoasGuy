@@ -13,11 +13,11 @@ def _read_thankYouPage_html() -> str:
     except FileNotFoundError:
         return "<html><body><h1>Thank You Page not found</h1></body></html>"
 
-@router.get("/psychology-driven-advanced-meta-ad-course/business-growth-plan/thankyou", response_class=HTMLResponse)
-@router.get("/psychology-driven-advanced-meta-ad-course/value-plan/thankyou", response_class=HTMLResponse)
+@router.get("/psychology-driven-advanced-meta-ad-course/Live-Mentorship-Plan/thankyou", response_class=HTMLResponse)
+@router.get("/psychology-driven-advanced-meta-ad-course/Recorded-Course-Plan/thankyou", response_class=HTMLResponse)
 @router.get("/psychology-driven-advanced-meta-ad-course/basic-plan/thankyou", response_class=HTMLResponse)
-@router.get("/growth-plan-for-business-ownerbusiness-growth-partner-plan/thankyou", response_class=HTMLResponse)
-@router.get("/growth-plan-for-business-ownerbusiness-growth-mastery-plan/thankyou", response_class=HTMLResponse)
+@router.get("/growth-plan-for-business-owner/business-growth-partner-plan/thankyou", response_class=HTMLResponse)
+@router.get("/growth-plan-for-business-owner/business-growth-mastery-plan/thankyou", response_class=HTMLResponse)
 @router.get("/fundamentals-of-facebook-ads/thankyou", response_class=HTMLResponse)
 async def thankYouPage() -> HTMLResponse:
     content = _read_thankYouPage_html()

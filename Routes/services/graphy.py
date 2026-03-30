@@ -29,6 +29,8 @@ COURSE_GRAPHY_PRODUCT_MAP = {
     "value-plan": os.getenv("GRAPHY_PRODUCT_VALUE_PLAN", ""),
     "master-creative-targeting-base": os.getenv("GRAPHY_PRODUCT_MCT_BASE", ""),
     "master-creative-targeting-mentorship": os.getenv("GRAPHY_PRODUCT_MCT_MENTORSHIP", ""),
+    "business-growth-partner-plan": os.getenv("GRAPHY_PRODUCT_BUSINESS_GROWTH_PARTNER", ""),
+    "business-growth-mastery-plan": os.getenv("GRAPHY_PRODUCT_BUSINESS_GROWTH_MASTERY", ""),
 }
 
 

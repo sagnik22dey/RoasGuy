@@ -2842,7 +2842,23 @@ body.dark-mode .footer-image .footer-svg-dark {
   line-height: 65px;
   text-align: center;
   color: var(--text-main);
-  margin-bottom: 35px;
+  margin-bottom: 12px;
+}
+
+.pricing-section-subtitle {
+  font-family: "Satoshi", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  color: #3c3c3c;
+  margin: 0 auto 50px auto;
+  max-width: 550px;
+}
+
+body.dark-mode .pricing-section-subtitle {
+  color: #e0e0e0;
 }
 
 .pricing-cards-wrapper {
@@ -3106,9 +3122,29 @@ body.dark-mode .footer-image .footer-svg-dark {
 }
 
 @media (max-width: 768px) {
+  .pricing-plan-title {
+    font-size: 38px;
+    line-height: 48px;
+    margin-bottom: 10px;
+  }
+  .pricing-section-subtitle {
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 40px;
+  }
 }
 
 @media (max-width: 480px) {
+  .pricing-plan-title {
+    font-size: 32px;
+    line-height: 42px;
+    margin-bottom: 8px;
+  }
+  .pricing-section-subtitle {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 30px;
+  }
 }
 
 .is-this-for-you-section {

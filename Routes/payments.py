@@ -73,7 +73,7 @@ COURSE_PRICES = {
     },
     "business-growth-mastery-plan": {
         "name": "Business Growth Mastery Plan",
-        "amount": 1499100,
+        "amount": 2499100,
         "currency": "INR",
         "price_env": "PRICE_BUSINESS_GROWTH_MASTERY"
     }

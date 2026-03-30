@@ -36,7 +36,7 @@ const COURSE_CONFIG = {
   },
   "business-growth-mastery-plan": {
     name: "Business Growth Mastery Plan",
-    amount: 14991,
+    amount: 24991,
     thankYouPage: "/psychology-driven-advanced-meta-ad-course/business-growth-mastery-plan/thankyou",
   },
 };

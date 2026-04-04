@@ -1,0 +1,2133 @@
+/* ================================================================
+   ROAS SCHOOL OF MARKETING — Landing Page Styles
+   ================================================================ */
+
+/* ── Reset & Base ── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #000000;
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ================================================================
+   HERO WRAPPER  (navbar + scattered images share one canvas)
+   Canvas reference: 1440 × ~1050px (matches Figma absolute coords)
+   ================================================================ */
+.hero-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 1050px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+/* ================================================================
+   NAVBAR
+   ================================================================ */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  padding: 0 40px;
+}
+
+/* Logo */
+.navbar-logo {
+  position: absolute;
+  left: 71px;
+  top: 33px;
+}
+
+.logo-img {
+  width: 110px;
+  height: auto;
+  max-height: 61px;
+  object-fit: contain;
+}
+
+/* Nav links — centered via Figma calc: left: calc(50% - 472px/2 + 89px) */
+.navbar-links {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 42px;
+  width: 472px;
+  height: 24px;
+  left: calc(50% - 472px / 2 + 89px);
+  top: 44px;
+}
+
+.navbar-links a {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #000000;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+
+.navbar-links a:hover {
+  opacity: 0.65;
+}
+
+/* Actions (cart + login) */
+.navbar-actions {
+  position: absolute;
+  right: 40px;
+  top: 34px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cart-icon {
+  position: absolute;
+  left: 1217px;
+  top: 42px;
+  width: 33px;
+  height: 33px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.cart-icon:hover {
+  opacity: 0.7;
+}
+
+/* Login / Enroll button */
+.login-btn {
+  position: absolute;
+  left: 1281px;
+  top: 34px;
+  width: 98px;
+  height: 44px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 10px;
+  background: linear-gradient(90deg, #1acfff 0%, #0076ff 100%);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+  transition:
+    opacity 0.2s,
+    transform 0.15s;
+}
+
+.login-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+
+/* ================================================================
+   SCATTERED HERO IMAGES
+   All positions are absolute within .hero-wrapper (1440px canvas)
+   ================================================================ */
+.hero-img {
+  position: absolute;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+/* Rectangle 147 */
+.rect-147 {
+  width: 198px;
+  height: 180px;
+  left: 363px;
+  top: 70px;
+}
+
+/* Rectangle 146 */
+.rect-146 {
+  width: 174px;
+  height: 180px;
+  left: 230px;
+  top: 158px;
+}
+
+/* Rectangle 148 — has border */
+.rect-148 {
+  width: 151px;
+  height: 156px;
+  left: 1045px;
+  top: 108px;
+  border: 0.5px solid #000000;
+}
+
+/* Rectangle 150 — small, no radius */
+.rect-150 {
+  width: 84px;
+  height: 58px;
+  left: 1301px;
+  top: 108px;
+  border-radius: 6px;
+}
+
+/* Rectangle 149 — large right */
+.rect-149 {
+  width: 260px;
+  height: 273px;
+  left: 1133px;
+  top: 345px;
+}
+
+/* Rectangle 153 — large left (partially off-screen) */
+.rect-153 {
+  width: 260px;
+  height: 273px;
+  left: -118px;
+  top: 434px;
+}
+
+/* Rectangle 156 — center, with border */
+.rect-156 {
+  width: 126px;
+  height: 117px;
+  left: 531px;
+  top: 648px;
+  border: 0.5px solid #000000;
+}
+
+/* Rectangle 154 — lower left */
+.rect-154 {
+  width: 165px;
+  height: 128px;
+  left: 168px;
+  top: 742px;
+}
+
+/* Rectangle 151 — lower far right */
+.rect-151 {
+  width: 168px;
+  height: 145px;
+  left: 1296px;
+  top: 707px;
+  border-radius: 0;
+}
+
+/* Rectangle 155 — lower center */
+.rect-155 {
+  width: 216px;
+  height: 183px;
+  left: 378px;
+  top: 828px;
+  border-radius: 0;
+}
+
+/* Rectangle 152 — lower right, wide */
+.rect-152 {
+  width: 372px;
+  height: 183px;
+  left: 877px;
+  top: 852px;
+}
+
+/* ================================================================
+   HERO CONTENT (centred heading + feature tags)
+   ================================================================ */
+.hero-content {
+  position: absolute;
+  width: 694px;
+  left: calc(50% - 694px / 2);
+  top: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  z-index: 10;
+}
+
+/* Heading */
+.hero-heading {
+  width: 694px;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 43px;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 26px;
+}
+
+/* Feature row */
+.hero-features {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  width: 714px;
+  margin-bottom: 36px;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+
+.feature-icon {
+  width: 21px;
+  height: 21px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-text {
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 146%;
+  letter-spacing: -0.04em;
+  color: #000000;
+  white-space: nowrap;
+}
+
+/* CTA buttons */
+.hero-cta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn-enroll {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 36px;
+  background: linear-gradient(90deg, #1acfff 0%, #0076ff 100%);
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition:
+    opacity 0.2s,
+    transform 0.15s;
+}
+
+.btn-enroll:hover {
+  opacity: 0.88;
+  transform: translateY(-2px);
+}
+
+.btn-learn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 34px;
+  background: transparent;
+  border-radius: 5px;
+  border: 1.5px solid #0076ff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #0076ff;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.btn-learn:hover {
+  background: #0076ff;
+  color: #fff;
+}
+
+/* ================================================================
+   SHARED SECTION HELPERS
+   ================================================================ */
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.section-title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 43px;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #555;
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.section-label {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #0076ff;
+  margin-bottom: 10px;
+}
+
+/* ================================================================
+   RESULTS SECTION
+   ================================================================ */
+.results-section {
+  padding: 96px 0;
+  background: #f7f9fc;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.result-card {
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.result-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.13);
+}
+
+.result-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.result-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px 16px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.65) 0%, transparent 100%);
+  display: flex;
+  align-items: flex-end;
+}
+
+.result-tag {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+/* ================================================================
+   COURSES SECTION  (Figma-matched carousel design)
+   ================================================================ */
+.courses-section {
+  padding: 80px 0 96px;
+  background: #ffffff;
+}
+
+/* Section heading */
+.courses-section-title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 146%;
+  text-align: center;
+  letter-spacing: -0.04em;
+  color: #000000;
+  margin-bottom: 48px;
+}
+
+/* ── 3-column static grid ── */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* ── Individual card (Figma: 389 × 513px) ── */
+.course-card-v2 {
+  background: #ffffff;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.12);
+  border-radius: 9.52px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
+}
+
+.course-card-v2:hover {
+  box-shadow: 0 0 28px rgba(0, 0, 0, 0.18);
+  transform: translateY(-3px);
+}
+
+/* Thumbnail (Figma: 389 × 195px) */
+.course-card-v2__thumb {
+  width: 100%;
+  aspect-ratio: 389 / 195;
+  overflow: hidden;
+  border-radius: 9.52px 9.52px 0 0;
+  flex-shrink: 0;
+}
+
+.course-card-v2__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Body — padding mirrors Figma left offset (561-528 = 32px) */
+.course-card-v2__body {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 22px 28px 28px;
+  flex: 1;
+}
+
+.course-card-v2__top {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+/* Title (Figma: Segoe UI 600 27px -4% ls) */
+.course-card-v2__title {
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 146%;
+  letter-spacing: -0.04em;
+  color: #000000;
+}
+
+/* Meta row: clock + certificate */
+.course-card-v2__meta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 28px;
+}
+
+.course-card-v2__meta-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 146%;
+  letter-spacing: -0.04em;
+  color: #000000;
+}
+
+.course-card-v2__meta-item svg {
+  flex-shrink: 0;
+}
+
+/* Description (Figma: Segoe UI 400 19px -4% ls) */
+.course-card-v2__desc {
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 146%;
+  letter-spacing: -0.04em;
+  color: #000000;
+  flex: 1;
+}
+
+/* "Get Started" pill button (Figma: Rectangle 145 border-radius 66px) */
+.course-card-v2__btn {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 20px;
+  border: 1px solid #000000;
+  border-radius: 66px;
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 146%;
+  letter-spacing: -0.04em;
+  color: #000000;
+  text-decoration: none;
+  width: fit-content;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.course-card-v2__btn:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+.course-card-v2__btn:hover svg path {
+  stroke: #ffffff;
+}
+
+/* ================================================================
+   ABOUT SECTION  (Figma redesign)
+   ================================================================ */
+.about-section {
+  padding: 80px 0 100px;
+  background: #ffffff;
+}
+
+/* ── Section Title ── */
+.about-section-title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 146%;
+  text-align: center;
+  letter-spacing: -0.04em;
+  color: #000000;
+  margin-bottom: 56px;
+}
+
+/* ── Top row: image left + text right ── */
+.about-top {
+  display: grid;
+  grid-template-columns: 541fr 624fr;
+  gap: 72px;
+  align-items: flex-start;
+  margin-bottom: 72px;
+}
+
+.about-top-image img {
+  width: 100%;
+  aspect-ratio: 541 / 317;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 4px 44px 19px rgba(55, 73, 87, 0.37);
+  display: block;
+}
+
+.about-top-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-top-text p {
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 146%;
+  letter-spacing: -0.04em;
+  color: #000000;
+}
+
+.about-top-text p strong {
+  font-weight: 700;
+}
+
+/* ── Quote block ── */
+.about-quote-outer {
+  position: relative;
+  max-width: 1034px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.about-quote-open-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  position: absolute;
+  left: -18px;
+  top: -10px;
+  z-index: 2;
+  background: #ffffff;
+}
+
+.about-quote-close-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  position: absolute;
+  right: -18px;
+  bottom: -10px;
+  z-index: 2;
+  background: #ffffff;
+}
+
+.about-quote-close-wrap .about-quote-mark {
+  transform: rotate(180deg);
+  display: block;
+}
+
+.about-quote-mark {
+  font-family: "Anonymous Pro", monospace;
+  font-weight: 700;
+  font-size: 128px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: #000000;
+  user-select: none;
+}
+
+.about-quote-box {
+  border: 3px solid #000000;
+  border-radius: 32px;
+  padding: 36px 80px 36px 230px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  min-height: 196px;
+  background: #ffffff;
+}
+
+.about-quote-avatar {
+  position: absolute;
+  left: 70px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #d0d7e0;
+}
+
+.about-quote-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.about-quote-text {
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 127%;
+  letter-spacing: -0.04em;
+  color: #000000;
+}
+
+/* ================================================================
+   WHO IS ROAS SCHOOL OF MARKETING FOR SECTION
+   ================================================================ */
+.who-for-section {
+  padding: 80px 0 96px;
+  background: #ffffff;
+}
+
+.who-for-title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 146%;
+  text-align: center;
+  letter-spacing: -0.04em;
+  color: #000000;
+  margin-bottom: 56px;
+}
+
+.who-for-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 28px;
+  margin-bottom: 48px;
+}
+
+.who-for-row--bottom {
+  margin-bottom: 0px;
+}
+
+.who-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 310px;
+}
+
+.who-card img {
+  width: 227px;
+  height: 187px;
+  object-fit: contain;
+  margin-bottom: 24px;
+}
+
+.who-card-title {
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 146%;
+  text-align: center;
+  letter-spacing: -0.04em;
+  color: #000000;
+  margin-bottom: 4px;
+}
+
+.who-card-text {
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 146%;
+  text-align: center;
+  letter-spacing: -0.04em;
+  color: #000000;
+}
+
+@media (max-width: 1024px) {
+  .who-for-row {
+    flex-wrap: wrap;
+  }
+}
+
+/* ================================================================
+   TESTIMONIALS SECTION
+   ================================================================ */
+.testimonials-section {
+  padding: 96px 0;
+  background: #ffffff;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.testimonial-card {
+  background: #f7f9fc;
+  border-radius: 14px;
+  padding: 28px 26px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border: 1px solid #e8ecf0;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
+}
+
+.testimonial-card:hover {
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
+
+.testimonial-avatar img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #0076ff;
+}
+
+.testimonial-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #333;
+  font-style: italic;
+  flex: 1;
+}
+
+.testimonial-name {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #000;
+}
+
+.testimonial-role {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  color: #0076ff;
+  font-weight: 500;
+}
+
+/* ================================================================
+   CTA BANNER SECTION
+   ================================================================ */
+.cta-section {
+  padding: 80px 0;
+  background: linear-gradient(90deg, #1acfff 0%, #0076ff 100%);
+}
+
+.cta-inner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.cta-heading {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 43px;
+  color: #ffffff;
+  max-width: 700px;
+}
+
+.cta-sub {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 8px;
+}
+
+.cta-btn {
+  padding: 16px 48px;
+  font-size: 18px;
+  background: #ffffff;
+  color: #0076ff;
+  border-radius: 5px;
+  border: none;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.cta-btn:hover {
+  opacity: 0.92;
+  transform: translateY(-2px);
+}
+
+/* ================================================================
+   BLOGS SECTION
+   ================================================================ */
+.blogs-section {
+  padding: 96px 0;
+  background: #f7f9fc;
+}
+
+.blogs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.blog-card {
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e8ecf0;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
+}
+
+.blog-card:hover {
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.blog-card > img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+.blog-info {
+  padding: 18px 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.blog-tag {
+  display: inline-block;
+  padding: 3px 12px;
+  background: #e8f4ff;
+  color: #0076ff;
+  border-radius: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  width: fit-content;
+}
+
+.blog-title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 1.45;
+  color: #000;
+}
+
+.blog-date {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  color: #999;
+}
+
+/* ================================================================
+   CONTACT SECTION  (Figma redesign)
+   ================================================================ */
+.contact-section {
+  padding: 80px 0 96px;
+  background: #ffffff;
+}
+
+/* Section heading — Bricolage Grotesque 600 40px */
+.contact-title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 146%;
+  text-align: center;
+  letter-spacing: -0.04em;
+  color: #000000;
+  margin-bottom: 56px;
+}
+
+/* ── Two-column layout with divider ── */
+.contact-columns {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+  max-width: 1052px;
+  margin: 0 auto;
+}
+
+/* Each column */
+.contact-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 32px;
+  padding: 0 48px;
+}
+
+/* Column heading — Segoe UI 700 32px */
+.contact-col-heading {
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 146%;
+  text-align: center;
+  letter-spacing: -0.04em;
+  color: #000000;
+  margin: 0;
+}
+
+/* Column description — Segoe UI 400 24px */
+.contact-col-desc {
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 146%;
+  text-align: center;
+  letter-spacing: -0.04em;
+  color: #000000;
+  max-width: 376px;
+  margin: 0;
+}
+
+/* ── Vertical divider line ── */
+.contact-divider {
+  width: 2px;
+  height: 234px;
+  background: #000000;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+/* ── CTA Buttons shared base ── */
+.contact-btn {
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    opacity 0.2s,
+    transform 0.15s;
+}
+
+.contact-btn:hover {
+  opacity: 0.88;
+  transform: translateY(-2px);
+}
+
+.contact-col--learners .contact-btn img {
+  width: 404px;
+  height: auto;
+  max-width: 100%;
+}
+
+.contact-col--business .contact-btn img {
+  width: 372px;
+  height: auto;
+  max-width: 100%;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .contact-col--learners .contact-btn img {
+    width: 340px;
+  }
+
+  .contact-col--business .contact-btn img {
+    width: 320px;
+  }
+
+  .contact-col {
+    padding: 0 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .contact-columns {
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .contact-divider {
+    width: 234px;
+    height: 2px;
+    align-self: center;
+  }
+
+  .contact-col {
+    padding: 0 16px;
+    width: 100%;
+  }
+
+  .contact-col-heading {
+    font-size: 26px;
+  }
+
+  .contact-col-desc {
+    font-size: 18px;
+  }
+
+  .contact-col--learners .contact-btn img,
+  .contact-col--business .contact-btn img {
+    width: 100%;
+    max-width: 380px;
+  }
+}
+
+/* ================================================================
+   MIND BEHIND ROAS SCHOOL OF MARKETING — SECTION
+   ================================================================ */
+.mind-behind-section {
+  padding: 80px 0 96px;
+  background: #ffffff;
+}
+
+/* Section heading */
+.mind-behind-title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 146%;
+  text-align: center;
+  letter-spacing: -0.04em;
+  color: #000000;
+  margin-bottom: 16px;
+}
+
+/* Subtitle */
+.mind-behind-subtitle {
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 146%;
+  text-align: center;
+  letter-spacing: -0.04em;
+  color: #000000;
+  margin-bottom: 48px;
+}
+
+/* The grey rounded card container — Rectangle 163 */
+.mind-behind-card {
+  background: #f2f2f2;
+  border-radius: 35px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 48px;
+  padding: 48px 54px;
+  max-width: 1232px;
+  margin: 0 auto;
+}
+
+/* Left text column */
+.mind-behind-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mind-behind-text p {
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 146%;
+  text-align: justify;
+  letter-spacing: -0.04em;
+  color: #000000;
+}
+
+.mind-behind-text p strong {
+  font-weight: 700;
+}
+
+/* Right image column */
+.mind-behind-image {
+  flex-shrink: 0;
+  width: 424px;
+}
+
+.mind-behind-image img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 37px;
+  display: block;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .mind-behind-card {
+    flex-direction: column;
+    padding: 40px 36px;
+    gap: 36px;
+  }
+
+  .mind-behind-image {
+    width: 100%;
+  }
+
+  .mind-behind-image img {
+    height: 360px;
+  }
+
+  .mind-behind-title {
+    font-size: 32px;
+  }
+
+  .mind-behind-subtitle {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mind-behind-section {
+    padding: 56px 0 64px;
+  }
+
+  .mind-behind-title {
+    font-size: 26px;
+  }
+
+  .mind-behind-subtitle {
+    font-size: 17px;
+    margin-bottom: 32px;
+  }
+
+  .mind-behind-card {
+    border-radius: 22px;
+    padding: 28px 20px;
+    gap: 28px;
+  }
+
+  .mind-behind-text p {
+    font-size: 16px;
+  }
+
+  .mind-behind-image img {
+    height: 280px;
+  }
+}
+
+/* ================================================================
+   MOVEMENT SECTION  (Group 11 — Figma)
+   ================================================================ */
+.movement-section {
+  padding: 80px 0 88px;
+  background: #ffffff;
+}
+
+/* ── Image wrapper — positions the blur overlay + text on top ── */
+.movement-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1225px;
+  margin: 0 auto 48px;
+  border-radius: 18px;
+  overflow: hidden;
+  line-height: 0; /* removes gap under inline img */
+}
+
+.movement-main-img {
+  width: 100%;
+  height: 681px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 18px;
+  display: block;
+}
+
+/* Rectangle 160 — dark blurred shadow behind the caption text */
+.movement-blur-overlay {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 60px; /* sits above the bottom edge */
+  width: 77.5%; /* ≈ 949/1225 */
+  height: 207px;
+  background: #000000;
+  opacity: 0.85;
+  filter: blur(57.65px);
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+/* Caption text centered over the blur overlay */
+.movement-overlay-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 74px;
+  width: 56.7%; /* ≈ 694/1225 */
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 146%;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+  text-align: center;
+  z-index: 2;
+}
+
+/* ── Body text below the image ── */
+.movement-body-text {
+  max-width: 1226px;
+  margin: 0 auto 40px;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 146%;
+  text-align: center;
+  letter-spacing: -0.04em;
+  color: #000000;
+}
+
+/* Gradient "MOVEMENT" highlight */
+.movement-highlight {
+  background: linear-gradient(90deg, #1acfff 0%, #0076ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+/* ── CTA button row ── */
+.movement-cta {
+  display: flex;
+  justify-content: center;
+}
+
+.movement-btn {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 25px;
+  gap: 10px;
+  background: linear-gradient(90deg, #1acfff 0%, #0076ff 100%);
+  border-radius: 9.67px;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 146%;
+  text-align: center;
+  letter-spacing: -0.04em;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  transition:
+    opacity 0.2s,
+    transform 0.15s;
+}
+
+.movement-btn:hover {
+  opacity: 0.88;
+  transform: translateY(-2px);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+  .movement-main-img {
+    height: 480px;
+  }
+
+  .movement-body-text {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .movement-section {
+    padding: 56px 0 64px;
+  }
+
+  .movement-main-img {
+    height: 320px;
+  }
+
+  .movement-overlay-text {
+    font-size: 15px;
+    width: 72%;
+    bottom: 48px;
+  }
+
+  .movement-blur-overlay {
+    height: 160px;
+    bottom: 36px;
+  }
+
+  .movement-body-text {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+
+  .movement-btn {
+    font-size: 20px;
+    padding: 8px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .movement-main-img {
+    height: 220px;
+  }
+
+  .movement-overlay-text {
+    font-size: 12px;
+    bottom: 30px;
+    width: 80%;
+  }
+
+  .movement-blur-overlay {
+    height: 110px;
+    bottom: 20px;
+  }
+
+  .movement-body-text {
+    font-size: 20px;
+  }
+
+  .movement-btn {
+    font-size: 18px;
+  }
+}
+
+/* ================================================================
+   FOOTER
+   ================================================================ */
+.footer {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Footer SVG visibility */
+body:not(.dark-mode) .footer-svg-dark {
+  display: none !important;
+}
+body.dark-mode .footer-svg-light {
+  display: none !important;
+}
+
+.footer-image {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding-bottom: 0;
+}
+
+.footer-image img {
+  width: 100%;
+  max-height: 775px;
+  object-fit: contain;
+}
+
+.footer-image svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.footer-image .footer-svg-light {
+  display: block;
+}
+.footer-image .footer-svg-dark {
+  display: none;
+}
+
+body.dark-mode .footer-image .footer-svg-light {
+  display: none;
+}
+body.dark-mode .footer-image .footer-svg-dark {
+  display: block;
+}
+
+/* ================================================================
+   RESPONSIVE — basic 1024px breakpoint
+   ================================================================ */
+@media (max-width: 1100px) {
+  /* Scale hero images proportionally */
+  .hero-wrapper {
+    height: 820px;
+    transform-origin: top left;
+  }
+
+  .results-grid,
+  .testimonials-grid,
+  .blogs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-top {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-top-image img {
+    aspect-ratio: auto;
+    height: 280px;
+  }
+
+  .about-quote-box {
+    padding: 32px 40px 32px 180px;
+  }
+
+  .contact-inner {
+    grid-template-columns: 1fr;
+  }
+
+  /* Grid: show 2 cards on tablet */
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ================================================================
+   SO WHAT MAKES US DIFFERENT — SECTION
+   ================================================================ */
+.differences-section {
+  padding: 80px 0 60px;
+  background: #ffffff;
+}
+
+.differences-title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 146%;
+  letter-spacing: -0.04em;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 80px;
+}
+
+.differences-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 80px;
+  column-gap: 40px;
+  max-width: 1052px;
+  margin: 0 auto;
+}
+
+.diff-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+}
+
+.diff-card img {
+  height: 180px;
+  width: auto;
+  object-fit: contain;
+}
+
+.diff-text {
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 146%;
+  text-align: center;
+  letter-spacing: -0.04em;
+  color: #000000;
+  max-width: 320px;
+  margin: 0;
+}
+
+.diff-text strong {
+  font-weight: 700;
+}
+
+/* ================================================================
+   WHO IS ROAS SCHOOL FOR — SECTION
+   ================================================================ */
+.who-for-section {
+  padding: 80px 0 80px;
+  background: #ffffff;
+}
+
+.who-for-title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 146%;
+  letter-spacing: -0.04em;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 56px;
+}
+
+.who-for-row {
+  display: flex;
+  justify-content: center;
+  column-gap: 80px;
+  row-gap: 60px;
+  flex-wrap: wrap;
+}
+
+.who-for-row--top {
+  margin-bottom: 80px;
+}
+
+.who-for-row--bottom {
+  /* 2 cards centered */
+}
+
+.who-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  width: 320px;
+}
+
+.who-card img {
+  height: 200px;
+  width: auto;
+  object-fit: contain;
+}
+
+.who-card-title {
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 146%;
+  letter-spacing: -0.04em;
+  color: #000000;
+  margin: 0;
+}
+
+.who-card-text {
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 146%;
+  letter-spacing: -0.04em;
+  text-align: center;
+  color: #000000;
+  max-width: 320px;
+  margin: 0;
+}
+
+/* ================================================================
+   WHY ROAS SCHOOL OF MARKETING — SECTION
+   ================================================================ */
+.why-roas-section {
+  padding: 80px 0 88px;
+  background: #ffffff;
+}
+
+.why-roas-title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 146%;
+  text-align: center;
+  letter-spacing: -0.04em;
+  color: #000000;
+  margin-bottom: 16px;
+}
+
+.why-roas-subtitle {
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 146%;
+  text-align: center;
+  letter-spacing: -0.04em;
+  color: #000000;
+  margin-bottom: 64px;
+}
+
+.why-roas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 56px 64px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.why-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.why-card__icon {
+  width: 94px;
+  height: 94px;
+  flex-shrink: 0;
+}
+
+.why-card__icon-inner {
+  display: block;
+  width: 94px;
+  height: 94px;
+}
+
+.why-card__icon-svg {
+  width: 94px;
+  height: 94px;
+  display: block;
+  border-radius: 18px;
+  overflow: visible;
+}
+
+.why-card__title {
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 146%;
+  letter-spacing: -0.04em;
+  color: #000000;
+  margin: 0;
+}
+
+.why-card__text {
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 146%;
+  letter-spacing: -0.04em;
+  color: #000000;
+  margin: 0;
+}
+
+/* ================================================================
+   RESPONSIVE — DIFFERENCES & WHO-FOR
+   ================================================================ */
+@media (max-width: 1024px) {
+  .differences-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 32px;
+  }
+
+  .differences-title,
+  .who-for-title {
+    font-size: 32px;
+  }
+
+  .why-roas-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px 40px;
+  }
+
+  .why-roas-title {
+    font-size: 32px;
+  }
+
+  .why-roas-subtitle {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .differences-section {
+    padding: 56px 0 40px;
+  }
+
+  .differences-title,
+  .who-for-title {
+    font-size: 26px;
+    margin-bottom: 36px;
+  }
+
+  .differences-grid {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 48px;
+    column-gap: 24px;
+  }
+
+  .diff-text {
+    font-size: 18px;
+  }
+
+  .who-card-text {
+    font-size: 18px;
+  }
+
+  .who-card {
+    width: 280px;
+  }
+
+  .who-for-row {
+    row-gap: 40px;
+  }
+
+  .why-roas-section {
+    padding: 56px 0 60px;
+  }
+
+  .why-roas-title {
+    font-size: 26px;
+    margin-bottom: 12px;
+  }
+
+  .why-roas-subtitle {
+    font-size: 17px;
+    margin-bottom: 40px;
+  }
+
+  .why-roas-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px 24px;
+  }
+
+  .why-card__title {
+    font-size: 20px;
+  }
+
+  .why-card__text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .differences-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .who-for-row--top,
+  .who-for-row--bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .who-card {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .why-roas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-roas-title {
+    font-size: 22px;
+  }
+
+  .why-roas-subtitle {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .results-grid,
+  .testimonials-grid,
+  .blogs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-features {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .about-quote-outer {
+    padding: 30px 16px;
+  }
+
+  .about-quote-open-wrap {
+    left: 0px;
+    top: -20px;
+  }
+
+  .about-quote-close-wrap {
+    right: 0px;
+    bottom: -20px;
+  }
+
+  .about-quote-mark {
+    font-size: 80px;
+  }
+
+  .about-quote-box {
+    padding: 24px 24px 24px 100px;
+    border-radius: 20px;
+    min-height: auto;
+  }
+
+  .about-quote-avatar {
+    width: 72px;
+    height: 72px;
+    left: 16px;
+  }
+
+  .about-quote-text {
+    font-size: 18px;
+  }
+
+  .about-section-title {
+    font-size: 28px;
+    margin-bottom: 36px;
+  }
+
+  /* Footer Image — mobile */
+  .footer-image {
+    width: calc(100% - 19px);
+    max-width: 383px;
+  }
+
+  .footer-image img,
+  .footer-image svg {
+    width: 100%;
+    height: 195px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .hero-heading {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  /* Grid: show 1 card on mobile */
+  .courses-section-title {
+    font-size: 28px;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================================================================
+   FAQ SECTION
+   ================================================================ */
+.faq-section {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 80px 20px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.faq-title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 146%;
+  text-align: center;
+  letter-spacing: -0.04em;
+  color: #000000;
+  margin-bottom: 48px;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 925px;
+}
+
+.faq-card {
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 3px 4px 16px rgba(0, 0, 0, 0.65);
+  border-radius: 16px;
+  padding: 17px 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.faq-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.faq-question {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 146%;
+  letter-spacing: -0.04em;
+  color: #000000;
+}
+
+.faq-answer {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 146%;
+  letter-spacing: -0.04em;
+  color: #000000;
+}
+
+@media (max-width: 768px) {
+  .faq-title {
+    font-size: 28px;
+  }
+
+  .faq-question {
+    font-size: 18px;
+  }
+
+  .faq-answer {
+    font-size: 16px;
+  }
+
+  .faq-card {
+    padding: 14px 18px;
+  }
+}

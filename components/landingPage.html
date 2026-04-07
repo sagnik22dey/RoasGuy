@@ -9,6 +9,643 @@
       href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@700&family=Lexend:wght@400;500&family=Montserrat:wght@400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..60,400;12..60,500;12..60,600&display=swap"
       rel="stylesheet"
     />
+
+    <style>
+      /* ============================================================
+         ANIMATION SYSTEM — internal, layered on top of landingPage.css
+         ============================================================ */
+
+      /* ── Keyframes ── */
+      @keyframes fadeSlideUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes fadeSlideLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      @keyframes fadeSlideRight {
+        from {
+          opacity: 0;
+          transform: translateX(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes popIn {
+        from {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-8px);
+        }
+        60% {
+          transform: translateY(-4px);
+        }
+      }
+      @keyframes wiggle {
+        0%,
+        100% {
+          transform: rotate(0deg);
+        }
+        20% {
+          transform: rotate(-12deg);
+        }
+        40% {
+          transform: rotate(12deg);
+        }
+        60% {
+          transform: rotate(-8deg);
+        }
+        80% {
+          transform: rotate(8deg);
+        }
+      }
+      @keyframes ripple {
+        0% {
+          transform: scale(0);
+          opacity: 0.6;
+        }
+        100% {
+          transform: scale(4);
+          opacity: 0;
+        }
+      }
+      @keyframes parallaxZoom {
+        from {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(1.06);
+        }
+      }
+
+      /* ── Hero scatter-out keyframe ──
+         Images start near center (translated inward), then scatter to final pos.
+         --inward-x / --inward-y = vector FROM final position TOWARD center */
+      @keyframes scatterOut {
+        0% {
+          opacity: 1;
+          transform: translate(var(--inward-x), var(--inward-y)) scale(0.5);
+        }
+        70% {
+          opacity: 1;
+          transform: translate(
+              calc(var(--inward-x) * -0.08),
+              calc(var(--inward-y) * -0.08)
+            )
+            scale(1.04);
+        }
+        100% {
+          opacity: 1;
+          transform: translate(0, 0) scale(1);
+        }
+      }
+
+      /* ── Hero text fade-in (appears AFTER images scatter) ── */
+      @keyframes heroTextReveal {
+        0% {
+          opacity: 0;
+          transform: scale(0.85);
+        }
+        60% {
+          opacity: 1;
+          transform: scale(1.03);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      /* ── Hero text + CTA: hidden until images finish, then reveal ── */
+      .hero-heading {
+        opacity: 0;
+        animation: heroTextReveal 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)
+          forwards;
+        animation-delay: 0.85s; /* after images finish scattering */
+      }
+      .hero-features {
+        opacity: 0;
+        animation: heroTextReveal 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)
+          forwards;
+        animation-delay: 0.95s;
+      }
+      .hero-cta {
+        opacity: 0;
+        animation: heroTextReveal 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)
+          forwards;
+        animation-delay: 1.05s;
+      }
+
+      /* ── Hero images: scatter outward from center on page load ── */
+      .hero-img {
+        animation: scatterOut 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        will-change: transform;
+      }
+
+      /* Per-image inward vectors: direction FROM final pos TOWARD hero center (720, 525).
+         Positive --inward-x = image is left of center, needs to move right toward center.
+         Positive --inward-y = image is above center, needs to move down toward center. */
+      .rect-147 {
+        --inward-x: 258px;
+        --inward-y: 365px;
+        animation-delay: 0s;
+      }
+      .rect-146 {
+        --inward-x: 403px;
+        --inward-y: 277px;
+        animation-delay: 0.03s;
+      }
+      .rect-148 {
+        --inward-x: -400px;
+        --inward-y: 339px;
+        animation-delay: 0.05s;
+      }
+      .rect-150 {
+        --inward-x: -623px;
+        --inward-y: 388px;
+        animation-delay: 0.02s;
+      }
+      .rect-149 {
+        --inward-x: -543px;
+        --inward-y: 44px;
+        animation-delay: 0.06s;
+      }
+      .rect-153 {
+        --inward-x: 708px;
+        --inward-y: -46px;
+        animation-delay: 0.04s;
+      }
+      .rect-156 {
+        --inward-x: 126px;
+        --inward-y: -182px;
+        animation-delay: 0.01s;
+      }
+      .rect-154 {
+        --inward-x: 470px;
+        --inward-y: -281px;
+        animation-delay: 0.07s;
+      }
+      .rect-151 {
+        --inward-x: -660px;
+        --inward-y: -255px;
+        animation-delay: 0.03s;
+      }
+      .rect-155 {
+        --inward-x: 234px;
+        --inward-y: -395px;
+        animation-delay: 0.05s;
+      }
+      .rect-152 {
+        --inward-x: -343px;
+        --inward-y: -419px;
+        animation-delay: 0.02s;
+      }
+
+      /* ── NO hover/float animations — everything stays static after load ── */
+
+      /* ── Course cards — scroll-triggered stagger ── */
+      .course-card-v2 {
+        opacity: 0;
+        transform: translateY(40px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease,
+          box-shadow 0.35s ease;
+      }
+      .course-card-v2.animate-in {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .course-card-v2:nth-child(1).animate-in {
+        transition-delay: 0s;
+      }
+      .course-card-v2:nth-child(2).animate-in {
+        transition-delay: 0.15s;
+      }
+      .course-card-v2:nth-child(3).animate-in {
+        transition-delay: 0.3s;
+      }
+
+      .course-card-v2:hover {
+        transform: translateY(-10px) !important;
+        box-shadow: 0 20px 48px rgba(0, 0, 0, 0.18) !important;
+      }
+      .course-card-v2:hover .course-card-v2__thumb img {
+        transform: scale(1.07);
+        transition: transform 0.45s ease;
+      }
+      .course-card-v2__thumb img {
+        transition: transform 0.45s ease;
+      }
+
+      /* "Get Started" button press */
+      .course-card-v2__btn:active {
+        transform: scale(0.94) !important;
+        transition: transform 0.1s ease !important;
+      }
+
+      /* ── About section: image from left, text from right ── */
+      .about-top-image {
+        opacity: 0;
+        transform: translateX(-50px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+      .about-top-image.animate-in {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      .about-top-image:hover img {
+        filter: drop-shadow(0 0 22px rgba(0, 118, 255, 0.4)) !important;
+      }
+      .about-top-text {
+        opacity: 0;
+        transform: translateX(50px);
+        transition:
+          opacity 0.7s ease 0.2s,
+          transform 0.7s ease 0.2s;
+      }
+      .about-top-text.animate-in {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      .about-quote-outer {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+          opacity 0.7s ease 0.3s,
+          transform 0.7s ease 0.3s;
+      }
+      .about-quote-outer.animate-in {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* ── Differences grid icons pop-in + hover ── */
+      .diff-card {
+        opacity: 0;
+        transform: scale(0.8);
+        transition:
+          opacity 0.5s ease,
+          transform 0.5s ease;
+        text-align: center;
+      }
+      .diff-card.animate-in {
+        opacity: 1;
+        transform: scale(1);
+      }
+      .diff-card:hover img {
+        animation: bounce 0.6s ease forwards;
+      }
+      .diff-card:hover .diff-text {
+        color: #3a4c66;
+      }
+      .diff-text {
+        transition: color 0.3s ease;
+      }
+
+      /* ── Who-for grid fade bottom-up + image scale hover ── */
+      .who-card {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
+      }
+      .who-card.animate-in {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .who-card:hover img {
+        transform: scale(1.05);
+        transition: transform 0.35s ease;
+      }
+      .who-card img {
+        transition: transform 0.35s ease;
+      }
+
+      /* ── Why-ROAS boxes: fade in + cyan border hover + number shift ── */
+      .why-card {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+          opacity 0.55s ease,
+          transform 0.55s ease,
+          box-shadow 0.3s ease,
+          border 0.3s ease;
+        border: 2px solid transparent;
+        border-radius: 12px;
+        padding: 28px 24px;
+      }
+      .why-card.animate-in {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .why-card:hover {
+        border-color: #1acfff;
+        box-shadow: 0 0 0 3px rgba(26, 207, 255, 0.25);
+      }
+      .why-card__number {
+        display: block;
+        font-family: "Bricolage Grotesque", sans-serif;
+        font-size: 56px;
+        font-weight: 700;
+        color: #1acfff;
+        line-height: 1;
+        margin-bottom: 12px;
+        transition: transform 0.3s ease;
+      }
+      .why-card:hover .why-card__number {
+        transform: translateX(5px);
+      }
+
+      /* ── Mind-Behind (Founder): fade-in, image colour on hover ── */
+      .mind-behind-card {
+        opacity: 0;
+        transition: opacity 0.8s ease;
+      }
+      .mind-behind-card.animate-in {
+        opacity: 1;
+      }
+      .mind-behind-image img {
+        transition: filter 0.5s ease;
+        filter: saturate(0.6) brightness(0.95);
+      }
+      .mind-behind-section:hover .mind-behind-image img {
+        filter: saturate(1) brightness(1);
+      }
+
+      /* ── Movement CTA: parallax zoom + glass hover ── */
+      .movement-main-img {
+        animation-timeline: scroll();
+        transition: transform 0.3s ease;
+      }
+      .movement-image-wrapper {
+        overflow: hidden;
+        border-radius: 24px;
+      }
+      .movement-image-wrapper:hover .movement-main-img {
+        transform: scale(1.04);
+      }
+      .movement-btn {
+        position: relative;
+        overflow: hidden;
+        transition:
+          box-shadow 0.3s ease,
+          transform 0.2s ease;
+      }
+      .movement-btn:hover {
+        box-shadow:
+          0 0 0 6px rgba(26, 207, 255, 0.35),
+          0 8px 32px rgba(0, 118, 255, 0.35);
+        transform: translateY(-2px);
+      }
+      .movement-btn:active {
+        transform: scale(0.96) !important;
+      }
+      .movement-btn::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 10px;
+        height: 10px;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        transform: scale(0);
+        pointer-events: none;
+      }
+      .movement-btn:active::after {
+        animation: ripple 0.5s ease-out forwards;
+      }
+      .movement-section {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+      .movement-section.animate-in {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* ── Contact: left slides left, right slides right ── */
+      .contact-col--learners {
+        opacity: 0;
+        transform: translateX(-50px);
+        transition:
+          opacity 0.65s ease,
+          transform 0.65s ease;
+      }
+      .contact-col--learners.animate-in {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      .contact-col--business {
+        opacity: 0;
+        transform: translateX(50px);
+        transition:
+          opacity 0.65s ease 0.15s,
+          transform 0.65s ease 0.15s;
+      }
+      .contact-col--business.animate-in {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      /* WhatsApp button wiggle icon */
+      .contact-col--learners .contact-btn:hover img {
+        animation: wiggle 0.5s ease;
+      }
+      .contact-col--business .contact-btn:hover img {
+        filter: brightness(0.85);
+        transition: filter 0.3s ease;
+      }
+
+      /* ── FAQ accordion ── */
+      .faq-card {
+        opacity: 0;
+        transform: translateY(20px);
+        transition:
+          opacity 0.5s ease,
+          transform 0.5s ease,
+          box-shadow 0.3s ease;
+        border: 1px solid #e8ecf0;
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 16px;
+        background: #fff;
+      }
+      .faq-card.animate-in {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .faq-card:hover {
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+      }
+
+      /* FAQ toggle — replace static reveal with accordion behaviour */
+      .faq-inner {
+        cursor: pointer;
+        padding: 24px 28px;
+      }
+      .faq-question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: "Segoe UI", sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        color: #000;
+        transition: color 0.3s ease;
+        user-select: none;
+      }
+      .faq-card:hover .faq-question {
+        color: #0076ff;
+      }
+      .faq-question::after {
+        content: "+";
+        font-size: 24px;
+        font-weight: 300;
+        flex-shrink: 0;
+        margin-left: 16px;
+        transition: transform 0.4s ease;
+        display: inline-block;
+      }
+      .faq-card.open .faq-question::after {
+        transform: rotate(45deg);
+      }
+      .faq-answer {
+        font-family: "Segoe UI", sans-serif;
+        font-size: 16px;
+        color: #444;
+        line-height: 1.7;
+        max-height: 0;
+        overflow: hidden;
+        transition:
+          max-height 0.45s ease,
+          padding 0.3s ease;
+        padding: 0 28px;
+      }
+      .faq-card.open .faq-answer {
+        max-height: 300px;
+        padding: 0 28px 24px;
+      }
+
+      /* ── Stagger delays for repeated elements ── */
+      .diff-card:nth-child(1).animate-in {
+        transition-delay: 0s;
+      }
+      .diff-card:nth-child(2).animate-in {
+        transition-delay: 0.08s;
+      }
+      .diff-card:nth-child(3).animate-in {
+        transition-delay: 0.16s;
+      }
+      .diff-card:nth-child(4).animate-in {
+        transition-delay: 0.24s;
+      }
+      .diff-card:nth-child(5).animate-in {
+        transition-delay: 0.32s;
+      }
+      .diff-card:nth-child(6).animate-in {
+        transition-delay: 0.4s;
+      }
+
+      .who-card:nth-child(1).animate-in {
+        transition-delay: 0s;
+      }
+      .who-card:nth-child(2).animate-in {
+        transition-delay: 0.1s;
+      }
+      .who-card:nth-child(3).animate-in {
+        transition-delay: 0.2s;
+      }
+
+      .why-card:nth-child(1).animate-in {
+        transition-delay: 0s;
+      }
+      .why-card:nth-child(2).animate-in {
+        transition-delay: 0.1s;
+      }
+      .why-card:nth-child(3).animate-in {
+        transition-delay: 0.2s;
+      }
+      .why-card:nth-child(4).animate-in {
+        transition-delay: 0.3s;
+      }
+      .why-card:nth-child(5).animate-in {
+        transition-delay: 0.4s;
+      }
+      .why-card:nth-child(6).animate-in {
+        transition-delay: 0.5s;
+      }
+
+      .faq-card:nth-child(1).animate-in {
+        transition-delay: 0s;
+      }
+      .faq-card:nth-child(2).animate-in {
+        transition-delay: 0.1s;
+      }
+      .faq-card:nth-child(3).animate-in {
+        transition-delay: 0.2s;
+      }
+      .faq-card:nth-child(4).animate-in {
+        transition-delay: 0.3s;
+      }
+      .faq-card:nth-child(5).animate-in {
+        transition-delay: 0.4s;
+      }
+      .faq-card:nth-child(6).animate-in {
+        transition-delay: 0.5s;
+      }
+    </style>
   </head>
   <body>
     <!-- ============================================================
@@ -18,18 +655,19 @@
       <!-- ── NAVBAR ── -->
       <nav class="navbar">
         <div class="navbar-logo">
-          <img
-            src="../Resources/HomePage/roas-logo-light.png"
-            alt="Roas School of Marketing"
-            class="logo-img"
-          />
+          <a href="/">
+            <img
+              src="../Resources/HomePage/roas-logo-light.png"
+              alt="Roas School of Marketing"
+            />
+          </a>
         </div>
 
         <div class="navbar-links">
           <a href="#">About Us</a>
           <a href="#">Blogs</a>
-          <a href="#">Courses</a>
-          <a href="#">Contact Us</a>
+          <a href="/courses">Courses</a>
+          <a href="/contact-us">Contact Us</a>
         </div>
 
         <div class="navbar-actions">
@@ -247,330 +885,335 @@
 
         <!-- Cards grid -->
         <div class="courses-grid">
-              <!-- Card 1 -->
-              <div class="course-card-v2">
-                <div class="course-card-v2__thumb">
-                  <img
-                    src="../Resources/Courses/mfma_student.png"
-                    alt="Master the Fundamentals of Facebook Ads"
-                  />
-                </div>
-                <div class="course-card-v2__body">
-                  <div class="course-card-v2__top">
-                    <h3 class="course-card-v2__title">
-                      Master the Fundamentals of Facebook Ads
-                    </h3>
-                    <div class="course-card-v2__meta">
-                      <span class="course-card-v2__meta-item">
-                        <svg
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <circle
-                            cx="12"
-                            cy="12"
-                            r="10"
-                            stroke="#374957"
-                            stroke-width="1.5"
-                          />
-                          <path
-                            d="M12 6v6l4 2"
-                            stroke="#374957"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                          />
-                        </svg>
-                        120 days
-                      </span>
-                      <span class="course-card-v2__meta-item">
-                        <svg
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"
-                            stroke="#374957"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <polyline
-                            points="14,2 14,8 20,8"
-                            stroke="#374957"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <line
-                            x1="9"
-                            y1="15"
-                            x2="15"
-                            y2="15"
-                            stroke="#374957"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                          />
-                          <line
-                            x1="9"
-                            y1="11"
-                            x2="11"
-                            y2="11"
-                            stroke="#374957"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                          />
-                        </svg>
-                        Certificate
-                      </span>
-                    </div>
-                  </div>
-                  <p class="course-card-v2__desc">
-                    Stop wasting money boosting posts. Learn how to pick the
-                    right objective, target the right audience, and launch
-                    ads...
-                  </p>
-                  <a href="#" class="course-card-v2__btn">
-                    <span>Get Started</span>
+          <!-- Card 1 -->
+          <div class="course-card-v2">
+            <div class="course-card-v2__thumb">
+              <img
+                src="../Resources/Courses/mfma_student.png"
+                alt="Master the Fundamentals of Facebook Ads"
+              />
+            </div>
+            <div class="course-card-v2__body">
+              <div class="course-card-v2__top">
+                <h3 class="course-card-v2__title">
+                  Master the Fundamentals of Facebook Ads
+                </h3>
+                <div class="course-card-v2__meta">
+                  <span class="course-card-v2__meta-item">
                     <svg
-                      width="18"
-                      height="18"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="#374957"
+                        stroke-width="1.5"
+                      />
+                      <path
+                        d="M12 6v6l4 2"
+                        stroke="#374957"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                    120 days
+                  </span>
+                  <span class="course-card-v2__meta-item">
+                    <svg
+                      width="16"
+                      height="16"
                       viewBox="0 0 24 24"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        d="M9 18l6-6-6-6"
+                        d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"
                         stroke="#374957"
                         stroke-width="1.5"
                         stroke-linecap="round"
                         stroke-linejoin="round"
                       />
+                      <polyline
+                        points="14,2 14,8 20,8"
+                        stroke="#374957"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <line
+                        x1="9"
+                        y1="15"
+                        x2="15"
+                        y2="15"
+                        stroke="#374957"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                      <line
+                        x1="9"
+                        y1="11"
+                        x2="11"
+                        y2="11"
+                        stroke="#374957"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
                     </svg>
-                  </a>
+                    Certificate
+                  </span>
                 </div>
               </div>
+              <p class="course-card-v2__desc">
+                Stop wasting money boosting posts. Learn how to pick the right
+                objective, target the right audience, and launch ads...
+              </p>
+              <a
+                href="/fundamentals-of-facebook-ads"
+                class="course-card-v2__btn"
+              >
+                <span>Get Started</span>
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 18l6-6-6-6"
+                    stroke="#374957"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
 
-              <!-- Card 2 -->
-              <div class="course-card-v2">
-                <div class="course-card-v2__thumb">
-                  <img
-                    src="../Resources/Courses/mpdama.png"
-                    alt="Psychology Driven Advanced Meta Ads Course"
-                  />
-                </div>
-                <div class="course-card-v2__body">
-                  <div class="course-card-v2__top">
-                    <h3 class="course-card-v2__title">
-                      Psychology Driven Advanced Meta Ads Course
-                    </h3>
-                    <div class="course-card-v2__meta">
-                      <span class="course-card-v2__meta-item">
-                        <svg
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <circle
-                            cx="12"
-                            cy="12"
-                            r="10"
-                            stroke="#374957"
-                            stroke-width="1.5"
-                          />
-                          <path
-                            d="M12 6v6l4 2"
-                            stroke="#374957"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                          />
-                        </svg>
-                        120 days
-                      </span>
-                      <span class="course-card-v2__meta-item">
-                        <svg
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"
-                            stroke="#374957"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <polyline
-                            points="14,2 14,8 20,8"
-                            stroke="#374957"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <line
-                            x1="9"
-                            y1="15"
-                            x2="15"
-                            y2="15"
-                            stroke="#374957"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                          />
-                          <line
-                            x1="9"
-                            y1="11"
-                            x2="11"
-                            y2="11"
-                            stroke="#374957"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                          />
-                        </svg>
-                        Certificate
-                      </span>
-                    </div>
-                  </div>
-                  <p class="course-card-v2__desc">
-                    Engineering buying behavior. knowing exactly who to target,
-                    how to craft offers people can't ignore, how to structure...
-                  </p>
-                  <a href="#" class="course-card-v2__btn">
-                    <span>Get Started</span>
+          <!-- Card 2 -->
+          <div class="course-card-v2">
+            <div class="course-card-v2__thumb">
+              <img
+                src="../Resources/Courses/mpdama.png"
+                alt="Psychology Driven Advanced Meta Ads Course"
+              />
+            </div>
+            <div class="course-card-v2__body">
+              <div class="course-card-v2__top">
+                <h3 class="course-card-v2__title">
+                  Psychology Driven Advanced Meta Ads Course
+                </h3>
+                <div class="course-card-v2__meta">
+                  <span class="course-card-v2__meta-item">
                     <svg
-                      width="18"
-                      height="18"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="#374957"
+                        stroke-width="1.5"
+                      />
+                      <path
+                        d="M12 6v6l4 2"
+                        stroke="#374957"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                    120 days
+                  </span>
+                  <span class="course-card-v2__meta-item">
+                    <svg
+                      width="16"
+                      height="16"
                       viewBox="0 0 24 24"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        d="M9 18l6-6-6-6"
+                        d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"
                         stroke="#374957"
                         stroke-width="1.5"
                         stroke-linecap="round"
                         stroke-linejoin="round"
                       />
+                      <polyline
+                        points="14,2 14,8 20,8"
+                        stroke="#374957"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <line
+                        x1="9"
+                        y1="15"
+                        x2="15"
+                        y2="15"
+                        stroke="#374957"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                      <line
+                        x1="9"
+                        y1="11"
+                        x2="11"
+                        y2="11"
+                        stroke="#374957"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
                     </svg>
-                  </a>
+                    Certificate
+                  </span>
                 </div>
               </div>
+              <p class="course-card-v2__desc">
+                Engineering buying behavior. knowing exactly who to target, how
+                to craft offers people can't ignore, how to structure...
+              </p>
+              <a
+                href="/psychology-driven-advanced-meta-ad-course"
+                class="course-card-v2__btn"
+              >
+                <span>Get Started</span>
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 18l6-6-6-6"
+                    stroke="#374957"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
 
-              <!-- Card 3 -->
-              <div class="course-card-v2">
-                <div class="course-card-v2__thumb">
-                  <img
-                    src="../Resources/Courses/mct.png"
-                    alt="Master Meta's Andromeda Update"
-                  />
-                </div>
-                <div class="course-card-v2__body">
-                  <div class="course-card-v2__top">
-                    <h3 class="course-card-v2__title">
-                      Master Meta's Andromeda Update
-                    </h3>
-                    <div class="course-card-v2__meta">
-                      <span class="course-card-v2__meta-item">
-                        <svg
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <circle
-                            cx="12"
-                            cy="12"
-                            r="10"
-                            stroke="#374957"
-                            stroke-width="1.5"
-                          />
-                          <path
-                            d="M12 6v6l4 2"
-                            stroke="#374957"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                          />
-                        </svg>
-                        120 days
-                      </span>
-                      <span class="course-card-v2__meta-item">
-                        <svg
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"
-                            stroke="#374957"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <polyline
-                            points="14,2 14,8 20,8"
-                            stroke="#374957"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <line
-                            x1="9"
-                            y1="15"
-                            x2="15"
-                            y2="15"
-                            stroke="#374957"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                          />
-                          <line
-                            x1="9"
-                            y1="11"
-                            x2="11"
-                            y2="11"
-                            stroke="#374957"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                          />
-                        </svg>
-                        Certificate
-                      </span>
-                    </div>
-                  </div>
-                  <p class="course-card-v2__desc">
-                    The rules have changed. This course shows you how to regain
-                    control, drive conversions, Improve ROAS and scale...
-                  </p>
-                  <a href="#" class="course-card-v2__btn">
-                    <span>Get Started</span>
+          <!-- Card 3 -->
+          <div class="course-card-v2">
+            <div class="course-card-v2__thumb">
+              <img
+                src="../Resources/Courses/mct.png"
+                alt="Master Meta's Andromeda Update"
+              />
+            </div>
+            <div class="course-card-v2__body">
+              <div class="course-card-v2__top">
+                <h3 class="course-card-v2__title">
+                  Master Meta's Andromeda Update
+                </h3>
+                <div class="course-card-v2__meta">
+                  <span class="course-card-v2__meta-item">
                     <svg
-                      width="18"
-                      height="18"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="#374957"
+                        stroke-width="1.5"
+                      />
+                      <path
+                        d="M12 6v6l4 2"
+                        stroke="#374957"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                    120 days
+                  </span>
+                  <span class="course-card-v2__meta-item">
+                    <svg
+                      width="16"
+                      height="16"
                       viewBox="0 0 24 24"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        d="M9 18l6-6-6-6"
+                        d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"
                         stroke="#374957"
                         stroke-width="1.5"
                         stroke-linecap="round"
                         stroke-linejoin="round"
                       />
+                      <polyline
+                        points="14,2 14,8 20,8"
+                        stroke="#374957"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <line
+                        x1="9"
+                        y1="15"
+                        x2="15"
+                        y2="15"
+                        stroke="#374957"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                      <line
+                        x1="9"
+                        y1="11"
+                        x2="11"
+                        y2="11"
+                        stroke="#374957"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
                     </svg>
-                  </a>
+                    Certificate
+                  </span>
                 </div>
               </div>
+              <p class="course-card-v2__desc">
+                The rules have changed. This course shows you how to regain
+                control, drive conversions, Improve ROAS and scale...
+              </p>
+              <a href="/master-creative-targeting" class="course-card-v2__btn">
+                <span>Get Started</span>
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 18l6-6-6-6"
+                    stroke="#374957"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
         <!-- /.courses-grid -->
       </div>
@@ -615,7 +1258,20 @@
         <!-- Quote block -->
         <div class="about-quote-outer">
           <div class="about-quote-open-wrap">
-            <span class="about-quote-mark">"</span>
+            <!-- <span class="about-quote-mark">"</span> -->
+            <svg
+              width="84"
+              height="84"
+              viewBox="0 0 84 84"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="84" height="84" fill="white" />
+              <path
+                d="M33.3125 40H10V23.375C10 20.4583 10.375 17.6667 11.125 15C11.9167 12.2917 13.2292 9.89583 15.0625 7.8125C16.8958 5.72917 19.2917 4.0625 22.25 2.8125C25.25 1.5625 28.9375 0.9375 33.3125 0.9375V11.6875C30.8125 11.6875 28.7292 11.9792 27.0625 12.5625C25.3958 13.1042 24.0625 13.8958 23.0625 14.9375C22.1042 15.9375 21.4167 17.1458 21 18.5625C20.5833 19.9792 20.375 21.5833 20.375 23.375V24.25H33.3125V40ZM68.25 40H44.9375V23.375C44.9375 20.4583 45.3125 17.6667 46.0625 15C46.8542 12.2917 48.1667 9.89583 50 7.8125C51.8333 5.72917 54.2292 4.0625 57.1875 2.8125C60.1875 1.5625 63.875 0.9375 68.25 0.9375V11.6875C65.75 11.6875 63.6667 11.9792 62 12.5625C60.375 13.1042 59.0625 13.8958 58.0625 14.9375C57.0625 15.9375 56.3542 17.1458 55.9375 18.5625C55.5208 19.9792 55.3125 21.5833 55.3125 23.375V24.25H68.25V40Z"
+                fill="black"
+              />
+            </svg>
           </div>
           <div class="about-quote-box">
             <div class="about-quote-avatar">
@@ -631,7 +1287,25 @@
             </p>
           </div>
           <div class="about-quote-close-wrap">
-            <span class="about-quote-mark">"</span>
+            <!-- <span class="about-quote-mark">"</span> -->
+            <svg
+              width="84"
+              height="84"
+              viewBox="0 0 84 84"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                width="84"
+                height="84"
+                transform="matrix(-1 0 0 -1 84 84)"
+                fill="white"
+              />
+              <path
+                d="M50.6875 44H74V60.625C74 63.5417 73.625 66.3333 72.875 69C72.0833 71.7083 70.7708 74.1042 68.9375 76.1875C67.1042 78.2708 64.7083 79.9375 61.75 81.1875C58.75 82.4375 55.0625 83.0625 50.6875 83.0625V72.3125C53.1875 72.3125 55.2708 72.0208 56.9375 71.4375C58.6042 70.8958 59.9375 70.1042 60.9375 69.0625C61.8958 68.0625 62.5833 66.8542 63 65.4375C63.4167 64.0208 63.625 62.4167 63.625 60.625V59.75H50.6875V44ZM15.75 44H39.0625V60.625C39.0625 63.5417 38.6875 66.3333 37.9375 69C37.1458 71.7083 35.8333 74.1042 34 76.1875C32.1667 78.2708 29.7708 79.9375 26.8125 81.1875C23.8125 82.4375 20.125 83.0625 15.75 83.0625V72.3125C18.25 72.3125 20.3333 72.0208 22 71.4375C23.625 70.8958 24.9375 70.1042 25.9375 69.0625C26.9375 68.0625 27.6458 66.8542 28.0625 65.4375C28.4792 64.0208 28.6875 62.4167 28.6875 60.625V59.75H15.75V44Z"
+                fill="black"
+              />
+            </svg>
           </div>
         </div>
       </div>
@@ -874,8 +1548,7 @@
           <!-- Card 6: Designed for the New-Age Marketer -->
           <div class="why-card">
             <div class="why-card__icon">
-              <img src="../Resources/LandingPage/icon-6.png">
-              </span>
+              <img src="../Resources/LandingPage/icon-6.png" />
             </div>
             <h3 class="why-card__title">Designed for the New-Age Marketer</h3>
             <p class="why-card__text">
@@ -983,9 +1656,9 @@
             <p class="contact-col-desc">
               have any questions regarding course outcomes drop a message at
             </p>
-            <a href="#" class="contact-btn">
+            <a href="https://wa.me/message/5LXLO6NRMIFTI1" class="contact-btn">
               <!-- WhatsApp icon -->
-              <img src="../Resources/LandingPage/join-the-whatsapp.png"/>
+              <img src="../Resources/LandingPage/join-the-whatsapp.png" />
             </a>
           </div>
 
@@ -998,9 +1671,9 @@
             <p class="contact-col-desc">
               Want us to help to grow your business
             </p>
-            <a href="#" class="contact-btn" style="margin-top: 1.65rem;">
+            <a href="#" class="contact-btn" style="margin-top: 1.65rem">
               <!-- Calendar / Calendly icon -->
-              <img src="../Resources/LandingPage/schedule-call.png"/>
+              <img src="../Resources/LandingPage/schedule-call.png" />
             </a>
           </div>
         </div>
@@ -1131,5 +1804,81 @@
         </svg>
       </div>
     </footer>
+
+    <script>
+      /* ============================================================
+         INTERSECTION OBSERVER — triggers .animate-in on scroll
+         ============================================================ */
+      (function () {
+        const THRESHOLD = 0.15;
+
+        const observerCfg = { threshold: THRESHOLD };
+
+        function createObserver(selector, single) {
+          const els = document.querySelectorAll(selector);
+          if (!els.length) return;
+
+          const obs = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animate-in");
+                if (single) obs.unobserve(entry.target);
+              }
+            });
+          }, observerCfg);
+
+          els.forEach((el) => obs.observe(el));
+        }
+
+        /* Courses — stagger individually */
+        createObserver(".course-card-v2", true);
+
+        /* About */
+        createObserver(".about-top-image", true);
+        createObserver(".about-top-text", true);
+        createObserver(".about-quote-outer", true);
+
+        /* Differences grid */
+        createObserver(".diff-card", true);
+
+        /* Who-for */
+        createObserver(".who-card", true);
+
+        /* Why ROAS */
+        createObserver(".why-card", true);
+
+        /* Founder / Mind Behind */
+        createObserver(".mind-behind-card", true);
+
+        /* Movement CTA section */
+        createObserver(".movement-section", true);
+
+        /* Contact columns */
+        createObserver(".contact-col--learners", true);
+        createObserver(".contact-col--business", true);
+
+        /* FAQ cards */
+        createObserver(".faq-card", true);
+      })();
+
+      /* ============================================================
+         FAQ ACCORDION TOGGLE
+         ============================================================ */
+      (function () {
+        document.querySelectorAll(".faq-inner").forEach((inner) => {
+          inner.addEventListener("click", () => {
+            const card = inner.closest(".faq-card");
+            const isOpen = card.classList.contains("open");
+
+            /* Close all others */
+            document.querySelectorAll(".faq-card.open").forEach((c) => {
+              if (c !== card) c.classList.remove("open");
+            });
+
+            card.classList.toggle("open", !isOpen);
+          });
+        });
+      })();
+    </script>
   </body>
 </html>

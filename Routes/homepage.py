@@ -13,7 +13,6 @@ def _read_homepage_html() -> str:
     except FileNotFoundError:
         return "<html><body><h1>Homepage not found</h1></body></html>"
 
-@router.get("/", response_class=HTMLResponse)
 @router.get("/fundamentals-of-facebook-ads", response_class=HTMLResponse)
 async def valueCourse() -> HTMLResponse:
     content = _read_homepage_html()

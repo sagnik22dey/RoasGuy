@@ -54,38 +54,26 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  height: 110px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   z-index: 100;
-  padding: 0 40px;
+  padding: 0px 60px;
 }
 
 /* Logo */
-.navbar-logo {
-  position: absolute;
-  left: 71px;
-  top: 33px;
-}
-
-.logo-img {
+.navbar-logo img {
   width: 110px;
-  height: auto;
-  max-height: 61px;
+  height: 80px;
   object-fit: contain;
 }
 
-/* Nav links — centered via Figma calc: left: calc(50% - 472px/2 + 89px) */
+/* Nav links */
 .navbar-links {
-  position: absolute;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 42px;
-  width: 472px;
-  height: 24px;
-  left: calc(50% - 472px / 2 + 89px);
-  top: 44px;
 }
 
 .navbar-links a {
@@ -97,27 +85,21 @@ img {
   text-align: center;
   color: #000000;
   white-space: nowrap;
-  transition: opacity 0.2s;
+  transition: color 0.2s;
 }
 
 .navbar-links a:hover {
-  opacity: 0.65;
+  color: #0076ff;
 }
 
 /* Actions (cart + login) */
 .navbar-actions {
-  position: absolute;
-  right: 40px;
-  top: 34px;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
 }
 
 .cart-icon {
-  position: absolute;
-  left: 1217px;
-  top: 42px;
   width: 33px;
   height: 33px;
   cursor: pointer;
@@ -130,17 +112,11 @@ img {
 
 /* Login / Enroll button */
 .login-btn {
-  position: absolute;
-  left: 1281px;
-  top: 34px;
-  width: 98px;
-  height: 44px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 10px 20px;
-  gap: 10px;
   background: linear-gradient(90deg, #1acfff 0%, #0076ff 100%);
   border-radius: 5px;
   border: none;
@@ -160,6 +136,56 @@ img {
 .login-btn:hover {
   opacity: 0.9;
   transform: scale(1.03);
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 20px 30px;
+  }
+
+  .navbar-links {
+    gap: 24px;
+  }
+
+  .navbar-links a {
+    font-size: 16px;
+  }
+
+  .login-btn {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .navbar-logo {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-links {
+    gap: 16px;
+  }
+
+  .navbar-links a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-links {
+    gap: 12px;
+  }
+
+  .navbar-links a {
+    font-size: 12px;
+  }
 }
 
 /* ================================================================
@@ -1709,9 +1735,7 @@ body.dark-mode .footer-image .footer-svg-dark {
   margin-bottom: 80px;
 }
 
-.who-for-row--bottom {
-  /* 2 cards centered */
-}
+/* 2 cards centered - .who-for-row--bottom */
 
 .who-card {
   display: flex;

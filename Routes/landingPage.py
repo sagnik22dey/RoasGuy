@@ -13,7 +13,7 @@ def _read_landingpage_html() -> str:
     except FileNotFoundError:
         return "<html><body><h1>Landing Page not found</h1></body></html>"
 
-@router.get("/landing-page", response_class=HTMLResponse)
+@router.get("/", response_class=HTMLResponse)
 async def landing_page() -> HTMLResponse:
     content = _read_landingpage_html()
     return HTMLResponse(content=content, status_code=200)

@@ -18,6 +18,7 @@ from Routes import payments
 from Routes import fofaSubroutes
 from Routes import courses
 from Routes import landingPage
+from Routes import contactUs
 app = FastAPI()
 
 @app.get("/.well-known/appspecific/com.chrome.devtools.json")
@@ -35,6 +36,7 @@ app.include_router(payments.router)
 app.include_router(fofaSubroutes.router)
 app.include_router(courses.router)
 app.include_router(landingPage.router)
+app.include_router(contactUs.router)
 
 app.mount("/Resources", StaticFiles(directory="Resources"), name="Resources")
 app.mount("/style", StaticFiles(directory="style"), name="style")

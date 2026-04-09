@@ -691,8 +691,30 @@
             </svg>
           </div>
           <button class="login-btn">Login</button>
+          <!-- Hamburger menu (mobile only) -->
+          <button class="hamburger-menu" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
       </nav>
+
+      <!-- ── MOBILE MENU DRAWER ── -->
+      <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+      <div class="mobile-menu-drawer" id="mobileMenuDrawer">
+        <button
+          class="mobile-menu-close"
+          id="mobileMenuClose"
+          aria-label="Close menu"
+        >
+          &times;
+        </button>
+        <a href="#">About Us</a>
+        <a href="#">Blogs</a>
+        <a href="/courses">Courses</a>
+        <a href="/contact-us">Contact Us</a>
+      </div>
 
       <!-- ── SCATTERED HERO IMAGES ── -->
 
@@ -889,7 +911,7 @@
           <div class="course-card-v2">
             <div class="course-card-v2__thumb">
               <img
-                src="../Resources/Courses/mfma_student.png"
+                src="../Resources/LandingPage/master-meta-ads.png"
                 alt="Master the Fundamentals of Facebook Ads"
               />
             </div>
@@ -1877,6 +1899,46 @@
 
             card.classList.toggle("open", !isOpen);
           });
+        });
+      })();
+    </script>
+
+    <!-- Mobile Menu Toggle -->
+    <script>
+      (function () {
+        const hamburger = document.querySelector(".hamburger-menu");
+        const overlay = document.getElementById("mobileMenuOverlay");
+        const drawer = document.getElementById("mobileMenuDrawer");
+        const closeBtn = document.getElementById("mobileMenuClose");
+
+        function openMenu() {
+          drawer.classList.add("open");
+          overlay.classList.add("open");
+          hamburger.classList.add("active");
+          document.body.style.overflow = "hidden";
+        }
+
+        function closeMenu() {
+          drawer.classList.remove("open");
+          overlay.classList.remove("open");
+          hamburger.classList.remove("active");
+          document.body.style.overflow = "";
+        }
+
+        hamburger.addEventListener("click", function () {
+          if (drawer.classList.contains("open")) {
+            closeMenu();
+          } else {
+            openMenu();
+          }
+        });
+
+        overlay.addEventListener("click", closeMenu);
+        closeBtn.addEventListener("click", closeMenu);
+
+        // Close menu when a link is clicked
+        drawer.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", closeMenu);
         });
       })();
     </script>

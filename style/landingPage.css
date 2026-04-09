@@ -138,6 +138,30 @@ img {
   transform: scale(1.03);
 }
 
+/* Hamburger menu — hidden on desktop */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hamburger-menu span {
+  display: block;
+  width: 24px;
+  height: 2.5px;
+  background: #374957;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
 @media (max-width: 1024px) {
   .navbar {
     padding: 20px 30px;
@@ -178,13 +202,153 @@ img {
   }
 }
 
+/* ── Mobile Navbar (≤480px) — matches Figma Frame 67 ── */
 @media (max-width: 480px) {
-  .navbar-links {
-    gap: 12px;
+  .navbar {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+    gap: 0;
+    background: #ffffff;
+    box-shadow: 0px 4px 12.3px rgba(8, 164, 255, 0.51);
+    height: 53px;
   }
 
-  .navbar-links a {
-    font-size: 12px;
+  .navbar-logo {
+    width: auto;
+    text-align: left;
+  }
+
+  .navbar-logo img {
+    width: 56px;
+    height: 31px;
+    object-fit: contain;
+  }
+
+  /* Hide nav links on mobile */
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-actions {
+    gap: 10px;
+    align-items: center;
+  }
+
+  .cart-icon {
+    width: 17px;
+    height: 17px;
+  }
+
+  .cart-icon svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .login-btn {
+    font-family: "Lexend", sans-serif;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 10px;
+    padding: 5px 10px;
+    border-radius: 31px;
+  }
+
+  /* Show hamburger on mobile */
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .hamburger-menu span {
+    width: 20px;
+    height: 2px;
+  }
+}
+
+/* ── Mobile Menu Overlay & Drawer ── */
+.mobile-menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-menu-overlay.open {
+  display: block;
+  opacity: 1;
+}
+
+.mobile-menu-drawer {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: -280px;
+  width: 280px;
+  height: 100%;
+  background: #ffffff;
+  z-index: 1000;
+  flex-direction: column;
+  padding: 70px 30px 30px;
+  gap: 0;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+  transition: right 0.3s ease;
+}
+
+.mobile-menu-drawer.open {
+  right: 0;
+}
+
+.mobile-menu-drawer a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #000000;
+  padding: 15px 0;
+  border-bottom: 1px solid #f0f0f0;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.mobile-menu-drawer a:hover {
+  color: #0076ff;
+}
+
+.mobile-menu-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #374957;
+  cursor: pointer;
+  line-height: 1;
+  padding: 5px;
+}
+
+/* Hamburger active state (X animation) */
+.hamburger-menu.active span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+@media (max-width: 480px) {
+  .mobile-menu-drawer {
+    display: flex;
   }
 }
 
@@ -1394,39 +1558,6 @@ img {
   display: block;
 }
 
-/* Rectangle 160 — dark blurred shadow behind the caption text */
-.movement-blur-overlay {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 60px; /* sits above the bottom edge */
-  width: 77.5%; /* ≈ 949/1225 */
-  height: 207px;
-  background: #000000;
-  opacity: 0.85;
-  filter: blur(57.65px);
-  border-radius: 8px;
-  pointer-events: none;
-}
-
-/* Caption text centered over the blur overlay */
-.movement-overlay-text {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 74px;
-  width: 56.7%; /* ≈ 694/1225 */
-  font-family: "Segoe UI", sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 146%;
-  letter-spacing: -0.04em;
-  color: #ffffff;
-  text-align: center;
-  z-index: 2;
-}
-
 /* ── Body text below the image ── */
 .movement-body-text {
   max-width: 1226px;
@@ -1505,17 +1636,6 @@ img {
     height: 320px;
   }
 
-  .movement-overlay-text {
-    font-size: 15px;
-    width: 72%;
-    bottom: 48px;
-  }
-
-  .movement-blur-overlay {
-    height: 160px;
-    bottom: 36px;
-  }
-
   .movement-body-text {
     font-size: 24px;
     margin-bottom: 32px;
@@ -1530,17 +1650,6 @@ img {
 @media (max-width: 480px) {
   .movement-main-img {
     height: 220px;
-  }
-
-  .movement-overlay-text {
-    font-size: 12px;
-    bottom: 30px;
-    width: 80%;
-  }
-
-  .movement-blur-overlay {
-    height: 110px;
-    bottom: 20px;
   }
 
   .movement-body-text {
@@ -1755,7 +1864,7 @@ body.dark-mode .footer-image .footer-svg-dark {
 .who-card-title {
   font-family: "Segoe UI", sans-serif;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 28px;
   line-height: 146%;
   letter-spacing: -0.04em;
   color: #000000;
@@ -1898,7 +2007,7 @@ body.dark-mode .footer-image .footer-svg-dark {
 
   .differences-title,
   .who-for-title {
-    font-size: 26px;
+    font-size: 30px;
     margin-bottom: 36px;
   }
 
@@ -1909,11 +2018,11 @@ body.dark-mode .footer-image .footer-svg-dark {
   }
 
   .diff-text {
-    font-size: 18px;
+    font-size: 25px;
   }
 
   .who-card-text {
-    font-size: 18px;
+    font-size: 22px;
   }
 
   .who-card {
@@ -2029,7 +2138,7 @@ body.dark-mode .footer-image .footer-svg-dark {
   }
 
   .about-section-title {
-    font-size: 28px;
+    font-size: 33px;
     margin-bottom: 36px;
   }
 
@@ -2058,7 +2167,7 @@ body.dark-mode .footer-image .footer-svg-dark {
 
   /* Grid: show 1 card on mobile */
   .courses-section-title {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .courses-grid {
@@ -2153,5 +2262,624 @@ body.dark-mode .footer-image .footer-svg-dark {
 
   .faq-card {
     padding: 14px 18px;
+  }
+}
+
+/* ================================================================
+   MOBILE HERO — ≤480px (placed last for cascade priority)
+   Matches Figma Frame 67 / 402px canvas
+   ================================================================ */
+@media (max-width: 480px) {
+  /* Hero wrapper */
+  .hero-wrapper {
+    height: 340px !important;
+    max-width: 100%;
+    overflow: visible;
+  }
+
+  /* Scattered images — scaled & repositioned */
+  .hero-img {
+    border-radius: 3.3px;
+  }
+
+  /* rect-147 — CTR keyboard top-left */
+  .rect-147 {
+    width: 47px;
+    height: 42px;
+    left: 5%;
+    top: 70px;
+  }
+
+  /* rect-146 — CPM blocks, below 147 */
+  .rect-146 {
+    width: 41px;
+    height: 42px;
+    left: -1.5%;
+    top: 108px;
+  }
+
+  /* rect-148 — target business, top-right */
+  .rect-148 {
+    width: 36px;
+    height: 37px;
+    left: auto;
+    right: 5%;
+    top: 70px;
+    border: 0.12px solid #000000;
+  }
+
+  /* rect-150 — small isometric, far right below 148 */
+  .rect-150 {
+    width: 20px;
+    height: 14px;
+    left: auto;
+    right: 1%;
+    top: 118px;
+    border-radius: 1.5px;
+  }
+
+  /* rect-153 — CAC report, left middle */
+  .rect-153 {
+    display: block;
+    width: 55px;
+    height: 58px;
+    left: 2%;
+    top: 195px;
+    border-radius: 3.3px;
+  }
+
+  /* rect-156 — emoji/growth icons, right of features */
+  .rect-156 {
+    display: block;
+    width: 40px;
+    height: 37px;
+    left: auto;
+    right: 12%;
+    top: 210px;
+    border: none;
+  }
+
+  /* rect-154 — colorful marketing icons, left lower */
+  .rect-154 {
+    width: 50px;
+    height: 42px;
+    left: 3%;
+    top: 270px;
+  }
+
+  /* rect-155 — puzzle/chart, left bottom */
+  .rect-155 {
+    width: 50px;
+    height: 42px;
+    left: 10%;
+    top: 310px;
+    border-radius: 0;
+  }
+
+  /* rect-152 — CPM neon, lower right wide */
+  .rect-152 {
+    width: 86px;
+    height: 42px;
+    left: auto;
+    right: 2%;
+    top: 310px;
+    border-radius: 3.3px;
+  }
+
+  /* rect-151 — isometric business, right middle */
+  .rect-151 {
+    width: 39px;
+    height: 33px;
+    left: auto;
+    right: 8%;
+    top: 260px;
+    border-radius: 0;
+  }
+
+  /* rect-149 — hide (too large for mobile) */
+  .rect-149 {
+    display: none;
+  }
+
+  /* Hero content */
+  .hero-content {
+    width: 85%;
+    left: 7.5%;
+    top: 110px;
+  }
+
+  .hero-heading {
+    width: 100%;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 14px;
+  }
+
+  .hero-features {
+    width: auto;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .feature-item {
+    gap: 4.4px;
+  }
+
+  .feature-icon {
+    width: 13px;
+    height: 13px;
+  }
+
+  .feature-icon svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .feature-text {
+    font-family: "Segoe UI", sans-serif;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 146%;
+    letter-spacing: -0.04em;
+    white-space: nowrap;
+  }
+
+  /* CTA buttons — hidden on mobile */
+  .hero-cta {
+    display: none;
+  }
+
+  /* ── About Section — mobile ── */
+  .about-section {
+    padding: 40px 0 50px;
+  }
+
+  .about-section-title {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 115%;
+    text-align: center;
+    letter-spacing: -0.04em;
+    color: #000000;
+    margin-bottom: 24px;
+    width: 234px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-top {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .about-top-image img {
+    width: 334px;
+    max-width: 100%;
+    height: 195px;
+    aspect-ratio: auto;
+    object-fit: cover;
+    border-radius: 2.2px;
+    box-shadow: 0px 0.89px 9.88px 4.23px rgba(55, 73, 87, 0.37);
+    margin: 0 auto;
+    display: block;
+  }
+
+  .about-top-text {
+    gap: 16px;
+    padding: 0 20px;
+  }
+
+  .about-top-text p {
+    font-family: "Segoe UI", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 146%;
+    letter-spacing: -0.04em;
+    color: #000000;
+  }
+
+  /* ── Quote block — mobile ── */
+  .about-quote-outer {
+    max-width: 335px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+
+  .about-quote-open-wrap {
+    left: -5px;
+    top: -5px;
+    padding: 3.2px;
+  }
+
+  .about-quote-open-wrap svg {
+    width: 27px;
+    height: 27px;
+  }
+
+  .about-quote-close-wrap {
+    right: -5px;
+    bottom: -5px;
+    padding: 3.2px;
+  }
+
+  .about-quote-close-wrap svg {
+    width: 27px;
+    height: 27px;
+  }
+
+  .about-quote-box {
+    border: 0.96px solid #000000;
+    border-radius: 10.2px;
+    padding: 20px 20px 20px 80px;
+    min-height: 129px;
+  }
+
+  .about-quote-avatar {
+    width: 52px;
+    height: 52px;
+    left: 16px;
+  }
+
+  .about-quote-text {
+    font-size: 16px;
+    line-height: 127%;
+    letter-spacing: -0.04em;
+  }
+
+  /* ── Why Roas Section — mobile ── */
+  .why-roas-section {
+    padding: 40px 0 48px;
+  }
+
+  .why-roas-title {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 146%;
+    text-align: center;
+    letter-spacing: -0.04em;
+    color: #000000;
+    margin-bottom: 0px;
+    width: 344px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .why-roas-subtitle {
+    font-family: "Segoe UI", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 115%;
+    text-align: center;
+    letter-spacing: -0.04em;
+    color: #000000;
+    margin-bottom: 32px;
+    width: 312px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .why-roas-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    max-width: 341px;
+    margin: 0 auto;
+  }
+
+  .why-card {
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .why-card__icon {
+    width: 94px;
+    height: 94px;
+  }
+
+  .why-card__icon img {
+    width: 94px;
+    height: 94px;
+    object-fit: contain;
+  }
+
+  .why-card__title {
+    font-family: "Segoe UI", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 146%;
+    letter-spacing: -0.04em;
+    color: #000000;
+  }
+
+  .why-card__text {
+    font-family: "Segoe UI", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 146%;
+    letter-spacing: -0.04em;
+    color: #000000;
+  }
+
+  /* ── Mind Behind Section — mobile ── */
+  .mind-behind-section {
+    padding: 40px 0 48px;
+  }
+
+  .mind-behind-section .section-container {
+    padding: 0;
+  }
+
+  .mind-behind-title {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 115%;
+    text-align: center;
+    letter-spacing: -0.04em;
+    color: #000000;
+    margin-bottom: 10px;
+    width: 306px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 16px;
+  }
+
+  .mind-behind-subtitle {
+    font-family: "Segoe UI", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 115%;
+    text-align: center;
+    letter-spacing: -0.04em;
+    color: #000000;
+    margin-bottom: 35px;
+    width: 306px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 16px;
+  }
+
+  .mind-behind-card {
+    flex-direction: column-reverse;
+    border-radius: 35px;
+    padding: 36px 24px 41px 24px;
+    gap: 32px;
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+  }
+
+  .mind-behind-image {
+    width: 100%;
+    max-width: 305px;
+    margin: 0 auto;
+  }
+
+  .mind-behind-image img {
+    width: 100%;
+    max-width: 305px;
+    height: 342px;
+    border-radius: 37px;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  .mind-behind-text {
+    gap: 16px;
+  }
+
+  .mind-behind-text p {
+    font-family: "Segoe UI", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 146%;
+    text-align: justify;
+    letter-spacing: -0.04em;
+    color: #000000;
+  }
+
+  /* ── Movement Section — mobile ── */
+  .movement-section {
+    padding: 40px 0 48px;
+  }
+
+  .movement-section .section-container {
+    padding: 0;
+  }
+
+  .movement-image-wrapper {
+    max-width: 100%;
+    margin: 0 auto 32px;
+    border-radius: 18px;
+  }
+
+  .movement-main-img {
+    width: 100%;
+    height: 377px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 18px;
+  }
+
+  .movement-overlay-text {
+    bottom: 50px;
+    width: 83%;
+    font-size: 16px;
+    line-height: 146%;
+    letter-spacing: -0.04em;
+  }
+
+  .movement-body-text {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 146%;
+    text-align: center;
+    letter-spacing: -0.04em;
+    color: #000000;
+    margin: 0 auto 24px;
+    max-width: 310px;
+    padding: 0 16px;
+  }
+
+  .movement-btn {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 146%;
+    padding: 8px 25px;
+    border-radius: 9.67px;
+    width: 298px;
+    max-width: calc(100% - 32px);
+  }
+
+  /* ── Contact Section — mobile ── */
+  .contact-section {
+    padding: 40px 0 48px;
+  }
+
+  .contact-title {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 146%;
+    text-align: center;
+    letter-spacing: -0.04em;
+    color: #000000;
+    margin-bottom: 10px;
+  }
+
+  .contact-columns {
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    max-width: 315px;
+    margin: 0 auto;
+  }
+
+  .contact-divider {
+    display: none;
+  }
+
+  .contact-col {
+    padding: 0;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .contact-col-heading {
+    font-family: "Segoe UI", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 146%;
+    text-align: center;
+    letter-spacing: -0.04em;
+    color: #000000;
+  }
+
+  .contact-col-desc {
+    font-family: "Segoe UI", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 146%;
+    text-align: center;
+    letter-spacing: -0.04em;
+    color: #000000;
+    max-width: 280px;
+  }
+
+  .contact-col--learners .contact-btn img {
+    width: 301px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .contact-col--business .contact-btn img {
+    width: 280px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .contact-col--business .contact-btn {
+    margin-top: 0 !important;
+  }
+
+  /* ── FAQ Section — mobile ── */
+  .faq-section {
+    padding: 40px 0 48px;
+  }
+
+  .faq-title {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 146%;
+    text-align: center;
+    letter-spacing: -0.04em;
+    color: #000000;
+    margin-bottom: 35px;
+  }
+
+  .faq-list {
+    gap: 25px;
+    max-width: 357px;
+    padding: 0 16px;
+  }
+
+  .faq-card {
+    box-shadow: 1.16px 1.54px 6.18px rgba(0, 0, 0, 0.65);
+    border-radius: 6.18px;
+    padding: 7px 10px;
+  }
+
+  .faq-inner {
+    gap: 4px;
+    padding: 0px !important;
+  }
+
+  /* Force all FAQs expanded on mobile — no accordion */
+  .faq-question {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 146%;
+    letter-spacing: -0.04em;
+    color: #000000 !important;
+  }
+
+  /* Hide the + toggle on mobile */
+  .faq-question::after {
+    display: none !important;
+  }
+
+  /* Force answers always visible on mobile */
+  .faq-answer {
+    max-height: none !important;
+    overflow: visible !important;
+    padding: 0 !important;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 146%;
+    letter-spacing: -0.04em;
+    color: #000000 !important;
+  }
+
+  /* Disable hover color change on mobile */
+  .faq-card:hover .faq-question {
+    color: #000000 !important;
   }
 }

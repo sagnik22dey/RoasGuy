@@ -116,6 +116,29 @@
         opacity: 0.9;
       }
 
+      .hamburger-menu {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        width: 24px;
+        height: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+      }
+
+      .hamburger-menu span {
+        display: block;
+        width: 24px;
+        height: 2.5px;
+        background: #374957;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+      }
+
       @media (max-width: 1024px) {
         .navbar {
           padding: 20px 30px;
@@ -157,12 +180,147 @@
       }
 
       @media (max-width: 480px) {
-        .navbar-links {
-          gap: 12px;
+        .navbar {
+          flex-wrap: nowrap;
+          justify-content: space-between;
+          align-items: center;
+          padding: 8px 20px;
+          gap: 0;
+          background: #ffffff;
+          box-shadow: 0px 4px 12.3px rgba(8, 164, 255, 0.51);
+          height: 53px;
         }
 
-        .navbar-links a {
-          font-size: 12px;
+        .navbar-logo {
+          width: auto;
+          text-align: left;
+        }
+
+        .navbar-logo img {
+          width: 56px;
+          height: 31px;
+          object-fit: contain;
+        }
+
+        .navbar-links {
+          display: none;
+        }
+
+        .navbar-actions {
+          gap: 10px;
+          align-items: center;
+        }
+
+        .cart-icon {
+          width: 17px;
+          height: 17px;
+        }
+
+        .cart-icon svg {
+          width: 17px;
+          height: 17px;
+        }
+
+        .login-btn {
+          font-family: "Lexend", sans-serif;
+          font-weight: 600;
+          font-size: 8px;
+          line-height: 10px;
+          padding: 5px 10px;
+          border-radius: 31px;
+        }
+
+        .hamburger-menu {
+          display: flex;
+        }
+
+        .hamburger-menu span {
+          width: 20px;
+          height: 2px;
+        }
+      }
+
+      .mobile-menu-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 999;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .mobile-menu-overlay.open {
+        display: block;
+        opacity: 1;
+      }
+
+      .mobile-menu-drawer {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: -280px;
+        width: 280px;
+        height: 100%;
+        background: #ffffff;
+        z-index: 1000;
+        flex-direction: column;
+        padding: 70px 30px 30px;
+        gap: 0;
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+        transition: right 0.3s ease;
+      }
+
+      .mobile-menu-drawer.open {
+        right: 0;
+      }
+
+      .mobile-menu-drawer a {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        color: #000000;
+        padding: 15px 0;
+        border-bottom: 1px solid #f0f0f0;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      .mobile-menu-drawer a:hover {
+        color: #0076ff;
+      }
+
+      .mobile-menu-close {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        background: none;
+        border: none;
+        font-size: 28px;
+        color: #374957;
+        cursor: pointer;
+        line-height: 1;
+        padding: 5px;
+      }
+
+      .hamburger-menu.active span:nth-child(1) {
+        transform: translateY(6.5px) rotate(45deg);
+      }
+
+      .hamburger-menu.active span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .hamburger-menu.active span:nth-child(3) {
+        transform: translateY(-6.5px) rotate(-45deg);
+      }
+
+      @media (max-width: 480px) {
+        .mobile-menu-drawer {
+          display: flex;
         }
       }
 
@@ -562,8 +720,6 @@
        RESPONSIVE — Tablet (≤ 959px) → 2 columns
     ============================================================ */
       @media (max-width: 959px) {
-
-
         .courses-section {
           padding: 40px 32px 60px;
         }
@@ -600,77 +756,121 @@
        RESPONSIVE — Mobile (≤ 559px) → 1 column
     ============================================================ */
       @media (max-width: 559px) {
-
-
         .courses-section {
           padding: 28px 16px 48px;
         }
+
         .courses-title {
-          font-size: 28px;
+          font-family: "Bricolage Grotesque", sans-serif;
+          font-size: 24px;
+          line-height: 146%;
+          letter-spacing: -0.04em;
+          text-align: center;
+          margin-bottom: 24px;
         }
 
         .course-grid {
           grid-template-columns: 1fr;
           gap: 32px;
+          max-width: 319px;
+          margin: 0 auto;
         }
 
         .filter-bar {
-          flex-direction: column;
-          align-items: stretch;
-          gap: 10px;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          gap: 20px; /* Reduced gap from 54px to fit smaller screens better if needed, but flex-wrap might be safer */
+          max-width: 360px;
+          margin: 0 auto 40px auto;
         }
 
         .filter-search {
-          width: 100%;
-          max-width: 100%;
+          width: 148px;
           min-width: unset;
           flex: none;
         }
 
         .filter-sort {
           display: flex;
-          flex-direction: column;
-          align-items: stretch;
-          width: 100%;
+          flex-direction: row;
+          align-items: center;
+          width: auto;
           flex: none;
-          gap: 10px;
+          gap: 8px;
         }
 
         .search-wrapper {
           width: 100%;
-          max-width: 100%;
-          height: 46px;
+          height: 17px;
+          background: #f8f8f8;
+          border-radius: 1.7px;
+          padding: 0 8px;
+          gap: 5px;
+        }
+
+        .search-icon {
+          width: 9.7px;
+          height: 9.7px;
+        }
+
+        .search-input {
+          font-family: "Segoe UI", sans-serif;
+          font-size: 7px;
+          height: 100%;
         }
 
         .custom-select,
         .sort-wrapper,
         .category-wrapper {
-          width: 100%;
+          width: auto;
           min-width: unset;
           flex: none;
         }
 
+        .sort-wrapper {
+          width: 66px;
+        }
+
+        .category-wrapper {
+          width: 83px;
+        }
+
         .custom-select__trigger {
-          font-size: 15px;
-          height: 46px;
-          padding: 0 40px 0 14px;
+          font-family: "Segoe UI", sans-serif;
+          font-size: 7px;
+          height: 17px;
+          padding: 0 16px 0 7px;
+          background: #f8f8f8;
+          border-radius: 1.7px;
+        }
+
+        .custom-select__chevron {
+          width: 8px;
+          height: 8px;
+          right: 4px;
         }
 
         .custom-select__option {
-          font-size: 15px;
-          padding: 11px 14px;
-        }
-
-        .search-input {
-          font-size: 15px;
+          font-size: 7.5px; /* Slightly larger for readability */
+          padding: 5px 10px;
         }
 
         .card-title {
-          font-size: 19px;
+          font-size: 22px;
+          line-height: 146%;
         }
+
+        .card-desc {
+          font-size: 15.5px;
+          line-height: 146%;
+        }
+
         .start-btn {
-          font-size: 20px;
+          font-size: 26px;
           height: 56px;
+          border-radius: 0 0 16.3px 16.3px;
         }
 
         /* Footer Image — mobile */
@@ -690,47 +890,67 @@
     </style>
   </head>
   <body>
-      <!-- ========== NAVBAR ========== -->
-      <nav class="navbar">
-        <div class="navbar-logo">
-          <a href="/">
-            <img
-              src="../Resources/HomePage/roas-logo-light.png"
-              alt="Roas School of Marketing"
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <a href="/">
+          <img
+            src="../Resources/HomePage/roas-logo-light.png"
+            alt="Roas School of Marketing"
+          />
+        </a>
+      </div>
+
+      <div class="navbar-links">
+        <a href="#">About Us</a>
+        <a href="#">Blogs</a>
+        <a href="/courses">Courses</a>
+        <a href="/contact-us">Contact Us</a>
+      </div>
+
+      <div class="navbar-actions">
+        <div class="cart-icon">
+          <svg
+            width="33"
+            height="33"
+            viewBox="0 0 33 33"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 1H5.36L8.12 19.47C8.25 20.29 8.68 21.03 9.32 21.55C9.97 22.07 10.78 22.33 11.6 22.29H25.4C26.22 22.33 27.03 22.07 27.68 21.55C28.32 21.03 28.75 20.29 28.88 19.47L31 7H6"
+              stroke="#374957"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
             />
-          </a>
+            <circle cx="11.5" cy="27.5" r="2.5" fill="#374957" />
+            <circle cx="25.5" cy="27.5" r="2.5" fill="#374957" />
+          </svg>
         </div>
+        <button class="login-btn">Login</button>
+        <button class="hamburger-menu" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
 
-        <div class="navbar-links">
-          <a href="#">About Us</a>
-          <a href="#">Blogs</a>
-          <a href="/courses">Courses</a>
-          <a href="/contact-us">Contact Us</a>
-        </div>
-
-        <div class="navbar-actions">
-          <div class="cart-icon">
-            <svg
-              width="33"
-              height="33"
-              viewBox="0 0 33 33"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1 1H5.36L8.12 19.47C8.25 20.29 8.68 21.03 9.32 21.55C9.97 22.07 10.78 22.33 11.6 22.29H25.4C26.22 22.33 27.03 22.07 27.68 21.55C28.32 21.03 28.75 20.29 28.88 19.47L31 7H6"
-                stroke="#374957"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <circle cx="11.5" cy="27.5" r="2.5" fill="#374957" />
-              <circle cx="25.5" cy="27.5" r="2.5" fill="#374957" />
-            </svg>
-          </div>
-          <button class="login-btn">Login</button>
-        </div>
-      </nav>
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    <div class="mobile-menu-drawer" id="mobileMenuDrawer">
+      <button
+        class="mobile-menu-close"
+        id="mobileMenuClose"
+        aria-label="Close menu"
+      >
+        &times;
+      </button>
+      <a href="#">About Us</a>
+      <a href="#">Blogs</a>
+      <a href="/courses">Courses</a>
+      <a href="/contact-us">Contact Us</a>
+    </div>
 
     <!-- ============================================================
        MAIN CONTENT
@@ -1599,7 +1819,6 @@
        JAVASCRIPT
   ============================================================ -->
     <script>
-
       /* ---- Custom Select Dropdowns ---- */
       function initCustomSelect(wrapperEl, onChange) {
         const trigger = wrapperEl.querySelector(".custom-select__trigger");
@@ -1738,6 +1957,44 @@
 
       /* Run on page load */
       applyFilters();
+    </script>
+
+    <script>
+      (function () {
+        const hamburger = document.querySelector(".hamburger-menu");
+        const overlay = document.getElementById("mobileMenuOverlay");
+        const drawer = document.getElementById("mobileMenuDrawer");
+        const closeBtn = document.getElementById("mobileMenuClose");
+
+        function openMenu() {
+          drawer.classList.add("open");
+          overlay.classList.add("open");
+          hamburger.classList.add("active");
+          document.body.style.overflow = "hidden";
+        }
+
+        function closeMenu() {
+          drawer.classList.remove("open");
+          overlay.classList.remove("open");
+          hamburger.classList.remove("active");
+          document.body.style.overflow = "";
+        }
+
+        hamburger.addEventListener("click", function () {
+          if (drawer.classList.contains("open")) {
+            closeMenu();
+          } else {
+            openMenu();
+          }
+        });
+
+        overlay.addEventListener("click", closeMenu);
+        closeBtn.addEventListener("click", closeMenu);
+
+        drawer.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", closeMenu);
+        });
+      })();
     </script>
   </body>
 </html>

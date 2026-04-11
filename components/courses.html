@@ -887,6 +887,134 @@
           object-position: center;
         }
       }
+
+      /* ============================================================
+         SCROLL-TRIGGERED ANIMATIONS
+      ============================================================ */
+      .anim-fade-up {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+          opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+          transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .anim-fade-left {
+        opacity: 0;
+        transform: translateX(-30px);
+        transition:
+          opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+          transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .anim-fade-right {
+        opacity: 0;
+        transform: translateX(30px);
+        transition:
+          opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+          transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .anim-visible {
+        opacity: 1 !important;
+        transform: translate(0, 0) !important;
+      }
+
+      /* ============================================================
+         ENHANCED HOVER EFFECTS
+      ============================================================ */
+      .course-card {
+        transition:
+          transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+          box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .course-card:hover {
+        transform: translateY(-6px) scale(1.03);
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+      }
+
+      .start-btn {
+        transition:
+          filter 0.35s ease,
+          transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+          box-shadow 0.35s ease;
+      }
+      .start-btn:hover {
+        filter: brightness(1.1);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .login-btn {
+        transition:
+          opacity 0.3s ease,
+          transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+          box-shadow 0.3s ease;
+      }
+      .login-btn:hover {
+        opacity: 0.95;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 14px rgba(0, 118, 255, 0.35);
+      }
+
+      .navbar-links a {
+        position: relative;
+        transition: color 0.3s ease;
+      }
+      .navbar-links a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 0;
+        height: 2px;
+        background: #0076ff;
+        transition: width 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .navbar-links a:hover::after {
+        width: 100%;
+      }
+
+      .search-wrapper {
+        transition: box-shadow 0.3s ease;
+      }
+      .search-wrapper:focus-within {
+        box-shadow: 0 0 0 3px rgba(0, 118, 255, 0.15);
+      }
+
+      .custom-select__trigger {
+        transition:
+          box-shadow 0.3s ease,
+          background 0.3s ease;
+      }
+      .custom-select__trigger:hover {
+        box-shadow: 0 0 0 3px rgba(0, 118, 255, 0.1);
+      }
+
+      /* ============================================================
+         ACCESSIBILITY — prefers-reduced-motion
+      ============================================================ */
+      @media (prefers-reduced-motion: reduce) {
+        .anim-fade-up,
+        .anim-fade-left,
+        .anim-fade-right {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+        .course-card,
+        .start-btn,
+        .login-btn,
+        .navbar-links a::after,
+        .search-wrapper,
+        .custom-select__trigger {
+          transition: none !important;
+        }
+        .course-card:hover {
+          transform: none;
+        }
+        .start-btn:hover,
+        .login-btn:hover {
+          transform: none;
+        }
+      }
     </style>
   </head>
   <body>
@@ -958,10 +1086,14 @@
     <main>
       <section class="courses-section">
         <!-- Page Title -->
-        <h1 class="courses-title">Courses</h1>
+        <h1 class="courses-title anim-fade-up">Courses</h1>
 
         <!-- ---- Filter Bar ---- -->
-        <div class="filter-bar" role="search">
+        <div
+          class="filter-bar anim-fade-up"
+          role="search"
+          style="transition-delay: 0.1s"
+        >
           <div class="filter-search">
             <!-- Search -->
             <div class="search-wrapper">
@@ -1098,7 +1230,7 @@
              CARD 1 — Master Psychology Driven Advanced Meta Ads
         ====================================================== -->
           <article
-            class="course-card"
+            class="course-card anim-fade-up"
             data-title="Master Psychology Driven Advanced Meta Ads"
             data-desc="Engineering buying behavior. knowing exactly who to target, how to craft offers people can't ignore, how to structure"
             data-date="2024-01-01"
@@ -1234,7 +1366,7 @@
              CARD 2 — Master Creative Targeting
         ====================================================== -->
           <article
-            class="course-card"
+            class="course-card anim-fade-up"
             data-title="Master Creative Targeting"
             data-desc="The rules have changed. This course shows you how to regain control, drive conversions, Improve ROAS and scale"
             data-date="2024-02-01"
@@ -1363,7 +1495,7 @@
              CARD 3 — Social Media Marketing for Business Owners
         ====================================================== -->
           <article
-            class="course-card"
+            class="course-card anim-fade-up"
             data-title="Social Media Marketing for business owners"
             data-desc="Stop wasting money boosting posts. target the right audience, and launch ads"
             data-date="2024-03-01"
@@ -1497,7 +1629,7 @@
              CARD 4 — Master the Fundamentals of Facebook Ads – Students
         ====================================================== -->
           <article
-            class="course-card"
+            class="course-card anim-fade-up"
             data-title="Master the Fundamentals of Facebook Ads - Students"
             data-desc="Stop wasting money boosting posts. Learn how to pick the right objective, target the right audience, and launch ads"
             data-date="2024-04-01"
@@ -1631,7 +1763,7 @@
              CARD 5 — Master the Fundamentals of Facebook Ads – Business Owner
         ====================================================== -->
           <article
-            class="course-card"
+            class="course-card anim-fade-up"
             data-title="Master the Fundamentals of Facebook Ads - Business Owner"
             data-desc="Stop wasting money boosting posts. target the right audience, and launch ads"
             data-date="2024-05-01"
@@ -1993,6 +2125,44 @@
 
         drawer.querySelectorAll("a").forEach(function (link) {
           link.addEventListener("click", closeMenu);
+        });
+      })();
+    </script>
+
+    <script>
+      (function () {
+        var reducedMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+        if (reducedMotion) return;
+
+        var animEls = document.querySelectorAll(
+          ".anim-fade-up, .anim-fade-left, .anim-fade-right",
+        );
+        var observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("anim-visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.15 },
+        );
+
+        animEls.forEach(function (el, i) {
+          var parent = el.parentElement;
+          var siblings = parent
+            ? parent.querySelectorAll(
+                ":scope > .anim-fade-up, :scope > .anim-fade-left, :scope > .anim-fade-right",
+              )
+            : [];
+          var idx = Array.prototype.indexOf.call(siblings, el);
+          if (idx > 0 && !el.style.transitionDelay) {
+            el.style.transitionDelay = idx * 0.12 + "s";
+          }
+          observer.observe(el);
         });
       })();
     </script>

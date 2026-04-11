@@ -1066,6 +1066,166 @@
       body.dark-mode .footer-image .footer-svg-dark {
         display: block;
       }
+
+      /* ============================================================
+         SCROLL-TRIGGERED ANIMATIONS
+      ============================================================ */
+      .anim-fade-up {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+          opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+          transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .anim-fade-left {
+        opacity: 0;
+        transform: translateX(-30px);
+        transition:
+          opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+          transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .anim-fade-right {
+        opacity: 0;
+        transform: translateX(30px);
+        transition:
+          opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+          transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .anim-visible {
+        opacity: 1 !important;
+        transform: translate(0, 0) !important;
+      }
+
+      /* ============================================================
+         ENHANCED HOVER EFFECTS
+      ============================================================ */
+      .login-btn {
+        transition:
+          opacity 0.3s ease,
+          transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+          box-shadow 0.3s ease;
+      }
+      .login-btn:hover {
+        opacity: 0.95;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 14px rgba(0, 118, 255, 0.35);
+      }
+
+      .navbar-links a {
+        position: relative;
+      }
+      .navbar-links a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 0;
+        height: 2px;
+        background: #0076ff;
+        transition: width 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .navbar-links a:hover::after {
+        width: 100%;
+      }
+
+      .form-input,
+      .phone-input-group {
+        transition:
+          border-color 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      .form-input:focus,
+      .phone-input-group:focus-within {
+        border-color: rgba(0, 118, 255, 0.6);
+        box-shadow: 0 0 0 3px rgba(0, 118, 255, 0.12);
+      }
+
+      .submit-btn {
+        transition:
+          transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+          box-shadow 0.35s ease,
+          background 0.35s ease;
+      }
+      .submit-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 2.54px 8px 24px rgba(8, 164, 255, 0.55);
+      }
+
+      .whatsapp-btn {
+        transition:
+          transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+          box-shadow 0.35s ease;
+      }
+      .whatsapp-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 2.54px 8px 24px rgba(8, 164, 255, 0.55);
+      }
+
+      .schedule-btn {
+        transition:
+          transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+          box-shadow 0.35s ease;
+      }
+      .schedule-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 2.54px 8px 24px rgba(8, 164, 255, 0.55);
+      }
+
+      .contact-btn {
+        transition:
+          opacity 0.3s ease,
+          transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .contact-btn:hover {
+        opacity: 0.88;
+        transform: translateY(-3px);
+      }
+
+      .info-block {
+        transition:
+          transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+          box-shadow 0.4s ease;
+      }
+      .info-block:hover {
+        transform: translateY(-4px);
+      }
+
+      .terms-text a {
+        transition: color 0.3s ease;
+      }
+
+      /* ============================================================
+         ACCESSIBILITY — prefers-reduced-motion
+      ============================================================ */
+      @media (prefers-reduced-motion: reduce) {
+        .anim-fade-up,
+        .anim-fade-left,
+        .anim-fade-right {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+        .login-btn,
+        .navbar-links a::after,
+        .form-input,
+        .phone-input-group,
+        .submit-btn,
+        .whatsapp-btn,
+        .schedule-btn,
+        .contact-btn,
+        .info-block,
+        .terms-text a {
+          transition: none !important;
+        }
+        .submit-btn:hover,
+        .whatsapp-btn:hover,
+        .schedule-btn:hover,
+        .contact-btn:hover,
+        .login-btn:hover,
+        .info-block:hover {
+          transform: none;
+        }
+      }
     </style>
   </head>
   <body>
@@ -1133,8 +1293,8 @@
       </div>
 
       <!-- ========== HERO ========== -->
-      <h1 class="hero-title">Get in touch with us</h1>
-      <p class="hero-subtitle">
+      <h1 class="hero-title anim-fade-up">Get in touch with us</h1>
+      <p class="hero-subtitle anim-fade-up" style="transition-delay: 0.1s">
         Fill out the form or schedule a meeting with us at your convenience.
       </p>
 
@@ -1147,7 +1307,7 @@
           onsubmit="handleSubmit(event)"
         >
           <!-- Full Name -->
-          <div class="form-group">
+          <div class="form-group anim-fade-left">
             <label class="form-label"
               >Full Name <span class="required">*</span></label
             >
@@ -1160,7 +1320,10 @@
           </div>
 
           <!-- Number -->
-          <div class="form-group">
+          <div
+            class="form-group anim-fade-left"
+            style="transition-delay: 0.12s"
+          >
             <label class="form-label"
               >Number <span class="required">*</span></label
             >
@@ -1182,7 +1345,10 @@
           </div>
 
           <!-- Email -->
-          <div class="form-group">
+          <div
+            class="form-group anim-fade-left"
+            style="transition-delay: 0.24s"
+          >
             <label class="form-label"
               >Email Address <span class="required">*</span></label
             >
@@ -1195,7 +1361,10 @@
           </div>
 
           <!-- Terms -->
-          <div class="terms-group">
+          <div
+            class="terms-group anim-fade-left"
+            style="transition-delay: 0.36s"
+          >
             <input type="checkbox" class="terms-checkbox" id="termsCheck" />
             <label class="terms-text" for="termsCheck">
               I agree with
@@ -1204,7 +1373,13 @@
           </div>
 
           <!-- Submit -->
-          <button type="submit" class="submit-btn">Send a request</button>
+          <button
+            type="submit"
+            class="submit-btn anim-fade-up"
+            style="transition-delay: 0.45s"
+          >
+            Send a request
+          </button>
         </form>
 
         <!-- DIVIDER -->
@@ -1213,7 +1388,7 @@
         <!-- RIGHT: Info blocks -->
         <div class="right-section">
           <!-- For Learners -->
-          <div class="info-block">
+          <div class="info-block anim-fade-right">
             <div class="info-block-inner">
               <h3 class="info-block-title">For Learners</h3>
               <p class="info-block-text">
@@ -1226,7 +1401,10 @@
           </div>
 
           <!-- For Business Owners -->
-          <div class="info-block">
+          <div
+            class="info-block anim-fade-right"
+            style="transition-delay: 0.15s"
+          >
             <div class="info-block-inner">
               <h3 class="info-block-title">For Business owners</h3>
               <p class="info-block-text">
@@ -1245,8 +1423,10 @@
 
       <!-- ========== CONTACT VIA ========== -->
       <div class="contact-via-section">
-        <h2 class="contact-via-title">You can also contact us via</h2>
-        <p class="contact-via-info">
+        <h2 class="contact-via-title anim-fade-up">
+          You can also contact us via
+        </h2>
+        <p class="contact-via-info anim-fade-up" style="transition-delay: 0.1s">
           📞 Mobile: +91 8400 786 843<br />
           📧 Email: support@roasschoolofmarketing.com
         </p>
@@ -1292,5 +1472,71 @@
         </div>
       </footer>
     </div>
+
+    <script>
+      (function () {
+        var reducedMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+        if (reducedMotion) return;
+
+        var animEls = document.querySelectorAll(
+          ".anim-fade-up, .anim-fade-left, .anim-fade-right",
+        );
+        var observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("anim-visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.15 },
+        );
+
+        animEls.forEach(function (el) {
+          observer.observe(el);
+        });
+      })();
+    </script>
+
+    <script>
+      (function () {
+        var hamburger = document.querySelector(".hamburger-menu");
+        var overlay = document.getElementById("mobileMenuOverlay");
+        var drawer = document.getElementById("mobileMenuDrawer");
+        var closeBtn = document.getElementById("mobileMenuClose");
+
+        function openMenu() {
+          drawer.classList.add("open");
+          overlay.classList.add("open");
+          hamburger.classList.add("active");
+          document.body.style.overflow = "hidden";
+        }
+
+        function closeMenu() {
+          drawer.classList.remove("open");
+          overlay.classList.remove("open");
+          hamburger.classList.remove("active");
+          document.body.style.overflow = "";
+        }
+
+        hamburger.addEventListener("click", function () {
+          if (drawer.classList.contains("open")) {
+            closeMenu();
+          } else {
+            openMenu();
+          }
+        });
+
+        overlay.addEventListener("click", closeMenu);
+        closeBtn.addEventListener("click", closeMenu);
+
+        drawer.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", closeMenu);
+        });
+      })();
+    </script>
   </body>
 </html>

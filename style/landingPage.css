@@ -2883,3 +2883,640 @@ body.dark-mode .footer-image .footer-svg-dark {
     color: #000000 !important;
   }
 }
+
+
+/* Moved from inline style */
+/* ============================================================
+         ANIMATION SYSTEM — internal, layered on top of landingPage.css
+         ============================================================ */
+
+      /* ── Keyframes ── */
+      @keyframes fadeSlideUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes fadeSlideLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      @keyframes fadeSlideRight {
+        from {
+          opacity: 0;
+          transform: translateX(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes popIn {
+        from {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-8px);
+        }
+        60% {
+          transform: translateY(-4px);
+        }
+      }
+      @keyframes wiggle {
+        0%,
+        100% {
+          transform: rotate(0deg);
+        }
+        20% {
+          transform: rotate(-12deg);
+        }
+        40% {
+          transform: rotate(12deg);
+        }
+        60% {
+          transform: rotate(-8deg);
+        }
+        80% {
+          transform: rotate(8deg);
+        }
+      }
+      @keyframes ripple {
+        0% {
+          transform: scale(0);
+          opacity: 0.6;
+        }
+        100% {
+          transform: scale(4);
+          opacity: 0;
+        }
+      }
+      @keyframes parallaxZoom {
+        from {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(1.06);
+        }
+      }
+
+      /* ── Hero scatter-out keyframe ──
+         Images start near center (translated inward), then scatter to final pos.
+         --inward-x / --inward-y = vector FROM final position TOWARD center */
+      @keyframes scatterOut {
+        0% {
+          opacity: 1;
+          transform: translate(var(--inward-x), var(--inward-y)) scale(0.5);
+        }
+        70% {
+          opacity: 1;
+          transform: translate(
+              calc(var(--inward-x) * -0.08),
+              calc(var(--inward-y) * -0.08)
+            )
+            scale(1.04);
+        }
+        100% {
+          opacity: 1;
+          transform: translate(0, 0) scale(1);
+        }
+      }
+
+      /* ── Hero text fade-in (appears AFTER images scatter) ── */
+      @keyframes heroTextReveal {
+        0% {
+          opacity: 0;
+          transform: scale(0.85);
+        }
+        60% {
+          opacity: 1;
+          transform: scale(1.03);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      /* ── Hero text + CTA: hidden until images finish, then reveal ── */
+      .hero-heading {
+        opacity: 0;
+        animation: heroTextReveal 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)
+          forwards;
+        animation-delay: 0.85s; /* after images finish scattering */
+      }
+      .hero-features {
+        opacity: 0;
+        animation: heroTextReveal 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)
+          forwards;
+        animation-delay: 0.95s;
+      }
+      .hero-cta {
+        opacity: 0;
+        animation: heroTextReveal 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)
+          forwards;
+        animation-delay: 1.05s;
+      }
+
+      /* ── Hero images: scatter outward from center on page load ── */
+      .hero-img {
+        animation: scatterOut 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        will-change: transform;
+      }
+
+      /* Per-image inward vectors: direction FROM final pos TOWARD hero center (720, 525).
+         Positive --inward-x = image is left of center, needs to move right toward center.
+         Positive --inward-y = image is above center, needs to move down toward center. */
+      .rect-147 {
+        --inward-x: 258px;
+        --inward-y: 365px;
+        animation-delay: 0.5s;
+      }
+      .rect-146 {
+        --inward-x: 403px;
+        --inward-y: 277px;
+        animation-delay: 0.53s;
+      }
+      .rect-148 {
+        --inward-x: -400px;
+        --inward-y: 339px;
+        animation-delay: 0.55s;
+      }
+      .rect-150 {
+        --inward-x: -623px;
+        --inward-y: 388px;
+        animation-delay: 0.52s;
+      }
+      .rect-149 {
+        --inward-x: -543px;
+        --inward-y: 44px;
+        animation-delay: 0.56s;
+      }
+      .rect-153 {
+        --inward-x: 708px;
+        --inward-y: -46px;
+        animation-delay: 0.54s;
+      }
+      .rect-156 {
+        --inward-x: 126px;
+        --inward-y: -182px;
+        animation-delay: 0.51s;
+      }
+      .rect-154 {
+        --inward-x: 470px;
+        --inward-y: -281px;
+        animation-delay: 0.57s;
+      }
+      .rect-151 {
+        --inward-x: -660px;
+        --inward-y: -255px;
+        animation-delay: 0.53s;
+      }
+      .rect-155 {
+        --inward-x: 234px;
+        --inward-y: -395px;
+        animation-delay: 0.55s;
+      }
+      .rect-152 {
+        --inward-x: -343px;
+        --inward-y: -419px;
+        animation-delay: 0.52s;
+      }
+
+      /* ── NO hover/float animations — everything stays static after load ── */
+
+      /* ── Course cards — scroll-triggered stagger ── */
+      .course-card-v2 {
+        opacity: 0;
+        transform: translateY(40px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease,
+          box-shadow 0.35s ease;
+      }
+      .course-card-v2.animate-in {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .course-card-v2:nth-child(1).animate-in {
+        transition-delay: 0s;
+      }
+      .course-card-v2:nth-child(2).animate-in {
+        transition-delay: 0.15s;
+      }
+      .course-card-v2:nth-child(3).animate-in {
+        transition-delay: 0.3s;
+      }
+
+      .course-card-v2:hover {
+        transform: translateY(-10px) !important;
+        box-shadow: 0 20px 48px rgba(0, 0, 0, 0.18) !important;
+      }
+      .course-card-v2:hover .course-card-v2__thumb img {
+        transform: scale(1.07);
+        transition: transform 0.45s ease;
+      }
+      .course-card-v2__thumb img {
+        transition: transform 0.45s ease;
+      }
+
+      /* "Get Started" button press */
+      .course-card-v2__btn:active {
+        transform: scale(0.94) !important;
+        transition: transform 0.1s ease !important;
+      }
+
+      /* ── About section: image from left, text from right ── */
+      .about-top-image {
+        opacity: 0;
+        transform: translateX(-50px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+      .about-top-image.animate-in {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      .about-top-image:hover img {
+        filter: drop-shadow(0 0 22px rgba(0, 118, 255, 0.4)) !important;
+      }
+      .about-top-text {
+        opacity: 0;
+        transform: translateX(50px);
+        transition:
+          opacity 0.7s ease 0.2s,
+          transform 0.7s ease 0.2s;
+      }
+      .about-top-text.animate-in {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      .about-quote-outer {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+          opacity 0.7s ease 0.3s,
+          transform 0.7s ease 0.3s;
+      }
+      .about-quote-outer.animate-in {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* ── Differences grid icons pop-in + hover ── */
+      .diff-card {
+        opacity: 0;
+        transform: scale(0.8);
+        transition:
+          opacity 0.5s ease,
+          transform 0.5s ease;
+        text-align: center;
+      }
+      .diff-card.animate-in {
+        opacity: 1;
+        transform: scale(1);
+      }
+      .diff-card:hover img {
+        animation: bounce 0.6s ease forwards;
+      }
+      .diff-card:hover .diff-text {
+        color: #3a4c66;
+      }
+      .diff-text {
+        transition: color 0.3s ease;
+      }
+
+      /* ── Who-for grid fade bottom-up + image scale hover ── */
+      .who-card {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
+      }
+      .who-card.animate-in {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .who-card:hover img {
+        transform: scale(1.05);
+        transition: transform 0.35s ease;
+      }
+      .who-card img {
+        transition: transform 0.35s ease;
+      }
+
+      /* ── Why-ROAS boxes: fade in + cyan border hover + number shift ── */
+      .why-card {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+          opacity 0.55s ease,
+          transform 0.55s ease,
+          box-shadow 0.3s ease,
+          border 0.3s ease;
+        border: 2px solid transparent;
+        border-radius: 12px;
+        padding: 28px 24px;
+      }
+      .why-card.animate-in {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .why-card:hover {
+        border-color: #1acfff;
+        box-shadow: 0 0 0 3px rgba(26, 207, 255, 0.25);
+      }
+      .why-card__number {
+        display: block;
+        font-family: "Bricolage Grotesque", sans-serif;
+        font-size: 56px;
+        font-weight: 700;
+        color: #1acfff;
+        line-height: 1;
+        margin-bottom: 12px;
+        transition: transform 0.3s ease;
+      }
+      .why-card:hover .why-card__number {
+        transform: translateX(5px);
+      }
+
+      /* ── Mind-Behind (Founder): fade-in, image colour on hover ── */
+      .mind-behind-card {
+        opacity: 0;
+        transition: opacity 0.8s ease;
+      }
+      .mind-behind-card.animate-in {
+        opacity: 1;
+      }
+      .mind-behind-image img {
+        transition: filter 0.5s ease;
+        filter: saturate(0.6) brightness(0.95);
+      }
+      .mind-behind-section:hover .mind-behind-image img {
+        filter: saturate(1) brightness(1);
+      }
+
+      /* ── Movement CTA: parallax zoom + glass hover ── */
+      .movement-main-img {
+        animation-timeline: scroll();
+        transition: transform 0.3s ease;
+      }
+      .movement-image-wrapper {
+        overflow: hidden;
+        border-radius: 24px;
+      }
+      .movement-image-wrapper:hover .movement-main-img {
+        transform: scale(1.04);
+      }
+      .movement-btn {
+        position: relative;
+        overflow: hidden;
+        transition:
+          box-shadow 0.3s ease,
+          transform 0.2s ease;
+      }
+      .movement-btn:hover {
+        box-shadow:
+          0 0 0 6px rgba(26, 207, 255, 0.35),
+          0 8px 32px rgba(0, 118, 255, 0.35);
+        transform: translateY(-2px);
+      }
+      .movement-btn:active {
+        transform: scale(0.96) !important;
+      }
+      .movement-btn::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 10px;
+        height: 10px;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        transform: scale(0);
+        pointer-events: none;
+      }
+      .movement-btn:active::after {
+        animation: ripple 0.5s ease-out forwards;
+      }
+      .movement-section {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+      .movement-section.animate-in {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* ── Contact: left slides left, right slides right ── */
+      .contact-col--learners {
+        opacity: 0;
+        transform: translateX(-50px);
+        transition:
+          opacity 0.65s ease,
+          transform 0.65s ease;
+      }
+      .contact-col--learners.animate-in {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      .contact-col--business {
+        opacity: 0;
+        transform: translateX(50px);
+        transition:
+          opacity 0.65s ease 0.15s,
+          transform 0.65s ease 0.15s;
+      }
+      .contact-col--business.animate-in {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      /* WhatsApp button wiggle icon */
+      .contact-col--learners .contact-btn:hover img {
+        animation: wiggle 0.5s ease;
+      }
+      .contact-col--business .contact-btn:hover img {
+        filter: brightness(0.85);
+        transition: filter 0.3s ease;
+      }
+
+      /* ── FAQ accordion ── */
+      .faq-card {
+        opacity: 0;
+        transform: translateY(20px);
+        transition:
+          opacity 0.5s ease,
+          transform 0.5s ease,
+          box-shadow 0.3s ease;
+        border: 1px solid #e8ecf0;
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 16px;
+        background: #fff;
+      }
+      .faq-card.animate-in {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .faq-card:hover {
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+      }
+
+      /* FAQ toggle — replace static reveal with accordion behaviour */
+      .faq-inner {
+        cursor: pointer;
+        padding: 24px 28px;
+      }
+      .faq-question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: "Segoe UI", sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        color: #000;
+        transition: color 0.3s ease;
+        user-select: none;
+      }
+      .faq-card:hover .faq-question {
+        color: #0076ff;
+      }
+      .faq-question::after {
+        content: "+";
+        font-size: 24px;
+        font-weight: 300;
+        flex-shrink: 0;
+        margin-left: 16px;
+        transition: transform 0.4s ease;
+        display: inline-block;
+      }
+      .faq-card.open .faq-question::after {
+        transform: rotate(45deg);
+      }
+      .faq-answer {
+        font-family: "Segoe UI", sans-serif;
+        font-size: 16px;
+        color: #444;
+        line-height: 1.7;
+        max-height: 0;
+        overflow: hidden;
+        transition:
+          max-height 0.45s ease,
+          padding 0.3s ease;
+        padding: 0 28px;
+      }
+      .faq-card.open .faq-answer {
+        max-height: 300px;
+        padding: 0 28px 24px;
+      }
+
+      /* ── Stagger delays for repeated elements ── */
+      .diff-card:nth-child(1).animate-in {
+        transition-delay: 0s;
+      }
+      .diff-card:nth-child(2).animate-in {
+        transition-delay: 0.08s;
+      }
+      .diff-card:nth-child(3).animate-in {
+        transition-delay: 0.16s;
+      }
+      .diff-card:nth-child(4).animate-in {
+        transition-delay: 0.24s;
+      }
+      .diff-card:nth-child(5).animate-in {
+        transition-delay: 0.32s;
+      }
+      .diff-card:nth-child(6).animate-in {
+        transition-delay: 0.4s;
+      }
+
+      .who-card:nth-child(1).animate-in {
+        transition-delay: 0s;
+      }
+      .who-card:nth-child(2).animate-in {
+        transition-delay: 0.1s;
+      }
+      .who-card:nth-child(3).animate-in {
+        transition-delay: 0.2s;
+      }
+
+      .why-card:nth-child(1).animate-in {
+        transition-delay: 0s;
+      }
+      .why-card:nth-child(2).animate-in {
+        transition-delay: 0.1s;
+      }
+      .why-card:nth-child(3).animate-in {
+        transition-delay: 0.2s;
+      }
+      .why-card:nth-child(4).animate-in {
+        transition-delay: 0.3s;
+      }
+      .why-card:nth-child(5).animate-in {
+        transition-delay: 0.4s;
+      }
+      .why-card:nth-child(6).animate-in {
+        transition-delay: 0.5s;
+      }
+
+      .faq-card:nth-child(1).animate-in {
+        transition-delay: 0s;
+      }
+      .faq-card:nth-child(2).animate-in {
+        transition-delay: 0.1s;
+      }
+      .faq-card:nth-child(3).animate-in {
+        transition-delay: 0.2s;
+      }
+      .faq-card:nth-child(4).animate-in {
+        transition-delay: 0.3s;
+      }
+      .faq-card:nth-child(5).animate-in {
+        transition-delay: 0.4s;
+      }
+      .faq-card:nth-child(6).animate-in {
+        transition-delay: 0.5s;
+      }

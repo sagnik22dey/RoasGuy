@@ -428,7 +428,7 @@ input:checked + .slider:before {
 
 @media (max-width: 768px) {
   .navbar {
-    height: 10vh;
+    height: 12vh;
     padding-left: 5vw;
     padding-right: 5vw;
   }

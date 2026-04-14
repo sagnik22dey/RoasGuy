@@ -397,14 +397,6 @@ img {
   border-radius: 6px;
 }
 
-/* Rectangle 149 — large right */
-.rect-149 {
-  width: 260px;
-  height: 273px;
-  left: 1133px;
-  top: 345px;
-}
-
 /* Rectangle 153 — large left (partially off-screen) */
 .rect-153 {
   width: 260px;
@@ -588,90 +580,6 @@ img {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 40px;
-}
-
-.section-title {
-  font-family: "Bricolage Grotesque", sans-serif;
-  font-weight: 600;
-  font-size: 36px;
-  line-height: 43px;
-  color: #000000;
-  text-align: center;
-  margin-bottom: 12px;
-}
-
-.section-subtitle {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  color: #555;
-  text-align: center;
-  margin-bottom: 56px;
-}
-
-.section-label {
-  display: inline-block;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: #0076ff;
-  margin-bottom: 10px;
-}
-
-/* ================================================================
-   RESULTS SECTION
-   ================================================================ */
-.results-section {
-  padding: 96px 0;
-  background: #f7f9fc;
-}
-
-.results-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-.result-card {
-  border-radius: 14px;
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  transition:
-    transform 0.2s,
-    box-shadow 0.2s;
-}
-
-.result-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.13);
-}
-
-.result-card img {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-  display: block;
-}
-
-.result-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 12px 16px;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.65) 0%, transparent 100%);
-  display: flex;
-  align-items: flex-end;
-}
-
-.result-tag {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  color: #ffffff;
 }
 
 /* ================================================================
@@ -940,7 +848,6 @@ img {
 }
 
 .about-quote-close-wrap .about-quote-mark {
-  transform: rotate(180deg);
   display: block;
 }
 
@@ -997,263 +904,6 @@ img {
   line-height: 127%;
   letter-spacing: -0.04em;
   color: #000000;
-}
-
-/* ================================================================
-   WHO IS ROAS SCHOOL OF MARKETING FOR SECTION
-   ================================================================ */
-.who-for-section {
-  padding: 80px 0 96px;
-  background: #ffffff;
-}
-
-.who-for-title {
-  font-family: "Bricolage Grotesque", sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 40px;
-  line-height: 146%;
-  text-align: center;
-  letter-spacing: -0.04em;
-  color: #000000;
-  margin-bottom: 56px;
-}
-
-.who-for-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 28px;
-  margin-bottom: 48px;
-}
-
-.who-for-row--bottom {
-  margin-bottom: 0px;
-}
-
-.who-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 310px;
-}
-
-.who-card img {
-  width: 227px;
-  height: 187px;
-  object-fit: contain;
-  margin-bottom: 24px;
-}
-
-.who-card-title {
-  font-family: "Segoe UI", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 146%;
-  text-align: center;
-  letter-spacing: -0.04em;
-  color: #000000;
-  margin-bottom: 4px;
-}
-
-.who-card-text {
-  font-family: "Segoe UI", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 146%;
-  text-align: center;
-  letter-spacing: -0.04em;
-  color: #000000;
-}
-
-@media (max-width: 1024px) {
-  .who-for-row {
-    flex-wrap: wrap;
-  }
-}
-
-/* ================================================================
-   TESTIMONIALS SECTION
-   ================================================================ */
-.testimonials-section {
-  padding: 96px 0;
-  background: #ffffff;
-}
-
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-}
-
-.testimonial-card {
-  background: #f7f9fc;
-  border-radius: 14px;
-  padding: 28px 26px 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  border: 1px solid #e8ecf0;
-  transition:
-    box-shadow 0.2s,
-    transform 0.2s;
-}
-
-.testimonial-card:hover {
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
-  transform: translateY(-3px);
-}
-
-.testimonial-avatar img {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #0076ff;
-}
-
-.testimonial-text {
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  line-height: 1.7;
-  color: #333;
-  font-style: italic;
-  flex: 1;
-}
-
-.testimonial-name {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  color: #000;
-}
-
-.testimonial-role {
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
-  color: #0076ff;
-  font-weight: 500;
-}
-
-/* ================================================================
-   CTA BANNER SECTION
-   ================================================================ */
-.cta-section {
-  padding: 80px 0;
-  background: linear-gradient(90deg, #1acfff 0%, #0076ff 100%);
-}
-
-.cta-inner {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-}
-
-.cta-heading {
-  font-family: "Bricolage Grotesque", sans-serif;
-  font-weight: 600;
-  font-size: 36px;
-  line-height: 43px;
-  color: #ffffff;
-  max-width: 700px;
-}
-
-.cta-sub {
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  color: rgba(255, 255, 255, 0.88);
-  margin-bottom: 8px;
-}
-
-.cta-btn {
-  padding: 16px 48px;
-  font-size: 18px;
-  background: #ffffff;
-  color: #0076ff;
-  border-radius: 5px;
-  border: none;
-  font-weight: 700;
-  margin-top: 8px;
-}
-
-.cta-btn:hover {
-  opacity: 0.92;
-  transform: translateY(-2px);
-}
-
-/* ================================================================
-   BLOGS SECTION
-   ================================================================ */
-.blogs-section {
-  padding: 96px 0;
-  background: #f7f9fc;
-}
-
-.blogs-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-}
-
-.blog-card {
-  border-radius: 14px;
-  overflow: hidden;
-  background: #fff;
-  border: 1px solid #e8ecf0;
-  transition:
-    box-shadow 0.2s,
-    transform 0.2s;
-}
-
-.blog-card:hover {
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
-  transform: translateY(-4px);
-}
-
-.blog-card > img {
-  width: 100%;
-  height: 210px;
-  object-fit: cover;
-}
-
-.blog-info {
-  padding: 18px 20px 22px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.blog-tag {
-  display: inline-block;
-  padding: 3px 12px;
-  background: #e8f4ff;
-  color: #0076ff;
-  border-radius: 20px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  width: fit-content;
-}
-
-.blog-title {
-  font-family: "Bricolage Grotesque", sans-serif;
-  font-weight: 600;
-  font-size: 17px;
-  line-height: 1.45;
-  color: #000;
-}
-
-.blog-date {
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
-  color: #999;
 }
 
 /* ================================================================
@@ -1360,6 +1010,11 @@ img {
   width: 372px;
   height: auto;
   max-width: 100%;
+}
+
+/* Schedule-call button — desktop top offset (replaces former inline style) */
+.contact-btn--schedule {
+  margin-top: 1.65rem;
 }
 
 /* ── Responsive ── */
@@ -1696,14 +1351,6 @@ img {
   align-items: center;
 }
 
-/* Footer SVG visibility */
-body:not(.dark-mode) .footer-svg-dark {
-  display: none !important;
-}
-body.dark-mode .footer-svg-light {
-  display: none !important;
-}
-
 .footer-image {
   width: 80%;
   display: flex;
@@ -1724,20 +1371,6 @@ body.dark-mode .footer-svg-light {
   display: block;
 }
 
-.footer-image .footer-svg-light {
-  display: block;
-}
-.footer-image .footer-svg-dark {
-  display: none;
-}
-
-body.dark-mode .footer-image .footer-svg-light {
-  display: none;
-}
-body.dark-mode .footer-image .footer-svg-dark {
-  display: block;
-}
-
 /* ================================================================
    RESPONSIVE — basic 1024px breakpoint
    ================================================================ */
@@ -1746,12 +1379,6 @@ body.dark-mode .footer-image .footer-svg-dark {
   .hero-wrapper {
     height: 820px;
     transform-origin: top left;
-  }
-
-  .results-grid,
-  .testimonials-grid,
-  .blogs-grid {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   .about-top {
@@ -1766,10 +1393,6 @@ body.dark-mode .footer-image .footer-svg-dark {
 
   .about-quote-box {
     padding: 32px 40px 32px 180px;
-  }
-
-  .contact-inner {
-    grid-template-columns: 1fr;
   }
 
   /* Grid: show 2 cards on tablet */
@@ -1960,20 +1583,6 @@ body.dark-mode .footer-image .footer-svg-dark {
   flex-shrink: 0;
 }
 
-.why-card__icon-inner {
-  display: block;
-  width: 94px;
-  height: 94px;
-}
-
-.why-card__icon-svg {
-  width: 94px;
-  height: 94px;
-  display: block;
-  border-radius: 18px;
-  overflow: visible;
-}
-
 .why-card__title {
   font-family: "Segoe UI", sans-serif;
   font-style: normal;
@@ -2115,12 +1724,6 @@ body.dark-mode .footer-image .footer-svg-dark {
 }
 
 @media (max-width: 768px) {
-  .results-grid,
-  .testimonials-grid,
-  .blogs-grid {
-    grid-template-columns: 1fr;
-  }
-
   .hero-features {
     flex-direction: column;
     gap: 12px;
@@ -2180,10 +1783,6 @@ body.dark-mode .footer-image .footer-svg-dark {
     height: 195px;
     object-fit: cover;
     object-position: center;
-  }
-
-  .section-title {
-    font-size: 28px;
   }
 
   .hero-heading {
@@ -2741,14 +2340,6 @@ body.dark-mode .footer-image .footer-svg-dark {
     border-radius: 18px;
   }
 
-  .movement-overlay-text {
-    bottom: 50px;
-    width: 83%;
-    font-size: 16px;
-    line-height: 146%;
-    letter-spacing: -0.04em;
-  }
-
   .movement-body-text {
     font-family: "Bricolage Grotesque", sans-serif;
     font-weight: 600;
@@ -2840,10 +2431,6 @@ body.dark-mode .footer-image .footer-svg-dark {
     height: auto;
   }
 
-  .contact-col--business .contact-btn {
-    margin-top: 0 !important;
-  }
-
   /* ── FAQ Section — mobile ── */
   .faq-section {
     padding: 40px 0 48px;
@@ -2927,51 +2514,12 @@ body.dark-mode .footer-image .footer-svg-dark {
     transform: translateY(0);
   }
 }
-@keyframes fadeSlideLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@keyframes fadeSlideRight {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
-  }
-}
-@keyframes popIn {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
   }
 }
 @keyframes bounce {
@@ -3014,15 +2562,6 @@ body.dark-mode .footer-image .footer-svg-dark {
     opacity: 0;
   }
 }
-@keyframes parallaxZoom {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.06);
-  }
-}
-
 /* ── Hero scatter-out keyframe ──
          Images start near center (translated inward), then scatter to final pos.
          --inward-x / --inward-y = vector FROM final position TOWARD center */
@@ -3106,11 +2645,6 @@ body.dark-mode .footer-image .footer-svg-dark {
   --inward-x: -623px;
   --inward-y: 388px;
   animation-delay: 0.02s;
-}
-.rect-149 {
-  --inward-x: -543px;
-  --inward-y: 44px;
-  animation-delay: 0.06s;
 }
 .rect-153 {
   --inward-x: 708px;
@@ -3288,20 +2822,6 @@ body.dark-mode .footer-image .footer-svg-dark {
   border-color: #1acfff;
   box-shadow: 0 0 0 3px rgba(26, 207, 255, 0.25);
 }
-.why-card__number {
-  display: block;
-  font-family: "Bricolage Grotesque", sans-serif;
-  font-size: 56px;
-  font-weight: 700;
-  color: #1acfff;
-  line-height: 1;
-  margin-bottom: 12px;
-  transition: transform 0.3s ease;
-}
-.why-card:hover .why-card__number {
-  transform: translateX(5px);
-}
-
 /* ── Mind-Behind (Founder): fade-in, image colour on hover ── */
 .mind-behind-card {
   opacity: 0;

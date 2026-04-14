@@ -396,7 +396,13 @@ img {
   top: 108px;
   border-radius: 6px;
 }
-
+/* Rectangle 149 — large right */
+.rect-149 {
+  width: 260px;
+  height: 273px;
+  left: 1133px;
+  top: 345px;
+}
 /* Rectangle 153 — large left (partially off-screen) */
 .rect-153 {
   width: 260px;
@@ -2000,7 +2006,6 @@ img {
     top: 260px;
     border-radius: 0;
   }
-
   /* rect-149 — hide (too large for mobile) */
   .rect-149 {
     display: none;
@@ -2645,6 +2650,11 @@ img {
   --inward-x: -623px;
   --inward-y: 388px;
   animation-delay: 0.02s;
+}
+.rect-149 {
+  --inward-x: -400px;
+  --inward-y: 339px;
+  animation-delay: 0.05s;
 }
 .rect-153 {
   --inward-x: 708px;

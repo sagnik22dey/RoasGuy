@@ -241,7 +241,8 @@ img {
     height: 17px;
   }
 
-  .cart-icon svg {
+  .cart-icon svg,
+  .cart-icon img {
     width: 17px;
     height: 17px;
   }
@@ -508,6 +509,12 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.feature-icon img {
+  width: 21px;
+  height: 21px;
+  display: block;
 }
 
 .feature-text {
@@ -777,8 +784,11 @@ img {
   color: #000000;
 }
 
-.course-card-v2__meta-item svg {
+.course-card-v2__meta-item svg,
+.course-card-v2__meta-item img {
   flex-shrink: 0;
+  width: 16px;
+  height: 16px;
 }
 
 /* Description (Figma: Segoe UI 400 19px -4% ls) */
@@ -823,6 +833,17 @@ img {
 
 .course-card-v2__btn:hover svg path {
   stroke: #ffffff;
+}
+
+.course-card-v2__btn:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.course-card-v2__btn img {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  transition: filter 0.2s;
 }
 
 /* ================================================================
@@ -931,6 +952,9 @@ img {
   letter-spacing: -0.04em;
   color: #000000;
   user-select: none;
+  width: 80px;
+  height: auto;
+  display: block;
 }
 
 .about-quote-box {
@@ -2119,6 +2143,8 @@ body.dark-mode .footer-image .footer-svg-dark {
 
   .about-quote-mark {
     font-size: 80px;
+    width: 60px;
+    height: auto;
   }
 
   .about-quote-box {
@@ -2417,7 +2443,8 @@ body.dark-mode .footer-image .footer-svg-dark {
     height: 13px;
   }
 
-  .feature-icon svg {
+  .feature-icon svg,
+  .feature-icon img {
     width: 13px;
     height: 13px;
   }
@@ -2500,9 +2527,9 @@ body.dark-mode .footer-image .footer-svg-dark {
     padding: 3.2px;
   }
 
-  .about-quote-open-wrap svg {
-    width: 27px;
-    height: 27px;
+  .about-quote-open-wrap img.about-quote-mark {
+    width: 40px;
+    height: 40px;
   }
 
   .about-quote-close-wrap {
@@ -2511,28 +2538,28 @@ body.dark-mode .footer-image .footer-svg-dark {
     padding: 3.2px;
   }
 
-  .about-quote-close-wrap svg {
-    width: 27px;
-    height: 27px;
+  .about-quote-close-wrap img.about-quote-mark {
+    width: 40px;
+    height: 40px;
   }
 
   .about-quote-box {
     border: 0.96px solid #000000;
     border-radius: 10.2px;
-    padding: 20px 20px 20px 80px;
-    min-height: 129px;
+    padding: 20px 20px 20px 110px;
+    min-height: 140px;
   }
 
   .about-quote-avatar {
-    width: 52px;
-    height: 52px;
+    width: 80px;
+    height: 80px;
     left: 16px;
   }
 
   .about-quote-text {
-    font-size: 16px;
-    line-height: 127%;
-    letter-spacing: -0.04em;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
   }
 
   /* ── Why Roas Section — mobile ── */

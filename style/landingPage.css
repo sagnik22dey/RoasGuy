@@ -2129,9 +2129,6 @@ img {
     left: -5px;
     top: -5px;
     padding: 3.2px;
-  }
-
-  .about-quote-open-wrap img.about-quote-mark {
     width: 40px;
     height: 40px;
   }
@@ -2140,9 +2137,6 @@ img {
     right: -5px;
     bottom: -5px;
     padding: 3.2px;
-  }
-
-  .about-quote-close-wrap img.about-quote-mark {
     width: 40px;
     height: 40px;
   }

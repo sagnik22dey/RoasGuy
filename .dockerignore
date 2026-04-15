@@ -11,3 +11,8 @@ __pycache__/
 .idea/
 .railwayignore
 Dockerfile
+node_modules/
+package.json
+package-lock.json
+optimize-images.js
+analyze_sizes.ps1

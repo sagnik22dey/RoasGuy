@@ -44,3 +44,8 @@ staticfiles/
 
 # ---- Misc ----
 # If you generate temporary files or local-only resources, add them below.
+node_modules/
+package.json
+package-lock.json
+optimize-images.js
+analyze_sizes.ps1

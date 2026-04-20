@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@700&family=Lexend:wght@400;500&family=Montserrat:wght@400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..60,400;12..60,500;12..60,600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@700&family=Lexend:wght@400;500&family=Montserrat:wght@400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..60,400;12..60,500;12..60,600;12..60,800&display=swap"
       rel="stylesheet"
     />
     <!-- Preload the above-the-fold logo so it doesn't block LCP -->
@@ -88,133 +88,65 @@
         <a href="/contact-us">Contact Us</a>
       </div>
 
-      <!-- ── SCATTERED HERO IMAGES ── -->
-
-      <!-- Rectangle 147 — top-left area -->
-      <img
-        class="hero-img rect-147"
-        src="../Resources/LandingPage/rec-147.webp"
-        alt="Marketing visual"
-        loading="lazy"
-      />
-
-      <!-- Rectangle 146 — left side, slightly lower -->
-      <img
-        class="hero-img rect-146"
-        src="../Resources/LandingPage/rec-146.webp"
-        alt="Marketing visual"
-        loading="lazy"
-      />
-      
-      <!-- Rectangle 148 — top-right area, with border -->
-      <img
-        class="hero-img rect-148"
-        src="../Resources/LandingPage/rec-148.webp"
-        alt="Marketing visual"
-        loading="lazy"
-      />
-      
-
-      <!-- Rectangle 150 — small, far right top -->
-      <img
-        class="hero-img rect-150"
-        src="../Resources/LandingPage/rec-150.webp"
-        alt="Marketing visual"
-        loading="lazy"
-      />
-
-       <!-- Rectangle 149 — right side, large -->
-      <img
-        class="hero-img rect-149"
-        src="../Resources/LandingPage/rec-149.webp"
-        alt="Marketing visual"
-        loading="lazy"
-      />
-
-      <!-- Rectangle 153 — far left (partially off-screen), large -->
-      <img
-        class="hero-img rect-153"
-        src="../Resources/LandingPage/rec-153.webp"
-        alt="Marketing visual"
-        loading="lazy"
-      />
-      
-
-      <!-- Rectangle 156 — center-left lower area, with border -->
-      <img
-        class="hero-img rect-156"
-        src="../Resources/LandingPage/rec-156.webp"
-        alt="Marketing visual"
-        loading="lazy"
-      />
-      
-
-      <!-- Rectangle 154 — left lower -->
-      <img
-        class="hero-img rect-154"
-        src="../Resources/LandingPage/rec-154.webp"
-        alt="Marketing visual"
-        loading="lazy"
-      />
-
-      <!-- Rectangle 151 — far right lower -->
-      <img
-        class="hero-img rect-151"
-        src="../Resources/LandingPage/rec-151.webp"
-        alt="Marketing visual"
-        loading="lazy"
-      />
-      
-      <!-- Rectangle 155 — center lower -->
-      <img
-        class="hero-img rect-155"
-        src="../Resources/LandingPage/rec-155.webp"
-        alt="Marketing visual"
-        loading="lazy"
-      />
-      
-
-      <!-- Rectangle 152 — right lower, wide -->
-      <img
-        class="hero-img rect-152"
-        src="../Resources/LandingPage/rec-152.webp"
-        alt="Marketing visual"
-        loading="lazy"
-      />
-      
       <!-- ── HERO CONTENT ── -->
       <div class="hero-content">
         <h1 class="hero-heading">
-          Master the psychology behind what makes people click, buy, and come
-          back
+          Master the psychology behind what makes people
+          <span class="hero-highlight-pink">click,</span> <span class="hero-highlight-purple">buy,</span> and
+          <span class="hero-highlight-cyan">come back</span>
         </h1>
         <div class="hero-features">
           <div class="feature-item">
             <span class="feature-icon">
-              <img src="../Resources/LandingPage/SVG/feature-tick-icon.svg"/>
+              <img src="../Resources/LandingPage/SVG/feature-tick-icon.svg" alt="" />
             </span>
             <span class="feature-text">Psychology-Driven Marketing</span>
           </div>
           <div class="feature-item">
             <span class="feature-icon">
-              <img src="../Resources/LandingPage/SVG/feature-tick-icon.svg"/>
+              <img src="../Resources/LandingPage/SVG/feature-tick-icon.svg" alt="" />
             </span>
             <span class="feature-text">Proven Growth Strategies</span>
           </div>
           <div class="feature-item">
             <span class="feature-icon">
-              <img src="../Resources/LandingPage/SVG/feature-tick-icon.svg"/>
+              <img src="../Resources/LandingPage/SVG/feature-tick-icon.svg" alt="" />
             </span>
-            <span class="feature-text"
-              >Using AI for Speed &amp; Creativity</span
-            >
+            <span class="feature-text">Using AI for Speed &amp; Creativity</span>
           </div>
         </div>
+      </div>
 
-        <!-- CTA Buttons -->
-        <div class="hero-cta">
-          <a href="#courses" class="btn-enroll">Enroll Now</a>
-          <a href="#about" class="btn-learn">Learn More</a>
+      <!-- ── HERO IMAGES — 3 person cards ── -->
+      <div class="hero-images-row">
+        <!-- Person 1 — left, slight rotation -->
+        <div class="hero-person hero-person--left">
+          <!-- <div class="hero-person__bg"></div> -->
+          <img
+            class="hero-person__img"
+            src="../Resources/LandingPage/hero-1.png"
+            alt="Student with thumbs up"
+          />
+        </div>
+
+        <!-- Person 2 — center, slight rotation -->
+        <div class="hero-person hero-person--center">
+          <!-- <div class="hero-person__bg"></div> -->
+          <img
+            class="hero-person__img"
+            src="../Resources/LandingPage/hero-2.png"
+            alt="Student holding books"
+          />
+        </div>
+
+        <!-- Person 3 — right, slight rotation -->
+        <div class="hero-person hero-person--right">
+          <!-- <div class="hero-person__bg"></div> -->
+          <img
+            class="hero-person__img"
+            src="../Resources/LandingPage/hero-3.png"
+            alt="Student showing thumbs up"
+          />
         </div>
       </div>
     </div>

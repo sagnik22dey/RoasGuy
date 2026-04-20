@@ -169,7 +169,7 @@
               <div class="hero-video-iframe-wrap">
                 <iframe
                   id="heroVideoIframe"
-                  src="https://www.youtube.com/embed/gpjv_2QXUyM"
+                  src="https://www.youtube.com/embed/E6hpGxMoZyA"
                   allow="
                     accelerometer;
                     autoplay;
@@ -185,14 +185,14 @@
             <div class="hero-video-lang-btns">
               <button
                 class="hero-lang-btn active"
-                data-video="https://www.youtube.com/embed/gpjv_2QXUyM"
+                data-video="https://www.youtube.com/embed/E6hpGxMoZyA"
                 id="heroLangEn"
               >
                 Hindi
               </button>
               <button
                 class="hero-lang-btn"
-                data-video="https://www.youtube.com/embed/E6hpGxMoZyA"
+                data-video="https://www.youtube.com/embed/gpjv_2QXUyM"
                 id="heroLangHi"
               >
                 English
@@ -1644,19 +1644,21 @@
     </script>
 
     <script>
-      (function () {
+      document.addEventListener("DOMContentLoaded", function () {
         const iframe = document.getElementById("heroVideoIframe");
         const langBtns = document.querySelectorAll(".hero-lang-btn");
+
         langBtns.forEach(function (btn) {
           btn.addEventListener("click", function () {
             langBtns.forEach(function (b) {
               b.classList.remove("active");
             });
             btn.classList.add("active");
-            iframe.src = btn.dataset.video;
+            const baseUrl = btn.dataset.video;
+            iframe.src = baseUrl + "?autoplay=1";
           });
         });
-      })();
+      });
     </script>
   </body>
 </html>

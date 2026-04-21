@@ -13,6 +13,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -20,6 +21,9 @@ body {
   color: #000000;
   background: #ffffff;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 a {
@@ -48,15 +52,15 @@ img {
    NAVBAR
    ================================================================ */
 .navbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 100;
   padding: 0px 60px;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  background: #fff;
+  box-sizing: border-box;
 }
 
 /* Logo */
@@ -98,20 +102,17 @@ img {
 }
 
 .cart-icon {
-  width: 33px;
-  height: 33px;
   cursor: pointer;
-  transition: opacity 0.2s;
 }
 
-.cart-icon:hover {
-  opacity: 0.7;
+.cart-icon svg {
+  width: 33px;
+  height: 33px;
 }
 
 /* Login / Enroll button */
 .login-btn {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 10px 20px;
@@ -120,20 +121,15 @@ img {
   border: none;
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
-  font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
-  text-align: center;
   color: #ffffff;
-  transition:
-    opacity 0.2s,
-    transform 0.15s;
+  transition: opacity 0.2s;
 }
 
 .login-btn:hover {
   opacity: 0.9;
-  transform: scale(1.03);
 }
 
 /* Hamburger menu — hidden on desktop */
@@ -213,7 +209,11 @@ img {
     height: 53px;
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
     z-index: 900;
+    box-sizing: border-box;
   }
 
   .navbar-logo {
@@ -222,12 +222,11 @@ img {
   }
 
   .navbar-logo img {
-    width: 76px;
+    width: 74px;
     height: 60px;
     object-fit: contain;
   }
 
-  /* Hide nav links on mobile */
   .navbar-links {
     display: none;
   }
@@ -242,8 +241,7 @@ img {
     height: 17px;
   }
 
-  .cart-icon svg,
-  .cart-icon img {
+  .cart-icon svg {
     width: 17px;
     height: 17px;
   }
@@ -257,7 +255,6 @@ img {
     border-radius: 31px;
   }
 
-  /* Show hamburger on mobile */
   .hamburger-menu {
     display: flex;
   }
@@ -1869,7 +1866,7 @@ img {
   .footer-image img,
   .footer-image svg {
     width: 100%;
-    height: 195px;
+    height: 180px;
     object-fit: cover;
     object-position: center;
   }
@@ -1985,6 +1982,10 @@ img {
    ================================================================ */
 @media (max-width: 480px) {
   /* Hero wrapper */
+  body {
+    padding-top: 53px;
+  }
+
   .hero-wrapper {
     max-width: 100%;
     overflow: hidden;
@@ -2010,7 +2011,7 @@ img {
   .hero-content {
     width: 332px;
     max-width: 90%;
-    padding-top: 65px;
+    padding-top: 10px;
     z-index: 10;
   }
 

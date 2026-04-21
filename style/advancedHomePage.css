@@ -1666,6 +1666,14 @@ body.dark-mode .instructor-bio {
   border-radius: 18px;
 }
 
+.card-image-content .proof-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+}
+
 .card-image-content.scale-110 img {
   transform: scale(1.1);
 }
@@ -7785,7 +7793,8 @@ body.dark-mode .pricing-card-standard {
   }
 }
 
-.crop-proof img {
+.crop-proof img,
+.crop-proof .proof-video {
   object-fit: cover;
   object-position: 65% 50%;
   transform: scale(1.3);

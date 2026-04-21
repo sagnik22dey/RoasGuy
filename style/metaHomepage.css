@@ -853,7 +853,7 @@ body.dark-mode .hero-desc-meta {
   }
 
   .hero-desc-meta {
-    font-size: 20px;
+    font-size: 19px;
     line-height: 146%;
     letter-spacing: -0.04em;
     margin-bottom: 0;
@@ -2439,7 +2439,8 @@ body.dark-mode .instructor-bio {
   z-index: 1;
 }
 
-.crop-proof img {
+.crop-proof img,
+.crop-proof .proof-video {
   object-fit: cover;
   object-position: 65% 50%;
   transform: scale(1.3);
@@ -2543,6 +2544,13 @@ body.dark-mode .instructor-bio {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.card-image-content .proof-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .blur-on-gif-result {

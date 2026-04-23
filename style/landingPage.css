@@ -57,8 +57,9 @@ img {
   justify-content: space-between;
   padding: 0px 60px;
   width: 100%;
-  position: relative;
-  z-index: 10;
+  position: fixed;
+  top: 0;
+  z-index: 900;
   background: #fff;
   box-sizing: border-box;
 }

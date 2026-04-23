@@ -35,7 +35,7 @@
         width: 100%;
         max-width: 1440px;
         margin: 0 auto;
-        min-height: 1906px;
+        min-height: 1430px;
         background: #ffffff;
       }
 
@@ -45,8 +45,10 @@
         align-items: center;
         justify-content: space-between;
         padding: 0px 60px;
-        position: relative;
-        z-index: 10;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 900;
         background: #fff;
       }
 
@@ -116,7 +118,7 @@
       /* ========== HERO SECTION ========== */
       .hero-title {
         text-align: center;
-        margin-top: 60px;
+        margin-top: 90px;
         font-family: "Bricolage Grotesque", sans-serif;
         font-weight: 600;
         font-size: 40px;
@@ -343,16 +345,31 @@
       .right-section {
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        align-items: stretch;
         justify-content: center;
-        align-items: center;
-        align-content: center;
-        gap: 40px;
-        width: 404px;
+        gap: 0;
+        width: 960px;
         flex-shrink: 0;
       }
 
+      .info-divider {
+        width: 2px;
+        background: #000000;
+        flex-shrink: 0;
+        align-self: stretch;
+        min-height: 240px;
+      }
+
       .info-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 36px;
+        flex: 1;
+        padding: 16px 40px;
+      }
+
+      .info-block-inner {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -360,18 +377,10 @@
         width: 100%;
       }
 
-      .info-block-inner {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 32px;
-        width: 376px;
-      }
-
       .info-block-title {
         font-family: "Segoe UI", sans-serif;
         font-weight: 700;
-        font-size: 32px;
+        font-size: 36px;
         line-height: 146%;
         text-align: center;
         letter-spacing: -0.04em;
@@ -382,10 +391,10 @@
       .info-block-text {
         font-family: "Segoe UI", sans-serif;
         font-weight: 400;
-        font-size: 24px;
-        line-height: 146%;
+        font-size: 22px;
+        line-height: 155%;
         text-align: center;
-        letter-spacing: -0.04em;
+        letter-spacing: -0.02em;
         color: #000000;
         width: 100%;
       }
@@ -571,8 +580,7 @@
 
         .right-section {
           width: 100%;
-          max-width: 404px;
-          gap: 80px;
+          max-width: 560px;
         }
 
         .navbar {
@@ -834,9 +842,17 @@
           gap: 32px;
         }
 
+        .info-divider {
+          width: 80%;
+          height: 2px;
+          align-self: center;
+          display: none;
+        }
+
         .info-block {
           width: 100%;
           gap: 16px;
+          padding: 0;
         }
 
         .info-block-inner {
@@ -863,7 +879,7 @@
           max-width: 274px;
         }
 
-        .info-block:nth-child(2) .contact-btn img {
+        .info-block:nth-child(3) .contact-btn img {
           width: 100%;
           max-width: 255px;
         }
@@ -1011,12 +1027,15 @@
 
       /* WhatsApp Button Size */
       .info-block:nth-child(1) .contact-btn img {
-        width: 404px;
+        width: 100%;
+        max-width: 360px;
       }
 
       /* Schedule Call Button Size */
-      .info-block:nth-child(2) .contact-btn img {
-        width: 376px;
+      .info-block:nth-child(3) .contact-btn img {
+        width: 100%;
+        max-width: 340px;
+        margin-top: 22px;
       }
       /* ============================================================
        FOOTER
@@ -1027,6 +1046,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-top: 30px;
       }
 
       body:not(.dark-mode) .footer-svg-dark {
@@ -1305,10 +1325,6 @@
 
       <!-- ========== HERO ========== -->
       <h1 class="hero-title anim-fade-up">Get in touch with us</h1>
-      <p class="hero-subtitle anim-fade-up" style="transition-delay: 0.1s">
-        Fill out the form or schedule a meeting with us at your convenience.
-      </p>
-
       <!-- ========== MAIN CONTENT ========== -->
       <div class="content-area">
         <!-- RIGHT: Info blocks -->
@@ -1318,13 +1334,16 @@
             <div class="info-block-inner">
               <h3 class="info-block-title">For Learners</h3>
               <p class="info-block-text">
-                have any questions regarding course outcomes drop a message at
+                Have any questions regarding course outcomes drop a message at
               </p>
             </div>
             <a href="https://wa.me/message/5LXLO6NRMIFTI1" class="contact-btn">
               <img src="../Resources/LandingPage/join-the-whatsapp.webp" />
             </a>
           </div>
+
+          <!-- Vertical Divider -->
+          <div class="info-divider"></div>
 
           <!-- For Business Owners -->
           <div

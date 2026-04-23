@@ -347,7 +347,7 @@
         justify-content: center;
         align-items: center;
         align-content: center;
-        gap: 129px;
+        gap: 40px;
         width: 404px;
         flex-shrink: 0;
       }
@@ -875,14 +875,14 @@
         }
 
         .contact-via-title {
-          font-size: 24px;
+          font-size: 22px;
           font-weight: 600;
           line-height: 146%;
           letter-spacing: -0.04em;
         }
 
         .contact-via-info {
-          font-size: 16px;
+          font-size: 14px;
           line-height: 176.45%;
           text-align: left;
           padding: 0;
@@ -1271,7 +1271,15 @@
               <circle cx="25.5" cy="27.5" r="2.5" fill="#374957" />
             </svg>
           </div>
-          <button class="login-btn">Login</button>
+          <button
+            class="login-btn"
+            onclick="
+              window.location.href =
+                'https://login.roasschoolofmarketing.com/t/u/activeCourses'
+            "
+          >
+            Login
+          </button>
           <button class="hamburger-menu" aria-label="Menu">
             <span></span>
             <span></span>
@@ -1303,91 +1311,6 @@
 
       <!-- ========== MAIN CONTENT ========== -->
       <div class="content-area">
-        <!-- LEFT: Form -->
-        <form
-          class="form-section"
-          id="contactForm"
-          onsubmit="handleSubmit(event)"
-        >
-          <!-- Full Name -->
-          <div class="form-group anim-fade-left">
-            <label class="form-label"
-              >Full Name <span class="required">*</span></label
-            >
-            <input
-              type="text"
-              class="form-input"
-              placeholder="Enter your full name"
-              required
-            />
-          </div>
-
-          <!-- Number -->
-          <div
-            class="form-group anim-fade-left"
-            style="transition-delay: 0.12s"
-          >
-            <label class="form-label"
-              >Number <span class="required">*</span></label
-            >
-            <div class="phone-input-group">
-              <select class="country-select">
-                <option value="+91">IN ▾</option>
-                <option value="+1">US ▾</option>
-                <option value="+44">UK ▾</option>
-                <option value="+61">AU ▾</option>
-                <option value="+971">AE ▾</option>
-              </select>
-              <input
-                type="tel"
-                class="phone-input"
-                placeholder="Enter Mobile Number"
-                required
-              />
-            </div>
-          </div>
-
-          <!-- Email -->
-          <div
-            class="form-group anim-fade-left"
-            style="transition-delay: 0.24s"
-          >
-            <label class="form-label"
-              >Email Address <span class="required">*</span></label
-            >
-            <input
-              type="email"
-              class="form-input"
-              placeholder="Enter your email"
-              required
-            />
-          </div>
-
-          <!-- Terms -->
-          <div
-            class="terms-group anim-fade-left"
-            style="transition-delay: 0.36s"
-          >
-            <input type="checkbox" class="terms-checkbox" id="termsCheck" />
-            <label class="terms-text" for="termsCheck">
-              I agree with
-              <a href="/terms-and-conditions">Terms &amp; conditions</a>
-            </label>
-          </div>
-
-          <!-- Submit -->
-          <button
-            type="submit"
-            class="submit-btn anim-fade-up"
-            style="transition-delay: 0.45s"
-          >
-            Send a request
-          </button>
-        </form>
-
-        <!-- DIVIDER -->
-        <div class="vertical-divider"></div>
-
         <!-- RIGHT: Info blocks -->
         <div class="right-section">
           <!-- For Learners -->

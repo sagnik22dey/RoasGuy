@@ -19,6 +19,10 @@ async def cartPage() -> HTMLResponse:
     content = _read_html_file("cartPage.html")
     return HTMLResponse(content=content, status_code=200)
 
+@router.get("/fundamentals-of-facebook-ads/students/cart", response_class=HTMLResponse)
+async def checkoutPage() -> HTMLResponse:
+    content = _read_html_file("cartPage_student.html")
+    return HTMLResponse(content=content, status_code=200)
 
 @router.get("/psychology-driven-advanced-meta-ad-course/basic-cart", response_class=HTMLResponse)
 async def basicCart() -> HTMLResponse:

@@ -39,6 +39,11 @@ const COURSE_CONFIG = {
     amount: 24991,
     thankYouPage: "/growth-plan-for-business-owner/business-growth-mastery-plan/thankyou",
   },
+  "fundamentals-of-facebook-ads-student": {
+    name: "Fundamentals of Facebook Ads - Student Plan",
+    amount: 99,
+    thankYouPage: "/fundamentals-of-facebook-ads/thankyou",
+  },
 };
 
 async function initializeRazorpayPayment(courseId) {

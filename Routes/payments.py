@@ -102,6 +102,12 @@ COURSE_PRICES = {
         "amount": 2499100,
         "currency": "INR",
         "price_env": "PRICE_BUSINESS_GROWTH_MASTERY"
+    },
+    "fundamentals-of-facebook-ads-student": {
+        "name": "Fundamentals of Facebook Ads - Student Plan",
+        "amount": 9900,
+        "currency": "INR",
+        "price_env": "PRICE_FUNDAMENTALS_STUDENT"
     }
 }
 

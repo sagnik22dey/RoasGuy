@@ -25,23 +25,39 @@
   --btn-gradient: linear-gradient(90deg, #1acfff 0%, #0076ff 100%);
 
   /* Language Button Variables (Light Mode) */
-  --lang-active-bg: linear-gradient(90deg, #08A4FF 0%, #056299 100%);
-  --lang-active-text: linear-gradient(91.52deg, #FFFFFF -1.64%, #EEEEEE 133.11%);
-  --lang-inactive-bg: linear-gradient(91.52deg, #FFFFFF -1.64%, #EEEEEE 133.11%);
+  --lang-active-bg: linear-gradient(90deg, #08a4ff 0%, #056299 100%);
+  --lang-active-text: linear-gradient(
+    91.52deg,
+    #ffffff -1.64%,
+    #eeeeee 133.11%
+  );
+  --lang-inactive-bg: linear-gradient(
+    91.52deg,
+    #ffffff -1.64%,
+    #eeeeee 133.11%
+  );
   --lang-inactive-text: #000000;
   --lang-inactive-border: 1px solid rgba(0, 0, 0, 0.1);
 
   --blue-strip: #0a93e3;
   --play-btn-bg: rgba(255, 255, 255, 0.86);
   --play-icon-color: #49454f;
-  --end-of-course-bg: linear-gradient(180deg, #08A4FF 0%, #056299 100%);
-  --feature-title-color: linear-gradient(91.52deg, #ffffff -1.64%, #eeeeee 133.11%);
-  --course-section-title-color: linear-gradient(91.52deg, #ffffff -1.64%, #eeeeee 133.11%);
+  --end-of-course-bg: linear-gradient(180deg, #08a4ff 0%, #056299 100%);
+  --feature-title-color: linear-gradient(
+    91.52deg,
+    #ffffff -1.64%,
+    #eeeeee 133.11%
+  );
+  --course-section-title-color: linear-gradient(
+    91.52deg,
+    #ffffff -1.64%,
+    #eeeeee 133.11%
+  );
   --metric-value-color: #000000;
   --faq-icon-color: #000000;
   --mission-wave-color: #000000;
   --guarantee-title-text: #ffffff;
-  --primary-color: #EEEEEE;
+  --primary-color: #eeeeee;
 }
 
 body.dark-mode {
@@ -68,15 +84,35 @@ body.dark-mode {
   --play-icon-color: #000000;
 
   /* Language Button Variables (Dark Mode) */
-  --lang-active-bg: linear-gradient(90deg, #08A4FF 0%, #056299 100%);
-  --lang-active-text: linear-gradient(91.52deg, #FFFFFF -1.64%, #EEEEEE 133.11%);
-  --lang-inactive-bg: linear-gradient(91.52deg, #FFFFFF -1.64%, #EEEEEE 133.11%);
+  --lang-active-bg: linear-gradient(90deg, #08a4ff 0%, #056299 100%);
+  --lang-active-text: linear-gradient(
+    91.52deg,
+    #ffffff -1.64%,
+    #eeeeee 133.11%
+  );
+  --lang-inactive-bg: linear-gradient(
+    91.52deg,
+    #ffffff -1.64%,
+    #eeeeee 133.11%
+  );
   --lang-inactive-text: #000000;
   --lang-inactive-border: none;
-  --end-of-course-bg: linear-gradient(91.52deg, #FFFFFF -1.64%, #EEEEEE 133.11%);
-  --feature-title-color: linear-gradient(91.52deg, #000000 -1.64%, #000000 133.11%);
-  --course-section-title-color: linear-gradient(91.52deg, #000000 -1.64%, #000000 133.11%);
-  --metric-value-color: #FFFFFF;
+  --end-of-course-bg: linear-gradient(
+    91.52deg,
+    #ffffff -1.64%,
+    #eeeeee 133.11%
+  );
+  --feature-title-color: linear-gradient(
+    91.52deg,
+    #000000 -1.64%,
+    #000000 133.11%
+  );
+  --course-section-title-color: linear-gradient(
+    91.52deg,
+    #000000 -1.64%,
+    #000000 133.11%
+  );
+  --metric-value-color: #ffffff;
   --faq-icon-color: #ffffff;
   --mission-wave-color: #ffffff;
   --guarantee-title-text: #000000;
@@ -90,14 +126,16 @@ body.dark-mode {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Lexend', sans-serif;
-  transition: background-color 0.3s ease, color 0.3s ease,
+  font-family: "Lexend", sans-serif;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
     box-shadow 0.3s ease;
 }
 
 /* Font specific simulation for "Neue Montreal" */
 .neue-font {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   letter-spacing: -0.02em;
 }
 
@@ -108,8 +146,7 @@ html {
 body {
   background: var(--hero-bg);
   background-color: var(--bg-body);
-  background-size: var(--bg-size,
-      auto);
+  background-size: var(--bg-size, auto);
   /* Apply grid size only in dark mode */
   width: 100vw;
   min-height: 100vh;
@@ -135,7 +172,9 @@ body {
   padding-right: 8vw;
   box-shadow: var(--nav-shadow);
   z-index: 1000;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .logo-container {
@@ -184,7 +223,9 @@ body.dark-mode .logo-dark {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
   cursor: pointer;
 }
 
@@ -236,11 +277,11 @@ body.dark-mode .logo-dark {
   transition: 0.4s;
 }
 
-input:checked+.slider {
+input:checked + .slider {
   border-color: white;
 }
 
-input:checked+.slider:before {
+input:checked + .slider:before {
   transform: translateX(3vh);
 }
 
@@ -255,7 +296,9 @@ input:checked+.slider:before {
   font-size: 1.8vh;
   font-weight: 600;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .btn-nav:hover {
@@ -289,21 +332,21 @@ input:checked+.slider:before {
   align-items: center;
   padding: 25px 32px;
   gap: 50px;
-  background: linear-gradient(90deg, #1ACFFF 0%, #0076FF 100%);
+  background: linear-gradient(90deg, #1acfff 0%, #0076ff 100%);
   border-radius: 30px;
   height: 35px;
 }
 
 /* Navigation links inside the pill */
 .nav-pill-link {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
   line-height: 40px;
   text-align: center;
   text-decoration: none;
-  background: linear-gradient(91.52deg, #FFFFFF -1.64%, #EEEEEE 133.11%);
+  background: linear-gradient(91.52deg, #ffffff -1.64%, #eeeeee 133.11%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -318,7 +361,11 @@ input:checked+.slider:before {
 .nav-pill-divider {
   width: 1px;
   height: 20px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(238, 238, 238, 0.8) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(238, 238, 238, 0.8) 100%
+  );
   border-radius: 1px;
 }
 
@@ -330,12 +377,14 @@ input:checked+.slider:before {
   align-items: center;
   padding: 25px 25px;
   min-width: 140px;
-  background: #FFFFFF;
-  border: 1.28px solid #08A4FF;
+  width: max-content;
+  white-space: nowrap;
+  background: #ffffff;
+  border: 1.28px solid #08a4ff;
   box-shadow: 0px -5px 10.5px rgba(0, 0, 0, 0.25);
   border-radius: 60px;
   height: 40px;
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -343,7 +392,9 @@ input:checked+.slider:before {
   text-align: center;
   color: #000000;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
   text-decoration: none;
   white-space: nowrap;
 }
@@ -414,14 +465,16 @@ input:checked+.slider:before {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 5px 15px;
+    padding: 5px 5px;
     min-width: 80px;
-    background: #FFFFFF;
-    border: 1.28px solid #08A4FF;
+    width: max-content;
+    white-space: nowrap;
+    background: #ffffff;
+    border: 1.28px solid #08a4ff;
     box-shadow: 0px -5px 10.5px rgba(0, 0, 0, 0.25);
     border-radius: 60px;
     height: 30px;
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -429,7 +482,9 @@ input:checked+.slider:before {
     text-align: center;
     color: #000000;
     cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
     text-decoration: none;
     white-space: nowrap;
   }
@@ -451,7 +506,6 @@ input:checked+.slider:before {
     height: 12px;
   }
 
-
   /* Hero Section Mobile Adjustments */
   .hero-content {
     flex-direction: column;
@@ -472,16 +526,17 @@ input:checked+.slider:before {
   /* Hero CTA Button - Show as text button on mobile (image hidden, text visible) */
   .btn-hero {
     position: static;
-    width: 256px;
+    width: max-content;
+    padding: 0 30px;
     height: 58px;
-    background: linear-gradient(90deg, #1ACFFF 0%, #0076FF 100%);
+    background: linear-gradient(90deg, #1acfff 0%, #0076ff 100%);
     border-radius: 67px;
     margin: 30px auto 0;
     display: flex;
     justify-content: center;
     align-items: center;
     order: 3;
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     font-weight: 600;
     font-size: 20px;
     color: white;
@@ -496,8 +551,8 @@ input:checked+.slider:before {
   }
 
   .btn-hero::after {
-    content: 'Enroll Now';
-    font-family: 'Lexend', sans-serif;
+    content: "Enroll Now";
+    font-family: "Lexend", sans-serif;
     font-weight: 600;
     font-size: 20px;
     color: white;
@@ -505,7 +560,6 @@ input:checked+.slider:before {
 }
 
 @media (max-width: 480px) {
-
   /* Mobile-specific color overrides for guarantee title text */
   :root {
     --guarantee-title-text: #000000;
@@ -545,7 +599,6 @@ input:checked+.slider:before {
   .nav-pill-divider {
     height: 10px;
   }
-
 
   /* ... (Existing Navbar overrides) ... - Keeping them valid if needed, or simply appending the new rules */
 
@@ -611,7 +664,7 @@ input:checked+.slider:before {
     bottom: 0.15vh;
   }
 
-  input:checked+.slider:before {
+  input:checked + .slider:before {
     transform: translateX(18px);
   }
 
@@ -664,10 +717,9 @@ input:checked+.slider:before {
   .play-icon {
     width: 42px;
     height: 46px;
-    fill: #49454F;
+    fill: #49454f;
   }
 }
-
 
 /* =========================================
        HERO SECTION
@@ -751,7 +803,7 @@ input:checked+.slider:before {
 }
 
 .video-card-wrapper::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
@@ -849,7 +901,7 @@ input:checked+.slider:before {
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -913,7 +965,7 @@ body.dark-mode .lang-btn.active:hover {
 }
 
 .hero-title {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 50px;
@@ -927,7 +979,7 @@ body.dark-mode .lang-btn.active:hover {
 }
 
 .hero-desc {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -993,7 +1045,7 @@ body.dark-mode .lang-btn.active:hover {
 }
 
 .beginner-title {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 40px;
@@ -1021,11 +1073,13 @@ body.dark-mode .lang-btn.active:hover {
   width: 80vw;
   max-width: 1000px;
   height: 1px;
-  background: linear-gradient(90deg,
-      transparent 0%,
-      var(--text-main) 20%,
-      var(--text-main) 80%,
-      transparent 100%);
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--text-main) 20%,
+    var(--text-main) 80%,
+    transparent 100%
+  );
   opacity: 0.3;
 }
 
@@ -1079,13 +1133,13 @@ body.dark-mode .lang-btn.active:hover {
 
 /* Card Title */
 .card-title {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
   line-height: 30px;
   text-align: center;
-  color: #08A4FF;
+  color: #08a4ff;
   position: relative;
 }
 
@@ -1096,7 +1150,7 @@ body.dark-mode .lang-btn.active:hover {
 
 /* Card Description */
 .card-desc {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 23px;
@@ -1111,7 +1165,7 @@ body.dark-mode .card-image {
 }
 
 body.dark-mode .card-title {
-  color: #1ACFFF;
+  color: #1acfff;
 }
 
 /* =========================================
@@ -1144,7 +1198,7 @@ body.dark-mode .card-title {
 }
 
 .course-section-title {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-size: 55px;
   font-weight: 600;
   line-height: 69px;
@@ -1194,7 +1248,7 @@ body.dark-mode .card-title {
   position: absolute;
   width: 238px;
   height: 238px;
-  background: #E6E6E6;
+  background: #e6e6e6;
   border-radius: 50%;
   z-index: 0;
 }
@@ -1214,7 +1268,7 @@ body.dark-mode .card-title {
 
 /* Feature Title */
 .feature-title {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
@@ -1229,7 +1283,7 @@ body.dark-mode .card-title {
 
 /* Feature Description */
 .feature-desc {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -1280,7 +1334,7 @@ body.dark-mode .card-title {
 }
 
 .curriculum-title {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 40px;
@@ -1292,7 +1346,7 @@ body.dark-mode .card-title {
 }
 
 .curriculum-subtitle {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -1332,7 +1386,7 @@ body.dark-mode .card-title {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #08A4FF;
+  background: #08a4ff;
   border-radius: 18px;
   top: 8px;
   left: 8px;
@@ -1344,7 +1398,7 @@ body.dark-mode .card-title {
   position: relative;
   width: 100%;
   min-height: 192px;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 2px solid #000000;
   border-radius: 18px;
   display: flex;
@@ -1357,7 +1411,7 @@ body.dark-mode .card-title {
 
 /* Card Number */
 .curriculum-card .card-number {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 87px;
@@ -1365,7 +1419,7 @@ body.dark-mode .card-title {
   display: flex;
   align-items: center;
   text-align: center;
-  color: #08A4FF;
+  color: #08a4ff;
   min-width: 130px;
 }
 
@@ -1387,7 +1441,7 @@ body.dark-mode .card-title {
 
 /* Card Title */
 .curriculum-card-title {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -1398,7 +1452,7 @@ body.dark-mode .card-title {
 
 /* Card List */
 .curriculum-card-list {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -1419,12 +1473,12 @@ body.dark-mode .card-title {
 
 /* Dark Mode Adjustments for Curriculum */
 body.dark-mode .curriculum-card .card-content {
-  background: #FFFFFF;
+  background: #ffffff;
   border-color: #000000;
 }
 
 body.dark-mode .curriculum-card .card-number {
-  color: #08A4FF;
+  color: #08a4ff;
 }
 
 body.dark-mode .curriculum-card-title,
@@ -1457,17 +1511,17 @@ body.dark-mode .curriculum-card .card-separator {
 }
 
 .guarantee-title-our {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 40px;
   line-height: 50px;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .guarantee-title-box {
-  background: #08A4FF;
+  background: #08a4ff;
   padding: 10px 40px;
   display: flex;
   align-items: center;
@@ -1475,7 +1529,7 @@ body.dark-mode .curriculum-card .card-separator {
 }
 
 .guarantee-title-text {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 40px;
@@ -1485,13 +1539,13 @@ body.dark-mode .curriculum-card .card-separator {
 }
 
 .guarantee-description {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 26px;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
   max-width: 1077px;
 }
 
@@ -1501,13 +1555,13 @@ body.dark-mode .curriculum-card .card-separator {
   justify-content: center;
   align-items: center;
   position: relative;
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 26px;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .refund-highlight {
@@ -1574,7 +1628,7 @@ body:not(.dark-mode) .guarantee-refund {
 }
 
 .mission-title {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 40px;
@@ -1599,7 +1653,7 @@ body:not(.dark-mode) .guarantee-refund {
 }
 
 .mission-text {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -1616,14 +1670,13 @@ body:not(.dark-mode) .guarantee-refund {
   font-weight: 600;
 }
 
-
 /* Instructor Card */
 .instructor-card {
   position: relative;
   width: 100%;
   max-width: 1260px;
   height: 606px;
-  background: #FCFCFC;
+  background: #fcfcfc;
   box-shadow: 11px 13px 21.3px rgba(0, 0, 0, 0.25);
   border-radius: 78px;
   display: flex;
@@ -1643,16 +1696,16 @@ body:not(.dark-mode) .guarantee-refund {
 }
 
 .instructor-label {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 30px;
-  color: #08A4FF;
+  color: #08a4ff;
 }
 
 .instructor-name {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 40px;
@@ -1661,7 +1714,7 @@ body:not(.dark-mode) .guarantee-refund {
 }
 
 .instructor-bio {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -1694,7 +1747,7 @@ body:not(.dark-mode) .guarantee-refund {
 
 /* Dark Mode Adjustments for ROAS Mission */
 body.dark-mode .instructor-card {
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 11px 13px 21.3px rgba(0, 0, 0, 0.4);
 }
 
@@ -1733,13 +1786,13 @@ body.dark-mode .instructor-bio {
   align-items: center;
   padding: 0px 20px;
   gap: 10px;
-  background: #08A4FF;
+  background: #08a4ff;
   height: 72px;
   min-width: 845px;
 }
 
 .proof-title-text {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 55px;
@@ -1759,7 +1812,7 @@ body.dark-mode .instructor-bio {
 
 /* Subtitle */
 .proof-subtitle {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 900;
   font-size: 32px;
@@ -1831,7 +1884,7 @@ body.dark-mode .instructor-bio {
   height: 360px;
   left: 8px;
   top: 8px;
-  background: #08A4FF;
+  background: #08a4ff;
   z-index: 0;
 }
 
@@ -1844,7 +1897,7 @@ body.dark-mode .instructor-bio {
   border: 3.42px solid #000000;
   overflow: hidden;
   z-index: 1;
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 .card-image-content img {
@@ -1902,16 +1955,16 @@ body.dark-mode .instructor-bio {
 }
 
 .metric-label {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
-  color: #08A4FF;
+  color: #08a4ff;
 }
 
 .metric-value {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -1950,7 +2003,7 @@ body.dark-mode .proof-title-text {
 }
 
 .additional-access-title {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-weight: 600;
   font-size: 40px;
   line-height: 50px;
@@ -2004,10 +2057,9 @@ body.dark-mode .proof-title-text {
   text-align: left;
 }
 
-
 /* Item 4: Highlighted with blue background */
 .access-item.item-highlighted {
-  background: #08A4FF;
+  background: #08a4ff;
   padding: 40px 50px;
   border-radius: 0;
   flex-direction: row;
@@ -2027,7 +2079,7 @@ body.dark-mode .proof-title-text {
 }
 
 .access-item.item-highlighted .free-badge {
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 /* Access Item Image */
@@ -2054,7 +2106,6 @@ body.dark-mode .proof-title-text {
   transform: rotate(15deg);
 }
 
-
 /* Access Item Content */
 .access-item-content {
   display: flex;
@@ -2074,7 +2125,7 @@ body.dark-mode .proof-title-text {
 }
 
 .original-price {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-weight: 600;
   font-size: 40px;
   line-height: 50px;
@@ -2083,7 +2134,7 @@ body.dark-mode .proof-title-text {
 }
 
 .free-badge {
-  background: #08A4FF;
+  background: #08a4ff;
   padding: 6px 24px;
   display: flex;
   align-items: center;
@@ -2091,7 +2142,7 @@ body.dark-mode .proof-title-text {
 }
 
 .free-text {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-weight: 600;
   font-size: 32px;
   line-height: 40px;
@@ -2101,7 +2152,7 @@ body.dark-mode .proof-title-text {
 
 /* Access Item Title */
 .access-item-title {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-weight: 600;
   font-size: 32px;
   line-height: 40px;
@@ -2111,7 +2162,7 @@ body.dark-mode .proof-title-text {
 
 /* Access Item Description */
 .access-item-desc {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 28px;
@@ -2121,15 +2172,15 @@ body.dark-mode .proof-title-text {
 
 /* Dark Mode Adjustments for Additional Access */
 body.dark-mode .access-item-title {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 body.dark-mode .access-item-desc {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 body.dark-mode .original-price {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 body.dark-mode .access-item.item-highlighted .original-price,
@@ -2641,7 +2692,6 @@ body.dark-mode .access-item.item-highlighted .access-item-desc {
            Theme Toggle Mobile Styles
            ========================================= */
 @media (max-width: 480px) {
-
   /* Mobile Navbar */
   .navbar {
     height: 53px;
@@ -2672,7 +2722,7 @@ body.dark-mode .access-item.item-highlighted .access-item-desc {
     bottom: 0.15vh;
   }
 
-  input:checked+.slider:before {
+  input:checked + .slider:before {
     transform: translateX(18px);
   }
 
@@ -2833,12 +2883,12 @@ body.dark-mode .access-item.item-highlighted .access-item-desc {
   }
 
   .curriculum-card .card-number {
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     font-weight: 700;
     font-size: 36px;
     line-height: 49px;
     min-width: 44px;
-    color: #08A4FF;
+    color: #08a4ff;
   }
 
   .curriculum-card .card-separator {
@@ -2922,7 +2972,7 @@ body.dark-mode .access-item.item-highlighted .access-item-desc {
   }
 
   .mission-title {
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 32px;
@@ -2933,7 +2983,7 @@ body.dark-mode .access-item.item-highlighted .access-item-desc {
   }
 
   .mission-text {
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -2949,7 +2999,7 @@ body.dark-mode .access-item.item-highlighted .access-item-desc {
     max-width: 100%;
     height: 1100px;
     margin: 0 auto;
-    background: #FCFCFC;
+    background: #fcfcfc;
     box-shadow: 11px 13px 21.3px rgba(0, 0, 0, 0.25);
     border-radius: 47px;
     flex-direction: column;
@@ -2964,16 +3014,16 @@ body.dark-mode .access-item.item-highlighted .access-item-desc {
   }
 
   .instructor-label {
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 25px;
-    color: #08A4FF;
+    color: #08a4ff;
   }
 
   .instructor-name {
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 25px;
@@ -2982,7 +3032,7 @@ body.dark-mode .access-item.item-highlighted .access-item-desc {
   }
 
   .instructor-bio {
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 17px;
@@ -3033,7 +3083,7 @@ body.dark-mode .access-item.item-highlighted .access-item-desc {
     height: 43px;
 
     /* Background */
-    background: #08A4FF;
+    background: #08a4ff;
     border-radius: 0;
     /* Assuming no radius from image, or default */
   }
@@ -3043,14 +3093,14 @@ body.dark-mode .access-item.item-highlighted .access-item-desc {
     width: 336px;
     height: 30px;
 
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
     line-height: 30px;
     text-align: center;
 
-    color: #FFFFFF;
+    color: #ffffff;
 
     flex: none;
     order: 0;
@@ -3066,7 +3116,7 @@ body.dark-mode .access-item.item-highlighted .access-item-desc {
     /* Allow auto height for wrapping if needed, but spec says 50px */
     min-height: 50px;
 
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 19px;
@@ -3177,7 +3227,7 @@ body.dark-mode .access-item.item-highlighted .access-item-desc {
   .metric-label {
     font-size: 17px;
     line-height: 22px;
-    color: #08A4FF;
+    color: #08a4ff;
     font-weight: 600;
   }
 
@@ -3267,12 +3317,12 @@ body.dark-mode .access-item.item-highlighted .access-item-desc {
 
 .get-certified-section {
   padding: 80px 8vw;
-  background-color: #F4F4F4;
+  background-color: #f4f4f4;
   /* Beige for light mode */
 }
 
 body.dark-mode .get-certified-section {
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
   /* Light gray for dark mode */
 }
 
@@ -3310,7 +3360,7 @@ body.dark-mode .get-certified-title {
 }
 
 .certified-highlight {
-  color: #08A4FF;
+  color: #08a4ff;
 }
 
 .certified-objects {
@@ -3362,7 +3412,7 @@ body.dark-mode .get-certified-image .certificate-light {
 
 body.dark-mode .get-certified-image .certificate-dark {
   display: block;
-  border-color: #0D1B2A;
+  border-color: #0d1b2a;
 }
 
 .certification-benefits {
@@ -3417,9 +3467,11 @@ body.dark-mode .benefit-item span {
   align-items: center;
   padding: 9.72px 11.47px 8.77px;
   gap: 6.74px;
-  width: 255.6px;
+  width: max-content;
+  padding-left: 30px;
+  padding-right: 30px;
   height: 58px;
-  background: linear-gradient(90deg, #1ACFFF 0%, #0076FF 100%);
+  background: linear-gradient(90deg, #1acfff 0%, #0076ff 100%);
   border-radius: 67.44px;
   border: none;
   cursor: pointer;
@@ -3439,13 +3491,12 @@ body.dark-mode .benefit-item span {
   font-size: 32.37px;
   line-height: 40px;
   text-align: center;
-  background: linear-gradient(91.52deg, #FFFFFF -1.64%, #EEEEEE 133.11%);
+  background: linear-gradient(91.52deg, #ffffff -1.64%, #eeeeee 133.11%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-decoration: none;
 }
-
 
 /* Responsive Styles */
 @media (max-width: 1200px) {
@@ -3507,7 +3558,9 @@ body.dark-mode .benefit-item span {
   }
 
   .btn-enroll-cert {
-    width: 220px;
+    width: max-content;
+    padding-left: 20px;
+    padding-right: 20px;
     height: 50px;
     text-decoration: none;
   }
@@ -3583,7 +3636,9 @@ body.dark-mode .benefit-item span {
 
   .btn-enroll-cert {
     order: 5;
-    width: 180px;
+    width: max-content;
+    padding-left: 15px;
+    padding-right: 15px;
     height: 44px;
     text-decoration: none;
   }
@@ -3641,7 +3696,7 @@ body.dark-mode .benefit-item span {
 }
 
 .no-nonsense-title {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 40px;
@@ -3650,7 +3705,7 @@ body.dark-mode .benefit-item span {
 }
 
 .no-nonsense-title .highlight-blue {
-  color: #08A4FF;
+  color: #08a4ff;
 }
 
 /* Features Container */
@@ -3672,16 +3727,16 @@ body.dark-mode .benefit-item span {
 }
 
 .feature-heading {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 30px;
-  color: #08A4FF;
+  color: #08a4ff;
 }
 
 .feature-description {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -3697,9 +3752,11 @@ body.dark-mode .benefit-item span {
   align-items: center;
   padding: 9.57px 12.51px;
   gap: 7.36px;
-  width: 279px;
+  width: max-content;
+  padding-left: 30px;
+  padding-right: 30px;
   height: 63.31px;
-  background: linear-gradient(90deg, #1ACFFF 0%, #0076FF 100%);
+  background: linear-gradient(90deg, #1acfff 0%, #0076ff 100%);
   border-radius: 73.61px;
   border: none;
   cursor: pointer;
@@ -3712,13 +3769,13 @@ body.dark-mode .benefit-item span {
 }
 
 .btn-enroll-text {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 35.34px;
   line-height: 44px;
   text-align: center;
-  background: linear-gradient(91.52deg, #FFFFFF -1.64%, #EEEEEE 133.11%);
+  background: linear-gradient(91.52deg, #ffffff -1.64%, #eeeeee 133.11%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -3807,7 +3864,9 @@ body.dark-mode .benefit-item span {
   }
 
   .btn-enroll-no-nonsense {
-    width: 240px;
+    width: max-content;
+    padding-left: 20px;
+    padding-right: 20px;
     height: 55px;
   }
 
@@ -3848,7 +3907,9 @@ body.dark-mode .benefit-item span {
   }
 
   .btn-enroll-no-nonsense {
-    width: 200px;
+    width: max-content;
+    padding-left: 15px;
+    padding-right: 15px;
     height: 48px;
   }
 
@@ -3867,12 +3928,12 @@ body.dark-mode .benefit-item span {
   flex-direction: column;
   align-items: center;
   padding: 80px 8vw;
-  background-color: #F4F4F4;
+  background-color: #f4f4f4;
   /* Light mode background */
 }
 
 body.dark-mode .course-for-you-section {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   /* Dark mode background - white */
 }
 
@@ -3905,16 +3966,16 @@ body.dark-mode .course-for-you-section {
   padding: 0px 20px;
   gap: 10px;
   height: 59px;
-  background: #08A4FF;
+  background: #08a4ff;
 }
 
 .course-for-you-header-text {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 40px;
   line-height: 55px;
-  background: linear-gradient(91.52deg, #FFFFFF -1.64%, #EEEEEE 133.11%);
+  background: linear-gradient(91.52deg, #ffffff -1.64%, #eeeeee 133.11%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -3931,12 +3992,12 @@ body.dark-mode .course-for-you-section {
 }
 
 .course-not-for-you-header {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 40px;
   line-height: 55px;
-  color: #08A4FF;
+  color: #08a4ff;
   margin: 0;
   padding: 0;
 }
@@ -3977,7 +4038,7 @@ body.dark-mode .course-for-you-divider {
 
 /* Item Text */
 .course-for-you-text {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -4149,17 +4210,24 @@ body.dark-mode .course-for-you-text {
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap");
 
 :root {
-  --faq-blue: #08A4FF;
-  --line: rgba(255, 255, 255, .75);
+  --faq-blue: #08a4ff;
+  --line: rgba(255, 255, 255, 0.75);
   --bg: #0b0b0b;
 
-  --grad: linear-gradient(91.52deg, #FFFFFF -1.64%, #EEEEEE 133.11%);
+  --grad: linear-gradient(91.52deg, #ffffff -1.64%, #eeeeee 133.11%);
 }
 
 .faq-section {
   background: var(--bg);
   padding: 80px 24px;
-  font-family: "Lexend", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family:
+    "Lexend",
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
 }
 
 .faq-wrap {
@@ -4241,7 +4309,10 @@ body.dark-mode .course-for-you-text {
   /* closed state like your figma plus icon */
   transform: translate(-50%, -50%);
   border-radius: 999px;
-  transition: transform .2s ease, opacity .2s ease, background .2s ease;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    background 0.2s ease;
 }
 
 .faq-icon::after {
@@ -4268,14 +4339,14 @@ body.dark-mode .course-for-you-text {
 
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows .25s ease;
+  transition: grid-template-rows 0.25s ease;
 }
 
 .faq-item[open] .faq-panel {
   grid-template-rows: 1fr;
 }
 
-.faq-panel>* {
+.faq-panel > * {
   overflow: hidden;
 }
 
@@ -4466,7 +4537,7 @@ body.dark-mode .footer-image .footer-svg-dark {
 .original-price {
   position: relative;
   display: inline-block;
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 40px;
@@ -4490,12 +4561,12 @@ body.dark-mode .footer-image .footer-svg-dark {
   justify-content: center;
   align-items: center;
   padding: 4px 16px;
-  background: #08A4FF;
+  background: #08a4ff;
   border-radius: 4px;
 }
 
 .free-text {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -4541,7 +4612,6 @@ body.dark-mode .footer-image .footer-svg-dark {
    ========================================= */
 
 @media (max-width: 480px) {
-
   /* Hero Container */
   .hero-container {
     /* Match navbar height */
@@ -4601,7 +4671,6 @@ body.dark-mode .footer-image .footer-svg-dark {
     font-style: italic;
   }
 
-
   /* Video Column - Order 2 (after text) */
   .video-col {
     width: 100%;
@@ -4658,7 +4727,7 @@ body.dark-mode .footer-image .footer-svg-dark {
 
   /* Language Toggle Container with Background - Extends from video */
   .video-col::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -4694,7 +4763,7 @@ body.dark-mode .footer-image .footer-svg-dark {
   }
 
   .lang-btn.active {
-    background: linear-gradient(90deg, #08A4FF 0%, #056299 100%);
+    background: linear-gradient(90deg, #08a4ff 0%, #056299 100%);
   }
 
   .lang-btn.active span {
@@ -4702,7 +4771,7 @@ body.dark-mode .footer-image .footer-svg-dark {
   }
 
   .lang-btn:not(.active) {
-    background: linear-gradient(91.52deg, #FFFFFF -1.64%, #EEEEEE 133.11%);
+    background: linear-gradient(91.52deg, #ffffff -1.64%, #eeeeee 133.11%);
     border: 0.55px solid #000000;
   }
 
@@ -4717,7 +4786,7 @@ body.dark-mode .footer-image .footer-svg-dark {
     height: 58.09px;
     padding: 9.73px 11.48px 8.78px;
     gap: 6.75px;
-    background: linear-gradient(90deg, #1ACFFF 0%, #0076FF 100%);
+    background: linear-gradient(90deg, #1acfff 0%, #0076ff 100%);
     border-radius: 67.55px;
     position: static !important;
     left: auto !important;
@@ -4865,7 +4934,7 @@ body.dark-mode .icon-dark {
   /* Title */
   .access-item-title {
     order: 1;
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     font-weight: 600;
     font-size: 26px;
     line-height: 30px;
@@ -4877,7 +4946,7 @@ body.dark-mode .icon-dark {
   /* Description */
   .access-item-desc {
     order: 2;
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     font-weight: 400;
     font-size: 19px;
     line-height: 24px;
@@ -4907,7 +4976,7 @@ body.dark-mode .icon-dark {
   }
 
   .original-price {
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     font-weight: 600;
     font-size: 24.4px;
     /* 24.4039px rounded */
@@ -4934,7 +5003,7 @@ body.dark-mode .icon-dark {
     width: 78.09px;
     height: 31.95px;
     padding: 0;
-    background: #08A4FF;
+    background: #08a4ff;
     border-radius: 0;
     display: flex;
     justify-content: center;
@@ -4942,7 +5011,7 @@ body.dark-mode .icon-dark {
   }
 
   .free-text {
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     font-weight: 600;
     font-size: 24.4px;
     line-height: 31px;
@@ -4973,7 +5042,6 @@ body.dark-mode .icon-dark {
 }
 
 @media (max-width: 768px) {
-
   /* Show mobile underline image */
   .course-underline-mobile-img {
     display: block;
@@ -5053,7 +5121,7 @@ body.dark-mode .footer-logo.logo-dark {
 }
 
 .footer-tagline {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-size: 14px;
   color: var(--text-main);
   opacity: 0.8;
@@ -5068,7 +5136,7 @@ body.dark-mode .footer-logo.logo-dark {
 
 .footer-links-title,
 .footer-contact-title {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-size: 18px;
   font-weight: 600;
   color: var(--text-main);
@@ -5085,7 +5153,7 @@ body.dark-mode .footer-logo.logo-dark {
 }
 
 .footer-links-list li a {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-size: 16px;
   color: var(--text-main);
   text-decoration: none;
@@ -5093,7 +5161,7 @@ body.dark-mode .footer-logo.logo-dark {
 }
 
 .footer-links-list li a:hover {
-  color: #08A4FF;
+  color: #08a4ff;
 }
 
 .footer-contact {
@@ -5104,13 +5172,13 @@ body.dark-mode .footer-logo.logo-dark {
 
 .footer-contact-phone,
 .footer-contact-email {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-size: 14px;
   color: var(--text-main);
 }
 
 .footer-contact-email a {
-  color: #08A4FF;
+  color: #08a4ff;
   text-decoration: none;
 }
 
@@ -5127,7 +5195,7 @@ body.dark-mode .footer-logo.logo-dark {
 }
 
 .footer-bottom p {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-size: 14px;
   color: var(--text-main);
   opacity: 0.7;

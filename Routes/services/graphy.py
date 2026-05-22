@@ -25,6 +25,7 @@ GRAPHY_API_KEY = os.getenv("GRAPHY_API_KEY")
 
 COURSE_GRAPHY_PRODUCT_MAP = {
     "fundamentals-of-facebook-ads": os.getenv("GRAPHY_PRODUCT_FUNDAMENTALS", ""),
+    "fundamentals-of-facebook-ads-student": os.getenv("GRAPHY_PRODUCT_FUNDAMENTALS", ""),
     "business-growth-plan": os.getenv("GRAPHY_PRODUCT_BUSINESS_GROWTH", ""),
     "value-plan": os.getenv("GRAPHY_PRODUCT_VALUE_PLAN", ""),
     "master-creative-targeting-base": os.getenv("GRAPHY_PRODUCT_MCT_BASE", ""),

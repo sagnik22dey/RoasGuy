@@ -1,0 +1,112 @@
+@import url("tokens.css");
+
+.ty {
+  min-height: 2650px;
+  padding-bottom: 0;
+}
+
+.ty-topbar {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: 35px;
+  background: linear-gradient(124deg, #487fd5 0%, #b47dda 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ty-topbar span {
+  color: var(--text-on-grad);
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.ty-hero {
+  position: relative;
+  width: 100%;
+  height: 548px;
+  margin-top: -35px;
+  padding-top: 35px;
+  background: url("../images/thankyou-hero-bg.png") center top / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ty-hero img {
+  width: 445px;
+  height: auto;
+  margin-top: 27px;
+}
+
+.ty-body {
+  position: relative;
+  z-index: 2;
+  margin-top: -160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  padding: 0 120px;
+}
+
+.ty-title {
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 1.1;
+}
+
+.ty-sub {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.ty-important {
+  margin-top: 48px;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.ty-important .hot {
+  color: var(--accent-red);
+}
+
+.ty-list {
+  list-style: none;
+  text-align: left;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.8;
+}
+
+.ty-cta {
+  margin-top: 24px;
+  width: 403px;
+  height: 61px;
+  border: none;
+  border-radius: 64px;
+  background: var(--grad-whatsapp);
+  box-shadow: var(--shadow-whatsapp);
+  color: var(--text-on-grad);
+  font-weight: 600;
+  font-size: 22px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.ty-footer {
+  margin-top: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ty-footer img {
+  width: 1426px;
+  height: auto;
+}

@@ -1,0 +1,56 @@
+:root {
+  --page-bg: #f8f8ff;
+  --text-main: #000000;
+  --text-on-grad: #ffffff;
+  --accent-red: #ff0000;
+
+  --grad-enroll: linear-gradient(90deg, #1acfff 0%, #0076ff 100%);
+  --grad-whatsapp: linear-gradient(181deg, #46cc5e 0%, #1f991e 100%);
+  --grad-bar: linear-gradient(180deg, #487fd5 0%, #b47dda 100%);
+  --grad-card: linear-gradient(-90deg, #cbecff, #fce2ff);
+  --grad-stroke: linear-gradient(90deg, #56c4ff, #f183ff);
+
+  --shadow-soft: 4.3px 4.3px 7.1px rgba(0, 0, 0, 0.25);
+  --shadow-card: 6px 6px 10.7px rgba(0, 0, 0, 0.29);
+  --shadow-whatsapp: 2.5px 5.7px 15.1px rgba(8, 164, 255, 0.48);
+
+  --font: "Instrument Sans", sans-serif;
+  --frame-w: 1440px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--page-bg);
+  color: var(--text-main);
+}
+
+.frame {
+  position: relative;
+  width: var(--frame-w);
+  zoom: calc(100% / 1440);
+  background: var(--page-bg);
+  overflow: hidden;
+}
+
+.btn-enroll {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--grad-enroll);
+  color: var(--text-on-grad);
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}

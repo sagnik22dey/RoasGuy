@@ -1,0 +1,387 @@
+@import url("tokens.css");
+
+.dk {
+  height: 12656px;
+}
+
+.abs {
+  position: absolute;
+}
+
+/* ---------- nav ---------- */
+.dk-nav {
+  top: 0;
+  left: 0;
+  width: 1440px;
+  height: 70px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+  z-index: 6;
+}
+
+.dk-logo {
+  display: flex;
+  align-items: center;
+}
+
+.dk-logo img {
+  width: 143px;
+  height: auto;
+}
+
+.dk-register {
+  width: 168px;
+  height: 46px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+/* ---------- refund sub-bar ---------- */
+.dk-topbar {
+  top: 70px;
+  left: 0;
+  width: 1440px;
+  height: 35px;
+  background: linear-gradient(90deg, #3f7fd6 0%, #b07cd9 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.dk-topbar span {
+  color: #fff;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+/* ---------- hero ---------- */
+.dk-hero {
+  top: 105px;
+  left: 0;
+  width: 1440px;
+  height: 618px;
+  overflow: hidden;
+  background: url("../images/hero-bg.png") left center / 1604px auto no-repeat;
+}
+
+.dk-hero-text {
+  top: 100px;
+  left: 90px;
+  width: 560px;
+  z-index: 3;
+}
+
+.dk-hero-text h1 {
+  font-weight: 600;
+  font-size: 58px;
+  line-height: 1.1;
+  color: #111;
+}
+
+.dk-hero-text h1 .accent {
+  color: #7b6cf0;
+}
+
+.dk-hero-text .sub {
+  margin-top: 22px;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.35;
+  color: #1a1a1a;
+  max-width: 470px;
+}
+
+.dk-hero-text .meta {
+  margin-top: 26px;
+  font-weight: 500;
+  font-size: 17px;
+  color: #222;
+}
+
+.dk-hero-text .time {
+  margin-top: 22px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #111;
+}
+
+.dk-hero-cta {
+  margin-top: 22px;
+  height: 56px;
+  padding: 0 30px;
+  border-radius: 12px;
+  font-size: 21px;
+}
+
+/* ---------- generic section heading ---------- */
+.sec-head {
+  width: 1440px;
+  text-align: center;
+}
+
+.sec-head h2 {
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 1.1;
+}
+
+.divider {
+  width: 120px;
+  height: 4px;
+  margin: 18px auto 0;
+  border-radius: 4px;
+  background: var(--grad-bar);
+}
+
+/* ---------- problem reframe ---------- */
+.problem-head {
+  top: 1988px;
+  left: 0;
+}
+
+.problem-imgs {
+  top: 2144px;
+  left: 0;
+  width: 1440px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.problem-imgs img {
+  width: 300px;
+  height: auto;
+  border-radius: 16px;
+}
+
+/* ---------- what you'll learn ---------- */
+.learn-head {
+  top: 3751px;
+  left: 0;
+}
+
+.learn-sub {
+  top: 3887px;
+  left: 0;
+  width: 1440px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.learn-block {
+  top: 3985px;
+  left: 186px;
+  width: 1068px;
+  background: var(--grad-card);
+  border-radius: 20px;
+  box-shadow: var(--shadow-card);
+  padding: 40px 56px;
+}
+
+.learn-block ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 40px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.learn-block li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.cta-center {
+  width: 1440px;
+  display: flex;
+  justify-content: center;
+}
+
+.cta-center .btn-enroll {
+  width: 320px;
+  height: 64px;
+  font-size: 22px;
+}
+
+.learn-cta {
+  top: 4516px;
+  left: 0;
+}
+
+/* ---------- results / testimonials ---------- */
+.results-head {
+  top: 4698px;
+  left: 0;
+}
+
+.testimonials {
+  top: 4960px;
+  left: 0;
+  width: 1440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.testimonials img {
+  width: 1059px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: var(--shadow-soft);
+}
+
+.results-cta {
+  top: 7777px;
+  left: 0;
+}
+
+/* ---------- what makes different ---------- */
+.diff-head {
+  top: 7971px;
+  left: 0;
+}
+
+.diff-block {
+  top: 8200px;
+  left: 0;
+  width: 1440px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.diff-block img {
+  width: 300px;
+  height: auto;
+  border-radius: 16px;
+}
+
+.diff-card {
+  top: 8420px;
+  left: 542px;
+  width: 356px;
+  height: 418px;
+  border-radius: 15px;
+  padding: 4px;
+  background: var(--grad-stroke);
+}
+
+.diff-card .inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: var(--page-bg);
+}
+
+/* ---------- about trainer ---------- */
+.trainer-head {
+  top: 8921px;
+  left: 0;
+}
+
+.trainer-card {
+  top: 9114px;
+  left: 180px;
+  width: 1081px;
+  min-height: 376px;
+  background: var(--grad-card);
+  border-radius: 20px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  gap: 40px;
+  padding: 32px;
+  align-items: center;
+}
+
+.trainer-card img {
+  width: 300px;
+  height: auto;
+  border-radius: 16px;
+}
+
+.trainer-card .bio {
+  flex: 1;
+}
+
+.trainer-card .bio h3 {
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.trainer-card .bio p {
+  margin-top: 14px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* ---------- pricing ---------- */
+.pricing-head {
+  top: 9574px;
+  left: 0;
+}
+
+.pricing-block {
+  top: 9719px;
+  left: 246px;
+  width: 949px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.pricing-cta {
+  top: 10597px;
+  left: 0;
+}
+
+.pricing-cta .btn-enroll {
+  width: 498px;
+  height: 77px;
+  font-size: 26px;
+}
+
+/* ---------- FAQ ---------- */
+.faq {
+  top: 10780px;
+  left: 246px;
+  width: 947px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: var(--shadow-soft);
+  padding: 20px 28px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+/* ---------- footer ---------- */
+.footer-contact {
+  top: 11762px;
+  left: 0;
+  width: 1440px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.footer-banner {
+  top: 11987px;
+  left: 7px;
+  width: 1426px;
+  height: auto;
+}

@@ -1,131 +1,640 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Roasguy — Desktop Landing</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/desktop.css" />
-</head>
-<body>
-  <div class="frame dk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roasguy — Desktop Landing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/figma_reference/css/desktop.css" />
+    <link rel="stylesheet" href="/figma_reference/css/mobile.css" />
+  </head>
+  <body>
+    <div class="frame dk">
+      <nav class="abs dk-nav">
+        <div class="dk-logo">
+          <img
+            src="/figma_reference/images/logo.png"
+            alt="ROAS School of Marketing"
+          />
+        </div>
+        <button class="btn-enroll dk-register">Register now</button>
+      </nav>
 
-    <nav class="abs dk-nav">
-      <div class="dk-logo">
-        <img src="images/logo.png" alt="ROAS School of Marketing" />
+      <div class="abs dk-topbar">
+        <span>No upsell after webinar, 100% refund if not satisfied</span>
       </div>
-      <button class="btn-enroll dk-register">Register now</button>
-    </nav>
 
-    <div class="abs dk-topbar">
-      <span>No upsell after webinar, 100% refund if not satisfied</span>
-    </div>
+      <section class="abs dk-hero">
+        <div class="abs dk-hero-text">
+          <h1>
+            Running <span class="accent">Meta Ads</span> But Not Getting
+            Results?
+          </h1>
+          <p class="sub">
+            In this 2-hour live session, I'll show you exactly what's going
+            wrong in your ads and how to fix it before you waste more money.
+          </p>
+          <p class="meta">
+            Live session&nbsp;&nbsp;•&nbsp;&nbsp;Real campaign
+            breakdowns&nbsp;&nbsp;•&nbsp;&nbsp;Q&amp;A included
+          </p>
+          <p class="time">Webinar time: Every Sunday at 4:00 PM</p>
+          <button class="btn-enroll dk-hero-cta">
+            Special Launch price offer ₹499
+          </button>
+        </div>
+      </section>
 
-    <section class="abs dk-hero">
-      <div class="abs dk-hero-text">
-        <h1>Running <span class="accent">Meta Ads</span> But Not Getting Results?</h1>
-        <p class="sub">In this 2-hour live session, I'll show you exactly what's going wrong in your ads and how to fix it before you waste more money.</p>
-        <p class="meta">Live session&nbsp;&nbsp;•&nbsp;&nbsp;Real campaign breakdowns&nbsp;&nbsp;•&nbsp;&nbsp;Q&amp;A included</p>
-        <p class="time">Webinar time: Every Sunday at 4:00 PM</p>
-        <button class="btn-enroll dk-hero-cta">Special Launch price offer ₹499</button>
+      <!-- Relatability -->
+      <div class="abs sec-head relatability-head">
+        <h2>Relatability</h2>
+        <div class="divider"></div>
       </div>
-    </section>
 
-    <!-- Problem Reframe -->
-    <div class="abs sec-head problem-head">
-      <h2>Problem Reframe</h2>
-      <div class="divider"></div>
-    </div>
-    <div class="abs problem-imgs">
-      <img src="images/kid-thinking-1.png" alt="" />
-      <img src="images/kid-thinking-2.png" alt="" />
-      <img src="images/kid-thinking-3.png" alt="" />
-    </div>
+      <div class="abs relatability-section">
+        <div class="vertical-dashed-line"></div>
 
-    <!-- What You'll Learn -->
-    <div class="abs sec-head learn-head">
-      <h2>What You'll Learn</h2>
-      <div class="divider"></div>
-    </div>
-    <div class="abs learn-sub">After this session, you'll be able to:</div>
-    <div class="abs learn-block">
-      <ul>
-        <li>✅ Set up Meta ad campaigns from scratch</li>
-        <li>✅ Target the right audience profitably</li>
-        <li>✅ Write ad creatives that convert</li>
-        <li>✅ Read and act on campaign metrics</li>
-        <li>✅ Scale winning campaigns the right way</li>
-        <li>✅ Avoid the costly beginner mistakes</li>
-      </ul>
-    </div>
-    <div class="abs cta-center learn-cta">
-      <button class="btn-enroll">Enroll Now</button>
-    </div>
+        <div class="rel-card">
+          <div class="rel-card-img">
+            <img src="/figma_reference/images/lp/ads.png" alt="Ads" />
+          </div>
+          <div class="rel-card-text">
+            <h3>You’ve probably been here…</h3>
+            <ul>
+              <li>
+                <img
+                  src="/figma_reference/images/lp/icon/relate-1.svg"
+                  alt="icon"
+                />
+                Testing different audiences
+              </li>
+              <li>
+                <img
+                  src="/figma_reference/images/lp/icon/relate-2.svg"
+                  alt="icon"
+                />
+                Changing creatives again and again
+              </li>
+              <li>
+                <img
+                  src="/figma_reference/images/lp/icon/relate-3.svg"
+                  alt="icon"
+                />
+                Following YouTube strategies
+              </li>
+              <li>
+                <img
+                  src="/figma_reference/images/lp/icon/relate-4.svg"
+                  alt="icon"
+                />
+                Using AI tools for suggestions
+              </li>
+            </ul>
+          </div>
+        </div>
 
-    <!-- Results / testimonials -->
-    <div class="abs sec-head results-head">
-      <h2>See What Happened After Implementing Our System</h2>
-      <div class="divider"></div>
-    </div>
-    <div class="abs testimonials">
-      <img src="images/testimonial-87.png" alt="" />
-      <img src="images/testimonial-84.png" alt="" />
-      <img src="images/testimonial-85.png" alt="" />
-      <img src="images/testimonial-86.png" alt="" />
-    </div>
-    <div class="abs cta-center results-cta">
-      <button class="btn-enroll">Enroll Now</button>
-    </div>
+        <div class="rel-bubble">
+          But your ads still don't give consistent results
+        </div>
 
-    <!-- What makes this different -->
-    <div class="abs sec-head diff-head">
-      <h2>What makes this webinar different than others</h2>
-      <div class="divider"></div>
-    </div>
-    <div class="abs diff-block">
-      <img src="images/kid-thinking-4.png" alt="" />
-      <img src="images/kid-thinking-6.png" alt="" />
-    </div>
+        <div class="rel-card">
+          <div class="rel-card-text">
+            <h3>Either:</h3>
+            <ul>
+              <li>
+                <img
+                  src="/figma_reference/images/lp/icon/relate-5.svg"
+                  alt="icon"
+                />
+                No leads
+              </li>
+              <li>
+                <img
+                  src="/figma_reference/images/lp/icon/relate-6.svg"
+                  alt="icon"
+                />
+                Expensive leads
+              </li>
+              <li>
+                <img
+                  src="/figma_reference/images/lp/icon/relate-7.svg"
+                  alt="icon"
+                />
+                Or no conversions
+              </li>
+            </ul>
+            <p class="worst-part">And the worst part?</p>
+          </div>
+          <div class="rel-card-img">
+            <img
+              src="/figma_reference/images/lp/ads-2.png"
+              alt="Hand holding ads"
+            />
+          </div>
+        </div>
 
-    <!-- About the Trainer -->
-    <div class="abs sec-head trainer-head">
-      <h2>About the Trainer</h2>
-      <div class="divider"></div>
-    </div>
-    <div class="abs trainer-card">
-      <img src="images/trainer-meta-ads.png" alt="Trainer" />
-      <div class="bio">
-        <h3>Your Instructor</h3>
-        <p>Years of hands-on experience running and scaling profitable Meta ad campaigns for businesses across industries.</p>
+        <div class="rel-bubble">You don't know what exactly is going wrong</div>
       </div>
-    </div>
 
-    <!-- Pricing Justification -->
-    <div class="abs sec-head pricing-head">
-      <h2>Pricing Justification</h2>
-      <div class="divider"></div>
-    </div>
-    <div class="abs pricing-block">
-      <p>Everything you need to start running profitable Meta ads, at a fraction of what agencies charge.</p>
-    </div>
-    <div class="abs cta-center pricing-cta">
-      <button class="btn-enroll">Enroll Now</button>
-    </div>
+      <!-- Problem Reframe -->
+      <div class="abs sec-head problem-head">
+        <h2>Problem Reframe</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="abs problem-section">
+        <!-- Left column -->
+        <div class="prob-col prob-left">
+          <img
+            src="/figma_reference/images/kid-thinking-1.png"
+            alt=""
+            class="prob-img-top"
+          />
+          <img
+            src="/figma_reference/images/kid-thinking-3.png"
+            alt=""
+            class="prob-img-bottom"
+          />
+        </div>
 
-    <!-- FAQ -->
-    <div class="abs faq">
-      <div class="faq-item">Who is this webinar for?</div>
-      <div class="faq-item">Do I need prior experience?</div>
-      <div class="faq-item">Will I get a recording?</div>
-      <div class="faq-item">Is there a refund policy?</div>
+        <!-- Center text column -->
+        <div class="prob-col prob-center">
+          <div class="prob-block">
+            <h3>Most people think:</h3>
+            <p>
+              “Maybe I need better creatives”<br />“Maybe I need better
+              targeting”
+            </p>
+          </div>
+          <div class="prob-block">
+            <div class="prob-bubble">But that’s not the real problem.</div>
+          </div>
+          <div class="prob-block">
+            <h3>The real problem is:</h3>
+            <p>“You’re running ads without a clear strategy”</p>
+          </div>
+          <div class="prob-block">
+            <h3>So Every Decision Becomes A Guess:</h3>
+            <ul class="prob-list">
+              <li>Who to target</li>
+              <li>What to say</li>
+              <li>What offer to run</li>
+            </ul>
+            <p class="prob-footer">And that’s where money gets wasted</p>
+          </div>
+        </div>
+
+        <!-- Right column -->
+        <div class="prob-col prob-right">
+          <img
+            src="/figma_reference/images/kid-thinking-2.png"
+            alt=""
+            class="prob-img-top"
+          />
+        </div>
+      </div>
+
+      <!-- Introducing The System -->
+      <div class="abs sec-head system-head">
+        <h2>Introducing The System</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="abs system-card">
+        <img
+          src="/figma_reference/images/lp/female-teacher.png"
+          alt="Girl with book"
+          class="sys-img"
+        />
+        <div class="sys-content">
+          <p class="sys-desc">
+            In this session, I'll walk you through a
+            <span class="sys-highlight">Simple 7-Step System</span> designed to
+            identify what's not working in your ads and turn it into profitable
+            results.
+          </p>
+          <div class="sys-grid">
+            <div class="sys-col">
+              <div class="sys-step">
+                <span class="sys-num">01</span> Target Audience
+              </div>
+              <div class="sys-step">
+                <span class="sys-num">02</span> Customer Psychology
+              </div>
+              <div class="sys-step">
+                <span class="sys-num">03</span> Irresistible Offer
+              </div>
+              <div class="sys-step">
+                <span class="sys-num">04</span> Marketing Message
+              </div>
+            </div>
+            <div class="sys-col">
+              <div class="sys-step">
+                <span class="sys-num">05</span> Media & Ad Strategy
+              </div>
+              <div class="sys-step">
+                <span class="sys-num">06</span> Lead Nurturing & Sales
+                Conversion
+              </div>
+              <div class="sys-step">
+                <span class="sys-num">07</span> Customer Retention & Growth
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- What You'll Learn -->
+      <div class="abs sec-head learn-head">
+        <h2>What You'll Learn</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="abs learn-sub">After this session, you'll be able to:</div>
+      <div class="abs learn-block">
+        <div class="learn-pill">
+          Understand why your ads are<br />not working
+        </div>
+        <div class="learn-pill">
+          Understand what to fix before<br />spending more money
+        </div>
+        <div class="learn-pill">
+          Stop relying on random<br />strategies or AI suggestions
+        </div>
+        <div class="learn-pill">
+          Build a structured approach to<br />your campaigns
+        </div>
+        <div class="learn-pill">
+          Think like a strategist, not just<br />an ad runner
+        </div>
+        <div class="learn-pill">
+          Scale your meta ads with<br />profitable results
+        </div>
+      </div>
+      <div class="abs cta-center learn-cta">
+        <button class="pill-btn">Reserve Your Spot Now For ₹499</button>
+      </div>
+
+      <!-- Results / testimonials -->
+      <div class="abs sec-head results-head">
+        <h2>See What Happened After<br />Implementing Our System</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="abs testimonials">
+        <div class="testi-item">
+          <div class="testi-dashboards">
+            <div class="testi-dashboard">
+              <div class="testi-label">Before</div>
+              <img
+                class="testi-img"
+                src="/figma_reference/images/lp/outcome/before-1.png"
+                alt="Before Dashboard"
+              />
+            </div>
+            <div class="testi-dashboard">
+              <div class="testi-label">After</div>
+              <img
+                class="testi-img"
+                src="/figma_reference/images/lp/outcome/after-1.png"
+                alt="After Dashboard"
+              />
+            </div>
+          </div>
+          <div class="testi-text">
+            <h3>D2C Women's Clothing Brand</h3>
+            <p>
+              The brand was averaging just 1.5X ROAS from Meta Ads.<br />By
+              optimizing audience targeting, offers, messaging, and campaigns,
+              ROAS grew to 4.2X in just 2 months.
+            </p>
+          </div>
+        </div>
+        <div class="testi-divider"></div>
+
+        <div class="testi-item">
+          <div class="testi-dashboards">
+            <div class="testi-dashboard">
+              <div class="testi-label">Before</div>
+              <img
+                class="testi-img"
+                src="/figma_reference/images/lp/outcome/before-2.png"
+                alt="Before Dashboard"
+              />
+            </div>
+            <div class="testi-dashboard">
+              <div class="testi-label">After</div>
+              <img
+                class="testi-img"
+                src="/figma_reference/images/lp/outcome/after-2.png"
+                alt="After Dashboard"
+              />
+            </div>
+          </div>
+          <div class="testi-text">
+            <h3>EdTech Company</h3>
+            <p>
+              Meta Ads were generating only 0.6X ROAS due to underperforming
+              campaigns.<br />By optimizing audience targeting, offers,
+              messaging, and strategy, ROAS increased to 4.1X in just 2 months,
+              creating a profitable customer acquisition system.
+            </p>
+          </div>
+        </div>
+        <div class="testi-divider"></div>
+
+        <div class="testi-item">
+          <div class="testi-dashboards">
+            <div class="testi-dashboard">
+              <div class="testi-label">Before</div>
+              <img
+                class="testi-img"
+                src="/figma_reference/images/lp/outcome/before-3.png"
+                alt="Before Dashboard"
+              />
+            </div>
+            <div class="testi-dashboard">
+              <div class="testi-label">After</div>
+              <img
+                class="testi-img"
+                src="/figma_reference/images/lp/outcome/after-3.png"
+                alt="After Dashboard"
+              />
+            </div>
+          </div>
+          <div class="testi-text">
+            <h3>Website Services Agency</h3>
+            <p>
+              The agency was generating leads at an average cost of ₹460 per
+              lead.<br />By optimizing audience targeting, messaging, offers,
+              and campaign strategy, the cost dropped to ₹243 per lead. This was
+              achieved within 2 months, significantly improving marketing
+              efficiency.
+            </p>
+          </div>
+        </div>
+        <div class="testi-divider"></div>
+
+        <div class="testi-item">
+          <div class="testi-dashboards">
+            <div class="testi-dashboard">
+              <div class="testi-label">Before</div>
+              <img
+                class="testi-img"
+                src="/figma_reference/images/lp/outcome/before-4.png"
+                alt="Before Dashboard"
+              />
+            </div>
+            <div class="testi-dashboard">
+              <div class="testi-label">After</div>
+              <img
+                class="testi-img"
+                src="/figma_reference/images/lp/outcome/after-4.png"
+                alt="After Dashboard"
+              />
+            </div>
+          </div>
+          <div class="testi-text">
+            <h3>Service-Based Company</h3>
+            <p>
+              Reduced lead acquisition cost from ₹199 to ₹54 per lead by
+              optimizing audience targeting, offers, messaging, and campaign
+              strategy.<br />Achieved a profitable customer acquisition system
+              within 2 months.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="abs cta-center results-cta">
+        <button class="pill-btn">Reserve Your Spot Now For ₹499</button>
+      </div>
+
+      <!-- What makes this different -->
+      <div class="abs sec-head diff-head">
+        <h2>What Makes This Webinar<br />Different Than Others</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="abs diff-block">
+        <div class="diff-top-box grad-border">
+          <div class="inner">
+            <h3>No shitty drama or upsell of any<br />course after webinar</h3>
+          </div>
+        </div>
+
+        <div class="diff-dashed-line"></div>
+
+        <div class="diff-bottom-layout">
+          <img
+            src="/figma_reference/images/kid-thinking-4.png"
+            alt=""
+            class="diff-kid mobile-hide"
+          />
+
+          <div class="diff-bottom-box grad-border">
+            <div class="inner">
+              <div class="diff-list">
+                <h3>You will NOT get:</h3>
+                <ul>
+                  <li>Generic theory</li>
+                  <li>Random tips</li>
+                  <li>Copy-paste strategies</li>
+                </ul>
+              </div>
+
+              <div class="diff-list diff-list-btm">
+                <h3>Instead, you'll get:</h3>
+                <ul>
+                  <li>Real campaign breakdowns</li>
+                  <li>Clear thinking process</li>
+                  <li>Practical understanding of what<br />actually works</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <img
+            src="/figma_reference/images/kid-thinking-6.png"
+            alt=""
+            class="diff-kid"
+          />
+        </div>
+      </div>
+
+      <!-- About the Trainer -->
+      <div class="abs sec-head trainer-head">
+        <h2>About The Trainer</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="abs trainer-card">
+        <img
+          class="trainer-img"
+          src="/figma_reference/images/trainer-meta-ads.png"
+          alt="Trainer"
+        />
+        <div class="trainer-bio">
+          <h3>Hi, I'm Syed Sohail (roasguy)</h3>
+          <p>
+            For the past 5+ years, I've been helping businesses generate leads
+            and sales through Meta Ads.
+          </p>
+          <p>
+            In this webinar, I'll share the exact 7-step marketing strategy
+            framework I use to identify what's not working, fix campaign gaps,
+            and make better marketing decisions.
+          </p>
+        </div>
+      </div>
+
+      <!-- Pricing Justification -->
+      <div class="abs sec-head pricing-head">
+        <h2>Pricing Justification</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="abs pricing-block">
+        <div class="pricing-pill">
+          Most people lose <strong>₹5,000–₹50,000</strong> before they figure
+          this out
+        </div>
+        <div class="pricing-pill">
+          This session costs just <strong>₹499</strong>
+        </div>
+        <div class="pricing-pill">
+          One insight from this session can <strong>save</strong> you much more
+          than that
+        </div>
+
+        <div class="pricing-features">
+          <div class="pricing-feature grad-border">
+            <div class="inner">
+              <img
+                src="/figma_reference/images/lp/icon/pricing-1.svg"
+                alt="Live Session"
+              />
+              <p>This Is A Live Session<br />(Not Pre-Recorded)</p>
+            </div>
+          </div>
+          <div class="pricing-feature grad-border">
+            <div class="inner">
+              <img
+                src="/figma_reference/images/lp/icon/pricing-2.svg"
+                alt="Q&A"
+              />
+              <p>
+                You'll Also Get A<br />Chance To Ask Your<br />Questions
+                Directly
+              </p>
+            </div>
+          </div>
+          <div class="pricing-feature grad-border">
+            <div class="inner">
+              <img
+                src="/figma_reference/images/lp/icon/pricing-3.svg"
+                alt="Limited Seats"
+              />
+              <p>Limited Seats<br />Available</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="abs cta-center pricing-cta">
+        <button class="pill-btn">Reserve Your Spot Now For ₹499</button>
+      </div>
+
+      <!-- FAQ -->
+      <div class="abs sec-head faq-head">
+        <h2>FAQs</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="abs faq">
+        <div class="faq-item">
+          <button class="faq-toggle" aria-expanded="false">
+            <div class="faq-icon"><span class="faq-symbol">+</span></div>
+            <strong>Is this for beginners?</strong>
+          </button>
+          <div class="faq-answer">
+            <p>
+              No, useful for people who are already running Meta ads and not
+              getting results.
+            </p>
+          </div>
+        </div>
+        <div class="faq-divider"></div>
+        <div class="faq-item">
+          <button class="faq-toggle" aria-expanded="false">
+            <div class="faq-icon"><span class="faq-symbol">+</span></div>
+            <strong>Will you show real examples?</strong>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Yes, you'll see actual campaign breakdowns, dashboards, and
+              performance insights.
+            </p>
+          </div>
+        </div>
+        <div class="faq-divider"></div>
+        <div class="faq-item">
+          <button class="faq-toggle" aria-expanded="false">
+            <div class="faq-icon"><span class="faq-symbol">+</span></div>
+            <strong>Will there be a Q&amp;A session?</strong>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, you can ask your questions live during the session.</p>
+          </div>
+        </div>
+        <div class="faq-divider"></div>
+        <div class="faq-item">
+          <button class="faq-toggle" aria-expanded="false">
+            <div class="faq-icon"><span class="faq-symbol">+</span></div>
+            <strong>Will recording be available?</strong>
+          </button>
+          <div class="faq-answer">
+            <p>
+              No. This is a live session only.<br />Make sure you attend it live
+              to get full value.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="abs footer-contact">
+        <div class="footer-line">📞 Mobile: +91 8400 786 843</div>
+        <div class="footer-line">
+          📧 Email: support@roasschoolofmarketing.com
+        </div>
+      </div>
+      <img
+        class="abs footer-banner"
+        src="/figma_reference/images/footer-banner.png"
+        alt=""
+      />
     </div>
-
-    <!-- Footer -->
-    <div class="abs footer-contact">📞 Mobile: +91 00000 00000 &nbsp;&nbsp; 📧 Email: hello@roasguy.com</div>
-    <img class="abs footer-banner" src="images/footer-banner.png" alt="" />
-
-  </div>
-</body>
+  </body>
+  <script>
+    document.querySelectorAll('.faq-toggle').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = btn.closest('.faq-item');
+        var answer = item.querySelector('.faq-answer');
+        var symbol = btn.querySelector('.faq-symbol');
+        var isOpen = btn.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.faq-toggle').forEach(function(other) {
+          if (other !== btn) {
+            other.setAttribute('aria-expanded', 'false');
+            other.querySelector('.faq-symbol').textContent = '+';
+            other.closest('.faq-item').querySelector('.faq-answer').style.maxHeight = null;
+          }
+        });
+        if (isOpen) {
+          btn.setAttribute('aria-expanded', 'false');
+          symbol.textContent = '+';
+          answer.style.maxHeight = null;
+        } else {
+          btn.setAttribute('aria-expanded', 'true');
+          symbol.textContent = '\u2212';
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+      });
+    });
+  </script>
 </html>

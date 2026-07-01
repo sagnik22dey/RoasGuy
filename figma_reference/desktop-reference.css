@@ -1,0 +1,5410 @@
+/* Phone */
+
+position: relative;
+width: 402px;
+height: 15601px;
+
+background: #FFFFFF;
+
+
+/* Rectangle 188 */
+
+position: absolute;
+width: 402px;
+height: 433px;
+left: 0px;
+top: 52px;
+
+background: url(Untitled design.png);
+
+
+/* Rectangle 185 */
+
+position: absolute;
+width: 402px;
+height: 1224px;
+left: 0px;
+top: 3622px;
+
+background: linear-gradient(180deg, rgba(72, 127, 213, 0.36) 0%, rgba(180, 125, 218, 0.36) 100%);
+
+
+/* Rectangle 186 */
+
+position: absolute;
+width: 402px;
+height: 908px;
+left: 0px;
+top: 11677px;
+
+background: linear-gradient(180deg, rgba(72, 127, 213, 0.36) 0%, rgba(180, 125, 218, 0.36) 100%);
+
+
+/* Rectangle 8 */
+
+position: absolute;
+width: 402px;
+height: 30px;
+left: 0px;
+top: 52px;
+
+background: linear-gradient(90.02deg, #487FD5 11.89%, #B47DDA 82.65%);
+
+
+/* No upsell after webinar, 100% refund if not satisfied */
+
+position: absolute;
+width: 352px;
+height: 18px;
+left: 25px;
+top: 58px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* Frame 5 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 26.64px;
+
+position: absolute;
+width: 355.73px;
+height: 298.64px;
+left: 25px;
+top: 136px;
+
+
+
+/* Frame 4 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 20px;
+
+width: 355.73px;
+height: 228px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 3 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 23px;
+
+width: 355.73px;
+height: 152px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Running Meta Ads But Not Getting Results? */
+
+width: 355.73px;
+height: 73.39px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 32px;
+line-height: 39px;
+text-align: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* In this 2-hour live session, I’ll show you exactly what’s going wrong in your ads and how to fix it before you waste more money. */
+
+width: 355.73px;
+height: 51.49px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+text-align: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 6.34px;
+
+width: 350.72px;
+height: 16px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Live session */
+
+width: 72px;
+height: 16px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 16px;
+/* identical to box height */
+text-align: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Ellipse 1 */
+
+width: 3.17px;
+height: 3.17px;
+
+background: #343434;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Real campaign breakdowns */
+
+width: 163px;
+height: 16px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 16px;
+/* identical to box height */
+text-align: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Ellipse 2 */
+
+width: 3.17px;
+height: 3.17px;
+
+background: #343434;
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* Q&A included */
+
+width: 84px;
+height: 16px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 16px;
+/* identical to box height */
+text-align: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+
+
+/* Frame 4 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 10.72px;
+
+width: 351px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Webinar time: Every Sunday at 4:00 PM */
+
+width: 351px;
+height: 20px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+text-align: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 2 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 9.95557px 9.95557px 10.7852px;
+gap: 8.3px;
+
+width: 320px;
+height: 44px;
+
+/* enroll button */
+background: linear-gradient(90deg, #1ACFFF 0%, #0076FF 100%);
+border-radius: 7.46667px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Special Launch price offer ₹499 */
+
+width: 292px;
+height: 24px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 19.9111px;
+line-height: 24px;
+text-align: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Line 1 */
+
+position: absolute;
+width: 1212px;
+height: 0px;
+left: calc(50% - 1212px/2 + 606px);
+top: 597px;
+
+border: 1.99762px dashed #959595;
+transform: rotate(90deg);
+
+
+/* Frame 13 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: flex-start;
+padding: 26px 0px 34.459px;
+gap: 4.99px;
+
+position: absolute;
+width: 302px;
+height: 459px;
+left: calc(50% - 302px/2);
+top: 648px;
+
+/* Gradient subtle */
+background: linear-gradient(270deg, #CBECFF 1.44%, #FCE2FF 101.2%);
+box-shadow: 2.99643px 2.99643px 4.94412px rgba(0, 0, 0, 0.25);
+border-radius: 7.49109px;
+
+
+/* Frame 12 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: center;
+align-content: flex-start;
+padding: 0px;
+gap: 23.47px;
+
+width: 276px;
+height: 414px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* optimizing-digital-ads-growth-performance 1 */
+
+width: 267.59px;
+height: 178.35px;
+
+background: url(optimizing-digital-ads-growth-performance.png);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 11 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 14.98px;
+
+width: 302.14px;
+height: 170.8px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* You’ve probably been here… */
+
+width: 302.14px;
+height: 61.93px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 27.0823px;
+line-height: 33px;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 10 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+padding: 0px;
+gap: 5.99px;
+
+width: 275.67px;
+height: 93.89px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 6 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 13.98px;
+
+width: 275.67px;
+height: 19.98px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* user-accepted 1 */
+
+width: 16.98px;
+height: 16.98px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Group */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 3.48%;
+bottom: 3.48%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 19.77%;
+right: 57.3%;
+top: 18.4%;
+bottom: 57.89%;
+
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+
+
+/* Vector */
+
+position: absolute;
+left: 17.09%;
+right: 54.07%;
+top: 3.48%;
+bottom: 73.21%;
+
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 51.02%;
+top: 47.31%;
+bottom: 3.48%;
+
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+
+
+/* Vector */
+
+position: absolute;
+left: 38.74%;
+right: 44.98%;
+top: 47.31%;
+bottom: 42.37%;
+
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+
+
+/* Vector */
+
+position: absolute;
+left: 46.73%;
+right: 37.52%;
+top: 68.37%;
+bottom: 7.05%;
+
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+
+
+/* Vector */
+
+position: absolute;
+left: 37.87%;
+right: 0%;
+top: 25.02%;
+bottom: 19.9%;
+
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+
+
+/* Testing different audiences */
+
+width: 244.21px;
+height: 19.98px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 200%;
+/* or 30px */
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 7 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 15.98px;
+
+width: 275.67px;
+height: 19.98px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Vector */
+
+width: 15.48px;
+height: 18.98px;
+
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Changing creatives again and again */
+
+width: 244.21px;
+height: 19.98px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 200%;
+/* or 30px */
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 8 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 15.98px;
+
+width: 275.67px;
+height: 18.48px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* youtube (1) 1 */
+
+width: 15.48px;
+height: 15.48px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 3.08%;
+right: 3.17%;
+top: 16.3%;
+bottom: 18.06%;
+
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+
+
+/* Following YouTube strategies */
+
+width: 244.21px;
+height: 18.48px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 200%;
+/* or 30px */
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 9 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 13.98px;
+
+width: 275.67px;
+height: 17.48px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Vector */
+
+width: 16.48px;
+height: 16.48px;
+
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Using AI tools for suggestions */
+
+width: 244.21px;
+height: 17.48px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 200%;
+/* or 30px */
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 4001 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 16px 25px 24px 26px;
+gap: 10px;
+
+position: absolute;
+width: 302px;
+height: 360px;
+left: calc(50% - 302px/2);
+top: 1308px;
+
+/* Gradient subtle */
+background: linear-gradient(270deg, #CBECFF 1.44%, #FCE2FF 101.2%);
+box-shadow: 3px 3px 4.8px rgba(0, 0, 0, 0.25);
+border-radius: 7.5px;
+
+
+/* Frame 25 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+align-items: flex-start;
+align-content: center;
+padding: 0px;
+gap: 7px;
+
+width: 251px;
+height: 334px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* optimizing-digital-ads-growth-performance 1 */
+
+width: 243px;
+height: 162px;
+
+background: url(psd-ads-3d-illustration.png);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 16 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 7.49px;
+
+width: 162.81px;
+height: 144.33px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 11 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 14.98px;
+
+width: 162.81px;
+height: 118.36px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Either: */
+
+width: 162.81px;
+height: 32.96px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 27.0823px;
+line-height: 33px;
+/* identical to box height */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 10 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+padding: 0px;
+gap: 5.99px;
+
+width: 163px;
+height: 70.42px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 6 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 13.98px;
+
+width: 163px;
+height: 19.98px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* filtering 1 */
+
+width: 16.98px;
+height: 16.48px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 12.97%;
+right: 12.97%;
+top: 0.1%;
+bottom: 0.1%;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+
+
+/* No leads */
+
+width: 244.21px;
+height: 19.98px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 200%;
+/* or 30px */
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 7 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 15.98px;
+
+width: 163px;
+height: 19.98px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* user-engagement 1 */
+
+width: 16.98px;
+height: 16.48px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Group */
+
+position: absolute;
+left: 2.28%;
+right: 2.29%;
+top: 2.47%;
+bottom: 2.48%;
+
+
+
+/* Group */
+
+position: absolute;
+left: 2.28%;
+right: 2.29%;
+top: 2.47%;
+bottom: 2.48%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 21.83%;
+right: 60.12%;
+top: 31.83%;
+bottom: 50.12%;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+
+
+/* Vector */
+
+position: absolute;
+left: 49.91%;
+right: 32.05%;
+top: 59.91%;
+bottom: 22.04%;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+
+
+/* Vector */
+
+position: absolute;
+left: 35.97%;
+right: 39.24%;
+top: 22.06%;
+bottom: 65.36%;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+
+
+/* Vector */
+
+position: absolute;
+left: 32.27%;
+right: 35.58%;
+top: 2.47%;
+bottom: 73.79%;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+
+
+/* Vector */
+
+position: absolute;
+left: 43.3%;
+right: 46.58%;
+top: 8.97%;
+bottom: 80.92%;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+
+
+/* Vector */
+
+position: absolute;
+left: 79.73%;
+right: 11.99%;
+top: 46.12%;
+bottom: 45.59%;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+
+
+/* Vector */
+
+position: absolute;
+left: 70.04%;
+right: 2.29%;
+top: 40.33%;
+bottom: 39.44%;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+
+
+/* Vector */
+
+position: absolute;
+left: 73.36%;
+right: 5.56%;
+top: 57.39%;
+bottom: 32%;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+
+
+/* Vector */
+
+position: absolute;
+left: 74.73%;
+right: 9.34%;
+top: 24.83%;
+bottom: 67.85%;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+
+
+/* Vector */
+
+position: absolute;
+left: 71.44%;
+right: 6.05%;
+top: 9.65%;
+bottom: 73.56%;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+
+
+/* Vector */
+
+position: absolute;
+left: 79.61%;
+right: 14.21%;
+top: 15.68%;
+bottom: 78.14%;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+
+
+/* Vector */
+
+position: absolute;
+left: 46.87%;
+right: 44.1%;
+top: 40.22%;
+bottom: 42.61%;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+
+
+/* Vector */
+
+position: absolute;
+left: 10.01%;
+right: 74.28%;
+top: 17.07%;
+bottom: 73.65%;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+
+
+/* Vector */
+
+position: absolute;
+left: 72.69%;
+right: 18.52%;
+top: 73.1%;
+bottom: 10.35%;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+
+
+/* Vector */
+
+position: absolute;
+left: 2.28%;
+right: 40.38%;
+top: 40.18%;
+bottom: 2.48%;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+
+
+/* Expensive leads */
+
+width: 244.21px;
+height: 19.98px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 200%;
+/* or 30px */
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 8 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 15.98px;
+
+width: 163px;
+height: 18.48px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* tool 1 */
+
+width: 15.98px;
+height: 15.98px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Group */
+
+position: absolute;
+left: 6.25%;
+right: 6.25%;
+top: 6.25%;
+bottom: 6.25%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 20.75%;
+right: 22.91%;
+top: 6.25%;
+bottom: 51.78%;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+
+
+/* Vector */
+
+position: absolute;
+left: 6.25%;
+right: 6.25%;
+top: 6.25%;
+bottom: 6.25%;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+
+
+/* Or no conversions */
+
+width: 244.21px;
+height: 18.48px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 200%;
+/* or 30px */
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* And the worst part? */
+
+width: 162.81px;
+height: 18.48px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 200%;
+/* or 30px */
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 18 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 12.9845px 16.9798px 12.9845px 17.4792px;
+gap: 4.99px;
+
+position: absolute;
+width: 302px;
+height: 67px;
+left: calc(50% - 302px/2);
+top: 1174px;
+
+background: #F5F6FF;
+border-radius: 29.4649px;
+
+
+/* But your ads still don’t give consistent results */
+
+width: 284px;
+height: 44px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 19.9762px;
+line-height: 110%;
+/* or 22px */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 15 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 12.9845px 16.9798px 12.9845px 17.4792px;
+gap: 4.99px;
+
+position: absolute;
+width: 264px;
+height: 70px;
+left: calc(50% - 264px/2);
+top: 1735px;
+
+background: #F5F6FF;
+border-radius: 29.4649px;
+
+
+/* You don’t know what exactly is going wrong */
+
+width: 254px;
+height: 44px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 19.9762px;
+line-height: 110%;
+/* or 22px */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 252 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 11px;
+
+position: absolute;
+width: 418.99px;
+height: 57.01px;
+left: calc(50% - 418.99px/2 + 0.5px);
+top: 543px;
+
+
+
+/* Relatability */
+
+width: 418.99px;
+height: 46.01px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 38.3436px;
+line-height: 47px;
+/* identical to box height */
+text-align: center;
+text-transform: capitalize;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Line 2 */
+
+width: 199.39px;
+height: 0px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Line 3 */
+
+position: absolute;
+width: 326px;
+height: 0px;
+left: calc(50% - 326px/2);
+top: 1934px;
+
+
+
+/* Line 8 */
+
+position: absolute;
+width: 326px;
+height: 0px;
+left: calc(50% - 326px/2);
+top: 4953px;
+
+
+
+/* Line 11 */
+
+position: absolute;
+width: 266px;
+height: 0px;
+left: calc(50% - 266px/2);
+top: 3575px;
+
+
+
+/* Problem Reframe */
+
+position: absolute;
+width: 325px;
+height: 47px;
+left: calc(50% - 325px/2 + 0.5px);
+top: 1876px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 38.34px;
+line-height: 47px;
+/* identical to box height */
+text-align: center;
+text-transform: capitalize;
+
+color: #000000;
+
+
+
+/* Frame 22 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 19px;
+
+position: absolute;
+width: 264px;
+height: 108px;
+left: calc(50% - 264px/2 - 7px);
+top: 2318px;
+
+
+
+/* Most people think: */
+
+width: 264px;
+height: 37px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 28.65px;
+line-height: 35px;
+text-align: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/*  “Maybe I need better creatives”  “Maybe I need better targeting” */
+
+width: 264px;
+height: 52px;
+
+font-family: 'Instrument Sans';
+font-style: italic;
+font-weight: 400;
+font-size: 17.19px;
+line-height: 153%;
+/* or 26px */
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 20 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 25px 23px 25px 24px;
+gap: 10px;
+
+position: absolute;
+width: 284px;
+height: 108px;
+left: calc(50% - 284px/2 - 7px);
+top: 2479px;
+
+background: #F5F6FF;
+border-radius: 15px;
+
+
+/* But that’s not the real problem. */
+
+width: 283px;
+height: 68px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 28.65px;
+line-height: 119%;
+/* or 34px */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #202020;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 21 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 19px;
+
+position: absolute;
+width: 277px;
+height: 112px;
+left: calc(50% - 277px/2 - 7.5px);
+top: 2640px;
+
+
+
+/* The real problem is: */
+
+width: 277px;
+height: 37px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 28.65px;
+line-height: 200%;
+/* or 57px */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* “You’re running ads without a clear strategy” */
+
+width: 277px;
+height: 67px;
+
+font-family: 'Instrument Sans';
+font-style: italic;
+font-weight: 400;
+font-size: 17.19px;
+line-height: 153%;
+/* or 26px */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 23 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 21px;
+
+position: absolute;
+width: 295px;
+height: 202px;
+left: calc(50% - 295px/2 - 7.5px);
+top: 2816px;
+
+
+
+/* So every decision becomes a guess: */
+
+width: 295px;
+height: 70px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 28.65px;
+line-height: 35px;
+text-align: center;
+text-transform: capitalize;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Who to target What to say What offer to run And that’s where money gets wasted */
+
+width: 295px;
+height: 111px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 17.19px;
+line-height: 161%;
+/* or 28px */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 3d-cute-kid-thinking-clueless 3 */
+
+position: absolute;
+width: 239px;
+height: 356px;
+left: calc(50% - 239px/2 + 0.5px);
+top: 3053px;
+
+background: url(3d-cartoon-female-teacher-character-presenting-side.png);
+transform: matrix(-1, 0, 0, 1, 0, 0);
+
+
+/* 3d-cute-kid-thinking-clueless 1 */
+
+position: absolute;
+width: 204px;
+height: 351px;
+left: calc(50% - 204px/2 + 7px);
+top: 1953px;
+
+background: url(3d-cartoon-female-teacher-character-thinking-hand-chin.png);
+
+
+/* Frame 233 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+align-items: flex-start;
+align-content: center;
+padding: 0px;
+gap: 51px;
+
+position: absolute;
+width: 344px;
+height: 1141px;
+left: calc(50% - 344px/2);
+top: 3654px;
+
+
+
+/* 3d-cute-kid-thinking-clueless 4 */
+
+width: 278px;
+height: 337px;
+
+background: url(3d-cartoon-female-teacher-character-reading-book.png);
+transform: matrix(-1, 0, 0, 1, 0, 0);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 232 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 37px;
+
+width: 326px;
+height: 753px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 27 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 31.51px;
+
+width: 326px;
+height: 282px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* In this session, I’ll walk you through a Simple 7-Step System designed to identify what’s not working in your ads and turn it into profitable results. */
+
+width: 282px;
+height: 139px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 28.355px;
+line-height: 35px;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 231 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 70px;
+
+width: 326px;
+height: 434px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 229 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 14px;
+
+width: 326px;
+height: 434px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 222 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 23px;
+
+width: 326px;
+height: 50px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 221 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 3.0303px 6.06061px 3.0303px 6.81818px;
+gap: 7.58px;
+
+width: 50px;
+height: 50px;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+border-radius: 25px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 01 */
+
+width: 30px;
+height: 44px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 27.2727px;
+line-height: 161%;
+/* identical to box height, or 44px */
+text-align: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Target Audience */
+
+width: 295px;
+height: 27px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 17.19px;
+line-height: 161%;
+/* or 28px */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 223 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 23px;
+
+width: 326px;
+height: 50px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 221 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 3.0303px 6.06061px 3.0303px 6.81818px;
+gap: 7.58px;
+
+width: 50px;
+height: 50px;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+border-radius: 25px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 02 */
+
+width: 34px;
+height: 44px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 27.2727px;
+line-height: 161%;
+/* identical to box height, or 44px */
+text-align: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Customer Psychology */
+
+width: 295px;
+height: 27px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 17.19px;
+line-height: 161%;
+/* or 28px */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 224 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 23px;
+
+width: 326px;
+height: 50px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 221 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 3.0303px 6.06061px 3.0303px 6.81818px;
+gap: 7.58px;
+
+width: 50px;
+height: 50px;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+border-radius: 25px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 03 */
+
+width: 35px;
+height: 44px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 27.2727px;
+line-height: 161%;
+/* identical to box height, or 44px */
+text-align: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Irresistible Offer */
+
+width: 295px;
+height: 27px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 17.19px;
+line-height: 161%;
+/* or 28px */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 225 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 23px;
+
+width: 326px;
+height: 50px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 221 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 3.0303px 6.06061px 3.0303px 6.81818px;
+gap: 7.58px;
+
+width: 50px;
+height: 50px;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+border-radius: 25px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 04 */
+
+width: 36px;
+height: 44px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 27.2727px;
+line-height: 161%;
+/* identical to box height, or 44px */
+text-align: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Marketing Message */
+
+width: 295px;
+height: 27px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 17.19px;
+line-height: 161%;
+/* or 28px */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 230 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 14px;
+
+width: 335px;
+height: 178px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+
+
+/* Frame 226 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 23px;
+
+width: 335px;
+height: 50px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 221 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 3.0303px 6.06061px 3.0303px 6.81818px;
+gap: 7.58px;
+
+width: 50px;
+height: 50px;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+border-radius: 25px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 05 */
+
+width: 35px;
+height: 44px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 27.2727px;
+line-height: 161%;
+/* identical to box height, or 44px */
+text-align: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Media & Ad Strategy */
+
+width: 295px;
+height: 27px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 17.19px;
+line-height: 161%;
+/* or 28px */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 227 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 23px;
+
+width: 335px;
+height: 50px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 221 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 3.0303px 6.06061px 3.0303px 6.81818px;
+gap: 7.58px;
+
+width: 50px;
+height: 50px;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+border-radius: 25px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 06 */
+
+width: 36px;
+height: 44px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 27.2727px;
+line-height: 161%;
+/* identical to box height, or 44px */
+text-align: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Lead Nurturing & Sales Conversion */
+
+width: 262px;
+height: 50px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 17.19px;
+line-height: 161%;
+/* or 28px */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 228 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 23px;
+
+width: 335px;
+height: 50px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 221 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 3.0303px 6.06061px 3.0303px 6.81818px;
+gap: 7.58px;
+
+width: 50px;
+height: 50px;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+border-radius: 25px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 07 */
+
+width: 33px;
+height: 44px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 27.2727px;
+line-height: 161%;
+/* identical to box height, or 44px */
+text-align: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Customer Retention & Growth */
+
+width: 295px;
+height: 27px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 17.19px;
+line-height: 161%;
+/* or 28px */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 2 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 9.95557px 9.95557px 10.7852px;
+gap: 8.3px;
+
+position: absolute;
+width: 284.56px;
+height: 44.8px;
+left: calc(50% - 284.56px/2 + 0.28px);
+top: 14237px;
+
+/* enroll button */
+background: linear-gradient(90deg, #1ACFFF 0%, #0076FF 100%);
+border-radius: 7.46667px;
+
+
+/* Reserve Your Spot for ₹499 */
+
+width: 252px;
+height: 24px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 19.9111px;
+line-height: 24px;
+text-align: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 4026 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 9.95557px 9.95557px 10.7852px;
+gap: 8.3px;
+
+position: absolute;
+width: 284.56px;
+height: 44.8px;
+left: calc(50% - 284.56px/2 + 0.28px);
+top: 10158px;
+
+/* enroll button */
+background: linear-gradient(90deg, #1ACFFF 0%, #0076FF 100%);
+border-radius: 7.46667px;
+
+
+/* Reserve Your Spot for ₹499 */
+
+width: 252px;
+height: 24px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 19.9111px;
+line-height: 24px;
+text-align: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 4027 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 9.95557px 9.95557px 10.7852px;
+gap: 8.3px;
+
+position: absolute;
+width: 284.56px;
+height: 44.8px;
+left: calc(50% - 284.56px/2 + 0.28px);
+top: 6216px;
+
+/* enroll button */
+background: linear-gradient(90deg, #1ACFFF 0%, #0076FF 100%);
+border-radius: 7.46667px;
+
+
+/* Reserve Your Spot for ₹499 */
+
+width: 252px;
+height: 24px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 19.9111px;
+line-height: 24px;
+text-align: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* What You’ll Learn */
+
+position: absolute;
+width: 319px;
+height: 32px;
+left: calc(50% - 319px/2 + 6.5px);
+top: 4902px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 36px;
+line-height: 44px;
+text-align: center;
+text-transform: capitalize;
+
+color: #000000;
+
+
+
+/* Introducing your system */
+
+position: absolute;
+width: 319px;
+height: 88px;
+left: calc(50% - 319px/2 + 6.5px);
+top: 3477px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 36px;
+line-height: 44px;
+text-align: center;
+text-transform: capitalize;
+
+color: #000000;
+
+
+
+/* Frame 4021 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 20px;
+
+position: absolute;
+width: 319px;
+height: 196px;
+left: 42px;
+top: 6337px;
+
+
+
+/* See What Happened After Implementing Our System */
+
+width: 319px;
+height: 176px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 36px;
+line-height: 44px;
+text-align: center;
+text-transform: capitalize;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Line 9 */
+
+width: 198px;
+height: 0px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* After this session, you’ll be able to: */
+
+position: absolute;
+width: 301px;
+height: 58px;
+left: calc(50% - 301px/2 + 6.5px);
+top: 5000px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Frame 247 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+gap: 43px;
+
+position: absolute;
+width: 367px;
+height: 1035px;
+left: calc(50% - 367px/2 + 0.5px);
+top: 5105px;
+
+
+
+/* Frame 32 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 24px 31.7143px;
+gap: 8.57px;
+
+width: 337px;
+height: 136.67px;
+
+background: linear-gradient(270deg, rgba(72, 127, 213, 0.5) 0%, rgba(180, 125, 218, 0.5) 96.11%);
+border-radius: 12.8571px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Understand why your ads are not working */
+
+width: 308px;
+height: 70px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 28.65px;
+line-height: 35px;
+text-align: center;
+
+color: #383838;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 33 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 24px 31.7143px;
+gap: 8.57px;
+
+width: 337px;
+height: 136.67px;
+
+background: linear-gradient(270deg, rgba(72, 127, 213, 0.5) 0%, rgba(180, 125, 218, 0.5) 96.11%);
+border-radius: 12.8571px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Understand what to fix before spending more money */
+
+width: 308px;
+height: 105px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 28.65px;
+line-height: 35px;
+text-align: center;
+
+color: #383838;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 34 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 24px 31.7143px;
+gap: 8.57px;
+
+width: 337px;
+height: 136.67px;
+
+background: linear-gradient(270deg, rgba(72, 127, 213, 0.5) 0%, rgba(180, 125, 218, 0.5) 96.11%);
+border-radius: 12.8571px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Stop relying on random strategies or AI suggestions */
+
+width: 308px;
+height: 105px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 28.65px;
+line-height: 35px;
+text-align: center;
+
+color: #383838;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 35 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 24px 31.7143px;
+gap: 8.57px;
+
+width: 337px;
+height: 136.67px;
+
+background: linear-gradient(270deg, rgba(72, 127, 213, 0.5) 0%, rgba(180, 125, 218, 0.5) 96.11%);
+border-radius: 12.8571px;
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Build a structured approach to your campaigns */
+
+width: 308px;
+height: 105px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 28.65px;
+line-height: 35px;
+text-align: center;
+
+color: #383838;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 36 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 24px 31.7143px;
+gap: 8.57px;
+
+width: 337px;
+height: 136.67px;
+
+background: linear-gradient(270deg, rgba(72, 127, 213, 0.5) 0%, rgba(180, 125, 218, 0.5) 96.11%);
+border-radius: 12.8571px;
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Think like a strategist, not just an ad runner */
+
+width: 308px;
+height: 70px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 28.65px;
+line-height: 35px;
+text-align: center;
+
+color: #383838;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 220 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 24px 31.7143px;
+gap: 8.57px;
+
+width: 337px;
+height: 136.67px;
+
+background: linear-gradient(270deg, rgba(72, 127, 213, 0.5) 0%, rgba(180, 125, 218, 0.5) 96.11%);
+border-radius: 12.8571px;
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Scale your meta ads with profitable results */
+
+width: 308px;
+height: 70px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 28.65px;
+line-height: 35px;
+text-align: center;
+
+color: #383838;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 38 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 25px 23px 25px 24px;
+gap: 10px;
+
+position: absolute;
+width: 312px;
+height: 118px;
+left: calc(50% - 312px/2 - 2px);
+top: 10497px;
+
+background: #F5F6FF;
+border-radius: 15px;
+
+
+/* No shitty drama or upsell of any course after webinar */
+
+width: 325px;
+height: 102px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 28.65px;
+line-height: 119%;
+/* or 34px */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #202020;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 3998 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 24px 33px 35px 34px;
+gap: 72px;
+
+position: absolute;
+width: 356px;
+height: 418px;
+left: calc(50% - 356px/2);
+top: 10694px;
+
+border-radius: 15px;
+
+
+/* Frame 37 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 19px;
+
+width: 289px;
+height: 134px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* You will NOT get: */
+
+width: 289px;
+height: 37px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 28.65px;
+line-height: 35px;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Generic theory Random tips Copy-paste strategies */
+
+width: 289px;
+height: 78px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 17.19px;
+line-height: 153%;
+/* or 26px */
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 39 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 19px;
+
+width: 289px;
+height: 153px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Instead, you’ll get: */
+
+width: 289px;
+height: 37px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 28.65px;
+line-height: 200%;
+/* or 57px */
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Real campaign breakdowns Clear thinking process Practical understanding of what actually works */
+
+width: 289px;
+height: 148px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 17.19px;
+line-height: 153%;
+/* or 26px */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Line 7 */
+
+position: absolute;
+width: 79px;
+height: 0px;
+left: calc(50% - 79px/2 + 39.5px);
+top: 10615px;
+
+border: 3px dashed #000000;
+transform: rotate(90deg);
+
+
+/* What makes this webinar different than others */
+
+position: absolute;
+width: 327px;
+height: 122px;
+left: calc(50% - 327px/2 + 0.5px);
+top: 10275px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 34px;
+line-height: 41px;
+text-align: center;
+text-transform: capitalize;
+
+color: #000000;
+
+
+
+/* Line 6 */
+
+position: absolute;
+width: 178px;
+height: 0px;
+left: calc(50% - 178px/2);
+top: 10417px;
+
+
+
+/* Line 10 */
+
+position: absolute;
+width: 332px;
+height: 0px;
+left: calc(50% - 332px/2);
+top: 12705px;
+
+
+
+/* 3d-cute-kid-thinking-clueless 6 */
+
+position: absolute;
+width: 239px;
+height: 412px;
+left: 82px;
+top: 11172px;
+
+background: url(3d-cartoon-female-teacher-character-giving-thumbs-up.png);
+
+
+/* About the Trainer */
+
+position: absolute;
+width: 355px;
+height: 44px;
+left: calc(50% - 355px/2 + 0.5px);
+top: 11715px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 36px;
+line-height: 44px;
+/* identical to box height */
+text-align: center;
+text-transform: capitalize;
+
+color: #000000;
+
+
+
+/* Frame 3999 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: flex-end;
+align-content: flex-start;
+padding: 0px;
+gap: 47px;
+
+position: absolute;
+width: 351px;
+height: 437px;
+left: calc(50% - 351px/2 + 0.5px);
+top: 12077px;
+
+
+
+/* Frame 4000 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 10px;
+
+width: 351px;
+height: 408px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Master the Fundamentals of Meta Ads 1 */
+
+width: 351px;
+height: 408px;
+
+background: url(WhatsApp Image 2025-11-24 at 4.07.41 PM.png);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 219 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 20px;
+
+width: 346px;
+height: 309px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Hi, I'm Syed Sohail (roasguy) */
+
+width: 346px;
+height: 76px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 119%;
+/* or 38px */
+display: flex;
+align-items: center;
+
+color: #202020;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* For the past 5+ years, I've been helping businesses generate leads and sales through Meta Ads. */
+
+width: 346px;
+height: 69px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 131%;
+/* or 26px */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* In this webinar, I'll share the exact 7-step marketing strategy framework I use to identify what's not working, fix campaign gaps, and make better marketing decisions. */
+
+width: 346px;
+height: 124px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 131%;
+/* or 26px */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Pricing Justification */
+
+position: absolute;
+width: 351px;
+height: 44px;
+left: calc(50% - 351px/2 + 0.5px);
+top: 12642px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 36px;
+line-height: 44px;
+/* identical to box height */
+text-align: center;
+text-transform: capitalize;
+
+color: #000000;
+
+
+
+/* Frame 251 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 23px;
+
+position: absolute;
+width: 361px;
+height: 340px;
+left: calc(50% - 361px/2 + 0.5px);
+top: 12762px;
+
+
+
+/* Frame 248 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 32px 55px;
+gap: 10px;
+
+width: 361px;
+height: 98px;
+
+background: linear-gradient(90deg, #487FD5 22.81%, #B47DDA 73.23%);
+border-radius: 11px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Most people lose ₹5,000–₹50,000 before they figure this out */
+
+width: 331px;
+height: 48px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 119%;
+/* or 24px */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 249 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 32px 225px;
+gap: 10px;
+
+width: 361px;
+height: 98px;
+
+background: linear-gradient(90deg, #487FD5 22.81%, #B47DDA 73.23%);
+border-radius: 11px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* This session costs just ₹499 */
+
+width: 259px;
+height: 24px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 119%;
+/* identical to box height, or 24px */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 250 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 32px 45px;
+gap: 10px;
+
+width: 361px;
+height: 98px;
+
+background: linear-gradient(90deg, #487FD5 22.81%, #B47DDA 73.23%);
+border-radius: 11px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* One insight from this session can save you much more than that */
+
+width: 345px;
+height: 48px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 119%;
+/* or 24px */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 243 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: center;
+align-content: flex-start;
+padding: 0px;
+gap: 49px;
+
+position: absolute;
+width: 263px;
+height: 1002.11px;
+left: calc(50% - 263px/2 + 0.5px);
+top: 13159px;
+
+
+
+/* Frame 242 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 30px 20px 40px 19px;
+gap: 33px;
+
+width: 262.48px;
+height: 301.37px;
+
+border-radius: 10.416px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* live-streaming 1 */
+
+width: 145.82px;
+height: 145.82px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 1.76%;
+right: 1.76%;
+top: 8.78%;
+bottom: 8.78%;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+
+
+/* This is a live session (not pre-recorded)  */
+
+width: 223.48px;
+height: 53.47px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 22.2208px;
+line-height: 27px;
+text-align: center;
+text-transform: capitalize;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 241 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 30px 20px 24px 19px;
+gap: 17px;
+
+width: 262.48px;
+height: 301.37px;
+
+border-radius: 10.416px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* question 1 */
+
+width: 145.13px;
+height: 145.13px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 25.1%;
+right: 0%;
+top: 25.1%;
+bottom: 0%;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 25.1%;
+top: 0%;
+bottom: 25.1%;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+
+
+/* money 1 */
+
+position: absolute;
+left: -45.56%;
+right: 126.81%;
+top: 15.67%;
+bottom: 65.58%;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+
+
+/* Group */
+
+position: absolute;
+left: 15.08%;
+right: 15.16%;
+top: 10.93%;
+bottom: 10.94%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 15.08%;
+right: 15.16%;
+top: 10.93%;
+bottom: 10.94%;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+
+
+/* Vector */
+
+position: absolute;
+left: 26.72%;
+right: 26.72%;
+top: 30.54%;
+bottom: 22.58%;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+
+
+/* You’ll also get a chance to ask your questions directly */
+
+width: 223.48px;
+height: 85.41px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 22.2208px;
+line-height: 27px;
+text-align: center;
+text-transform: capitalize;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 240 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 19px 20px 35px 19px;
+gap: 18px;
+
+width: 262.48px;
+height: 301.37px;
+
+border-radius: 10.416px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* money 2 */
+
+width: 168.04px;
+height: 168.04px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Group */
+
+position: absolute;
+left: 15.08%;
+right: 15.16%;
+top: 10.94%;
+bottom: 10.94%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 15.08%;
+right: 15.16%;
+top: 10.94%;
+bottom: 10.94%;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+
+
+/* Vector */
+
+position: absolute;
+left: 26.72%;
+right: 26.72%;
+top: 30.55%;
+bottom: 22.58%;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+
+
+/* Limited seats available */
+
+width: 223.48px;
+height: 61.11px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 24.9984px;
+line-height: 30px;
+text-align: center;
+text-transform: capitalize;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 245 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 11px;
+
+position: absolute;
+width: 225px;
+height: 40px;
+left: calc(50% - 225px/2 + 0.5px);
+top: 14357px;
+
+
+
+/* FAQs */
+
+width: 145px;
+height: 40px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 36px;
+line-height: 44px;
+text-align: center;
+text-transform: capitalize;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 244 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 40px;
+
+position: absolute;
+width: 359px;
+height: 786px;
+left: calc(50% - 359px/2 + 0.5px);
+top: 14433px;
+
+
+
+/* Frame 124 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 21.78px;
+
+width: 359px;
+height: 122px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 59 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 6.2096px;
+gap: 4.78px;
+
+width: 35.35px;
+height: 35.35px;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+border-radius: 17.6735px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Minus
+
+Keywords: subtract
+*/
+
+width: 22.93px;
+height: 22.93px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Icon */
+
+position: absolute;
+left: 20.83%;
+right: 20.83%;
+top: 50%;
+bottom: 50%;
+
+/* dfgdgfdasfg */
+border: 1.91065px solid #000000;
+
+
+/* Frame 18 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 21.78px;
+
+width: 890px;
+height: 29px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Is this for beginners? */
+
+width: 300px;
+height: 29px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+
+/* dfgdgfdasfg */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/*  No, useful for people who are already running Meta ads and not getting results. */
+
+width: 300px;
+height: 71px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+
+/* dfgdgfdasfg */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Line 12 */
+
+width: 357px;
+height: 0px;
+
+border: 1px solid #000000;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 216 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 21.78px;
+
+width: 359px;
+height: 148px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 59 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 6.2096px;
+gap: 4.78px;
+
+width: 35.35px;
+height: 35.35px;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+border-radius: 17.6735px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Minus
+
+Keywords: subtract
+*/
+
+width: 22.93px;
+height: 22.93px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Icon */
+
+position: absolute;
+left: 20.83%;
+right: 20.83%;
+top: 50%;
+bottom: 50%;
+
+/* dfgdgfdasfg */
+border: 1.91065px solid #000000;
+
+
+/* Frame 18 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 21.78px;
+
+width: 890px;
+height: 79px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Will you show real examples? */
+
+width: 300px;
+height: 45px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+
+/* dfgdgfdasfg */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/*  Yes, you’ll see actual campaign breakdowns, dashboards, and performance insights. */
+
+width: 300px;
+height: 71px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+
+/* dfgdgfdasfg */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Line 23 */
+
+width: 357px;
+height: 0px;
+
+border: 1px solid #000000;
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* Frame 217 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 21.78px;
+
+width: 359px;
+height: 114px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 59 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 6.2096px;
+gap: 4.78px;
+
+width: 35.35px;
+height: 35.35px;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+border-radius: 17.6735px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Minus
+
+Keywords: subtract
+*/
+
+width: 22.93px;
+height: 22.93px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Icon */
+
+position: absolute;
+left: 20.83%;
+right: 20.83%;
+top: 50%;
+bottom: 50%;
+
+/* dfgdgfdasfg */
+border: 1.91065px solid #000000;
+
+
+/* Frame 18 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 21.78px;
+
+width: 890px;
+height: 79px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Will there be a Q&A session? */
+
+width: 300px;
+height: 45px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+
+/* dfgdgfdasfg */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Yes, you can ask your questions live during the session. */
+
+width: 300px;
+height: 47px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+
+/* dfgdgfdasfg */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Line 24 */
+
+width: 357px;
+height: 0px;
+
+border: 1px solid #000000;
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+flex-grow: 0;
+
+
+/* Frame 218 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 21.78px;
+
+width: 359px;
+height: 162px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 6;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 59 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 6.2096px;
+gap: 4.78px;
+
+width: 35.35px;
+height: 35.35px;
+
+/* Gradient color */
+background: linear-gradient(180deg, #487FD5 0%, #B47DDA 100%);
+border-radius: 17.6735px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Minus
+
+Keywords: subtract
+*/
+
+width: 22.93px;
+height: 22.93px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Icon */
+
+position: absolute;
+left: 20.83%;
+right: 20.83%;
+top: 50%;
+bottom: 50%;
+
+/* dfgdgfdasfg */
+border: 1.91065px solid #000000;
+
+
+/* Frame 18 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 21.78px;
+
+width: 890px;
+height: 125px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Will recording be available? */
+
+width: 300px;
+height: 58px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+
+/* dfgdgfdasfg */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* No. This is a live session only. Make sure you attend it live to get full value. */
+
+width: 300px;
+height: 71px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+
+/* dfgdgfdasfg */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* 📞 Mobile: +91 8400 786 843 📧 Email: support@roasschoolofmarketing.com */
+
+position: absolute;
+width: 359px;
+height: 55px;
+left: calc(50% - 359px/2 + 0.5px);
+top: 15295px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 176.45%;
+/* or 28px */
+text-align: center;
+
+/* dfgdgfdasfg */
+color: #000000;
+
+
+
+/* Frame 4002 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 6.70807px 6.70807px 7.26708px;
+gap: 5.59px;
+
+position: absolute;
+width: 94px;
+height: 30px;
+left: 295px;
+top: 11px;
+
+/* enroll button */
+background: linear-gradient(90deg, #1ACFFF 0%, #0076FF 100%);
+border-radius: 4px;
+
+
+/* Register now */
+
+width: 82px;
+height: 16px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 13.4161px;
+line-height: 16px;
+text-align: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* WhatsApp Image 2025-10-27 at 12.49.35 PM 5 */
+
+position: absolute;
+width: 79px;
+height: 37px;
+left: calc(50% - 79px/2 - 146.5px);
+top: 8px;
+
+background: url(Logo-Dark.png);
+
+
+/* Frame 4022 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 40px;
+
+position: absolute;
+width: 348.19px;
+height: 765.98px;
+left: 27px;
+top: 6618px;
+
+
+
+/* Group 88 */
+
+width: 348.17px;
+height: 280.5px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 36 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 17.8176px 23.5447px;
+gap: 6.36px;
+
+position: absolute;
+width: 144.77px;
+height: 43.8px;
+left: 101.71px;
+top: 0px;
+
+background: linear-gradient(270deg, rgba(72, 127, 213, 0.5) 0%, rgba(180, 125, 218, 0.5) 96.11%);
+border-radius: 9.54514px;
+
+
+/* Before */
+
+width: 97.25px;
+height: 28px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 22.9083px;
+line-height: 28px;
+/* identical to box height */
+text-align: center;
+
+color: #383838;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* WhatsApp Image 2026-06-16 at 3.55.57 PM 1 */
+
+position: absolute;
+width: 348.17px;
+height: 201.94px;
+left: 0.01px;
+top: 78.56px;
+
+background: url(WhatsApp Image 2026-06-16 at 3.55.57 PM.jpg);
+
+
+/* Group 89 */
+
+width: 348.19px;
+height: 280.49px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 4013 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 17.8176px 23.5447px;
+gap: 6.36px;
+
+position: absolute;
+width: 144.77px;
+height: 43.8px;
+left: 101.71px;
+top: 320.5px;
+
+background: linear-gradient(270deg, rgba(72, 127, 213, 0.5) 0%, rgba(180, 125, 218, 0.5) 96.11%);
+border-radius: 9.54514px;
+
+
+/* After */
+
+width: 97.25px;
+height: 28px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 22.9083px;
+line-height: 28px;
+/* identical to box height */
+text-align: center;
+
+color: #383838;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* WhatsApp Image 2026-06-16 at 3.54.31 PM 1 */
+
+position: absolute;
+width: 348.19px;
+height: 208.48px;
+left: 0px;
+top: 392.51px;
+
+background: url(WhatsApp Image 2026-06-16 at 3.54.31 PM.jpg);
+
+
+/* D2C Women's Clothing Brand  The brand was averaging just 1.5X ROAS from Meta Ads.  By optimizing audience targeting, offers, messaging, and campaigns, ROAS grew to 4.2X in just 2 months. */
+
+width: 348.19px;
+height: 125px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 17.19px;
+line-height: 21px;
+text-align: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Line 25 */
+
+position: absolute;
+width: 280px;
+height: 0px;
+left: calc(50% - 280px/2);
+top: 7447px;
+
+
+
+/* Line 26 */
+
+position: absolute;
+width: 280px;
+height: 0px;
+left: calc(50% - 280px/2);
+top: 8340px;
+
+
+
+/* Line 27 */
+
+position: absolute;
+width: 280px;
+height: 0px;
+left: calc(50% - 280px/2);
+top: 9254px;
+
+
+
+/* Frame 4023 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 40px;
+
+position: absolute;
+width: 351px;
+height: 767.45px;
+left: 26px;
+top: 7510px;
+
+
+
+/* Group 90 */
+
+width: 350px;
+height: 269.95px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 36 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 17.8176px 23.5447px;
+gap: 6.36px;
+
+position: absolute;
+width: 144.77px;
+height: 43.8px;
+left: 101.5px;
+top: 0px;
+
+background: linear-gradient(270deg, rgba(72, 127, 213, 0.5) 0%, rgba(180, 125, 218, 0.5) 96.11%);
+border-radius: 9.54514px;
+
+
+/* Before */
+
+width: 97.25px;
+height: 28px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 22.9083px;
+line-height: 28px;
+/* identical to box height */
+text-align: center;
+
+color: #383838;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* WhatsApp Image 2026-06-16 at 3.54.31 PM 2 */
+
+position: absolute;
+width: 350px;
+height: 209.56px;
+left: 0px;
+top: 60.39px;
+
+background: url(WhatsApp Image 2026-06-16 at 4.04.40 PM.jpg);
+
+
+/* Group 91 */
+
+width: 350px;
+height: 271.5px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 4013 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 17.8176px 23.5447px;
+gap: 6.36px;
+
+position: absolute;
+width: 144.77px;
+height: 43.8px;
+left: 101.5px;
+top: 309.95px;
+
+background: linear-gradient(270deg, rgba(72, 127, 213, 0.5) 0%, rgba(180, 125, 218, 0.5) 96.11%);
+border-radius: 9.54514px;
+
+
+/* After */
+
+width: 97.25px;
+height: 28px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 22.9083px;
+line-height: 28px;
+/* identical to box height */
+text-align: center;
+
+color: #383838;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* WhatsApp Image 2026-06-16 at 3.55.57 PM 2 */
+
+position: absolute;
+width: 350px;
+height: 203px;
+left: 0px;
+top: 378.45px;
+
+background: url(WhatsApp Image 2026-06-16 at 4.05.19 PM.jpg);
+
+
+/* EdTech Company  Meta Ads were generating only 0.6X ROAS due to underperforming campaigns.  By optimizing audience targeting, offers, messaging, and strategy, ROAS increased to 4.1X in just 2 months, creating a profitable customer acquisition system. */
+
+width: 351px;
+height: 146px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 17.19px;
+line-height: 21px;
+text-align: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 4024 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 40px;
+
+position: absolute;
+width: 351px;
+height: 788.45px;
+left: 26px;
+top: 8403px;
+
+
+
+/* Group 90 */
+
+width: 350px;
+height: 269.95px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 36 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 17.8176px 23.5447px;
+gap: 6.36px;
+
+position: absolute;
+width: 144.77px;
+height: 43.8px;
+left: 101.5px;
+top: 0px;
+
+background: linear-gradient(270deg, rgba(72, 127, 213, 0.5) 0%, rgba(180, 125, 218, 0.5) 96.11%);
+border-radius: 9.54514px;
+
+
+/* Before */
+
+width: 97.25px;
+height: 28px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 22.9083px;
+line-height: 28px;
+/* identical to box height */
+text-align: center;
+
+color: #383838;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* WhatsApp Image 2026-06-16 at 3.54.31 PM 2 */
+
+position: absolute;
+width: 350px;
+height: 209.56px;
+left: 0px;
+top: 60.39px;
+
+background: url(WhatsApp Image 2026-06-16 at 4.00.25 PM.jpg);
+
+
+/* Group 91 */
+
+width: 350px;
+height: 271.5px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 4013 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 17.8176px 23.5447px;
+gap: 6.36px;
+
+position: absolute;
+width: 144.77px;
+height: 43.8px;
+left: 101.5px;
+top: 309.95px;
+
+background: linear-gradient(270deg, rgba(72, 127, 213, 0.5) 0%, rgba(180, 125, 218, 0.5) 96.11%);
+border-radius: 9.54514px;
+
+
+/* After */
+
+width: 97.25px;
+height: 28px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 22.9083px;
+line-height: 28px;
+/* identical to box height */
+text-align: center;
+
+color: #383838;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* WhatsApp Image 2026-06-16 at 3.55.57 PM 2 */
+
+position: absolute;
+width: 350px;
+height: 203px;
+left: 0px;
+top: 378.45px;
+
+background: url(WhatsApp Image 2026-06-16 at 4.01.22 PM.jpg);
+
+
+/* Website Services Agency The agency was generating leads at an average cost of ₹460 per lead.  By optimizing audience targeting, messaging, offers, and campaign strategy, the cost dropped to ₹243 per lead.  This was achieved within 2 months, significantly improving marketing efficiency. */
+
+width: 351px;
+height: 167px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 17.19px;
+line-height: 21px;
+text-align: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 4025 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 40px;
+
+position: absolute;
+width: 351px;
+height: 767.45px;
+left: 26px;
+top: 9317px;
+
+
+
+/* Group 90 */
+
+width: 350px;
+height: 269.95px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 36 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 17.8176px 23.5447px;
+gap: 6.36px;
+
+position: absolute;
+width: 144.77px;
+height: 43.8px;
+left: 101.5px;
+top: 0px;
+
+background: linear-gradient(270deg, rgba(72, 127, 213, 0.5) 0%, rgba(180, 125, 218, 0.5) 96.11%);
+border-radius: 9.54514px;
+
+
+/* Before */
+
+width: 97.25px;
+height: 28px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 22.9083px;
+line-height: 28px;
+/* identical to box height */
+text-align: center;
+
+color: #383838;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* WhatsApp Image 2026-06-16 at 3.54.31 PM 2 */
+
+position: absolute;
+width: 350px;
+height: 209.56px;
+left: 0px;
+top: 60.39px;
+
+background: url(WhatsApp Image 2026-06-16 at 4.09.57 PM.jpg);
+
+
+/* Group 91 */
+
+width: 350px;
+height: 271.5px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 4013 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 17.8176px 23.5447px;
+gap: 6.36px;
+
+position: absolute;
+width: 144.77px;
+height: 43.8px;
+left: 101.5px;
+top: 309.95px;
+
+background: linear-gradient(270deg, rgba(72, 127, 213, 0.5) 0%, rgba(180, 125, 218, 0.5) 96.11%);
+border-radius: 9.54514px;
+
+
+/* After */
+
+width: 97.25px;
+height: 28px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 22.9083px;
+line-height: 28px;
+/* identical to box height */
+text-align: center;
+
+color: #383838;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* WhatsApp Image 2026-06-16 at 3.55.57 PM 2 */
+
+position: absolute;
+width: 350px;
+height: 203px;
+left: 0px;
+top: 378.45px;
+
+background: url(WhatsApp Image 2026-06-16 at 4.11.15 PM.jpg);
+
+
+/* Service-Based Company  Reduced lead acquisition cost from ₹199 to ₹54 per lead by optimizing audience targeting, offers, messaging, and campaign strategy.  Achieved a profitable customer acquisition system within 2 months. */
+
+width: 351px;
+height: 146px;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 17.19px;
+line-height: 21px;
+text-align: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* WhatsApp Image 2025-10-27 at 12.49.35 PM 4 */
+
+position: absolute;
+width: 396px;
+height: 186px;
+left: calc(50% - 396px/2 - 3px);
+bottom: 0px;
+
+background: url(Logo-Dark.png);

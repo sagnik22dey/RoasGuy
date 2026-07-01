@@ -10,12 +10,12 @@
   --grad-card: linear-gradient(-90deg, #cbecff, #fce2ff);
   --grad-stroke: linear-gradient(90deg, #56c4ff, #f183ff);
 
-  --shadow-soft: 4.3px 4.3px 7.1px rgba(0, 0, 0, 0.25);
-  --shadow-card: 6px 6px 10.7px rgba(0, 0, 0, 0.29);
-  --shadow-whatsapp: 2.5px 5.7px 15.1px rgba(8, 164, 255, 0.48);
+  --shadow-soft: 0.299vw 0.299vw 0.493vw rgba(0, 0, 0, 0.25);
+  --shadow-card: 0.417vw 0.417vw 0.743vw rgba(0, 0, 0, 0.29);
+  --shadow-whatsapp: 0.174vw 0.396vw 1.049vw rgba(8, 164, 255, 0.48);
 
   --font: "Instrument Sans", sans-serif;
-  --frame-w: 1440px;
+  --frame-w: 100vw;
 }
 
 * {
@@ -24,7 +24,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   overflow-x: hidden;
 }
@@ -38,7 +39,7 @@ body {
 .frame {
   position: relative;
   width: var(--frame-w);
-  zoom: calc(100% / 1440);
+  margin: 0 auto;
   background: var(--page-bg);
   overflow: hidden;
 }
@@ -50,7 +51,7 @@ body {
   background: var(--grad-enroll);
   color: var(--text-on-grad);
   border: none;
-  border-radius: 12px;
+  border-radius: 0.833vw;
   font-weight: 600;
   cursor: pointer;
 }

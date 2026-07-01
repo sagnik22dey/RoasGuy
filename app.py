@@ -19,6 +19,7 @@ from Routes import fofaSubroutes
 from Routes import courses
 from Routes import landingPage
 from Routes import contactUs
+from Routes import figmaRoutes
 app = FastAPI()
 
 @app.get("/.well-known/appspecific/com.chrome.devtools.json")
@@ -37,9 +38,11 @@ app.include_router(fofaSubroutes.router)
 app.include_router(courses.router)
 app.include_router(landingPage.router)
 app.include_router(contactUs.router)
+app.include_router(figmaRoutes.router)
 
 app.mount("/Resources", StaticFiles(directory="Resources"), name="Resources")
 app.mount("/style", StaticFiles(directory="style"), name="style")
+app.mount("/figma_reference", StaticFiles(directory="figma_reference"), name="figma_reference")
 
 
 

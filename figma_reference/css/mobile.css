@@ -1,0 +1,662 @@
+@media (max-width: 1024px) {
+  /* Base reset */
+  .frame.dk {
+    position: relative;
+    height: auto;
+  }
+
+  .abs {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+
+  /* ---------- nav ---------- */
+  .dk-nav {
+    width: 100%;
+    height: 16vw;
+    padding: 0 4vw;
+  }
+
+  .dk-logo img {
+    width: 32vw;
+  }
+
+  .dk-register {
+    width: 28vw;
+    height: 10vw;
+    border-radius: 1.5vw;
+    font-size: 3.5vw;
+  }
+
+  /* ---------- refund sub-bar ---------- */
+  .dk-topbar {
+    width: 100%;
+    height: 9vw;
+    text-align: center;
+    padding: 0 2vw;
+  }
+
+  .dk-topbar span {
+    font-size: 3.2vw;
+  }
+
+  /* ---------- hero ---------- */
+  .dk-hero {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(180deg, #eaf0ff 0%, #f7edff 100%);
+    padding-bottom: 12vw;
+  }
+
+  .dk-hero-text {
+    width: 100%;
+    padding: 12vw 4vw 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dk-hero-text h1 {
+    font-size: 8.5vw;
+    line-height: 1.15;
+  }
+
+  .dk-hero-text .sub {
+    max-width: 100%;
+    margin-top: 5vw;
+    font-size: 4.2vw;
+  }
+
+  .dk-hero-text .meta {
+    margin-top: 5vw;
+    font-size: 3.1vw;
+  }
+
+  .dk-hero-text .time {
+    margin-top: 5vw;
+    font-size: 4vw;
+  }
+
+  .dk-hero-cta {
+    width: 90vw;
+    height: 14vw;
+    margin-top: 6vw;
+    border-radius: 2vw;
+    font-size: 4.5vw;
+  }
+  /* ---------- relatability ---------- */
+  .relatability-head {
+    width: 100%;
+    text-align: center;
+    padding: 8vw 0 4vw;
+  }
+
+  .sec-head h2 {
+    font-size: 8vw;
+  }
+
+  .divider {
+    width: 30vw;
+    height: 1vw;
+    margin: 2vw auto;
+  }
+
+  .relatability-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 4vw;
+  }
+
+  .vertical-dashed-line {
+    display: block;
+    top: 4vw; /* adjust start position below header */
+    bottom: 6vw; /* adjust end position */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .rel-card {
+    width: 90vw;
+    margin: 0 auto 6vw;
+    display: flex;
+    flex-direction: column;
+    padding: 8vw 6vw;
+    gap: 4vw;
+    border-radius: 4vw;
+  }
+
+  .rel-card-img {
+    width: 70vw;
+    align-self: center;
+    order: 1;
+  }
+
+  .rel-card-text {
+    width: 100%;
+    order: 2;
+  }
+
+  .rel-card-text h3 {
+    font-size: 6vw;
+    margin-bottom: 4vw;
+  }
+
+  .rel-card-text li {
+    font-size: 3.5vw;
+    margin-bottom: 3vw;
+  }
+
+  .rel-card-text li img {
+    width: 4.5vw;
+    height: 4.5vw;
+    margin-right: 3vw;
+  }
+
+  .worst-part {
+    font-size: 3.5vw;
+    margin-top: 4vw;
+  }
+
+  .rel-bubble {
+    width: 85vw;
+    text-align: center;
+    font-size: 4vw;
+    padding: 4vw 6vw;
+    border-radius: 999vw;
+    margin-bottom: 6vw;
+  }
+  /* ---------- problem reframe ---------- */
+  .problem-head {
+    width: 100%;
+    text-align: center;
+    padding: 8vw 0 4vw;
+  }
+
+  .problem-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 4vw;
+    margin-bottom: 12vw;
+  }
+
+  .prob-col {
+    width: 100%;
+  }
+
+  /* Un-nest the left column to reorder the images globally */
+  .prob-left {
+    display: contents;
+  }
+
+  .prob-right {
+    display: none;
+  }
+
+  .prob-left .prob-img-top {
+    order: 1;
+    width: 50vw;
+    height: auto;
+    margin: 0 auto 8vw;
+  }
+
+  .prob-center {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10vw;
+    padding: 0 2vw;
+  }
+
+  .prob-right .prob-img-top {
+    order: 3;
+    width: 50vw;
+    height: auto;
+    margin: 10vw auto 0;
+  }
+
+  .prob-left .prob-img-bottom {
+    order: 4;
+    width: 50vw;
+    height: auto;
+    margin: 10vw auto 0;
+  }
+
+  .prob-block {
+    width: 100%;
+  }
+
+  .prob-block h3 {
+    font-size: 6.5vw;
+    margin-bottom: 3vw;
+    line-height: 1.2;
+  }
+
+  .prob-block p {
+    font-size: 4.2vw;
+    line-height: 1.4;
+  }
+
+  .prob-bubble {
+    width: 90vw;
+    padding: 5vw 6vw;
+    font-size: 5vw;
+    border-radius: 2vw;
+    box-sizing: border-box;
+  }
+
+  .prob-list {
+    text-align: left;
+    display: inline-block;
+    font-size: 4.2vw;
+    line-height: 1.8;
+    margin: 2vw auto 3vw;
+  }
+
+  .prob-footer {
+    font-size: 3.5vw !important;
+  }
+  /* ---------- introducing the system ---------- */
+  .system-head {
+    width: 100%;
+    text-align: center;
+    padding: 8vw 0 4vw;
+  }
+
+  .system-card {
+    width: 90vw;
+    margin: 0 auto 12vw;
+    flex-direction: column;
+    padding: 8vw 6vw;
+    gap: 6vw;
+    border-radius: 4vw;
+  }
+
+  .sys-img {
+    width: 70vw;
+    margin: 0 auto;
+  }
+
+  .sys-desc {
+    font-size: 4.8vw;
+    text-align: left;
+    margin-bottom: 6vw;
+  }
+
+  .sys-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+  }
+
+  .sys-col {
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+  }
+
+  .sys-step {
+    font-size: 3.8vw;
+    gap: 4vw;
+  }
+
+  .sys-num {
+    width: 9vw;
+    height: 9vw;
+    font-size: 4vw;
+  }
+  /* ---------- what you'll learn ---------- */
+  .learn-head {
+    width: 100%;
+    text-align: center;
+    padding: 8vw 0 4vw;
+  }
+
+  .learn-sub {
+    width: 100%;
+    text-align: center;
+    font-size: 4.5vw;
+    margin-bottom: 8vw;
+  }
+
+  .learn-block {
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+  }
+
+  .learn-pill {
+    width: 100%;
+    padding: 6vw 5vw;
+    font-size: 4.5vw;
+    height: auto;
+    border-radius: 2.5vw;
+    box-sizing: border-box;
+  }
+
+  .learn-cta {
+    width: 100%;
+    text-align: center;
+    margin-top: 10vw;
+    margin-bottom: 12vw;
+  }
+
+  .pill-btn {
+    font-size: 4.5vw !important;
+    padding: 4vw 8vw !important;
+    height: auto !important;
+  }
+  /* ---------- results / testimonials ---------- */
+  .results-head {
+    width: 100%;
+    text-align: center;
+    padding: 8vw 0 4vw;
+  }
+
+  .testimonials {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 4vw;
+    box-sizing: border-box;
+  }
+
+  .testi-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 8vw;
+  }
+
+  .testi-dashboards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8vw;
+  }
+
+  .testi-dashboard {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4vw;
+  }
+
+  .testi-label {
+    padding: 2.5vw 10vw;
+    font-size: 4.5vw;
+    border-radius: 2vw;
+  }
+
+  .testi-img {
+    width: 100%;
+    border-radius: 1vw;
+  }
+
+  .testi-text {
+    text-align: center;
+    margin-top: 6vw;
+  }
+
+  .testi-text h3 {
+    font-size: 5.5vw;
+    margin-bottom: 2vw;
+  }
+
+  .testi-text p {
+    font-size: 4.2vw;
+  }
+
+  .testi-divider {
+    width: 80vw;
+    height: 0.2vw;
+    margin: 4vw 0 10vw;
+  }
+
+  .results-cta {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 12vw;
+  }
+  /* ---------- what makes different ---------- */
+  .diff-head {
+    width: 100%;
+    text-align: center;
+    padding: 8vw 0 4vw;
+  }
+
+  .diff-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .diff-block .grad-border {
+    padding: 0.6vw;
+    border-radius: 3vw;
+  }
+
+  .diff-block .grad-border .inner {
+    border-radius: 2.4vw;
+  }
+
+  .diff-top-box {
+    width: 80vw;
+    height: auto;
+  }
+
+  .diff-top-box .inner {
+    padding: 6vw 4vw;
+  }
+
+  .diff-top-box h3 {
+    font-size: 4.8vw;
+  }
+
+  .diff-dashed-line {
+    height: 12vw;
+    border-left-width: 0.4vw;
+  }
+
+  .diff-bottom-layout {
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    gap: 0;
+  }
+
+  .diff-bottom-box {
+    order: 1;
+    width: 80vw;
+    height: auto;
+    margin-top: 0;
+  }
+
+  .diff-bottom-box .inner {
+    padding: 8vw 6vw;
+    gap: 6vw;
+  }
+
+  .diff-list h3 {
+    font-size: 4.8vw;
+    margin-bottom: 3vw;
+  }
+
+  .diff-list li {
+    font-size: 4vw;
+    padding-left: 2.5vw;
+    margin-bottom: 1.5vw;
+  }
+
+  .diff-kid {
+    order: 2;
+    width: 50vw;
+    margin-top: 8vw;
+    margin-bottom: 12vw;
+  }
+
+  .mobile-hide {
+    display: none;
+  }
+
+  /* ---------- about trainer ---------- */
+  .trainer-head {
+    width: 100%;
+    text-align: center;
+    padding: 8vw 0 4vw;
+  }
+
+  .trainer-card {
+    width: 90vw;
+    margin: 0 auto 12vw;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 8vw 0;
+    gap: 0;
+    border-radius: 4vw;
+  }
+
+  .trainer-img {
+    width: 80vw;
+    height: auto;
+    margin-left: 0;
+    align-self: center;
+  }
+
+  .trainer-bio {
+    padding: 0 6vw;
+    text-align: left;
+  }
+
+  .trainer-bio h3 {
+    font-size: 6vw;
+    margin-bottom: 4vw;
+  }
+
+  .trainer-bio p {
+    font-size: 4.2vw;
+    margin-bottom: 3vw;
+  }
+  /* ---------- pricing ---------- */
+  .pricing-head {
+    width: 100%;
+    text-align: center;
+    padding: 8vw 0 4vw;
+  }
+
+  .pricing-block {
+    width: 100%;
+    padding: 0 4vw;
+    gap: 4vw;
+    box-sizing: border-box;
+  }
+
+  .pricing-pill {
+    width: 90vw;
+    padding: 4vw;
+    border-radius: 2vw;
+    font-size: 4vw;
+    box-sizing: border-box;
+  }
+
+  .pricing-features {
+    flex-direction: column;
+    align-items: center;
+    gap: 6vw;
+    margin-top: 8vw;
+  }
+
+  .pricing-feature {
+    width: 80vw;
+    height: auto;
+  }
+
+  .pricing-feature .inner {
+    padding: 8vw 4vw;
+    gap: 6vw;
+  }
+
+  .pricing-feature img {
+    width: 25vw;
+    height: 25vw;
+  }
+
+  .pricing-feature p {
+    font-size: 4.5vw;
+  }
+
+  .pricing-cta {
+    width: 100%;
+    text-align: center;
+    margin-top: 8vw;
+    margin-bottom: 12vw;
+  }
+  /* ---------- FAQ ---------- */
+  .faq-head {
+    width: 100%;
+    text-align: center;
+    padding: 8vw 0 4vw;
+  }
+
+  .faq {
+    width: 100%;
+    padding: 0 6vw;
+    box-sizing: border-box;
+    margin-bottom: 12vw;
+  }
+
+  .faq-toggle {
+    gap: 3vw;
+    padding: 6vw 0 4vw;
+  }
+
+  .faq-toggle strong {
+    font-size: 4.5vw;
+  }
+
+  .faq-icon {
+    width: 7vw;
+    height: 7vw;
+  }
+
+  .faq-symbol {
+    font-size: 4.5vw;
+  }
+
+  .faq-answer p {
+    font-size: 4vw;
+    padding-left: 10vw;
+    padding-bottom: 6vw;
+  }
+
+  /* ---------- footer ---------- */
+  .footer-contact {
+    width: 100%;
+    font-size: 3.5vw;
+    gap: 3vw;
+    margin-bottom: 12vw;
+    text-align: center;
+  }
+
+  .footer-banner {
+    width: 100%;
+    height: auto;
+    margin: 0 auto 8vw;
+    padding: 0 4vw;
+    box-sizing: border-box;
+  }
+}
